@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/common/Breadcrumb.astro';
+import { getBreadcrumbSchema } from '../../utils/seo';
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('proyek');
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project },
+  }));
+}
+
+interface Props {
+  project: CollectionEntry<'proyek'>;
+}
+
+const { project } = Astro.props;
+const { Content } = await project.render();
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Beranda', url: '/' },
+  { name: 'Proyek', url: '/proyek/' },
+  { name: project.data.title, url: `/proyek/${project.slug}/` },
+]);
+---
+
+<BaseLayout
+  title={`${project.data.title} - Portofolio Proyek`}
+  description={`Studi kasus pengerjaan ${project.data.greenhouseType} di ${project.data.locationCity}, ${project.data.locationProvince}. Dimensi: ${project.data.dimensions}.`}
+  image={project.data.coverImage}
+  jsonLd={[breadcrumbSchema]}
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">
+    <Breadcrumb
+      items={[
+        { label: 'Proyek', href: '/proyek/' },
+        { label: project.data.title },
+      ]}
+    />
+
+    <div class="my-8 space-y-4">
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="text-xs font-bold bg-brand-50 text-brand-800 px-3 py-1 rounded-full uppercase tracking-wider">
+          {project.data.greenhouseType}
+        </span>
+        <span class="text-xs font-semibold bg-steel-100 text-steel-700 px-3 py-1 rounded-full">
+          Kategori Klien: {project.data.clientType}
+        </span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-steel-900 tracking-tight leading-tight">
+        {project.data.title}
+      </h1>
+    </div>
+
+    <!-- Main Image -->
+    <div class="rounded-3xl overflow-hidden bg-steel-100 border border-steel-200 shadow-soft mb-8">
+      <img
+        src={project.data.coverImage}
+        alt={project.data.title}
+        class="w-full aspect-video object-cover"
+        loading="eager"
+        onerror="this.setAttribute('src', 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1000&q=80')"
+      />
+    </div>
+
+    <!-- Project Metadata Cards -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-5 rounded-2xl bg-white border border-steel-200 shadow-soft mb-8">
+      <div>
+        <span class="text-[11px] text-steel-500 font-medium block">Lokasi:</span>
+        <span class="text-xs sm:text-sm font-bold text-steel-900">
+          {project.data.locationCity}, {project.data.locationProvince}
+        </span>
+      </div>
+      <div>
+        <span class="text-[11px] text-steel-500 font-medium block">Dimensi:</span>
+        <span class="text-xs sm:text-sm font-bold text-steel-900">
+          {project.data.dimensions}
+        </span>
+      </div>
+      <div>
+        <span class="text-[11px] text-steel-500 font-medium block">Selesai:</span>
+        <span class="text-xs sm:text-sm font-bold text-steel-900">
+          {project.data.completionDate}
+        </span>
+      </div>
+      <div>
+        <span class="text-[11px] text-steel-500 font-medium block">Tipe Struktur:</span>
+        <span class="text-xs sm:text-sm font-bold text-emerald-800">
+          {project.data.greenhouseType}
+        </span>
+      </div>
+    </div>
+
+    <!-- Main Materials -->
+    <div class="p-5 rounded-2xl bg-earth-sand/50 border border-steel-200 mb-8">
+      <h4 class="text-xs font-bold text-steel-800 uppercase tracking-wider mb-2.5">
+        Material Utama yang Digunakan:
+      </h4>
+      <div class="flex flex-wrap gap-2">
+        {project.data.mainMaterials.map((mat) => (
+          <span class="px-3 py-1 rounded-lg bg-white border border-steel-200 text-xs font-medium text-steel-800">
+            {mat}
+          </span>
+        ))}
+      </div>
+    </div>
+
+    <!-- Markdown Content -->
+    <div class="prose prose-emerald max-w-none mb-12">
+      <Content />
+    </div>
+
+    <!-- Consultation Box -->
+    <div class="p-8 rounded-3xl bg-brand-950 text-white text-center space-y-4">
+      <h3 class="text-xl font-bold text-white">Ingin Membangun Greenhouse Serupa?</h3>
+      <p class="text-xs sm:text-sm text-emerald-200 max-w-xl mx-auto">
+        Diskusikan ukuran lahan, komoditas target, dan anggaran Anda bersama tim aplikator Agrokomplek Cemerlang.
+      </p>
+      <a
+        href={`https://wa.me/6285183002070?text=${encodeURIComponent(
+          `Halo Agrokomplek Cemerlang, saya melihat portofolio proyek ${project.data.title} dan ingin konsultasi pembuatan greenhouse serupa.`
+        )}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-earth-gold text-white font-bold text-sm shadow-soft hover:bg-earth-gold-hover transition-colors"
+      >
+        <span>Konsultasi Proyek via WhatsApp</span>
+      </a>
+    </div>
+  </div>
+</BaseLayout>

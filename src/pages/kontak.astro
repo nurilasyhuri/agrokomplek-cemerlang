@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/common/Breadcrumb.astro';
+import { BUSINESS_INFO } from '../data/businessInfo';
+---
+
+<BaseLayout
+  title="Hubungi Kami - Konsultasi WhatsApp & Kontak Resmi"
+  description="Hubungi Agrokomplek Cemerlang via WhatsApp 0851-8300-2070 atau kunjungi toko kami di Kedungkandang Malang. Pelayanan pesanan produk dan konsultasi greenhouse."
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">
+    <Breadcrumb items={[{ label: 'Kontak' }]} />
+
+    <div class="my-8 text-center max-w-2xl mx-auto space-y-3">
+      <span class="text-xs font-bold text-brand-700 uppercase tracking-wider bg-brand-50 px-3 py-1 rounded-full">
+        Pusat Bantuan & Pemesanan
+      </span>
+      <h1 class="text-3xl sm:text-4xl font-black text-steel-900 tracking-tight">
+        Hubungi Agrokomplek Cemerlang
+      </h1>
+      <p class="text-base text-steel-600">
+        Konsultasikan kebutuhan produk pertanian, cek ketersediaan stok, atau ajukan permintaan survei proyek greenhouse Anda.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-10">
+      <!-- Contact Details -->
+      <div class="p-8 rounded-3xl bg-white border border-steel-200 shadow-soft space-y-6">
+        <h3 class="text-xl font-bold text-steel-900 border-b border-steel-100 pb-3">
+          Saluran Komunikasi Resmi
+        </h3>
+
+        <div class="space-y-4 text-sm text-steel-700">
+          <div>
+            <span class="text-xs text-steel-500 font-semibold block">WhatsApp Utama:</span>
+            <a
+              href={`https://wa.me/${BUSINESS_INFO.contact.whatsappRaw}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-base font-bold text-brand-700 hover:underline"
+            >
+              {BUSINESS_INFO.contact.phone}
+            </a>
+          </div>
+
+          <div>
+            <span class="text-xs text-steel-500 font-semibold block">Email Bisnis & Pengadaan:</span>
+            <span class="text-sm font-semibold text-steel-900">{BUSINESS_INFO.contact.email}</span>
+          </div>
+
+          <div>
+            <span class="text-xs text-steel-500 font-semibold block">Alamat Toko Fisik:</span>
+            <span class="text-xs text-steel-700 leading-relaxed block mt-0.5">
+              {BUSINESS_INFO.address.fullFormatted}
+            </span>
+          </div>
+
+          <div>
+            <span class="text-xs text-steel-500 font-semibold block">Jam Pelayanan:</span>
+            <span class="text-xs text-steel-700 block mt-0.5">
+              Toko: {BUSINESS_INFO.hours.physicalStore} <br />
+              WhatsApp: Respons Cepat Setiap Hari
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Routing Direct Actions -->
+      <div class="p-8 rounded-3xl bg-brand-950 text-white flex flex-col justify-between space-y-6 shadow-card">
+        <div class="space-y-3">
+          <span class="text-xs font-bold text-earth-gold uppercase tracking-wider block">
+            Respon Tercepat
+          </span>
+          <h3 class="text-2xl font-bold text-white tracking-tight">
+            Chat Langsung dengan Tim Ahli Kami
+          </h3>
+          <p class="text-xs text-emerald-200/90 leading-relaxed">
+            Klik salah satu tombol di bawah untuk membuka obrolan WhatsApp dengan pesan pembuka otomatis yang sesuai dengan kebutuhan Anda:
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <a
+            href="https://wa.me/6285183002070?text=Halo%20Agrokomplek%20Cemerlang%2C%20saya%20ingin%20cek%20stok%20dan%20harga%20produk%20pertanian."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-brand-700 hover:bg-brand-600 text-white font-bold text-xs transition-colors"
+          >
+            <span>💬 Tanya Stok Produk Pertanian</span>
+          </a>
+
+          <a
+            href="https://wa.me/6285183002070?text=Halo%20Agrokomplek%20Cemerlang%2C%20saya%20ingin%20konsultasi%20pembuatan%20proyek%20greenhouse."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-earth-gold hover:bg-earth-gold-hover text-white font-bold text-xs transition-colors"
+          >
+            <span>🏗️ Konsultasi Jasa Greenhouse</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,82 @@
+---
+import { generateGeneralInquiryUrl } from '../../utils/whatsapp';
+
+const currentPath = Astro.url.pathname;
+const waBottomUrl = generateGeneralInquiryUrl('mobile-dock');
+
+const isKatalogActive = currentPath.startsWith('/produk');
+const isGreenhouseActive = currentPath.startsWith('/jasa');
+const isLokasiActive = currentPath.startsWith('/lokasi');
+---
+
+<aside
+  class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-surface-card border-t border-surface-border shadow-sm safe-area-pb select-none"
+  aria-label="Aksi Cepat Mobile"
+>
+  <div class="grid grid-cols-4 gap-1 max-w-lg mx-auto px-2 py-1 items-center">
+    
+    <!-- Action 1: Katalog -->
+    <a
+      href="/produk/"
+      class:list={[
+        'flex flex-col items-center justify-center py-1.5 px-1 rounded-md transition-colors touch-target',
+        isKatalogActive
+          ? 'bg-agri-50 text-agri-700 font-bold'
+          : 'text-ink-muted hover:text-ink-primary',
+      ]}
+    >
+      <svg class="w-5 h-5 mb-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/>
+      </svg>
+      <span class="text-[10px] leading-tight font-medium">Katalog</span>
+    </a>
+
+    <!-- Action 2: Jasa Greenhouse -->
+    <a
+      href="/jasa/pembuatan-greenhouse/"
+      class:list={[
+        'flex flex-col items-center justify-center py-1.5 px-1 rounded-md transition-colors touch-target',
+        isGreenhouseActive
+          ? 'bg-agri-50 text-agri-700 font-bold'
+          : 'text-ink-muted hover:text-ink-primary',
+      ]}
+    >
+      <svg class="w-5 h-5 mb-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 21h18M5 21V9l7-6 7 6v12M9 21V12a3 3 0 0 1 6 0v9"/>
+      </svg>
+      <span class="text-[10px] leading-tight font-medium">Greenhouse</span>
+    </a>
+
+    <!-- Action 3: Lokasi Toko -->
+    <a
+      href="/lokasi/"
+      class:list={[
+        'flex flex-col items-center justify-center py-1.5 px-1 rounded-md transition-colors touch-target',
+        isLokasiActive
+          ? 'bg-agri-50 text-agri-700 font-bold'
+          : 'text-ink-muted hover:text-ink-primary',
+      ]}
+    >
+      <svg class="w-5 h-5 mb-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+        <circle cx="12" cy="10" r="3"/>
+      </svg>
+      <span class="text-[10px] leading-tight font-medium">Lokasi Toko</span>
+    </a>
+
+    <!-- Action 4: Tanya WA (Highlight Button) -->
+    <a
+      href={waBottomUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex flex-col items-center justify-center py-1.5 px-1 rounded-md bg-agri-700 active:bg-agri-800 text-white font-bold transition-colors touch-target"
+      aria-label="Konsultasi WhatsApp"
+    >
+      <svg class="w-5 h-5 mb-0.5 text-emerald-300" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
+      </svg>
+      <span class="text-[10px] leading-tight font-bold">Chat WA</span>
+    </a>
+
+  </div>
+</aside>

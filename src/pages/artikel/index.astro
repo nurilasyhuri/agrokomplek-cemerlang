@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/common/Breadcrumb.astro';
+import { getCollection } from 'astro:content';
+
+const articles = await getCollection('artikel');
+const sortedArticles = articles.sort(
+  (a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
+);
+---
+
+<BaseLayout
+  title="Artikel & Panduan Pertanian & Greenhouse - Agrokomplek Cemerlang"
+  description="Kumpulan artikel edukatif, panduan estimasi biaya greenhouse, perbandingan bahan plastik UV dan paranet, serta teknik budidaya pertanian modern."
+>
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">
+    <Breadcrumb items={[{ label: 'Artikel' }]} />
+
+    <div class="my-8 text-center max-w-3xl mx-auto space-y-3">
+      <span class="text-xs font-bold text-brand-700 uppercase tracking-wider bg-brand-50 px-3 py-1 rounded-full">
+        Edukasi & Panduan Praktisi
+      </span>
+      <h1 class="text-3xl sm:text-4xl font-black text-steel-900 tracking-tight">
+        Panduan Pertanian & Konstruksi Greenhouse
+      </h1>
+      <p class="text-base text-steel-600 leading-relaxed">
+        Artikel teknis berbasis pengalaman lapangan untuk membantu Anda mengambil keputusan yang tepat terkait pemilihan sarana produksi dan pembangunan fasilitas budidaya.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 my-10">
+      {sortedArticles.map((art) => (
+        <a
+          href={`/artikel/${art.slug}/`}
+          class="group rounded-2xl bg-white border border-steel-200 overflow-hidden shadow-soft hover:shadow-card transition-all flex flex-col justify-between"
+        >
+          <div>
+            <div class="aspect-video bg-steel-100 relative overflow-hidden">
+              <img
+                src={art.data.heroImage}
+                alt={art.data.title}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                loading="lazy"
+                onerror="this.setAttribute('src', 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=600&q=80')"
+              />
+              <div class="absolute top-3 left-3 bg-brand-900/90 backdrop-blur-md text-white px-2.5 py-1 rounded-md text-[10px] font-bold">
+                {art.data.category}
+              </div>
+            </div>
+
+            <div class="p-5 space-y-2.5">
+              <span class="text-[11px] text-steel-400 block font-medium">
+                {art.data.publishDate}
+              </span>
+              <h3 class="font-bold text-steel-900 text-base leading-snug group-hover:text-brand-700 transition-colors">
+                {art.data.title}
+              </h3>
+              <p class="text-xs text-steel-600 line-clamp-3 leading-relaxed">
+                {art.data.description}
+              </p>
+            </div>
+          </div>
+
+          <div class="px-5 py-3.5 bg-steel-50 border-t border-steel-100 flex items-center justify-between text-xs font-semibold text-brand-700">
+            <span>Baca Selengkapnya</span>
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+            </svg>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>

@@ -1,0 +1,14 @@
+# Build & Dependencies
+node_modules/
+dist/
+.astro/
+.wrangler/
+
+# Environment & Secrets
+.env
+.env.*
+!.env.example
+
+# OS files
+.DS_Store
+Thumbs.db

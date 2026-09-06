@@ -1,0 +1,234 @@
+---
+import { BUSINESS_INFO } from '../../data/businessInfo';
+import { MAIN_NAVIGATION, SECONDARY_NAVIGATION } from '../../data/navigation';
+import { generateGeneralInquiryUrl } from '../../utils/whatsapp';
+
+const currentPath = Astro.url.pathname;
+const waInquiryUrl = generateGeneralInquiryUrl('header-cta');
+---
+
+<header class="w-full">
+  <!-- Top Utility Information Strip -->
+  <div class="bg-surface-subtle border-b border-surface-border text-xs text-ink-muted px-4 py-1.5 hidden md:block">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="flex items-center gap-4">
+        <span class="font-medium text-ink-secondary">
+          Toko Fisik & Gudang: <span class="text-ink-primary font-semibold">Jl. KH. Malik Dalam, Kedungkandang, Kota Malang</span>
+        </span>
+      </div>
+      <div class="flex items-center gap-5">
+        <span>Senin - Sabtu: 08.00 - 17.00 WIB</span>
+        <span class="text-surface-border-dark">|</span>
+        <a
+          href={waInquiryUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="font-semibold text-agri-700 hover:text-agri-800 flex items-center gap-1.5"
+        >
+          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
+          </svg>
+          <span>WA: {BUSINESS_INFO.contact.phone}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Bar -->
+  <div class="sticky top-0 z-30 bg-surface-card border-b border-surface-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        
+        <!-- Brand Wordmark -->
+        <a href="/" class="flex flex-col select-none group py-0.5">
+          <span class="text-base sm:text-lg font-bold tracking-tight text-ink-primary group-hover:text-agri-700 transition-colors leading-tight">
+            Agrokomplek Cemerlang
+          </span>
+          <span class="text-[10px] font-medium text-ink-muted tracking-wider uppercase leading-none mt-0.5">
+            Greenhouse &amp; Saprodi Pertanian
+          </span>
+        </a>
+
+        <!-- Desktop Navigation Links (Focused 4 Core Items) -->
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-ink-secondary">
+          {MAIN_NAVIGATION.map((item) => {
+            const isActive = currentPath.startsWith(item.href);
+            return (
+              <a
+                href={item.href}
+                class:list={[
+                  'py-2 border-b-2 transition-colors',
+                  isActive
+                    ? 'border-agri-700 text-agri-700 font-bold'
+                    : 'border-transparent hover:text-ink-primary hover:border-surface-border',
+                ]}
+              >
+                {item.label}
+              </a>
+            );
+          })}
+        </nav>
+
+        <!-- Right CTA & Mobile Toggle -->
+        <div class="flex items-center gap-3">
+          <a
+            href={waInquiryUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-md bg-agri-700 hover:bg-agri-800 text-white font-bold text-xs uppercase tracking-wider transition-colors select-none"
+          >
+            <svg class="w-4 h-4 text-emerald-300" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
+            </svg>
+            <span>Konsultasi WhatsApp</span>
+          </a>
+
+          <!-- Mobile Menu Button (Min 44px) -->
+          <button
+            id="mobile-menu-btn"
+            type="button"
+            aria-label="Buka Menu"
+            class="lg:hidden w-11 h-11 flex items-center justify-center rounded-md border border-surface-border text-ink-primary hover:bg-surface-subtle active:bg-surface-border transition-colors select-none"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer Scrim / Backdrop -->
+  <div
+    id="mobile-drawer-backdrop"
+    class="fixed inset-0 bg-ink-primary/50 z-40 transition-opacity duration-200 opacity-0 pointer-events-none lg:hidden"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Mobile Drawer Panel -->
+  <aside
+    id="mobile-drawer"
+    class="hidden fixed inset-y-0 right-0 w-80 max-w-[85vw] bg-surface-card z-50 border-l border-surface-border flex flex-col justify-between lg:hidden"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Menu Navigasi Mobile"
+  >
+    <!-- Drawer Top -->
+    <div>
+      <div class="p-4 border-b border-surface-border flex items-center justify-between bg-surface-subtle">
+        <div class="flex flex-col">
+          <span class="font-bold text-sm text-ink-primary tracking-tight">Agrokomplek Cemerlang</span>
+          <span class="text-[10px] font-medium text-ink-muted uppercase">Greenhouse &amp; Saprodi &bull; Malang</span>
+        </div>
+        <button
+          id="mobile-drawer-close"
+          type="button"
+          aria-label="Tutup Menu"
+          class="w-10 h-10 flex items-center justify-center rounded-md border border-surface-border text-ink-primary hover:bg-surface-card transition-colors select-none"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Primary Navigation Links -->
+      <nav class="p-4 space-y-1">
+        <span class="text-[10px] font-bold uppercase tracking-wider text-ink-muted px-3 block mb-2">Menu Utama</span>
+        {MAIN_NAVIGATION.map((item) => {
+          const isActive = currentPath.startsWith(item.href);
+          return (
+            <a
+              href={item.href}
+              class:list={[
+                'flex items-center justify-between px-3 py-3 rounded-md text-sm font-bold transition-colors',
+                isActive
+                  ? 'bg-agri-50 text-agri-700'
+                  : 'text-ink-primary hover:bg-surface-subtle',
+              ]}
+            >
+              <span>{item.label}</span>
+              <svg class="w-4 h-4 text-surface-border-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          );
+        })}
+
+        <!-- Secondary Navigation Links -->
+        <div class="pt-4 mt-4 border-t border-surface-border space-y-1">
+          <span class="text-[10px] font-bold uppercase tracking-wider text-ink-muted px-3 block mb-1">Informasi Lain</span>
+          {SECONDARY_NAVIGATION.map((item) => {
+            const isActive = currentPath.startsWith(item.href);
+            return (
+              <a
+                href={item.href}
+                class:list={[
+                  'flex items-center justify-between px-3 py-2 text-xs font-semibold transition-colors',
+                  isActive
+                    ? 'text-agri-700 font-bold'
+                    : 'text-ink-secondary hover:text-ink-primary',
+                ]}
+              >
+                <span>{item.label}</span>
+              </a>
+            );
+          })}
+        </div>
+      </nav>
+    </div>
+
+    <!-- Drawer Bottom Contact -->
+    <div class="p-4 border-t border-surface-border bg-surface-subtle space-y-3">
+      <div class="text-xs text-ink-muted leading-relaxed">
+        <p class="font-semibold text-ink-primary">Gudang & Toko Malang:</p>
+        <p>Jl. KH. Malik Dalam RT 01 RW 07, Buring, Kedungkandang, Malang</p>
+      </div>
+      <a
+        href={waInquiryUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="w-full flex items-center justify-center gap-2 py-3 rounded-md bg-agri-700 hover:bg-agri-800 text-white font-bold text-xs uppercase tracking-wider transition-colors select-none"
+      >
+        <svg class="w-4 h-4 text-emerald-300" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
+        </svg>
+        <span>Hubungi WhatsApp</span>
+      </a>
+    </div>
+  </aside>
+</header>
+
+<script>
+  function initHeader() {
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const drawer = document.getElementById('mobile-drawer');
+    const backdrop = document.getElementById('mobile-drawer-backdrop');
+    const closeBtn = document.getElementById('mobile-drawer-close');
+
+    function openDrawer() {
+      if (!drawer || !backdrop) return;
+      drawer.classList.remove('hidden');
+      backdrop.classList.remove('opacity-0', 'pointer-events-none');
+      backdrop.classList.add('opacity-100', 'pointer-events-auto');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeDrawer() {
+      if (!drawer || !backdrop) return;
+      drawer.classList.add('hidden');
+      backdrop.classList.add('opacity-0', 'pointer-events-none');
+      backdrop.classList.remove('opacity-100', 'pointer-events-auto');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    menuBtn?.addEventListener('click', openDrawer);
+    closeBtn?.addEventListener('click', closeDrawer);
+    backdrop?.addEventListener('click', closeDrawer);
+  }
+
+  initHeader();
+  document.addEventListener('astro:page-load', initHeader);
+</script>

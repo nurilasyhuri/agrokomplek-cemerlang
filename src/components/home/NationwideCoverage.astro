@@ -1,0 +1,89 @@
+---
+import { BUSINESS_INFO } from '../../data/businessInfo';
+---
+
+<section class="py-12 lg:py-20 bg-surface-canvas border-b border-surface-border">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      
+      <!-- Left Column: Logistics Info (7 cols) -->
+      <div class="lg:col-span-7 space-y-6">
+        <span class="text-xs font-bold uppercase tracking-wider text-agri-700">Jangkauan Logistik & Perakitan</span>
+        
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-ink-primary leading-tight">
+          Melayani Pengiriman Material & Perakitan Lapangan Seluruh Indonesia
+        </h2>
+
+        <p class="text-sm sm:text-base text-ink-secondary leading-relaxed">
+          Gudang utama kami berada di Kedungkandang, Kota Malang. Untuk memenuhi kebutuhan petani dan kontraktor di luar Jawa Timur, kami mengoperasikan dua mekanisme layanan: pengiriman kargo material ekonomis dan pemberangkatan tim teknisi perakitan ke lokasi proyek.
+        </p>
+
+        <!-- 2 Workflows -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+          <div class="border border-surface-border bg-surface-card p-4 rounded-md">
+            <span class="text-xs font-bold uppercase tracking-wider text-agri-700 block mb-1">01. Pengiriman Material</span>
+            <p class="text-xs text-ink-muted leading-relaxed">
+              Plastik UV rol, paranet bal, mulsa, dan spring clip dikirim via Indah Logistik, Baraka Sarana Tama, KIB Cepat, atau truk balen untuk ongkir paling terjangkau.
+            </p>
+          </div>
+
+          <div class="border border-surface-border bg-surface-card p-4 rounded-md">
+            <span class="text-xs font-bold uppercase tracking-wider text-agri-700 block mb-1">02. Tim Instalasi Proyek</span>
+            <p class="text-xs text-ink-muted leading-relaxed">
+              Tim tukang spesialis greenhouse siap diterjunkan ke lokasi Anda di Jawa, Sumatera, Kalimantan, Sulawesi, hingga kawasan timur Indonesia.
+            </p>
+          </div>
+        </div>
+
+        <!-- Action Links -->
+        <div class="pt-2 flex flex-wrap gap-4">
+          <a
+            href="/wilayah-layanan/"
+            class="px-5 py-2.5 rounded-md bg-agri-700 hover:bg-agri-800 text-white font-bold text-xs uppercase tracking-wider transition-colors select-none"
+          >
+            Pelajari Prosedur Luar Kota &rarr;
+          </a>
+          <a
+            href={`https://wa.me/6285183002070?text=${encodeURIComponent('Halo Agrokomplek Cemerlang, saya ingin cek ongkir material / layanan perakitan untuk lokasi proyek saya.')}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-5 py-2.5 rounded-md border border-surface-border bg-surface-card hover:bg-surface-subtle text-ink-primary font-bold text-xs uppercase tracking-wider transition-colors select-none"
+          >
+            Cek Ongkir via WA
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Verification Data Box (5 cols) -->
+      <div class="lg:col-span-5">
+        <div class="border border-surface-border bg-surface-card p-6 rounded-lg space-y-4">
+          <h3 class="text-sm font-bold text-ink-primary uppercase tracking-wider border-b border-surface-border pb-3">
+            Standar Pengemasan & Pengiriman
+          </h3>
+
+          <div class="space-y-3 text-xs text-ink-secondary">
+            <div class="flex items-start gap-3">
+              <span class="font-bold text-agri-700 shrink-0">1.</span>
+              <p><strong class="text-ink-primary">Packing Karung & Plastik Tebal:</strong> Setiap rol plastik UV dan paranet dibungkus rapat ganda untuk mencegah sobekan selama transit di pelabuhan dan kargo.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="font-bold text-agri-700 shrink-0">2.</span>
+              <p><strong class="text-ink-primary">Resi & Tracking Transparan:</strong> Pelanggan menerima nomor resi resmi kargo langsung setelah serah terima barang di gudang ekspedisi.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="font-bold text-agri-700 shrink-0">3.</span>
+              <p><strong class="text-ink-primary">Konsultasi Panduan Pasang:</strong> Untuk pelanggan yang memasang sendiri, teknisi kami siap memandu via video call WhatsApp jika ada kendala perakitan.</p>
+            </div>
+          </div>
+
+          <div class="border-t border-surface-border pt-4 text-xs text-ink-muted">
+            <p><strong>Alamat Gudang:</strong> {BUSINESS_INFO.address.street}, {BUSINESS_INFO.address.city}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

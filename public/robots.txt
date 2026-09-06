@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://agrokomplekcemerlang.com/sitemap-index.xml

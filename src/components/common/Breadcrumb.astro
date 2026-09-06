@@ -1,0 +1,42 @@
+---
+export interface Props {
+  items: { label: string; href?: string }[];
+}
+
+const { items } = Astro.props;
+---
+
+<nav aria-label="Breadcrumb" class="py-2.5 px-4 sm:px-0">
+  <ol class="flex flex-wrap items-center gap-1.5 text-xs text-ink-muted font-medium">
+    <!-- Home Icon (Clean, without text) -->
+    <li>
+      <a
+        href="/"
+        aria-label="Beranda"
+        class="text-ink-muted hover:text-agri-700 transition-colors flex items-center p-0.5 rounded-sm"
+      >
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+      </a>
+    </li>
+
+    {items.map((item, index) => (
+      <li class="flex items-center gap-1.5">
+        <svg class="w-3.5 h-3.5 text-surface-border-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+        </svg>
+        {item.href && index !== items.length - 1 ? (
+          <a href={item.href} class="hover:text-agri-700 transition-colors">
+            {item.label}
+          </a>
+        ) : (
+          <span class="text-ink-primary font-bold" aria-current="page">
+            {item.label}
+          </span>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>

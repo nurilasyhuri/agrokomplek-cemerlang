@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg-canvas: #f7f6f2;
+    --color-bg-card: #ffffff;
+    --color-bg-subtle: #efece4;
+    --color-border: #dcd9d0;
+    --color-ink-primary: #111713;
+    --color-ink-secondary: #364239;
+    --color-ink-muted: #637066;
+    --color-agri-700: #165334;
+    --color-agri-800: #0f3c25;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: var(--color-bg-canvas);
+    color: var(--color-ink-primary);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    background-color: var(--color-bg-canvas);
+    color: var(--color-ink-primary);
+  }
+
+  /* Prevent iOS Safari auto-zoom on form inputs */
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+  @media (min-width: 640px) {
+    input, select, textarea {
+      font-size: 0.875rem !important;
+    }
+  }
+
+  /* Clean solid selection */
+  ::selection {
+    background-color: #b1d2b8;
+    color: #0a2919;
+  }
+}
+
+@layer utilities {
+  .safe-area-pb {
+    padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
+  }
+  
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}

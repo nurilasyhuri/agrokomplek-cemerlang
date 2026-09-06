@@ -1,0 +1,38 @@
+export const BUSINESS_INFO = {
+  name: 'Agrokomplek Cemerlang',
+  legalName: 'Agrokomplek Cemerlang Malang',
+  tagline: 'Tumbuhkan Lebih Baik. Bangun Lebih Terarah.',
+  positioning: 'Pusat Kebutuhan Pertanian dan Jasa Pembuatan Greenhouse Seluruh Indonesia',
+  address: {
+    street: 'Jl. KH. Malik Dalam RT 01 RW 07',
+    village: 'Buring',
+    district: 'Kedungkandang',
+    city: 'Kota Malang',
+    province: 'Jawa Timur',
+    postalCode: '65136',
+    country: 'ID',
+    fullFormatted: 'Jl. KH. Malik Dalam RT 01 RW 07, Buring, Kedungkandang, Kota Malang, Jawa Timur 65136',
+  },
+  contact: {
+    phone: '0851-8300-2070',
+    phoneInternational: '+62 851-8300-2070',
+    whatsappRaw: '6285183002070',
+    email: 'agrokomplekcemerlang@gmail.com',
+  },
+  geo: {
+    latitude: -7.9984,
+    longitude: 112.6456,
+    mapsUrl: 'https://share.google/RkGZAeLgftgFwjqRo',
+    mapsEmbedIframe: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.0!2d112.6456!3d-7.9984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNTknNTQuMiJTIDExMsKwMzgnNDQuMiJF!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid',
+  },
+  hours: {
+    display: 'Buka Setiap Hari (Online Konsultasi 24 Jam)',
+    physicalStore: 'Senin - Minggu: 07.30 - 17.00 WIB',
+  },
+  greenhouseTypes: [
+    { id: 'bambu', name: 'Greenhouse Bambu', durability: '3 - 5 Tahun', costTier: 'Ekonomis', suitableFor: 'Sayuran daun, pembibitan, hidroponik pemula' },
+    { id: 'galvanis', name: 'Greenhouse Galvanis', durability: '10 - 15+ Tahun', costTier: 'Standar Industri', suitableFor: 'Melon hidroponik, hortikultura intensif, komersial' },
+    { id: 'baja-ringan', name: 'Greenhouse Baja Ringan', durability: '7 - 10 Tahun', costTier: 'Menengah', suitableFor: 'Tanaman buah, persemaian modern, instalasi cepat' },
+    { id: 'tunnel-garam', name: 'Tunnel Garam (Prisma Garam)', durability: '5 - 10 Tahun', costTier: 'Spesialis Pesisir', suitableFor: 'Kristalisasi garam meja tahan hujan & bersih' },
+  ],
+};

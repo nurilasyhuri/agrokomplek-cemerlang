@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/common/Breadcrumb.astro';
+import ProductFilter from '../../components/products/ProductFilter';
+import { getCollection } from 'astro:content';
+
+const products = await getCollection('produk');
+const mappedProducts = products.map((p) => ({
+  title: p.data.title,
+  description: p.data.description,
+  category: p.data.category,
+  priceDisplay: p.data.priceDisplay,
+  stockStatus: p.data.stockStatus,
+  thumbnail: p.data.thumbnail,
+  slug: p.slug,
+}));
+---
+
+<BaseLayout
+  title="Katalog Saprodi, Perlengkapan Pertanian & Greenhouse"
+  description="Katalog lengkap saprodi pertanian, alat pertanian, mulsa, sprayer, dan perlengkapan greenhouse di Agrokomplek Cemerlang Malang. Cek ketersediaan via WhatsApp."
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-20">
+    <Breadcrumb items={[{ label: 'Katalog Produk' }]} />
+
+    <div class="my-8 text-center max-w-3xl mx-auto">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-steel-900 tracking-tight mb-3">
+        Katalog Produk Pertanian & Greenhouse
+      </h1>
+      <p class="text-base text-steel-600">
+        Temukan berbagai kebutuhan budidaya mulai dari benih, pupuk, media tanam, peralatan semprot, hingga plastik UV dan komponen greenhouse terlengkap.
+      </p>
+    </div>
+
+    <!-- Interactive Filter & Search Island -->
+    <ProductFilter client:load products={mappedProducts} />
+  </div>
+</BaseLayout>

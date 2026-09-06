@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/common/Breadcrumb.astro';
+---
+
+<BaseLayout
+  title="Tentang Agrokomplek Cemerlang - Profil & Filosofi Bisnis"
+  description="Mengenal Agrokomplek Cemerlang: Pusat penyedia sarana produksi pertanian dan kontraktor pembuatan greenhouse yang berbasis di Malang, Jawa Timur."
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">
+    <Breadcrumb items={[{ label: 'Tentang Kami' }]} />
+
+    <div class="my-8 space-y-4">
+      <span class="text-xs font-bold text-brand-700 uppercase tracking-wider bg-brand-50 px-3 py-1 rounded-full">
+        Profil Bisnis
+      </span>
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-steel-900 tracking-tight">
+        Mendukung Pertanian dari Kebutuhan Dasar hingga Infrastruktur Modern
+      </h1>
+    </div>
+
+    <div class="prose prose-emerald max-w-none text-steel-700 space-y-6 leading-relaxed">
+      <p class="text-base sm:text-lg">
+        Pertanian yang berkembang dan menguntungkan berawal dari perencanaan yang matang: penggunaan sarana produksi (saprodi) yang tepat, perlengkapan budidaya yang efisien, serta infrastruktur greenhouse yang kokoh dan disesuaikan dengan kondisi iklim setempat.
+      </p>
+
+      <p>
+        <strong>Agrokomplek Cemerlang</strong> hadir di Buring, Kedungkandang, Kota Malang, Jawa Timur sebagai mitra strategis bagi petani perorangan, kelompok tani, pengusaha agribisnis hortikultura, hingga pengelola tambak garam modern di seluruh penjuru Indonesia.
+      </p>
+
+      <div class="my-8 p-6 rounded-2xl bg-brand-50 border border-brand-200">
+        <h3 class="text-lg font-bold text-brand-900 mb-2">Tagline & Prinsip Kami</h3>
+        <p class="text-base font-semibold text-brand-800 italic mb-2">
+          "Tumbuhkan Lebih Baik. Bangun Lebih Terarah."
+        </p>
+        <p class="text-xs text-brand-900">
+          Kami menolak pendekatan *overselling* atau memaksakan spesifikasi mahal yang tidak relevan. Rekomendasi produk dan desain greenhouse kami selalu diselaraskan dengan jenis komoditas, anggaran modal, dan daya dukung lahan Anda.
+        </p>
+      </div>
+
+      <h2 class="text-2xl font-bold text-steel-900">Dua Pilar Utama Layanan Kami:</h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 not-prose">
+        <div class="p-6 rounded-2xl bg-white border border-steel-200 shadow-soft">
+          <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-800 flex items-center justify-center font-bold mb-3">
+            🌾
+          </div>
+          <h4 class="font-bold text-steel-900 text-base mb-1.5">1. Penjualan Saprodi & Alat</h4>
+          <p class="text-xs text-steel-600 leading-relaxed">
+            Menyediakan pupuk, pestisida terdaftar, media tanam, mulsa plastik, sprayer, selang irigasi drip, dan aneka aksesoris budidaya dengan stok terjamin.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white border border-steel-200 shadow-soft">
+          <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-800 flex items-center justify-center font-bold mb-3">
+            🏗️
+          </div>
+          <h4 class="font-bold text-steel-900 text-base mb-1.5">2. Kontraktor Greenhouse</h4>
+          <p class="text-xs text-steel-600 leading-relaxed">
+            Layanan konstruksi greenhouse profesional (Bambu, Galvanis, Baja Ringan, dan Tunnel Garam) mencakup desain, pengadaan material, survei lahan, dan perakitan tuntas nasional.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

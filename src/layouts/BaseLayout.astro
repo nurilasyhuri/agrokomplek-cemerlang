@@ -1,0 +1,40 @@
+---
+import SeoHead from '../components/common/SeoHead.astro';
+import Header from '../components/common/Header.astro';
+import Footer from '../components/common/Footer.astro';
+import MobileStickyBar from '../components/common/MobileStickyBar.astro';
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  image?: string;
+  type?: 'website' | 'article' | 'product';
+  jsonLd?: Record<string, any> | Array<Record<string, any>>;
+}
+
+const { title, description, canonical, image, type, jsonLd } = Astro.props;
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <SeoHead
+      title={title}
+      description={description}
+      canonical={canonical}
+      image={image}
+      type={type}
+      jsonLd={jsonLd}
+    />
+  </head>
+  <body class="bg-surface-canvas text-ink-primary antialiased selection:bg-agri-100 selection:text-agri-900">
+    <Header />
+    <main class="flex-1 pb-20 lg:pb-0">
+      <slot />
+    </main>
+    <Footer />
+    <MobileStickyBar />
+  </body>
+</html>

@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumb from '../../components/common/Breadcrumb.astro';
+import EstimationCalculator from '../../components/greenhouse/EstimationCalculator';
+import { getGreenhouseServiceSchema, getBreadcrumbSchema } from '../../utils/seo';
+import { generateGeneralInquiryUrl } from '../../utils/whatsapp';
+
+const waConsultUrl = generateGeneralInquiryUrl('greenhouse-landing-primary');
+const serviceSchema = getGreenhouseServiceSchema();
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Beranda', url: 'https://agrokomplekcemerlang.com/' },
+  { name: 'Jasa Pembuatan Greenhouse', url: 'https://agrokomplekcemerlang.com/jasa/pembuatan-greenhouse/' },
+]);
+---
+
+<BaseLayout
+  title="Jasa Pembuatan Greenhouse Indonesia: Bambu, Galvanis, Baja Ringan & Garam | Agrokomplek Cemerlang"
+  description="Kontraktor pembuatan greenhouse terpercaya di Malang, melayani rancang bangun struktur galvanis, bambu presisi, baja ringan, dan tunnel garam ke seluruh Indonesia dengan perhitungan teknik iklim tropis."
+  jsonLd={[serviceSchema, breadcrumbSchema]}
+>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-20 space-y-12">
+    
+    <!-- Breadcrumb -->
+    <Breadcrumb items={[{ label: 'Jasa Pembuatan Greenhouse' }]} />
+
+    <!-- Page Header Hero -->
+    <div class="border-b border-surface-border pb-10">
+      <span class="text-xs font-bold uppercase tracking-wider text-agri-700">Fabrikasi & Konstruksi Pertanian</span>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-ink-primary mt-1.5 leading-[1.15] max-w-4xl">
+        Jasa Pembuatan Greenhouse: Konstruksi Presisi untuk Pertanian Tropis Terproteksi
+      </h1>
+      <p class="text-base sm:text-lg text-ink-secondary mt-4 leading-relaxed max-w-3xl">
+        Dari riset varietas hortikultura hobi hingga kebun komersial melon dan sayuran bernilai tinggi. Agrokomplek Cemerlang menyediakan jasa rancang bangun lengkap: perhitungan beban angin, ventilasi sirkulasi udara mikro, suplai material berspesifikasi jelas, dan perakitan lapangan di seluruh Indonesia.
+      </p>
+
+      <div class="flex flex-wrap gap-3 pt-6">
+        <a
+          href="#kalkulator"
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-agri-700 hover:bg-agri-800 text-white font-bold text-xs uppercase tracking-wider transition-colors select-none"
+        >
+          <span>Hitung Estimasi Anggaran Lahan</span>
+          <span aria-hidden="true">&darr;</span>
+        </a>
+
+        <a
+          href={waConsultUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-surface-border bg-surface-card hover:bg-surface-subtle text-ink-primary font-bold text-xs uppercase tracking-wider transition-colors select-none"
+        >
+          <svg class="w-4 h-4 text-emerald-600" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
+          </svg>
+          <span>Diskusi dengan Teknisi WA</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 4 Core Engineering Principles -->
+    <div class="space-y-6">
+      <div class="border-b border-surface-border pb-3">
+        <span class="text-xs font-bold uppercase tracking-wider text-agri-700">Pendekatan Rekayasa</span>
+        <h2 class="text-xl sm:text-2xl font-extrabold text-ink-primary mt-0.5">
+          Mengapa Desain Greenhouse Membutuhkan Perhitungan Teknis
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="border border-surface-border bg-surface-card p-5 rounded-lg space-y-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-agri-700 block">01. Efek Termal</span>
+          <h3 class="font-bold text-ink-primary text-sm">Ventilasi Chimney Tropis</h3>
+          <p class="text-xs text-ink-muted leading-relaxed">
+            Menghindari jebakan hawa panas terperangkap dengan desain bukaan atap (monitor roof) sehingga udara panas naik dan keluar alami.
+          </p>
+        </div>
+
+        <div class="border border-surface-border bg-surface-card p-5 rounded-lg space-y-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-agri-700 block">02. Manajemen Embun</span>
+          <h3 class="font-bold text-ink-primary text-sm">Kemiringan Atap & Anti-Drip</h3>
+          <p class="text-xs text-ink-muted leading-relaxed">
+            Mencegah tetesan air embun jatuh langsung ke daun tanaman yang menjadi pemicu utama serangan jamur dan busuk pucuk.
+          </p>
+        </div>
+
+        <div class="border border-surface-border bg-surface-card p-5 rounded-lg space-y-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-agri-700 block">03. Beban Struktural</span>
+          <h3 class="font-bold text-ink-primary text-sm">Daya Tahan Terpaan Angin</h3>
+          <p class="text-xs text-ink-muted leading-relaxed">
+            Perhitungan jarak gording, kedalaman pondasi cor strouss, dan ketahanan terhadap beban gantungan buah melon serta instalasi hidroponik.
+          </p>
+        </div>
+
+        <div class="border border-surface-border bg-surface-card p-5 rounded-lg space-y-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-agri-700 block">04. Difusi Cahaya</span>
+          <h3 class="font-bold text-ink-primary text-sm">PAR & Ketahanan UV</h3>
+          <p class="text-xs text-ink-muted leading-relaxed">
+            Penggunaan plastik UV impor dengan aditif EVA dan anti-dust agar radiasi fotosintesis maksimal tanpa membakar tajuk tanaman.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Calculator Anchor -->
+    <div id="kalkulator" class="pt-6">
+      <EstimationCalculator client:load />
+    </div>
+
+    <!-- 4-Step Transparent Workflow -->
+    <div class="border-t border-surface-border pt-12 space-y-6">
+      <div>
+        <span class="text-xs font-bold uppercase tracking-wider text-agri-700">Alur Kerja Sama</span>
+        <h2 class="text-xl sm:text-2xl font-extrabold text-ink-primary mt-0.5">
+          Prosedur Dari Konsultasi Awal Hingga Serah Terima Kunci
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="border border-surface-border bg-surface-card p-5 rounded-lg space-y-2">
+          <span class="text-xs font-bold text-agri-700">Langkah 01</span>
+          <h3 class="font-bold text-ink-primary text-sm">Konsultasi Kebutuhan & RAB</h3>
+          <p class="text-xs text-ink-muted leading-relaxed">
+            Diskusikan jenis tanaman, ukuran lahan, target waktu, dan budget. Kami susunkan rincian spesifikasi material dan perkiraan anggaran transparan.
+          </p>
+        </div>
+
+        <div class="border border-surface-border bg-surface-card p-5 rounded-lg space-y-2">
+          <span class="text-xs font-bold text-agri-700">Langkah 02</span>
+          <h3 class="font-bold text-ink-primary text-sm">Survei Lahan & Desain Kerja</h3>
+          <p class="text-xs text-ink-muted leading-relaxed">
+            Tim teknisi memeriksa kondisi kontur tanah, arah mata angin, serta ketersediaan sumber air dan listrik di lokasi proyek Anda.
+          </p>
+        </div>
+
+        <div class="border border-surface-border bg-surface-card p-5 rounded-lg space-y-2">
+          <span class="text-xs font-bold text-agri-700">Langkah 03</span>
+          <h3 class="font-bold text-ink-primary text-sm">Fabrikasi & Pengiriman</h3>
+          <p class="text-xs text-ink-muted leading-relaxed">
+            Material pipa, plastik UV, dan aksesoris dipersiapkan dan diuji di workshop Malang, kemudian dikirim via ekspedisi terpercaya ke lokasi.
+          </p>
+        </div>
+
+        <div class="border border-surface-border bg-surface-card p-5 rounded-lg space-y-2">
+          <span class="text-xs font-bold text-agri-700">Langkah 04</span>
+          <h3 class="font-bold text-ink-primary text-sm">Perakitan & Serah Terima</h3>
+          <p class="text-xs text-ink-muted leading-relaxed">
+            Tim aplikator lapangan merakit struktur hingga tuntas, memasang plastik UV dan insectnet, serta uji kebocoran sebelum serah terima.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</BaseLayout>

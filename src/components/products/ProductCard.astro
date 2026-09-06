@@ -1,0 +1,78 @@
+---
+export interface Props {
+  product: {
+    title: string;
+    description: string;
+    category: string;
+    priceDisplay?: string;
+    stockStatus: string;
+    thumbnail: string;
+    slug: string;
+    brand?: string;
+  };
+}
+
+const { product } = Astro.props;
+
+const waUrl = `https://wa.me/6285183002070?text=${encodeURIComponent(
+  `Halo Agrokomplek Cemerlang, saya ingin cek stok & harga produk: ${product.title} (Ref: ${product.slug})`
+)}`;
+---
+
+<div class="border border-surface-border bg-surface-card rounded-lg overflow-hidden flex flex-col justify-between hover:border-agri-700 transition-colors">
+  <div>
+    <!-- Thumbnail Image -->
+    <a href={`/produk/${product.slug}/`} class="block aspect-square bg-surface-subtle overflow-hidden border-b border-surface-border relative">
+      <img
+        src={product.thumbnail}
+        alt={product.title}
+        class="w-full h-full object-cover"
+        loading="lazy"
+        onerror="this.setAttribute('src', 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=600&q=80')"
+      />
+      
+      <!-- Stock Status -->
+      <div class="absolute top-2.5 left-2.5">
+        <span class="inline-block px-2 py-0.5 rounded-sm text-[10px] font-bold uppercase tracking-wider bg-surface-card text-ink-primary border border-surface-border">
+          {product.stockStatus === 'ready'
+            ? 'Ready Stok'
+            : product.stockStatus === 'po'
+            ? 'Pre-Order'
+            : 'Cek Stok'}
+        </span>
+      </div>
+    </a>
+
+    <!-- Details -->
+    <div class="p-4 space-y-2">
+      <h3 class="font-bold text-ink-primary text-sm leading-snug line-clamp-2">
+        <a href={`/produk/${product.slug}/`} class="hover:text-agri-700 transition-colors">
+          {product.title}
+        </a>
+      </h3>
+
+      <p class="text-xs text-ink-muted line-clamp-2 leading-relaxed">
+        {product.description}
+      </p>
+    </div>
+  </div>
+
+  <!-- Bottom Price & CTA -->
+  <div class="p-4 pt-0 border-t border-surface-border mt-3 flex items-center justify-between gap-2 pt-3">
+    <div>
+      <span class="text-[10px] font-semibold text-ink-muted block uppercase">Status Harga</span>
+      <span class="text-xs font-bold text-ink-primary">
+        {product.priceDisplay || 'Hubungi Toko'}
+      </span>
+    </div>
+
+    <a
+      href={waUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-agri-700 hover:bg-agri-800 text-white text-xs font-bold transition-colors select-none"
+    >
+      <span>Tanya WA</span>
+    </a>
+  </div>
+</div>
