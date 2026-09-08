@@ -1,12 +1,11 @@
 ---
-title: 'Insect Net 50 Mesh Kasa Hijau / Putih Greenhouse'
-description: 'Kasa pelindung tanaman (insect screen) 50 mesh dengan lubang micro-barrier. Melindungi tanaman greenhouse dari kutu kebul, thrips, ulat, dan serangga vektor virus tanpa menghambat sirkulasi udara.'
+title: 'Insect Net 50 Mesh — Kasa Hijau / Putih'
+description: 'Kasa pelindung tanaman dengan 50 mesh yang membantu mengurangi masuknya kutu kebul, thrips, ulat, dan berbagai serangga pengganggu. Dirancang untuk tetap memberikan sirkulasi udara sambil membantu menciptakan lingkungan budidaya yang lebih terlindungi.'
 category: 'perlengkapan-greenhouse'
-priceDisplay: 'Mulai Rp 9.500 / Meter'
 stockStatus: 'ready'
 featured: true
 thumbnail: '/images/products/insectnet-screen.webp'
-brand: 'AgroMesh Pro'
+brand: 'Standar Industri 50 Mesh'
 orderPriority: 3
 specs:
   Kerapatan Mesh: '50 Mesh (Micro Barrier)'

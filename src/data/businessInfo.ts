@@ -1,8 +1,10 @@
 export const BUSINESS_INFO = {
   name: 'Agrokomplek Cemerlang',
   legalName: 'Agrokomplek Cemerlang Malang',
-  tagline: 'Tumbuhkan Lebih Baik. Bangun Lebih Terarah.',
-  positioning: 'Pusat Kebutuhan Pertanian dan Jasa Pembuatan Greenhouse Seluruh Indonesia',
+  tagline: 'Membangun Pertanian yang Lebih Terlindungi. Lebih Efisien. Lebih Siap Berkembang.',
+  positioning: 'Solusi Infrastruktur Budidaya dari Material hingga Instalasi',
+  brandPillars: 'PERTANIAN • PROTEKSI • IRIGASI • KONSTRUKSI',
+  description: 'Agrokomplek Cemerlang menyediakan sarana produksi pertanian, material greenhouse, perlengkapan irigasi, sistem hidroponik, serta jasa pembuatan dan instalasi greenhouse untuk mendukung petani dan pelaku agribisnis di Indonesia.',
   address: {
     street: 'Jl. KH. Malik Dalam RT 01 RW 07',
     village: 'Buring',

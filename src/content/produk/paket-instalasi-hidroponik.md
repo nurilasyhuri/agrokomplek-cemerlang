@@ -1,12 +1,11 @@
 ---
-title: 'Paket Sistem Instalasi Hidroponik NFT & DFT'
-description: 'Paket lengkap instalasi hidroponik pipa PVC food grade / gully trapesium untuk skala hobi, edukasi, maupun komersial. Dilengkapi pompa celup, tandon nutrisi, dan manifold pembagi aliran presisi.'
+title: 'Paket Instalasi Hidroponik NFT & DFT'
+description: 'Paket instalasi hidroponik untuk kebutuhan hobi, edukasi, nursery maupun skala komersial. Tersedia konfigurasi dengan pipa PVC food grade / gully, pompa, tandon nutrisi, dan manifold pembagi aliran.'
 category: 'perlengkapan-greenhouse'
-priceDisplay: 'Mulai Rp 1.500.000 / Modul'
 stockStatus: 'ready'
 featured: true
 thumbnail: '/images/products/instalasi-hidroponik.webp'
-brand: 'HydroCemerlang'
+brand: 'Agrokomplek Cemerlang'
 orderPriority: 4
 specs:
   Tipe Sistem: 'NFT (Nutrient Film Technique) & DFT'

@@ -11,7 +11,7 @@ mainMaterials:
   - 'Plastik UV 200 Micron Transparansi Tinggi'
   - 'Meja Kristalisasi Geomembrane HDPE 0.5 mm'
   - 'Ventilasi Ujung Anti-Hujan'
-coverImage: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80'
+coverImage: '/images/greenhouse/tunnel-garam-greenhouse.webp'
 featured: true
 ---
 

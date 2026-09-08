@@ -28,9 +28,12 @@ export default {
           700: '#165334',        // Official brand forest green
           800: '#0f3c25',        // Pressed / deep brand green
           900: '#0a2919',
+          950: '#061a10',
         },
         // Functional Accent (Terracotta / Earth Amber)
         ochre: {
+          50: '#fbf4ed',
+          100: '#f5e5d3',
           600: '#c26219',
           700: '#a34e0f',
           800: '#873d08',
@@ -47,11 +50,16 @@ export default {
         md: '6px',
         lg: '8px',
         xl: '12px',
+        '2xl': '16px',
+        '3xl': '20px',
+        full: '9999px',
       },
       boxShadow: {
         none: 'none',
         sm: '0 1px 2px 0 rgba(17, 23, 19, 0.05)',
         md: '0 2px 6px -1px rgba(17, 23, 19, 0.08)',
+        soft: '0 2px 8px 0 rgba(17, 23, 19, 0.06)',
+        card: '0 4px 14px -2px rgba(17, 23, 19, 0.08)',
       },
     },
   },

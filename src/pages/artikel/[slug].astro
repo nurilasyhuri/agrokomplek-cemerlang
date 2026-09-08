@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/common/Breadcrumb.astro';
-import { getBreadcrumbSchema } from '../../utils/seo';
+import { getBreadcrumbSchema, getArticleSchema } from '../../utils/seo';
 import { getCollection, type CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -24,6 +24,16 @@ const breadcrumbSchema = getBreadcrumbSchema([
   { name: 'Artikel', url: '/artikel/' },
   { name: article.data.title, url: `/artikel/${article.slug}/` },
 ]);
+
+const articleSchema = getArticleSchema({
+  title: article.data.title,
+  description: article.data.description,
+  heroImage: article.data.heroImage,
+  publishDate: article.data.publishDate,
+  updatedDate: article.data.updatedDate,
+  author: article.data.author,
+  slug: article.slug,
+});
 ---
 
 <BaseLayout
@@ -31,7 +41,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
   description={article.data.description}
   image={article.data.heroImage}
   type="article"
-  jsonLd={[breadcrumbSchema]}
+  jsonLd={[articleSchema, breadcrumbSchema]}
 >
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">
     <Breadcrumb
@@ -42,50 +52,53 @@ const breadcrumbSchema = getBreadcrumbSchema([
     />
 
     <article class="my-8">
-      <div class="space-y-4 mb-8">
-        <span class="text-xs font-bold text-brand-700 bg-brand-50 px-3 py-1 rounded-full uppercase tracking-wider">
+      <div class="space-y-3 mb-8">
+        <span class="text-xs font-bold text-agri-700 bg-agri-50 border border-agri-100 px-3 py-0.5 rounded-sm uppercase tracking-wider inline-block">
           {article.data.category}
         </span>
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-steel-900 tracking-tight leading-tight">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-ink-primary tracking-tight leading-tight">
           {article.data.title}
         </h1>
-        <div class="flex items-center gap-3 text-xs text-steel-500 pt-1">
-          <span>Ditulis oleh: <strong class="text-steel-800">{article.data.author}</strong></span>
-          <span>•</span>
+        <div class="flex items-center gap-3 text-xs text-ink-muted pt-1">
+          <span>Ditulis oleh: <strong class="text-ink-primary">{article.data.author}</strong></span>
+          <span>&bull;</span>
           <span>{article.data.publishDate}</span>
         </div>
       </div>
 
-      <!-- Hero Image -->
-      <div class="aspect-video rounded-3xl overflow-hidden bg-steel-100 border border-steel-200 shadow-soft mb-10">
-        <img
-          src={article.data.heroImage}
-          alt={article.data.title}
-          class="w-full h-full object-cover"
-          loading="eager"
-          onerror="this.setAttribute('src','https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1000&q=80')"
-        />
+      <!-- Hero Image Frame -->
+      <div class="rounded-lg overflow-hidden bg-surface-subtle border border-surface-border mb-10 p-1.5">
+        <div class="aspect-video rounded-md overflow-hidden bg-surface-canvas relative border border-surface-border">
+          <img
+            src={article.data.heroImage}
+            alt={article.data.title}
+            class="w-full h-full object-cover"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
       </div>
 
       <!-- Content -->
-      <div class="prose prose-emerald max-w-none text-steel-800 leading-relaxed">
+      <div class="prose prose-emerald max-w-none text-ink-secondary text-base leading-relaxed">
         <Content />
       </div>
 
       <!-- Bottom Author / CTA Box -->
-      <div class="mt-12 p-8 rounded-3xl bg-brand-950 text-white space-y-4 text-center sm:text-left">
+      <div class="mt-12 p-8 rounded-lg bg-agri-950 text-white border border-agri-800 space-y-4 text-center sm:text-left shadow-md">
         <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
           <div class="space-y-1">
+            <span class="text-xs font-bold uppercase tracking-wider text-ochre-100 block">Konsultasi Teknis</span>
             <h4 class="text-lg font-bold text-white">Butuh Diskusi Teknis Lebih Lanjut?</h4>
-            <p class="text-xs sm:text-sm text-emerald-200">
-              Tim Agrokomplek Cemerlang siap membantu menjawab pertanyaan spesifik seputar proyek budidaya atau greenhouse Anda.
+            <p class="text-xs sm:text-sm text-agri-100 leading-relaxed max-w-xl">
+              Tim spesialis Agrokomplek Cemerlang siap membantu menjawab pertanyaan spesifik seputar proyek budidaya atau pembangunan greenhouse Anda.
             </p>
           </div>
           <a
             href="https://wa.me/6285183002070?text=Halo%20Agrokomplek%20Cemerlang%2C%20saya%20membaca%20artikel%20dan%20ingin%20konsultasi%20lebih%20lanjut."
             target="_blank"
             rel="noopener noreferrer"
-            class="px-6 py-3 rounded-xl bg-earth-gold hover:bg-earth-gold-hover text-white font-bold text-xs shadow-soft transition-colors shrink-0"
+            class="px-6 py-3 rounded-md bg-ochre-700 hover:bg-ochre-800 text-white font-bold text-xs uppercase tracking-wider transition-colors shrink-0 select-none"
           >
             <span>Konsultasi via WA</span>
           </a>

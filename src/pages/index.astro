@@ -1,11 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroSection from '../components/home/HeroSection.astro';
-import TrustBar from '../components/home/TrustBar.astro';
 import CategoryGrid from '../components/home/CategoryGrid.astro';
 import GreenhouseServiceHighlight from '../components/home/GreenhouseServiceHighlight.astro';
 import NationwideCoverage from '../components/home/NationwideCoverage.astro';
-import LocationSnippet from '../components/home/LocationSnippet.astro';
 import ProductCard from '../components/products/ProductCard.astro';
 import { getLocalBusinessSchema } from '../utils/seo';
 import { getCollection } from 'astro:content';
@@ -13,48 +11,41 @@ import { getCollection } from 'astro:content';
 const allProducts = await getCollection('produk');
 const featuredProducts = allProducts.filter((p) => p.data.featured).slice(0, 4);
 
-const schema = getLocalBusinessSchema();
+const localSchema = getLocalBusinessSchema();
 ---
 
 <BaseLayout
-  title="Saprodi, Perlengkapan Pertanian & Jasa Greenhouse Indonesia"
-  description="Agrokomplek Cemerlang menyediakan saprodi pertanian, alat pertanian, dan kontraktor pembuatan greenhouse di Malang untuk seluruh Indonesia. Hubungi WhatsApp 0851-8300-2070."
-  jsonLd={schema}
+  title="Distributor Saprodi Pertanian &amp; Jasa Pembuatan Greenhouse"
+  description="Agrokomplek Cemerlang: distributor saprodi pertanian, material greenhouse, irigasi, dan jasa pembuatan greenhouse komersial di Malang &amp; seluruh Indonesia."
+  jsonLd={[localSchema]}
 >
   <!-- 1. Hero Section -->
   <HeroSection />
-
-  <!-- 2. Trust Bar -->
-  <TrustBar />
-
-  <!-- 3. Category Grid -->
+  <!-- 2. Category Grid -->
   <CategoryGrid />
-
   <!-- 4. Featured Products (If available) -->
   {featuredProducts.length > 0 && (
-    <section class="py-16 sm:py-20 bg-white border-b border-steel-200">
+    <section class="py-14 sm:py-20 bg-surface-card border-b border-surface-border">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mb-10">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mb-10 pb-4 border-b border-surface-border">
           <div>
-            <span class="text-xs font-bold text-brand-700 uppercase tracking-wider block mb-1">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-ink-primary tracking-tight leading-[1.15]">
               Pilihan Unggulan
-            </span>
-            <h2 class="text-2xl sm:text-3xl font-extrabold text-steel-900 tracking-tight">
-              Produk Pertanian & Greenhouse Populer
             </h2>
+            <p class="text-xl sm:text-2xl font-bold text-agri-700 tracking-tight mt-1.5">
+              Produk Pertanian &amp; Greenhouse Yang Banyak Dibutuhkan
+            </p>
           </div>
           <a
             href="/produk/"
-            class="inline-flex items-center gap-1.5 text-sm font-bold text-brand-700 hover:text-brand-800"
+            class="inline-flex items-center gap-1.5 text-xs uppercase tracking-wider font-bold text-agri-700 hover:text-agri-800 bg-surface-subtle px-3.5 py-2 rounded-md border border-surface-border"
           >
-            <span>Lihat Semua Katalog</span>
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-            </svg>
+            <span>LIHAT SEMUA KATALOG</span>
+            <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {featuredProducts.map((p) => (
             <ProductCard
               product={{
@@ -80,7 +71,5 @@ const schema = getLocalBusinessSchema();
   <!-- 6. Nationwide Logistics -->
   <NationwideCoverage />
 
-  <!-- 7. Location & Store -->
-  <LocationSnippet />
 
 </BaseLayout>

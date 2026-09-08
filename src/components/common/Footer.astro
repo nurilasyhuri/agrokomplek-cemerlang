@@ -1,6 +1,8 @@
 ---
 import { BUSINESS_INFO } from '../../data/businessInfo';
-import { FOOTER_PRODUCT_LINKS, FOOTER_SERVICE_LINKS } from '../../data/navigation';
+import { generateGeneralInquiryUrl } from '../../utils/whatsapp';
+
+const waConsultUrl = generateGeneralInquiryUrl('footer');
 ---
 
 <footer class="bg-surface-card border-t border-surface-border text-ink-secondary text-sm">
@@ -15,12 +17,13 @@ import { FOOTER_PRODUCT_LINKS, FOOTER_SERVICE_LINKS } from '../../data/navigatio
             AGROKOMPLEK CEMERLANG
           </span>
           <span class="text-xs font-semibold uppercase tracking-wider text-agri-700 block mt-0.5">
-            Pusat Saprodi Pertanian & Kontraktor Greenhouse
+            Saprodi Pertanian &bull; Greenhouse &bull; Irigasi &bull; Konstruksi
           </span>
         </div>
 
-        <p class="text-xs text-ink-muted leading-relaxed max-w-md">
-          Penyedia resmi perlengkapan greenhouse, plastik UV, paranet, mulsa, dan sistem irigasi tetes. Melayani konsultasi teknis, penjualan grosir/retail, serta jasa perakitan struktur greenhouse komersial di seluruh wilayah Indonesia.
+        <p class="text-xs text-ink-secondary leading-relaxed max-w-md">
+          <strong class="text-ink-primary">Dari kebutuhan kecil hingga proyek pertanian berskala besar.</strong><br />
+          Agrokomplek Cemerlang menyediakan sarana produksi pertanian, material greenhouse, perlengkapan irigasi, sistem hidroponik, serta jasa pembuatan dan instalasi greenhouse untuk mendukung petani dan pelaku agribisnis di Indonesia.
         </p>
 
         <!-- Structured Contact & Location Panel -->
@@ -32,9 +35,9 @@ import { FOOTER_PRODUCT_LINKS, FOOTER_SERVICE_LINKS } from '../../data/navigatio
               <circle cx="12" cy="10" r="3"/>
             </svg>
             <div class="space-y-1">
-              <span class="font-bold text-ink-primary block">Alamat Gudang & Toko Fisik:</span>
+              <span class="font-bold text-ink-primary block uppercase tracking-wider text-[11px]">Alamat Toko &amp; Gudang:</span>
               <p class="text-ink-secondary leading-relaxed">
-                Jl. KH. Malik Dalam RT 01 RW 07, Kedungkandang, Kota Malang, Jawa Timur 65136
+                Jl. KH. Malik Dalam RT 01 RW 07, Buring, Kedungkandang, Kota Malang, Jawa Timur 65136
               </p>
               <a
                 href={BUSINESS_INFO.geo.mapsUrl}
@@ -55,7 +58,7 @@ import { FOOTER_PRODUCT_LINKS, FOOTER_SERVICE_LINKS } from '../../data/navigatio
                 <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
               </svg>
               <div>
-                <span class="font-bold text-ink-primary block">WhatsApp:</span>
+                <span class="font-bold text-ink-primary block uppercase tracking-wider text-[11px]">WhatsApp 24 Jam:</span>
                 <a
                   href={`https://wa.me/${BUSINESS_INFO.contact.whatsappRaw}`}
                   target="_blank"
@@ -73,70 +76,97 @@ import { FOOTER_PRODUCT_LINKS, FOOTER_SERVICE_LINKS } from '../../data/navigatio
                 <polyline points="12 6 12 12 16 14"/>
               </svg>
               <div>
-                <span class="font-bold text-ink-primary block">Jam Buka Toko:</span>
-                <span class="text-ink-secondary">{BUSINESS_INFO.hours.physicalStore}</span>
+                <span class="font-bold text-ink-primary block uppercase tracking-wider text-[11px]">Jam Operasional:</span>
+                <span class="text-ink-secondary">SENIN &mdash; MINGGU<br />07.30 &mdash; 17.00 WIB</span>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Col 2: Katalog Produk (3 cols) -->
+      <!-- Col 2: PRODUK (3 cols) -->
       <div class="lg:col-span-3 space-y-3">
-        <h3 class="text-xs font-bold uppercase tracking-wider text-ink-primary border-b border-surface-border pb-2">
-          Katalog Produk
+        <h3 class="text-sm font-bold uppercase tracking-wider text-ink-primary border-b border-surface-border pb-2">
+          PRODUK
         </h3>
         <ul class="space-y-2 text-xs">
-          {FOOTER_PRODUCT_LINKS.map((link) => (
-            <li>
-              <a href={link.href} class="hover:text-agri-700 transition-colors">
-                {link.label}
-              </a>
-            </li>
-          ))}
-          <li>
+          <li><a href="/produk/saprodi-pertanian/" class="hover:text-agri-700 transition-colors">Saprodi Pertanian</a></li>
+          <li><a href="/produk/plastik-uv-greenhouse-14/" class="hover:text-agri-700 transition-colors">Plastik UV Greenhouse</a></li>
+          <li><a href="/produk/paranet-tanaman/" class="hover:text-agri-700 transition-colors">Paranet Tanaman</a></li>
+          <li><a href="/produk/insectnet-kasa-greenhouse/" class="hover:text-agri-700 transition-colors">Insect Net</a></li>
+          <li><a href="/produk/selang-drip-irigasi-16mm/" class="hover:text-agri-700 transition-colors">Selang Drip</a></li>
+          <li><a href="/produk/mulsa-plastik-hitam-perak/" class="hover:text-agri-700 transition-colors">Mulsa Pertanian</a></li>
+          <li><a href="/produk/paket-instalasi-hidroponik/" class="hover:text-agri-700 transition-colors">Perlengkapan Hidroponik</a></li>
+          <li class="pt-1">
             <a href="/produk/" class="text-agri-700 font-bold hover:underline">
-              Semua Produk Pertanian &rarr;
+              Semua Katalog Produk &rarr;
             </a>
           </li>
         </ul>
       </div>
 
-      <!-- Col 3: Jasa Greenhouse & Konstruksi (2 cols) -->
+      <!-- Col 3: KONSTRUKSI (2 cols) -->
       <div class="lg:col-span-2 space-y-3">
-        <h3 class="text-xs font-bold uppercase tracking-wider text-ink-primary border-b border-surface-border pb-2">
-          Jasa Konstruksi
+        <h3 class="text-sm font-bold uppercase tracking-wider text-ink-primary border-b border-surface-border pb-2">
+          KONSTRUKSI
         </h3>
         <ul class="space-y-2 text-xs">
-          {FOOTER_SERVICE_LINKS.map((link) => (
-            <li>
-              <a href={link.href} class="hover:text-agri-700 transition-colors">
-                {link.label}
-              </a>
-            </li>
-          ))}
-          <li>
-            <a href="/jasa/pembuatan-greenhouse/" class="text-agri-700 font-bold hover:underline">
-              Hitung Estimasi RAB &rarr;
+          <li><a href="/proyek/greenhouse-bambu-kedungkandang-malang/" class="hover:text-agri-700 transition-colors">Greenhouse Bambu</a></li>
+          <li><a href="/proyek/greenhouse-galvanis-batu-malang/" class="hover:text-agri-700 transition-colors">Greenhouse Galvanis</a></li>
+          <li><a href="/proyek/greenhouse-baja-ringan-malang/" class="hover:text-agri-700 transition-colors">Greenhouse Baja Ringan</a></li>
+          <li><a href="/proyek/tunnel-garam-pesisir-madura/" class="hover:text-agri-700 transition-colors">Tunnel Garam</a></li>
+          <li class="pt-1">
+            <a href="/jasa/pembuatan-greenhouse/#kalkulator" class="text-ochre-700 font-bold hover:underline">
+              Estimasi RAB Proyek &rarr;
             </a>
           </li>
         </ul>
       </div>
 
-      <!-- Col 4: Informasi & Legal (2 cols) -->
+      <!-- Col 4: INFORMASI (2 cols) -->
       <div class="lg:col-span-2 space-y-3">
-        <h3 class="text-xs font-bold uppercase tracking-wider text-ink-primary border-b border-surface-border pb-2">
-          Informasi Toko
+        <h3 class="text-sm font-bold uppercase tracking-wider text-ink-primary border-b border-surface-border pb-2">
+          INFORMASI
         </h3>
         <ul class="space-y-2 text-xs">
-          <li><a href="/wilayah-layanan/" class="hover:text-agri-700">Wilayah Layanan & Kargo</a></li>
+          <li><a href="/wilayah-layanan/" class="hover:text-agri-700">Wilayah Layanan &amp; Kargo</a></li>
           <li><a href="/proyek/" class="hover:text-agri-700">Portofolio Proyek</a></li>
-          <li><a href="/lokasi/" class="hover:text-agri-700">Lokasi & Panduan Arah</a></li>
+          <li><a href="/lokasi/" class="hover:text-agri-700">Lokasi &amp; Panduan Arah</a></li>
           <li><a href="/tentang-kami/" class="hover:text-agri-700">Profil Perusahaan</a></li>
           <li><a href="/kontak/" class="hover:text-agri-700">Hubungi Kami</a></li>
         </ul>
       </div>
 
+    </div>
+
+    <!-- Brand Commitment Callout & Quick Action Bar -->
+    <div class="mt-12 pt-8 border-t border-surface-border flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+      <div>
+        <span class="font-extrabold text-sm text-ink-primary block uppercase tracking-wider">AGROKOMPLEK CEMERLANG</span>
+        <p class="text-xs text-ink-secondary mt-0.5 font-medium">
+          Membangun Pertanian yang Lebih Terlindungi. Lebih Efisien. Lebih Siap Berkembang.
+        </p>
+        <p class="text-[11px] text-ink-muted mt-0.5">
+          📍 Malang, Jawa Timur &bull; 📱 0851-8300-2070
+        </p>
+      </div>
+
+      <div class="flex items-center gap-3 shrink-0">
+        <a
+          href="/produk/"
+          class="px-4 py-2 rounded-md bg-surface-subtle hover:bg-surface-border border border-surface-border text-ink-primary font-bold text-xs uppercase tracking-wider transition-colors"
+        >
+          LIHAT KATALOG
+        </a>
+        <a
+          href={waConsultUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-4 py-2 rounded-md bg-agri-700 hover:bg-agri-800 text-white font-bold text-xs uppercase tracking-wider transition-colors"
+        >
+          KONSULTASI PROYEK
+        </a>
+      </div>
     </div>
   </div>
 
@@ -144,7 +174,7 @@ import { FOOTER_PRODUCT_LINKS, FOOTER_SERVICE_LINKS } from '../../data/navigatio
   <div class="bg-surface-subtle border-t border-surface-border py-4 px-4 text-xs text-ink-muted">
     <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
       <p>&copy; {new Date().getFullYear()} Agrokomplek Cemerlang. Hak cipta dilindungi undang-undang.</p>
-      <p>Distributor Perlengkapan Greenhouse & Kontraktor Pertanian Indonesia</p>
+      <p>Pertanian &bull; Proteksi &bull; Irigasi &bull; Konstruksi Greenhouse Indonesia</p>
     </div>
   </div>
 </footer>

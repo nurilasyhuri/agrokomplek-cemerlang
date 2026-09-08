@@ -9,29 +9,40 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
       
       <!-- Left Column: Logistics Info (7 cols) -->
       <div class="lg:col-span-7 space-y-6">
-        <span class="text-xs font-bold uppercase tracking-wider text-agri-700">Jangkauan Logistik & Perakitan</span>
-        
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-ink-primary leading-tight">
-          Melayani Pengiriman Material & Perakitan Lapangan Seluruh Indonesia
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-ink-primary leading-[1.15]">
+          Jangkauan Logistik &amp; Perakitan
         </h2>
+        <p class="text-xl sm:text-2xl font-bold text-agri-700 tracking-tight">
+          Material Bisa Dikirim. Tim Kami Bisa Datang.
+        </p>
 
         <p class="text-sm sm:text-base text-ink-secondary leading-relaxed">
-          Gudang utama kami berada di Kedungkandang, Kota Malang. Untuk memenuhi kebutuhan petani dan kontraktor di luar Jawa Timur, kami mengoperasikan dua mekanisme layanan: pengiriman kargo material ekonomis dan pemberangkatan tim teknisi perakitan ke lokasi proyek.
+          Agrokomplek Cemerlang melayani kebutuhan material dan konstruksi untuk berbagai wilayah Indonesia.
         </p>
 
         <!-- 2 Workflows -->
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-          <div class="border border-surface-border bg-surface-card p-4 rounded-md">
-            <span class="text-xs font-bold uppercase tracking-wider text-agri-700 block mb-1">01. Pengiriman Material</span>
+          <div class="border border-surface-border bg-surface-card p-5 rounded-lg space-y-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-agri-700 block">
+              01 &mdash; PENGIRIMAN MATERIAL
+            </span>
+            <p class="text-[11px] font-semibold text-ink-primary">
+              Plastik UV &bull; Paranet &bull; Mulsa &bull; Spring Clip &bull; Material Irigasi &bull; Komponen Greenhouse
+            </p>
             <p class="text-xs text-ink-muted leading-relaxed">
-              Plastik UV rol, paranet bal, mulsa, dan spring clip dikirim via Indah Logistik, Baraka Sarana Tama, KIB Cepat, atau truk balen untuk ongkir paling terjangkau.
+              Kami membantu mengatur pengiriman melalui pilihan ekspedisi dan angkutan sesuai jenis, volume, dan tujuan barang.
             </p>
           </div>
 
-          <div class="border border-surface-border bg-surface-card p-4 rounded-md">
-            <span class="text-xs font-bold uppercase tracking-wider text-agri-700 block mb-1">02. Tim Instalasi Proyek</span>
+          <div class="border border-surface-border bg-surface-card p-5 rounded-lg space-y-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-agri-700 block">
+              02 &mdash; TIM INSTALASI PROYEK
+            </span>
             <p class="text-xs text-ink-muted leading-relaxed">
-              Tim tukang spesialis greenhouse siap diterjunkan ke lokasi Anda di Jawa, Sumatera, Kalimantan, Sulawesi, hingga kawasan timur Indonesia.
+              Untuk proyek yang membutuhkan tenaga aplikator, tim teknisi dapat dijadwalkan untuk membantu proses perakitan di lokasi.
+            </p>
+            <p class="text-[11px] font-semibold text-agri-700 pt-1">
+              Jawa &bull; Sumatera &bull; Kalimantan &bull; Sulawesi &bull; Indonesia Timur
             </p>
           </div>
         </div>
@@ -42,15 +53,17 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
             href="/wilayah-layanan/"
             class="px-5 py-2.5 rounded-md bg-agri-700 hover:bg-agri-800 text-white font-bold text-xs uppercase tracking-wider transition-colors select-none"
           >
-            Pelajari Prosedur Luar Kota &rarr;
+            <span>PELAJARI JANGKAUAN LAYANAN</span>
+            <span aria-hidden="true">&rarr;</span>
           </a>
           <a
-            href={`https://wa.me/6285183002070?text=${encodeURIComponent('Halo Agrokomplek Cemerlang, saya ingin cek ongkir material / layanan perakitan untuk lokasi proyek saya.')}`}
+            href={`https://wa.me/${BUSINESS_INFO.contact.whatsappRaw}?text=${encodeURIComponent('Halo Agrokomplek Cemerlang, saya ingin cek ongkir material / layanan perakitan untuk lokasi proyek saya.')}`}
             target="_blank"
             rel="noopener noreferrer"
             class="px-5 py-2.5 rounded-md border border-surface-border bg-surface-card hover:bg-surface-subtle text-ink-primary font-bold text-xs uppercase tracking-wider transition-colors select-none"
           >
-            Cek Ongkir via WA
+            <span>KONSULTASI LOGISTIK WA</span>
+            <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
       </div>
@@ -58,32 +71,41 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
       <!-- Right Column: Verification Data Box (5 cols) -->
       <div class="lg:col-span-5">
         <div class="border border-surface-border bg-surface-card p-6 rounded-lg space-y-4">
-          <h3 class="text-sm font-bold text-ink-primary uppercase tracking-wider border-b border-surface-border pb-3">
-            Standar Pengemasan & Pengiriman
+          <h3 class="text-base sm:text-lg font-bold text-ink-primary uppercase tracking-wider border-b border-surface-border pb-3">
+            STANDAR PENGEMASAN &amp; PENGIRIMAN
           </h3>
 
-          <div class="space-y-3 text-xs text-ink-secondary">
-            <div class="flex items-start gap-3">
-              <span class="font-bold text-agri-700 shrink-0">1.</span>
-              <p><strong class="text-ink-primary">Packing Karung & Plastik Tebal:</strong> Setiap rol plastik UV dan paranet dibungkus rapat ganda untuk mencegah sobekan selama transit di pelabuhan dan kargo.</p>
+          <div class="space-y-4 text-xs text-ink-secondary">
+            <div class="space-y-1">
+              <span class="font-bold text-ink-primary text-sm uppercase tracking-wider block">
+                01 &mdash; Packing Aman
+              </span>
+              <p class="text-ink-muted leading-relaxed">
+                Rol plastik UV dan material tertentu dikemas dengan perlindungan tambahan untuk membantu mengurangi risiko kerusakan selama perjalanan.
+              </p>
             </div>
-            <div class="flex items-start gap-3">
-              <span class="font-bold text-agri-700 shrink-0">2.</span>
-              <p><strong class="text-ink-primary">Resi & Tracking Transparan:</strong> Pelanggan menerima nomor resi resmi kargo langsung setelah serah terima barang di gudang ekspedisi.</p>
+            
+            <div class="space-y-1">
+              <span class="font-bold text-ink-primary text-sm uppercase tracking-wider block">
+                02 &mdash; Resi &amp; Tracking
+              </span>
+              <p class="text-ink-muted leading-relaxed">
+                Nomor resi diberikan setelah barang diserahkan kepada pihak ekspedisi.
+              </p>
             </div>
-            <div class="flex items-start gap-3">
-              <span class="font-bold text-agri-700 shrink-0">3.</span>
-              <p><strong class="text-ink-primary">Konsultasi Panduan Pasang:</strong> Untuk pelanggan yang memasang sendiri, teknisi kami siap memandu via video call WhatsApp jika ada kendala perakitan.</p>
-            </div>
-          </div>
 
-          <div class="border-t border-surface-border pt-4 text-xs text-ink-muted">
-            <p><strong>Alamat Gudang:</strong> {BUSINESS_INFO.address.street}, {BUSINESS_INFO.address.city}</p>
+            <div class="space-y-1">
+              <span class="font-bold text-ink-primary text-sm uppercase tracking-wider block">
+                03 &mdash; Panduan Instalasi
+              </span>
+              <p class="text-ink-muted leading-relaxed">
+                Untuk pelanggan yang melakukan pemasangan sendiri, tersedia bantuan konsultasi teknis melalui WhatsApp/video call apabila diperlukan.
+              </p>
+            </div>
           </div>
         </div>
       </div>
 
     </div>
-
   </div>
 </section>

@@ -2,11 +2,10 @@
 title: 'Tray Semai 128 Lubang Pembibitan'
 description: 'Wadah semai benih plastik hitam tebal isi 128 lubang untuk penyemaian benih cabai, tomat, terong, melon, dan sayuran daun. Memudahkan proses transplanting bibit.'
 category: 'perlengkapan-pertanian'
-priceDisplay: 'Rp 8.500 / Pcs'
 stockStatus: 'ready'
 featured: false
-thumbnail: 'https://images.unsplash.com/photo-1592417817098-8f3d6910985c?auto=format&fit=crop&w=600&q=80'
-brand: 'Seedling Master'
+thumbnail: '/images/products/tray-semai-128-lubang.webp'
+brand: 'Standar Pembibitan 128 Lubang'
 orderPriority: 8
 specs:
   Jumlah Lubang: '128 Cavity'

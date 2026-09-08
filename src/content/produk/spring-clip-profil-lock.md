@@ -2,11 +2,10 @@
 title: 'Spring Clip & Profil Lock Rangka Greenhouse'
 description: 'Sistem pengunci plastik UV dan paranet ke rangka pipa galvanis atau baja ringan. Menjepit plastik dengan kencang, rapi, dan tidak merobek lembaran penutup.'
 category: 'perlengkapan-greenhouse'
-priceDisplay: 'Rp 35.000 / Batang (2 Meter)'
 stockStatus: 'ready'
 featured: false
-thumbnail: 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=600&q=80'
-brand: 'Import Zinc-Alloy'
+thumbnail: '/images/products/spring-clip-profil-lock.webp'
+brand: 'Baja Galvanis Anti-Karat'
 orderPriority: 5
 specs:
   Panjang Profil: '2 Meter per Batang'

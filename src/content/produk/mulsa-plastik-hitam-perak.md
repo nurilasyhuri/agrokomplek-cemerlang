@@ -1,12 +1,11 @@
 ---
 title: 'Mulsa Plastik Hitam Perak (MPHP) 120 cm'
-description: 'Plastik mulsa pertanian dua warna (Hitam-Perak) untuk menjaga kelembaban tanah, menekan pertumbuhan gulma, dan memantulkan sinar matahari guna mengusir hama kutu daun/thrips.'
+description: 'Mulsa dua warna yang membantu menjaga kelembapan tanah, menekan pertumbuhan gulma, dan memantulkan cahaya matahari. Pilihan praktis untuk berbagai kebutuhan budidaya hortikultura.'
 category: 'perlengkapan-pertanian'
-priceDisplay: 'Rp 380.000 / Rol (500m)'
 stockStatus: 'ready'
 featured: true
-thumbnail: 'https://images.unsplash.com/photo-1574943320219-553eb213f72d?auto=format&fit=crop&w=600&q=80'
-brand: 'Bell / Cap Gunung'
+thumbnail: '/images/products/mulsa-plastik-hitam-perak.webp'
+brand: 'Kualitas Pertanian Terstandar'
 orderPriority: 4
 specs:
   Lebar: '120 cm (Kondisi Terlipat 60 cm)'

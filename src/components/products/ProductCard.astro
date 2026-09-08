@@ -19,21 +19,23 @@ const waUrl = `https://wa.me/6285183002070?text=${encodeURIComponent(
 )}`;
 ---
 
-<div class="border border-surface-border bg-surface-card rounded-lg overflow-hidden flex flex-col justify-between hover:border-agri-700 transition-colors">
+<div class="border border-surface-border bg-surface-card rounded-lg overflow-hidden flex flex-col justify-between hover:border-agri-700 transition-all duration-150 group shadow-xs">
   <div>
-    <!-- Thumbnail Image -->
+    <!-- Thumbnail Image with WebP & local fallback -->
     <a href={`/produk/${product.slug}/`} class="block aspect-square bg-surface-subtle overflow-hidden border-b border-surface-border relative">
       <img
         src={product.thumbnail}
         alt={product.title}
-        class="w-full h-full object-cover"
+        width="400"
+        height="400"
+        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         loading="lazy"
-        onerror="this.setAttribute('src', 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=600&q=80')"
+        decoding="async"
       />
       
-      <!-- Stock Status -->
-      <div class="absolute top-2.5 left-2.5">
-        <span class="inline-block px-2 py-0.5 rounded-sm text-[10px] font-bold uppercase tracking-wider bg-surface-card text-ink-primary border border-surface-border">
+      <!-- Stock Status Badge -->
+      <div class="absolute top-2 left-2 sm:top-2.5 sm:left-2.5">
+        <span class="inline-block px-1.5 sm:px-2 py-0.5 rounded-sm text-[9px] sm:text-[10px] font-bold uppercase tracking-wider bg-surface-card/95 backdrop-blur-xs text-ink-primary border border-surface-border shadow-xs">
           {product.stockStatus === 'ready'
             ? 'Ready Stok'
             : product.stockStatus === 'po'
@@ -44,35 +46,41 @@ const waUrl = `https://wa.me/6285183002070?text=${encodeURIComponent(
     </a>
 
     <!-- Details -->
-    <div class="p-4 space-y-2">
-      <h3 class="font-bold text-ink-primary text-sm leading-snug line-clamp-2">
+    <div class="p-2.5 sm:p-4 space-y-1 sm:space-y-1.5">
+      {product.brand && (
+        <span class="text-[10px] sm:text-xs font-semibold text-agri-700 block truncate">
+          {product.brand}
+        </span>
+      )}
+
+      <h3 class="font-bold text-ink-primary text-sm sm:text-base leading-snug line-clamp-2">
         <a href={`/produk/${product.slug}/`} class="hover:text-agri-700 transition-colors">
           {product.title}
         </a>
       </h3>
 
-      <p class="text-xs text-ink-muted line-clamp-2 leading-relaxed">
+      <p class="hidden sm:block text-xs text-ink-muted line-clamp-2 leading-relaxed">
         {product.description}
       </p>
     </div>
   </div>
 
-  <!-- Bottom Price & CTA -->
-  <div class="p-4 pt-0 border-t border-surface-border mt-3 flex items-center justify-between gap-2 pt-3">
-    <div>
-      <span class="text-[10px] font-semibold text-ink-muted block uppercase">Status Harga</span>
-      <span class="text-xs font-bold text-ink-primary">
-        {product.priceDisplay || 'Hubungi Toko'}
-      </span>
+  <!-- Bottom Actions -->
+  <div class="p-2.5 pt-0 sm:p-4 sm:pt-0 border-t border-surface-border mt-2 sm:mt-3 pt-2 sm:pt-3 space-y-2">
+    <div class="flex items-center justify-between text-[11px] text-ink-muted">
+      <span class="font-medium">Stok Gudang Malang</span>
+      <span class="font-semibold text-agri-700">Siap Kirim</span>
     </div>
-
     <a
       href={waUrl}
       target="_blank"
       rel="noopener noreferrer"
-      class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-agri-700 hover:bg-agri-800 text-white text-xs font-bold transition-colors select-none"
+      class="w-full inline-flex items-center justify-center gap-1.5 py-1.5 sm:py-2 px-2 rounded-md bg-agri-700 hover:bg-agri-800 active:bg-agri-900 text-white text-[11px] sm:text-xs font-bold transition-colors select-none min-h-[38px] sm:min-h-[40px] shadow-xs"
     >
-      <span>Tanya WA</span>
+      <svg class="w-3.5 h-3.5 text-emerald-300 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
+      </svg>
+      <span>Tanya Stok &amp; Spesifikasi</span>
     </a>
   </div>
 </div>

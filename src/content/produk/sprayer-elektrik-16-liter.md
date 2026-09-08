@@ -2,11 +2,10 @@
 title: 'Sprayer Elektrik Pertanian 16 Liter'
 description: 'Alat semprot punggung elektrik kapasitas 16 liter dengan baterai lithium rechargeable. Tekanan semprot stabil untuk aplikasi pupuk cair dan pestisida.'
 category: 'perlengkapan-pertanian'
-priceDisplay: 'Rp 450.000 / Unit'
 stockStatus: 'ready'
 featured: true
-thumbnail: 'https://images.unsplash.com/photo-1615811361523-6bd03d7748e7?auto=format&fit=crop&w=600&q=80'
-brand: 'CBA / Swan Quality'
+thumbnail: '/images/products/sprayer-elektrik-16-liter.webp'
+brand: 'Kapasitas 16 Liter Baterai'
 orderPriority: 3
 specs:
   Kapasitas Tangki: '16 Liter'

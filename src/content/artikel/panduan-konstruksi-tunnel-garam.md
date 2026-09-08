@@ -5,7 +5,7 @@ publishDate: '28 Agustus 2026'
 author: 'Tim Ahli Agrokomplek Cemerlang'
 category: 'Inovasi Agribisnis'
 tags: ['Tunnel Garam', 'Prisma Garam', 'Garam Industri', 'Teknologi Pesisir']
-heroImage: 'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80'
+heroImage: '/images/greenhouse/tunnel-garam-greenhouse.webp'
 featured: true
 ---
 

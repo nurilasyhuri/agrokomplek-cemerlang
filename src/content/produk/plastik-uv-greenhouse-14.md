@@ -1,12 +1,11 @@
 ---
-title: 'Plastik UV Greenhouse 14% - 200 Micron'
-description: 'Plastik UV kualitas premium dengan kandungan aditif UV stabilizer 14%, ketebalan 200 micron (0.20 mm). Tahan cuaca ekstrem, radiasi ultraviolet tinggi, dan anti getas hingga 3-5 tahun.'
+title: 'Plastik UV Greenhouse 14% — 200 Micron'
+description: 'Plastik UV dengan ketebalan 200 micron / 0,20 mm dan kandungan UV stabilizer 14%. Pilihan untuk kebutuhan greenhouse yang membutuhkan material pelindung terhadap radiasi UV dan kondisi cuaca tropis.'
 category: 'perlengkapan-greenhouse'
-priceDisplay: 'Mulai Rp 18.000 / Meter'
 stockStatus: 'ready'
 featured: true
 thumbnail: '/images/products/plastik-uv-greenhouse.webp'
-brand: 'Vatan / Import Quality'
+brand: 'Kualitas Terstandar 200 Micron'
 orderPriority: 1
 specs:
   Kandungan UV: '14% UV Stabilizer'

@@ -1,66 +1,132 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumb from '../components/common/Breadcrumb.astro';
+import { BUSINESS_INFO } from '../data/businessInfo';
 ---
 
 <BaseLayout
   title="Tentang Agrokomplek Cemerlang - Profil & Filosofi Bisnis"
-  description="Mengenal Agrokomplek Cemerlang: Pusat penyedia sarana produksi pertanian dan kontraktor pembuatan greenhouse yang berbasis di Malang, Jawa Timur."
+  description="Mengenal Agrokomplek Cemerlang: mitra penyedia saprodi pertanian, material proteksi greenhouse, perlengkapan irigasi, dan konstruksi berbasis di Malang."
 >
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">
     <Breadcrumb items={[{ label: 'Tentang Kami' }]} />
 
-    <div class="my-8 space-y-4">
-      <span class="text-xs font-bold text-brand-700 uppercase tracking-wider bg-brand-50 px-3 py-1 rounded-full">
-        Profil Bisnis
+    <div class="my-8 space-y-2">
+      <span class="text-xs font-bold text-agri-700 uppercase tracking-wider bg-agri-50 border border-agri-100 px-3 py-1 rounded-sm inline-block">
+        Profil Bisnis &amp; Prinsip
       </span>
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-steel-900 tracking-tight">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-ink-primary tracking-tight">
         Mendukung Pertanian dari Kebutuhan Dasar hingga Infrastruktur Modern
       </h1>
     </div>
 
-    <div class="prose prose-emerald max-w-none text-steel-700 space-y-6 leading-relaxed">
-      <p class="text-base sm:text-lg">
-        Pertanian yang berkembang dan menguntungkan berawal dari perencanaan yang matang: penggunaan sarana produksi (saprodi) yang tepat, perlengkapan budidaya yang efisien, serta infrastruktur greenhouse yang kokoh dan disesuaikan dengan kondisi iklim setempat.
+    <div class="space-y-8 text-sm sm:text-base text-ink-secondary leading-relaxed">
+      <p>
+        Pertanian yang berkembang dan menguntungkan berawal dari perencanaan yang matang: penggunaan sarana produksi (saprodi) yang tepat, perlengkapan budidaya yang efisien, serta infrastruktur greenhouse yang kokoh dan disesuaikan dengan kondisi iklim mikro setempat.
       </p>
 
       <p>
-        <strong>Agrokomplek Cemerlang</strong> hadir di Buring, Kedungkandang, Kota Malang, Jawa Timur sebagai mitra strategis bagi petani perorangan, kelompok tani, pengusaha agribisnis hortikultura, hingga pengelola tambak garam modern di seluruh penjuru Indonesia.
+        <strong class="text-ink-primary">Agrokomplek Cemerlang</strong> menyediakan kebutuhan Saprodi Pertanian, Material Greenhouse, Perlengkapan Irigasi, serta Jasa Pembuatan Greenhouse. Produk yang tersedia meliputi plastik UV greenhouse, paranet, mulsa pertanian, insect net, selang drip, perlengkapan hidroponik, dan berbagai komponen pendukung budidaya lainnya.
       </p>
 
-      <div class="my-8 p-6 rounded-2xl bg-brand-50 border border-brand-200">
-        <h3 class="text-lg font-bold text-brand-900 mb-2">Tagline & Prinsip Kami</h3>
-        <p class="text-base font-semibold text-brand-800 italic mb-2">
-          "Tumbuhkan Lebih Baik. Bangun Lebih Terarah."
-        </p>
-        <p class="text-xs text-brand-900">
-          Kami menolak pendekatan *overselling* atau memaksakan spesifikasi mahal yang tidak relevan. Rekomendasi produk dan desain greenhouse kami selalu diselaraskan dengan jenis komoditas, anggaran modal, dan daya dukung lahan Anda.
+      <!-- Tagline Callout -->
+      <div class="p-6 rounded-lg bg-surface-subtle border border-surface-border space-y-2">
+        <span class="text-xs font-bold uppercase tracking-wider text-agri-700 block">Filosofi Kerja Kami</span>
+        <h2 class="text-lg font-bold text-ink-primary">
+          "{BUSINESS_INFO.tagline}"
+        </h2>
+        <p class="text-xs sm:text-sm text-ink-secondary leading-relaxed">
+          Kami menolak pendekatan <em>overselling</em> atau memaksakan spesifikasi mahal yang tidak relevan. Rekomendasi material dan desain greenhouse kami selalu diselaraskan dengan jenis komoditas, daya dukung lahan, dan anggaran modal Anda.
         </p>
       </div>
 
-      <h2 class="text-2xl font-bold text-steel-900">Dua Pilar Utama Layanan Kami:</h2>
+      <!-- 2 Pillars -->
+      <div class="space-y-4 pt-2">
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-ink-primary border-b border-surface-border pb-3">
+          Empat Pilar Solusi Pertanian &amp; Greenhouse
+        </h3>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 not-prose">
-        <div class="p-6 rounded-2xl bg-white border border-steel-200 shadow-soft">
-          <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-800 flex items-center justify-center font-bold mb-3">
-            🌾
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div class="p-6 rounded-lg bg-surface-card border border-surface-border space-y-3">
+            <div class="w-8 h-8 rounded-sm bg-agri-700 text-white flex items-center justify-center font-bold text-xs">
+              01
+            </div>
+            <h4 class="font-extrabold text-ink-primary text-lg sm:text-xl">Saprodi Pertanian</h4>
+            <p class="text-xs text-ink-secondary leading-relaxed">
+              Menyediakan pupuk NPK dan organik berkualitas, nutrisi hidroponik AB Mix, media tanam siap pakai, dan benih sayuran unggul untuk produktivitas panen maksimal.
+            </p>
+            <div class="pt-2">
+              <a href="/produk/saprodi-pertanian/" class="text-xs font-bold text-agri-700 hover:underline inline-flex items-center gap-1">
+                <span>Katalog Saprodi</span>
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
           </div>
-          <h4 class="font-bold text-steel-900 text-base mb-1.5">1. Penjualan Saprodi & Alat</h4>
-          <p class="text-xs text-steel-600 leading-relaxed">
-            Menyediakan pupuk, pestisida terdaftar, media tanam, mulsa plastik, sprayer, selang irigasi drip, dan aneka aksesoris budidaya dengan stok terjamin.
-          </p>
-        </div>
 
-        <div class="p-6 rounded-2xl bg-white border border-steel-200 shadow-soft">
-          <div class="w-10 h-10 rounded-xl bg-brand-100 text-brand-800 flex items-center justify-center font-bold mb-3">
-            🏗️
+          <div class="p-6 rounded-lg bg-surface-card border border-surface-border space-y-3">
+            <div class="w-8 h-8 rounded-sm bg-agri-700 text-white flex items-center justify-center font-bold text-xs">
+              02
+            </div>
+            <h4 class="font-extrabold text-ink-primary text-lg sm:text-xl">Material Greenhouse</h4>
+            <p class="text-xs text-ink-secondary leading-relaxed">
+              Suplai plastik UV greenhouse 14% &amp; 20% (200 mikron), paranet shading net 65%-75%, insect net 50 mesh micro-barrier, spring clip, dan profil lock galvanis.
+            </p>
+            <div class="pt-2">
+              <a href="/produk/perlengkapan-greenhouse/" class="text-xs font-bold text-agri-700 hover:underline inline-flex items-center gap-1">
+                <span>Material Greenhouse</span>
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
           </div>
-          <h4 class="font-bold text-steel-900 text-base mb-1.5">2. Kontraktor Greenhouse</h4>
-          <p class="text-xs text-steel-600 leading-relaxed">
-            Layanan konstruksi greenhouse profesional (Bambu, Galvanis, Baja Ringan, dan Tunnel Garam) mencakup desain, pengadaan material, survei lahan, dan perakitan tuntas nasional.
-          </p>
+
+          <div class="p-6 rounded-lg bg-surface-card border border-surface-border space-y-3">
+            <div class="w-8 h-8 rounded-sm bg-agri-700 text-white flex items-center justify-center font-bold text-xs">
+              03
+            </div>
+            <h4 class="font-extrabold text-ink-primary text-lg sm:text-xl">Perlengkapan Irigasi &amp; Lahan</h4>
+            <p class="text-xs text-ink-secondary leading-relaxed">
+              Menyediakan selang drip 16mm, sprayer elektrik 16L, mulsa plastik hitam perak (MPHP), perlengkapan hidroponik gully/PVC, dan fitting irigasi tetes presisi.
+            </p>
+            <div class="pt-2">
+              <a href="/produk/perlengkapan-pertanian/" class="text-xs font-bold text-agri-700 hover:underline inline-flex items-center gap-1">
+                <span>Alat Irigasi &amp; Lahan</span>
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="p-6 rounded-lg bg-surface-card border border-surface-border space-y-3">
+            <div class="w-8 h-8 rounded-sm bg-ochre-700 text-white flex items-center justify-center font-bold text-xs">
+              04
+            </div>
+            <h4 class="font-extrabold text-ink-primary text-lg sm:text-xl">Jasa Pembuatan Greenhouse</h4>
+            <p class="text-xs text-ink-secondary leading-relaxed">
+              Layanan konstruksi greenhouse (Pipa Galvanis Hot-Dip, Rangka Bambu Presisi, Baja Ringan, dan Tunnel Garam Pesisir) dengan tim aplikator ke seluruh Indonesia.
+            </p>
+            <div class="pt-2">
+              <a href="/jasa/pembuatan-greenhouse/" class="text-xs font-bold text-ochre-700 hover:underline inline-flex items-center gap-1">
+                <span>Simulasi &amp; Estimasi RAB</span>
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
+
+      <!-- Store Location snippet -->
+      <div class="p-6 rounded-lg bg-surface-card border border-surface-border flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          <h4 class="font-bold text-ink-primary text-sm">Ingin Berkunjung ke Gudang Kami di Malang?</h4>
+          <p class="text-xs text-ink-muted mt-0.5">{BUSINESS_INFO.address.fullFormatted}</p>
+        </div>
+        <a
+          href="/lokasi/"
+          class="px-5 py-2.5 rounded-md bg-agri-700 hover:bg-agri-800 text-white font-bold text-xs uppercase tracking-wider transition-colors shrink-0 select-none"
+        >
+          Lihat Peta Lokasi &rarr;
+        </a>
+      </div>
+
     </div>
   </div>
 </BaseLayout>

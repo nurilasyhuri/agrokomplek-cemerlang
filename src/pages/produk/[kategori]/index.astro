@@ -4,26 +4,26 @@ import Breadcrumb from '../../../components/common/Breadcrumb.astro';
 import ProductCard from '../../../components/products/ProductCard.astro';
 import { getCollection } from 'astro:content';
 
-export async function getStaticPaths() {
-  const categories = [
-    {
-      kategori: 'saprodi-pertanian',
-      title: 'Saprodi Pertanian Malang & Indonesia',
-      desc: 'Pilihan sarana produksi pertanian: pupuk organik, NPK, pestisida terdaftar, benih hortikultura dan media tanam.',
-    },
-    {
-      kategori: 'perlengkapan-pertanian',
-      title: 'Perlengkapan & Alat Pertanian Berkualitas',
-      desc: 'Perlengkapan untuk mempermudah pekerjaan lahan: sprayer elektrik, mulsa plastik hitam perak, selang drip dan tray semai.',
-    },
-    {
-      kategori: 'perlengkapan-greenhouse',
-      title: 'Perlengkapan & Komponen Greenhouse Indonesia',
-      desc: 'Komponen penutup dan aksesoris greenhouse: Plastik UV 14%-20%, Paranet 65%-85%, Spring Clip, dan Profil Lock.',
-    },
-  ];
+export const CATEGORIES = [
+  {
+    kategori: 'saprodi-pertanian',
+    title: 'Saprodi Pertanian Malang & Indonesia',
+    desc: 'Pilihan sarana produksi pertanian: pupuk organik, NPK, pestisida terdaftar, benih hortikultura dan media tanam.',
+  },
+  {
+    kategori: 'perlengkapan-pertanian',
+    title: 'Perlengkapan & Alat Pertanian Berkualitas',
+    desc: 'Perlengkapan untuk mempermudah pekerjaan lahan: sprayer elektrik, mulsa plastik hitam perak, selang drip dan tray semai.',
+  },
+  {
+    kategori: 'perlengkapan-greenhouse',
+    title: 'Perlengkapan & Komponen Greenhouse Indonesia',
+    desc: 'Komponen penutup dan aksesoris greenhouse: Plastik UV 14%-20%, Paranet 65%-85%, Spring Clip, dan Profil Lock.',
+  },
+];
 
-  return categories.map((cat) => ({
+export async function getStaticPaths() {
+  return CATEGORIES.map((cat) => ({
     params: { kategori: cat.kategori },
     props: { cat },
   }));
@@ -46,19 +46,42 @@ const filteredProducts = allProducts.filter((p) => p.data.category === kategori)
     />
 
     <div class="my-8 max-w-3xl">
-      <span class="text-xs font-bold text-brand-700 uppercase tracking-wider block mb-1">
-        Kategori Produk
+      <span class="text-xs font-bold text-agri-700 uppercase tracking-wider block mb-1">
+        Kategori Material
       </span>
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-steel-900 tracking-tight mb-3">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-ink-primary tracking-tight mb-3">
         {cat.title}
       </h1>
-      <p class="text-base text-steel-600 leading-relaxed">
+      <p class="text-sm sm:text-base text-ink-secondary leading-relaxed">
         {cat.desc}
       </p>
     </div>
 
+    <!-- Category Pill Links (Horizontal scroll on mobile) -->
+    <div class="flex items-center gap-1.5 sm:gap-2 mb-8 pb-3 border-b border-surface-border overflow-x-auto sm:flex-wrap">
+      <a
+        href="/produk/"
+        class="whitespace-nowrap shrink-0 px-3.5 py-2 sm:py-1.5 rounded-md text-xs font-bold uppercase tracking-wider border border-surface-border bg-surface-subtle text-ink-secondary hover:bg-surface-canvas hover:text-ink-primary transition-colors"
+      >
+        Semua Produk
+      </a>
+      {CATEGORIES.map((c) => (
+        <a
+          href={`/produk/${c.kategori}/`}
+          class:list={[
+            'whitespace-nowrap shrink-0 px-3.5 py-2 sm:py-1.5 rounded-md text-xs font-bold uppercase tracking-wider transition-colors',
+            c.kategori === kategori
+              ? 'bg-agri-700 text-white border border-agri-700 shadow-xs'
+              : 'border border-surface-border bg-surface-subtle text-ink-secondary hover:bg-surface-canvas hover:text-ink-primary',
+          ]}
+        >
+          {c.title.split(' ')[0]} {c.title.split(' ')[1]}
+        </a>
+      ))}
+    </div>
+
     {filteredProducts.length > 0 ? (
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
         {filteredProducts.map((p) => (
           <ProductCard
             product={{
@@ -75,8 +98,11 @@ const filteredProducts = allProducts.filter((p) => p.data.category === kategori)
         ))}
       </div>
     ) : (
-      <div class="p-12 text-center bg-white rounded-2xl border border-steel-200">
-        <p class="text-steel-600">Belum ada item yang terdaftar di kategori ini.</p>
+      <div class="p-12 text-center bg-surface-card rounded-lg border border-surface-border">
+        <p class="text-ink-secondary text-sm">Belum ada item yang terdaftar di kategori ini.</p>
+        <a href="/produk/" class="inline-block mt-3 text-xs font-bold text-agri-700 hover:underline">
+          Lihat Semua Produk &rarr;
+        </a>
       </div>
     )}
   </div>

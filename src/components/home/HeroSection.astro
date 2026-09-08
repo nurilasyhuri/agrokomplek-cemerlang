@@ -11,58 +11,65 @@ const waConsultUrl = generateGeneralInquiryUrl('hero-primary');
       <!-- Left Editorial Text Column (7 cols) -->
       <div class="lg:col-span-7 space-y-6">
         
-        <!-- Technical Kicker -->
-        <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-agri-700">
-          <span class="w-2 h-2 rounded-none bg-agri-700 inline-block"></span>
-          <span>Distributor Material & Kontraktor Greenhouse Resmi</span>
-        </div>
-
-        <!-- Master Headline -->
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-ink-primary leading-[1.15]">
-          Suplai Material Pertanian & Fabrikasi Greenhouse Standar Industri
+        <!-- Master Headline (H1 JUDUL UTAMA) -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-ink-primary leading-[1.12]">
+          Agrokomplek Cemerlang
+          <span class="block text-2xl sm:text-3xl lg:text-4xl font-extrabold text-agri-700 tracking-tight mt-2">
+            Distributor Saprodi Pertanian &amp; Jasa Pembuatan Greenhouse
+          </span>
         </h1>
 
-        <!-- Clear Grounded Copy -->
-        <p class="text-base sm:text-lg text-ink-secondary leading-relaxed max-w-2xl">
-          Agrokomplek Cemerlang menyediakan plastik UV berkualitas, paranet, mulsa, dan perlengkapan irigasi, serta melayani jasa rancang bangun konstruksi greenhouse komersial di seluruh wilayah Indonesia dari toko dan gudang fisik kami di Kedungkandang, Kota Malang.
+        <!-- Tagline (Font Lebih Kecil Sebagai Tagline) -->
+        <p class="text-lg sm:text-xl font-bold text-ink-primary leading-snug">
+          Lengkapi Kebutuhan Pertanian Anda. Bangun Greenhouse Yang Lebih Siap Menghadapi Iklim Tropis.
         </p>
 
-        <!-- Direct Actions -->
+        <!-- Clear Grounded Lead Copy -->
+        <p class="text-sm sm:text-base text-ink-secondary leading-relaxed max-w-2xl">
+          Dari sarana produksi hingga konstruksi greenhouse &mdash; kami menyediakan produk, material, sistem irigasi, dan tenaga aplikator untuk mendukung budidaya yang lebih produktif dan efisien.
+        </p>
+
+        <!-- Direct Actions (Uppercase CTA) -->
         <div class="flex flex-col sm:flex-row gap-3 pt-2">
+          <a
+            href="/produk/"
+            class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-agri-700 hover:bg-agri-800 text-white font-bold text-xs uppercase tracking-wider transition-colors select-none shadow-xs"
+          >
+            <span>LIHAT KATALOG</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
+
           <a
             href={waConsultUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-md bg-agri-700 hover:bg-agri-800 text-white font-bold text-sm uppercase tracking-wider transition-colors select-none"
+            class="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-md border border-surface-border bg-surface-subtle hover:bg-surface-canvas text-ink-primary font-bold text-xs uppercase tracking-wider transition-colors select-none"
           >
-            <svg class="w-4 h-4 text-emerald-300" viewBox="0 0 24 24" fill="currentColor">
+            <svg class="w-4 h-4 text-emerald-600" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
             </svg>
-            <span>Konsultasi Proyek WhatsApp</span>
-          </a>
-
-          <a
-            href="/produk/"
-            class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md border border-surface-border bg-surface-subtle hover:bg-surface-canvas text-ink-primary font-bold text-sm transition-colors select-none"
-          >
-            <span>Lihat Katalog Produk</span>
+            <span>KONSULTASI PROYEK</span>
             <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
 
-        <!-- 3-Pillar Operational Reality Strip -->
-        <div class="pt-6 border-t border-surface-border grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div class="border-l-2 border-agri-700 pl-3">
-            <span class="block text-xs font-bold text-ink-primary uppercase tracking-wider">Gudang Malang</span>
-            <span class="text-xs text-ink-muted leading-tight block mt-0.5">Stok fisik di Kedungkandang, siap kirim & ambil</span>
+        <!-- 4-Pillar Strip: Satu Tempat untuk Berbagai Kebutuhan Budidaya -->
+        <div class="pt-6 border-t border-surface-border grid grid-cols-2 sm:grid-cols-4 gap-3">
+          <div class="border-l-2 border-agri-700 pl-2.5">
+            <span class="block text-xs font-bold text-ink-primary uppercase tracking-wider">SAPRODI</span>
+            <span class="text-[11px] text-ink-muted leading-tight block mt-0.5">Pupuk &bull; Nutrisi &bull; Media Tanam &bull; Benih</span>
           </div>
-          <div class="border-l-2 border-agri-700 pl-3">
-            <span class="block text-xs font-bold text-ink-primary uppercase tracking-wider">Skala Fleksibel</span>
-            <span class="text-xs text-ink-muted leading-tight block mt-0.5">Dari riset hobi hingga proyek kebun komersial</span>
+          <div class="border-l-2 border-agri-700 pl-2.5">
+            <span class="block text-xs font-bold text-ink-primary uppercase tracking-wider">MATERIAL GH</span>
+            <span class="text-[11px] text-ink-muted leading-tight block mt-0.5">Plastik UV &bull; Paranet &bull; Insect Net</span>
           </div>
-          <div class="border-l-2 border-agri-700 pl-3">
-            <span class="block text-xs font-bold text-ink-primary uppercase tracking-wider">Ekspedisi Kargo</span>
-            <span class="text-xs text-ink-muted leading-tight block mt-0.5">Kirim material & tim teknisi seluruh Indonesia</span>
+          <div class="border-l-2 border-agri-700 pl-2.5">
+            <span class="block text-xs font-bold text-ink-primary uppercase tracking-wider">IRIGASI</span>
+            <span class="text-[11px] text-ink-muted leading-tight block mt-0.5">Drip &bull; Sprayer &bull; Fitting &bull; Hidroponik</span>
+          </div>
+          <div class="border-l-2 border-agri-700 pl-2.5">
+            <span class="block text-xs font-bold text-ink-primary uppercase tracking-wider">JASA KONSTRUKSI</span>
+            <span class="text-[11px] text-ink-muted leading-tight block mt-0.5">Rancang &bull; Fabrikasi &bull; Instalasi</span>
           </div>
         </div>
 
@@ -70,29 +77,40 @@ const waConsultUrl = generateGeneralInquiryUrl('hero-primary');
 
       <!-- Right Visual Feature Frame (5 cols) -->
       <div class="lg:col-span-5">
-        <div class="border border-surface-border bg-surface-subtle p-2 rounded-lg">
+        <div class="border border-surface-border bg-surface-subtle p-3 rounded-lg space-y-3">
           <div class="aspect-[4/3] rounded-md overflow-hidden bg-surface-canvas relative border border-surface-border">
             <img
               src="/images/greenhouse/greenhouse-galvanis.webp"
               alt="Konstruksi Greenhouse Galvanis Agrokomplek Cemerlang"
               class="w-full h-full object-cover"
               loading="eager"
-              onerror="this.setAttribute('src', 'https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=800&q=80')"
             />
+            <span class="absolute top-3 left-3 bg-agri-700 text-white text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-xs">
+              KONSTRUKSI GREENHOUSE
+            </span>
           </div>
 
-          <!-- Technical Specs Plate -->
-          <div class="p-3 mt-2 bg-surface-card border border-surface-border rounded-md">
-            <div class="flex items-center justify-between text-xs">
-              <div>
-                <span class="font-bold text-ink-primary block">Greenhouse Galvanis Hot-Dip</span>
-                <span class="text-[11px] text-ink-muted">Pipa Galvanis 1.5" + Plastik UV 200 Micron</span>
-              </div>
+          <!-- Feature Description Plate -->
+          <div class="p-3 bg-surface-card border border-surface-border rounded-md space-y-2">
+            <div>
+              <span class="text-[10px] font-bold text-agri-700 uppercase tracking-wider block">Dirancang untuk Budidaya. Dibangun untuk Bertahan.</span>
+              <h3 class="font-bold text-ink-primary text-base sm:text-lg mt-0.5">Greenhouse Galvanis Hot-Dip</h3>
+            </div>
+            <p class="text-xs text-ink-secondary leading-relaxed">
+              Struktur greenhouse dengan pipa galvanis hot-dip 1.5" dan pilihan plastik UV hingga 200 micron, dirancang untuk kebutuhan budidaya komersial di iklim tropis.
+            </p>
+            <div class="flex flex-wrap gap-1.5 pt-1 text-[11px] font-semibold text-ink-muted">
+              <span class="px-2 py-0.5 rounded-xs bg-surface-subtle border border-surface-border text-ink-primary">Pipa Galvanis 1.5"</span>
+              <span class="px-2 py-0.5 rounded-xs bg-surface-subtle border border-surface-border text-ink-primary">Plastik UV 200 Micron</span>
+              <span class="px-2 py-0.5 rounded-xs bg-surface-subtle border border-surface-border text-ink-primary">Sambungan Klem Presisi</span>
+            </div>
+            <div class="pt-2 border-t border-surface-border flex justify-end">
               <a
                 href="/jasa/pembuatan-greenhouse/"
-                class="px-2.5 py-1 rounded-sm bg-agri-700 text-white text-xs font-bold hover:bg-agri-800 transition-colors"
+                class="text-xs font-bold uppercase tracking-wider text-agri-700 hover:text-agri-800 flex items-center gap-1"
               >
-                Detail Jasa
+                <span>LIHAT DETAIL JASA</span>
+                <span aria-hidden="true">&rarr;</span>
               </a>
             </div>
           </div>

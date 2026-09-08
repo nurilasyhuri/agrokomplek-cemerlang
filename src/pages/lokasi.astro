@@ -8,21 +8,21 @@ const schema = getLocalBusinessSchema();
 ---
 
 <BaseLayout
-  title="Lokasi Toko Pertanian di Kedungkandang Malang"
-  description="Kunjungi toko fisik Agrokomplek Cemerlang di Jl. KH. Malik Dalam RT 01 RW 07, Buring, Kedungkandang, Kota Malang. Lihat petunjuk arah, rute, dan jam buka."
+  title="Toko Pertanian Kedungkandang Malang"
+  description="Kunjungi toko fisik &amp; gudang Agrokomplek Cemerlang di Buring, Kedungkandang, Kota Malang. Cek sampel plastik UV, paranet, irigasi, dan konsultasi greenhouse."
   jsonLd={schema}
 >
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">
     <Breadcrumb items={[{ label: 'Lokasi & Toko' }]} />
 
-    <div class="my-8 text-center max-w-3xl mx-auto space-y-3">
-      <span class="text-xs font-bold text-brand-700 uppercase tracking-wider bg-brand-50 px-3 py-1 rounded-full">
+    <div class="my-8 text-center max-w-3xl mx-auto space-y-2">
+      <span class="text-xs font-bold text-agri-700 uppercase tracking-wider bg-agri-50 border border-agri-100 px-3 py-1 rounded-sm inline-block">
         Toko Fisik & Pusat Operasional
       </span>
-      <h1 class="text-3xl sm:text-4xl font-black text-steel-900 tracking-tight">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-ink-primary tracking-tight">
         Toko Pertanian Agrokomplek Cemerlang di Malang
       </h1>
-      <p class="text-base text-steel-600 leading-relaxed">
+      <p class="text-sm sm:text-base text-ink-secondary leading-relaxed">
         Bagi pelanggan di Malang Raya (Kedungkandang, Buring, Gadang, Tajinan, Kota Malang, Kota Batu, dan Kabupaten Malang), silakan berkunjung langsung untuk melihat fisik produk dan konsultasi teknis greenhouse.
       </p>
     </div>
@@ -30,9 +30,9 @@ const schema = getLocalBusinessSchema();
     <!-- Map & Details Grid -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 my-10 items-start">
       
-      <!-- Interactive Google Maps Iframe -->
-      <div class="lg:col-span-7 bg-white p-3 rounded-3xl border border-steel-200 shadow-soft">
-        <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-steel-100 relative">
+      <!-- Interactive Google Maps Container -->
+      <div class="lg:col-span-7 bg-surface-card p-2 rounded-lg border border-surface-border">
+        <div class="aspect-[4/3] rounded-md overflow-hidden bg-surface-subtle relative border border-surface-border">
           <iframe
             src="https://maps.google.com/maps?q=-7.9984,112.6456&z=15&output=embed"
             width="100%"
@@ -47,32 +47,33 @@ const schema = getLocalBusinessSchema();
 
       <!-- NAP & Landmarks -->
       <div class="lg:col-span-5 space-y-6">
-        <div class="p-6 rounded-3xl bg-white border border-steel-200 shadow-soft space-y-4">
-          <h3 class="text-lg font-bold text-steel-900 border-b border-steel-100 pb-3">
-            Informasi Alamat & Kontak
+        <div class="p-6 rounded-lg bg-surface-card border border-surface-border space-y-4">
+          <h3 class="text-base sm:text-lg font-bold text-ink-primary border-b border-surface-border pb-3 uppercase tracking-wider">
+            Informasi Alamat &amp; Kontak Toko
           </h3>
 
-          <div class="space-y-3 text-xs sm:text-sm text-steel-700">
+          <div class="space-y-3.5 text-xs sm:text-sm text-ink-secondary">
             <div>
-              <span class="font-bold text-steel-900 block">Alamat Lengkap:</span>
-              <span>{BUSINESS_INFO.address.fullFormatted}</span>
+              <span class="font-bold text-ink-primary block uppercase text-xs">Alamat Lengkap:</span>
+              <span class="mt-0.5 block leading-relaxed">{BUSINESS_INFO.address.fullFormatted}</span>
             </div>
 
-            <div>
-              <span class="font-bold text-steel-900 block">Nomor WhatsApp / Telepon:</span>
-              <a href={`https://wa.me/${BUSINESS_INFO.contact.whatsappRaw}`} class="text-brand-700 font-semibold hover:underline">
+            <div class="border-t border-surface-border pt-3">
+              <span class="font-bold text-ink-primary block uppercase text-xs">WhatsApp / Telepon:</span>
+              <a href={`https://wa.me/${BUSINESS_INFO.contact.whatsappRaw}`} class="text-agri-700 font-bold hover:underline mt-0.5 inline-block">
                 {BUSINESS_INFO.contact.phone}
               </a>
             </div>
 
-            <div>
-              <span class="font-bold text-steel-900 block">Jam Buka Toko Fisik:</span>
-              <span>{BUSINESS_INFO.hours.physicalStore}</span>
+            <div class="border-t border-surface-border pt-3">
+              <span class="font-bold text-ink-primary block uppercase text-xs">Jam Buka Toko Fisik:</span>
+              <span class="mt-0.5 block">{BUSINESS_INFO.hours.physicalStore}</span>
+              <span class="text-[11px] text-ink-muted">(Konsultasi Online WhatsApp 24 Jam)</span>
             </div>
 
-            <div>
-              <span class="font-bold text-steel-900 block">Email Bisnis:</span>
-              <span>{BUSINESS_INFO.contact.email}</span>
+            <div class="border-t border-surface-border pt-3">
+              <span class="font-bold text-ink-primary block uppercase text-xs">Email:</span>
+              <span class="mt-0.5 block">{BUSINESS_INFO.contact.email}</span>
             </div>
           </div>
 
@@ -81,23 +82,30 @@ const schema = getLocalBusinessSchema();
               href={BUSINESS_INFO.geo.mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-brand-700 hover:bg-brand-800 text-white font-bold text-xs shadow-soft transition-colors"
+              class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-md bg-agri-700 hover:bg-agri-800 text-white font-bold text-xs uppercase tracking-wider transition-colors select-none"
             >
               <span>Buka Navigasi Google Maps</span>
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-              </svg>
+              <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
         </div>
 
         <!-- Landmarks & Guidance -->
-        <div class="p-6 rounded-3xl bg-earth-sand/50 border border-steel-200 space-y-3">
-          <h4 class="text-sm font-bold text-steel-900">Petunjuk Rute & Akses:</h4>
-          <ul class="text-xs text-steel-600 space-y-2">
-            <li>• Dari arah <strong>Terminal Gadang</strong>: Ambil arah Buring / Kedungkandang (sekitar 7-10 menit).</li>
-            <li>• Dari arah <strong>Pusat Kota Malang / Alun-alun</strong>: Melalui Jl. Kolonel Sugiono ke arah Jl. KH. Malik Dalam.</li>
-            <li>• Akses kendaraan roda dua, mobil, dan truk muatan saprodi dapat masuk dengan mudah.</li>
+        <div class="p-5 rounded-lg bg-surface-subtle border border-surface-border space-y-3">
+          <h4 class="text-sm sm:text-base font-bold uppercase tracking-wider text-ink-primary">Petunjuk Rute &amp; Akses Gudang:</h4>
+          <ul class="text-xs text-ink-secondary space-y-2 leading-relaxed">
+            <li class="flex items-start gap-2">
+              <span class="w-1.5 h-1.5 bg-agri-700 rounded-none shrink-0 mt-1.5"></span>
+              <span><strong>Dari Terminal Gadang:</strong> Ambil arah Buring / Kedungkandang (sekitar 7-10 menit berkendara).</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="w-1.5 h-1.5 bg-agri-700 rounded-none shrink-0 mt-1.5"></span>
+              <span><strong>Dari Alun-alun Kota Malang:</strong> Melalui Jl. Kolonel Sugiono mengarah ke Jl. KH. Malik Dalam.</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="w-1.5 h-1.5 bg-agri-700 rounded-none shrink-0 mt-1.5"></span>
+              <span><strong>Akses Truk & Muatan:</strong> Akses jalan memadai untuk mobil pikap, truk engkel, hingga truk CDD kargo.</span>
+            </li>
           </ul>
         </div>
 
