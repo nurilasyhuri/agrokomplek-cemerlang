@@ -2,41 +2,45 @@
 import { BUSINESS_INFO } from '../../data/businessInfo';
 ---
 
-<section class="py-12 lg:py-20 bg-surface-canvas border-b border-surface-border">
+<section class="py-16 lg:py-24 bg-white border-b border-zinc-200/80">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
       
       <!-- Text details -->
       <div class="lg:col-span-6 space-y-6">
         <div>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-ink-primary tracking-tight leading-[1.15]">
-            Toko &amp; Gudang Fisik
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/60 mb-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+            Toko Fisik & Gudang Pusat
+          </div>
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight leading-[1.15]">
+            Kunjungi Gudang Agrokomplek Cemerlang di Malang
           </h2>
-          <p class="text-xl sm:text-2xl font-bold text-agri-700 tracking-tight mt-1.5">
-            Lokasi Toko &amp; Gudang Agrokomplek Cemerlang
+          <p class="text-sm sm:text-base text-zinc-600 mt-3 leading-relaxed">
+            Terbuka bagi mitra tani, pelaku greenhouse komersial, maupun dinas pertanian untuk konsultasi langsung dan verifikasi fisik spesifikasi material.
           </p>
         </div>
 
-        <div class="space-y-3 text-xs text-ink-secondary">
-          <div class="flex items-start gap-3 p-3.5 rounded-md bg-surface-card border border-surface-border">
-            <svg class="w-4 h-4 text-agri-700 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="space-y-3 text-xs sm:text-sm text-zinc-600">
+          <div class="flex items-start gap-3.5 p-5 rounded-3xl bg-zinc-50/70 border border-zinc-200/80">
+            <svg class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
             </svg>
             <div>
-              <span class="font-bold text-ink-primary block uppercase">Alamat Gudang & Toko:</span>
-              <span class="text-ink-secondary mt-0.5 block">{BUSINESS_INFO.address.fullFormatted}</span>
+              <span class="font-bold text-zinc-900 block text-xs uppercase tracking-wider text-zinc-500">Alamat Gudang & Toko</span>
+              <span class="text-zinc-700 mt-1 block leading-relaxed">{BUSINESS_INFO.address.fullFormatted}</span>
             </div>
           </div>
 
-          <div class="flex items-start gap-3 p-3.5 rounded-md bg-surface-card border border-surface-border">
-            <svg class="w-4 h-4 text-agri-700 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="flex items-start gap-3.5 p-5 rounded-3xl bg-zinc-50/70 border border-zinc-200/80">
+            <svg class="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
             <div class="space-y-1">
-              <span class="font-bold text-ink-primary block uppercase tracking-wider text-[11px]">Jam Operasional:</span>
-              <p class="text-ink-primary font-bold text-xs">SENIN &mdash; MINGGU: 07.30 &mdash; 17.00 WIB</p>
-              <p class="text-ink-muted text-xs">Konsultasi WhatsApp: 24 Jam</p>
+              <span class="font-bold text-zinc-900 block text-xs uppercase tracking-wider text-zinc-500">Jam Operasional Toko</span>
+              <p class="text-zinc-900 font-semibold text-xs sm:text-sm">{BUSINESS_INFO.hours.physicalStore}</p>
+              <p class="text-zinc-500 text-xs">Konsultasi WhatsApp: 24 Jam Nonstop</p>
             </div>
           </div>
         </div>
@@ -46,7 +50,7 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
             href={BUSINESS_INFO.geo.mapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-md bg-agri-700 hover:bg-agri-800 text-white font-bold text-xs uppercase tracking-wider transition-colors select-none"
+            class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition-all shadow-sm select-none"
           >
             <span>Buka Rute Google Maps</span>
             <span aria-hidden="true">&rarr;</span>
@@ -54,7 +58,7 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
 
           <a
             href="/lokasi/"
-            class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-md border border-surface-border bg-surface-card hover:bg-surface-subtle text-ink-primary font-bold text-xs uppercase tracking-wider transition-colors select-none"
+            class="inline-flex items-center gap-1.5 px-7 py-3.5 rounded-full border border-zinc-200 bg-white hover:bg-zinc-50 text-zinc-900 font-semibold text-sm transition-all shadow-xs select-none"
           >
             <span>Detail Panduan Lokasi</span>
           </a>
@@ -63,7 +67,7 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
 
       <!-- Google Maps Embed Container -->
       <div class="lg:col-span-6">
-        <div class="rounded-lg overflow-hidden border border-surface-border bg-surface-subtle aspect-[4/3] relative">
+        <div class="rounded-3xl overflow-hidden border border-zinc-200/80 bg-zinc-100 aspect-[4/3] relative shadow-sm">
           <iframe
             src="https://maps.google.com/maps?q=-7.9984,112.6456&z=15&output=embed"
             width="100%"

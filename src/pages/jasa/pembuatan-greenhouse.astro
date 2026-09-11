@@ -25,19 +25,22 @@ const breadcrumbSchema = getBreadcrumbSchema([
     <Breadcrumb items={[{ label: 'Jasa Pembuatan Greenhouse' }]} />
 
     <!-- Page Header Hero -->
-    <div class="border-b border-surface-border pb-10">
-      <span class="text-xs font-bold uppercase tracking-wider text-agri-700">Fabrikasi & Konstruksi Pertanian</span>
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-ink-primary mt-1.5 leading-[1.15] max-w-4xl">
-        Jasa Pembuatan Greenhouse: Konstruksi Presisi untuk Pertanian Tropis Terproteksi
+    <div class="border-b border-zinc-200/80 pb-12 pt-4">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/60 mb-4">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+        Fabrikasi & Konstruksi Pertanian Tropis
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-900 leading-[1.15] max-w-4xl">
+        Jasa Pembuatan Greenhouse Presisi untuk Pertanian Terproteksi
       </h1>
-      <p class="text-base sm:text-lg text-ink-secondary mt-4 leading-relaxed max-w-3xl">
-        Dari riset varietas hortikultura hobi hingga kebun komersial melon dan sayuran bernilai tinggi. Agrokomplek Cemerlang menyediakan jasa rancang bangun lengkap: perhitungan beban angin, ventilasi sirkulasi udara mikro, suplai material berspesifikasi jelas, dan perakitan lapangan di seluruh Indonesia.
+      <p class="text-base sm:text-lg text-zinc-600 mt-4 leading-relaxed max-w-3xl">
+        Dari kebun hortikultura intensif hingga komersial skala besar. Agrokomplek Cemerlang menyediakan jasa rancang bangun komprehensif: simulasi beban angin, ventilasi sirkulasi udara mikro, material berspesifikasi standar industri, dan perakitan lapangan di seluruh Indonesia.
       </p>
 
-      <div class="flex flex-wrap gap-3 pt-6">
+      <div class="flex flex-wrap items-center gap-3 pt-8">
         <a
           href="#kalkulator"
-          class="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-agri-700 hover:bg-agri-800 text-white font-bold text-xs uppercase tracking-wider transition-colors select-none"
+          class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition-all shadow-sm select-none"
         >
           <span>Hitung Estimasi Anggaran Lahan</span>
           <span aria-hidden="true">&darr;</span>
@@ -47,7 +50,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
           href={waConsultUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 px-6 py-3 rounded-md border border-surface-border bg-surface-card hover:bg-surface-subtle text-ink-primary font-bold text-xs uppercase tracking-wider transition-colors select-none"
+          class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-zinc-200 bg-white hover:bg-zinc-50 text-zinc-900 font-semibold text-sm transition-all shadow-xs select-none"
         >
           <svg class="w-4 h-4 text-emerald-600" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
@@ -59,42 +62,50 @@ const breadcrumbSchema = getBreadcrumbSchema([
 
     <!-- 4 Core Engineering Principles -->
     <div class="space-y-6">
-      <div class="border-b border-surface-border pb-3">
-        <span class="text-xs font-bold uppercase tracking-wider text-agri-700">Pendekatan Rekayasa</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-ink-primary mt-0.5">
+      <div>
+        <span class="text-xs font-semibold text-emerald-700 uppercase tracking-wider block">Pendekatan Rekayasa</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight mt-1">
           Mengapa Desain Greenhouse Membutuhkan Perhitungan Teknis
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="border border-surface-border bg-surface-card p-5 rounded-lg space-y-2">
-          <span class="text-xs font-bold uppercase tracking-wider text-agri-700 block">01. Efek Termal</span>
-          <h3 class="font-bold text-ink-primary text-base sm:text-lg">Ventilasi Chimney Tropis</h3>
-          <p class="text-xs text-ink-muted leading-relaxed">
-            Menghindari jebakan hawa panas terperangkap dengan desain bukaan atap (monitor roof) sehingga udara panas naik dan keluar alami.
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div class="bg-white border border-zinc-200/80 p-6 sm:p-7 rounded-3xl space-y-3 shadow-sm hover:shadow-md transition-all hover:border-zinc-300">
+          <div class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center text-xs font-bold text-emerald-800">
+            01
+          </div>
+          <h3 class="font-bold text-zinc-900 text-base sm:text-lg leading-snug">Ventilasi Chimney Tropis</h3>
+          <p class="text-xs text-zinc-600 leading-relaxed">
+            Menghindari jebakan hawa panas terperangkap dengan desain bukaan atap (monitor roof) sehingga sirkulasi udara panas keluar alami.
           </p>
         </div>
 
-        <div class="border border-surface-border bg-surface-card p-5 rounded-lg space-y-2">
-          <span class="text-xs font-bold uppercase tracking-wider text-agri-700 block">02. Manajemen Embun</span>
-          <h3 class="font-bold text-ink-primary text-base sm:text-lg">Kemiringan Atap &amp; Anti-Drip</h3>
-          <p class="text-xs text-ink-muted leading-relaxed">
+        <div class="bg-white border border-zinc-200/80 p-6 sm:p-7 rounded-3xl space-y-3 shadow-sm hover:shadow-md transition-all hover:border-zinc-300">
+          <div class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center text-xs font-bold text-emerald-800">
+            02
+          </div>
+          <h3 class="font-bold text-zinc-900 text-base sm:text-lg leading-snug">Kemiringan Atap & Anti-Drip</h3>
+          <p class="text-xs text-zinc-600 leading-relaxed">
             Mencegah tetesan air embun jatuh langsung ke daun tanaman yang menjadi pemicu utama serangan jamur dan busuk pucuk.
           </p>
         </div>
 
-        <div class="border border-surface-border bg-surface-card p-5 rounded-lg space-y-2">
-          <span class="text-xs font-bold uppercase tracking-wider text-agri-700 block">03. Beban Struktural</span>
-          <h3 class="font-bold text-ink-primary text-base sm:text-lg">Daya Tahan Terpaan Angin</h3>
-          <p class="text-xs text-ink-muted leading-relaxed">
+        <div class="bg-white border border-zinc-200/80 p-6 sm:p-7 rounded-3xl space-y-3 shadow-sm hover:shadow-md transition-all hover:border-zinc-300">
+          <div class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center text-xs font-bold text-emerald-800">
+            03
+          </div>
+          <h3 class="font-bold text-zinc-900 text-base sm:text-lg leading-snug">Daya Tahan Terpaan Angin</h3>
+          <p class="text-xs text-zinc-600 leading-relaxed">
             Perhitungan jarak gording, kedalaman pondasi cor strouss, dan ketahanan terhadap beban gantungan buah melon serta instalasi hidroponik.
           </p>
         </div>
 
-        <div class="border border-surface-border bg-surface-card p-5 rounded-lg space-y-2">
-          <span class="text-xs font-bold uppercase tracking-wider text-agri-700 block">04. Difusi Cahaya</span>
-          <h3 class="font-bold text-ink-primary text-base sm:text-lg">PAR &amp; Ketahanan UV</h3>
-          <p class="text-xs text-ink-muted leading-relaxed">
+        <div class="bg-white border border-zinc-200/80 p-6 sm:p-7 rounded-3xl space-y-3 shadow-sm hover:shadow-md transition-all hover:border-zinc-300">
+          <div class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center text-xs font-bold text-emerald-800">
+            04
+          </div>
+          <h3 class="font-bold text-zinc-900 text-base sm:text-lg leading-snug">Difusi Cahaya & PAR UV</h3>
+          <p class="text-xs text-zinc-600 leading-relaxed">
             Penggunaan plastik UV impor dengan aditif EVA dan anti-dust agar radiasi fotosintesis maksimal tanpa membakar tajuk tanaman.
           </p>
         </div>
@@ -102,49 +113,57 @@ const breadcrumbSchema = getBreadcrumbSchema([
     </div>
 
     <!-- Interactive Calculator Anchor -->
-    <div id="kalkulator" class="pt-6">
+    <div id="kalkulator" class="pt-4">
       <EstimationCalculator client:load />
     </div>
 
     <!-- 4-Step Transparent Workflow -->
-    <div class="border-t border-surface-border pt-12 space-y-6">
+    <div class="border-t border-zinc-200/80 pt-12 space-y-6">
       <div>
-        <span class="text-xs font-bold uppercase tracking-wider text-agri-700">Alur Kerja Sama</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-ink-primary mt-0.5">
+        <span class="text-xs font-semibold text-emerald-700 uppercase tracking-wider block">Alur Kerja Sama</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight mt-1">
           Prosedur Dari Konsultasi Awal Hingga Serah Terima Kunci
         </h2>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="border border-surface-border bg-surface-card p-5 rounded-lg space-y-2">
-          <span class="text-xs font-bold text-agri-700">Langkah 01</span>
-          <h3 class="font-bold text-ink-primary text-base sm:text-lg">Konsultasi Kebutuhan &amp; RAB</h3>
-          <p class="text-xs text-ink-muted leading-relaxed">
-            Diskusikan jenis tanaman, ukuran lahan, target waktu, dan budget. Kami susunkan rincian spesifikasi material dan perkiraan anggaran transparan.
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div class="bg-zinc-50/70 border border-zinc-200/80 p-6 sm:p-7 rounded-3xl space-y-3">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-zinc-900 border border-zinc-200 shadow-xs">
+            Langkah 01
+          </span>
+          <h3 class="font-bold text-zinc-900 text-base sm:text-lg leading-snug">Konsultasi Kebutuhan & RAB</h3>
+          <p class="text-xs text-zinc-600 leading-relaxed">
+            Diskusikan komoditas, ukuran lahan, target waktu, dan budget. Kami susunkan rincian spesifikasi material dan perkiraan anggaran transparan.
           </p>
         </div>
 
-        <div class="border border-surface-border bg-surface-card p-5 rounded-lg space-y-2">
-          <span class="text-xs font-bold text-agri-700">Langkah 02</span>
-          <h3 class="font-bold text-ink-primary text-base sm:text-lg">Survei Lahan &amp; Desain Kerja</h3>
-          <p class="text-xs text-ink-muted leading-relaxed">
-            Tim teknisi memeriksa kondisi kontur tanah, arah mata angin, serta ketersediaan sumber air dan listrik di lokasi proyek Anda.
+        <div class="bg-zinc-50/70 border border-zinc-200/80 p-6 sm:p-7 rounded-3xl space-y-3">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-zinc-900 border border-zinc-200 shadow-xs">
+            Langkah 02
+          </span>
+          <h3 class="font-bold text-zinc-900 text-base sm:text-lg leading-snug">Survei Lahan & Desain Kerja</h3>
+          <p class="text-xs text-zinc-600 leading-relaxed">
+            Tim teknisi memeriksa kontur tanah, arah terpaan angin, serta ketersediaan sumber air dan listrik di lokasi proyek Anda.
           </p>
         </div>
 
-        <div class="border border-surface-border bg-surface-card p-5 rounded-lg space-y-2">
-          <span class="text-xs font-bold text-agri-700">Langkah 03</span>
-          <h3 class="font-bold text-ink-primary text-base sm:text-lg">Fabrikasi &amp; Pengiriman</h3>
-          <p class="text-xs text-ink-muted leading-relaxed">
-            Material pipa, plastik UV, dan aksesoris dipersiapkan dan diuji di workshop Malang, kemudian dikirim via ekspedisi terpercaya ke lokasi.
+        <div class="bg-zinc-50/70 border border-zinc-200/80 p-6 sm:p-7 rounded-3xl space-y-3">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-zinc-900 border border-zinc-200 shadow-xs">
+            Langkah 03
+          </span>
+          <h3 class="font-bold text-zinc-900 text-base sm:text-lg leading-snug">Fabrikasi & Pengiriman</h3>
+          <p class="text-xs text-zinc-600 leading-relaxed">
+            Material pipa, plastik UV, dan aksesoris dipersiapkan di workshop Malang, kemudian dikirim via armada kargo terpercaya ke lokasi Anda.
           </p>
         </div>
 
-        <div class="border border-surface-border bg-surface-card p-5 rounded-lg space-y-2">
-          <span class="text-xs font-bold text-agri-700">Langkah 04</span>
-          <h3 class="font-bold text-ink-primary text-base sm:text-lg">Perakitan &amp; Serah Terima</h3>
-          <p class="text-xs text-ink-muted leading-relaxed">
-            Tim aplikator lapangan merakit struktur hingga tuntas, memasang plastik UV dan insectnet, serta uji kebocoran sebelum serah terima.
+        <div class="bg-zinc-50/70 border border-zinc-200/80 p-6 sm:p-7 rounded-3xl space-y-3">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-zinc-900 border border-zinc-200 shadow-xs">
+            Langkah 04
+          </span>
+          <h3 class="font-bold text-zinc-900 text-base sm:text-lg leading-snug">Perakitan & Serah Terima</h3>
+          <p class="text-xs text-zinc-600 leading-relaxed">
+            Tim aplikator lapangan merakit struktur hingga tuntas, memasang plastik UV dan insect net, serta uji kekokohan sebelum serah terima.
           </p>
         </div>
       </div>

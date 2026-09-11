@@ -106,6 +106,20 @@
 - **Step 3:** Project parameters (City/Regency, Target Crop, Timeline).
 - **Step 4:** Live budget range summary (Min - Max IDR) + direct WhatsApp dispatch pre-filling all parameters.
 
+### 3.5 Shopify-Grade Direct-to-WA Conversion Architecture (Zero Web Forms)
+- **Zero Web Forms Invariant:** Under no circumstance should a checkout, address, or multi-step form be rendered on the website. The user journey ends directly at WhatsApp with a pre-filled structured message.
+- **Variant Selector (`ProductVariantSelector.tsx`):**
+  - Pill-based option buttons (e.g. Ukuran Roll, Tebal Micron, Kerapatan Net).
+  - Selected state: `border-agri-700 bg-agri-50 text-agri-800 font-bold`.
+  - Unselected state: `border-surface-border bg-surface-card hover:bg-surface-subtle text-ink-primary`.
+- **Dynamic Price Engine:** Live reactive price display in IDR format (`Rp X.XXX.XXX`), updating unit price and total price immediately when a variant is chosen or quantity changes.
+- **Accessible Quantity Stepper:** `[-] 1 [+]` buttons with minimum 44px touch targets and live input guard ($1 \le Qty \le 999$).
+- **Single-Click Direct WhatsApp Action:**
+  - High-visibility green CTA button with official WhatsApp brand icon.
+  - Generates pre-encoded `https://wa.me/6285183002070?text=...` URI.
+  - Encodes: Product Name, SKU, Selected Variant, Quantity, Calculated Total Price, Page URL, and Clean Delivery Template.
+- **Mobile Sticky Action Dock:** Single-deck sticky bar on PDP (< 768px) displaying current variant price and direct "Beli via WA" button within thumb zone without obstructing viewport.
+
 ---
 
 ## 4. Accessibility & Touch Reality

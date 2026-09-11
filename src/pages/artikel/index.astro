@@ -16,52 +16,53 @@ const sortedArticles = articles.sort(
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">
     <Breadcrumb items={[{ label: 'Artikel' }]} />
 
-    <div class="my-8 text-center max-w-3xl mx-auto space-y-2">
-      <span class="text-xs font-bold text-agri-700 uppercase tracking-wider bg-agri-50 border border-agri-100 px-3 py-1 rounded-sm inline-block">
-        Edukasi &amp; Panduan Praktisi
-      </span>
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-ink-primary tracking-tight">
-        Panduan Pertanian &amp; Konstruksi Greenhouse
+    <div class="my-10 text-center max-w-3xl mx-auto space-y-3">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/60">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+        Edukasi & Panduan Praktisi
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight">
+        Panduan Pertanian & Konstruksi Greenhouse
       </h1>
-      <p class="text-sm sm:text-base text-ink-secondary leading-relaxed">
-        Artikel teknis berbasis pengalaman lapangan untuk membantu Anda mengambil keputusan yang tepat terkait pemilihan sarana produksi dan pembangunan fasilitas budidaya.
+      <p class="text-sm sm:text-base text-zinc-600 leading-relaxed">
+        Artikel teknis berbasis pengalaman lapangan untuk membantu Anda mengambil keputusan tepat dalam pemilihan saprodi dan pembangunan fasilitas budidaya modern.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 my-10">
       {sortedArticles.map((art) => (
         <a
           href={`/artikel/${art.slug}/`}
-          class="group rounded-lg bg-surface-card border border-surface-border overflow-hidden hover:border-agri-700 transition-colors flex flex-col justify-between"
+          class="group rounded-3xl bg-white border border-zinc-200/80 overflow-hidden hover:border-zinc-300 hover:shadow-lg transition-all flex flex-col justify-between"
         >
           <div>
-            <div class="aspect-video bg-surface-subtle relative overflow-hidden border-b border-surface-border">
+            <div class="aspect-[16/10] bg-zinc-100 relative overflow-hidden">
               <img
                 src={art.data.heroImage}
                 alt={art.data.title}
-                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                 loading="lazy"
                 decoding="async"
               />
-              <div class="absolute top-3 left-3 bg-agri-700 text-white px-2.5 py-0.5 rounded-xs text-[10px] font-bold uppercase tracking-wider">
+              <div class="absolute top-3.5 left-3.5 bg-white/90 backdrop-blur-md text-zinc-900 px-3 py-1 rounded-full text-[11px] font-semibold shadow-xs border border-zinc-200/50">
                 {art.data.category}
               </div>
             </div>
 
-            <div class="p-5 space-y-2.5">
-              <span class="text-[11px] text-ink-muted block font-medium">
+            <div class="p-6 space-y-3">
+              <span class="text-xs text-zinc-400 block font-medium">
                 {art.data.publishDate}
               </span>
-              <h3 class="font-bold text-ink-primary text-lg sm:text-xl leading-snug group-hover:text-agri-700 transition-colors">
+              <h3 class="font-bold text-zinc-900 text-lg sm:text-xl leading-snug group-hover:text-emerald-700 transition-colors">
                 {art.data.title}
               </h3>
-              <p class="text-xs text-ink-secondary line-clamp-3 leading-relaxed">
+              <p class="text-xs text-zinc-600 line-clamp-3 leading-relaxed">
                 {art.data.description}
               </p>
             </div>
           </div>
 
-          <div class="px-5 py-3 bg-surface-subtle border-t border-surface-border flex items-center justify-between text-xs font-bold text-agri-700">
+          <div class="px-6 py-4 bg-zinc-50/60 border-t border-zinc-100 flex items-center justify-between text-xs font-semibold text-emerald-700 group-hover:text-emerald-800">
             <span>Baca Panduan Selengkapnya</span>
             <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">&rarr;</span>
           </div>

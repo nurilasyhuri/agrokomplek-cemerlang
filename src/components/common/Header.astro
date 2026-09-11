@@ -8,24 +8,23 @@ const waInquiryUrl = generateGeneralInquiryUrl('header-cta');
 ---
 
 <header class="w-full">
-  <!-- Top Utility Information Strip -->
-  <div class="bg-surface-subtle border-b border-surface-border text-xs text-ink-muted px-4 py-1.5 hidden md:block">
-    <div class="max-w-7xl mx-auto flex justify-between items-center">
-      <div class="flex items-center gap-4">
-        <span class="font-medium text-ink-secondary">
-          Toko Fisik & Gudang: <span class="text-ink-primary font-semibold">Jl. KH. Malik Dalam, Kedungkandang, Kota Malang</span>
-        </span>
+  <!-- Top Utility Information Strip (Ultra-clean Apple/Google subhead) -->
+  <div class="bg-zinc-50/80 border-b border-zinc-200/70 text-xs text-zinc-500 px-4 py-1.5 hidden md:block backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto flex justify-between items-center text-[11px]">
+      <div class="flex items-center gap-2 text-zinc-600">
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+        <span>Gudang &amp; Toko Fisik Malang: <strong class="text-zinc-900 font-medium">Jl. KH. Malik Dalam, Kedungkandang</strong></span>
       </div>
-      <div class="flex items-center gap-5">
-        <span>Senin - Sabtu: 08.00 - 17.00 WIB</span>
-        <span class="text-surface-border-dark">|</span>
+      <div class="flex items-center gap-5 text-zinc-500">
+        <span>Senin &ndash; Sabtu: 08.00 &ndash; 17.00 WIB</span>
+        <span class="text-zinc-300">&bull;</span>
         <a
           href={waInquiryUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="font-semibold text-agri-700 hover:text-agri-800 flex items-center gap-1.5"
+          class="font-medium text-zinc-700 hover:text-emerald-700 transition-colors flex items-center gap-1.5"
         >
-          <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+          <svg class="w-3.5 h-3.5 text-emerald-600" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
           </svg>
           <span>WA: {BUSINESS_INFO.contact.phone}</span>
@@ -34,33 +33,41 @@ const waInquiryUrl = generateGeneralInquiryUrl('header-cta');
     </div>
   </div>
 
-  <!-- Main Navigation Bar -->
-  <div class="sticky top-0 z-30 bg-surface-card border-b border-surface-border">
+  <!-- Main Navigation Bar (Translucent Apple-style Glass) -->
+  <div class="sticky top-0 z-40 bg-white/80 backdrop-blur-xl border-b border-zinc-200/80 transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 sm:h-20">
         
         <!-- Brand Wordmark -->
-        <a href="/" class="flex flex-col select-none group py-0.5">
-          <span class="text-base sm:text-lg font-bold tracking-tight text-ink-primary group-hover:text-agri-700 transition-colors leading-tight">
-            Agrokomplek Cemerlang
-          </span>
-          <span class="text-[10px] font-medium text-ink-muted tracking-wider uppercase leading-none mt-0.5">
-            Pertanian &bull; Proteksi &bull; Irigasi &bull; Konstruksi
-          </span>
+        <a href="/" class="flex items-center gap-3 select-none group py-1">
+          <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-700 group-hover:scale-105 transition-transform duration-200 shadow-xs">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+              <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+            </svg>
+          </div>
+          <div class="flex flex-col">
+            <span class="text-base sm:text-lg font-bold tracking-tight text-zinc-900 group-hover:text-emerald-700 transition-colors leading-tight">
+              Agrokomplek Cemerlang
+            </span>
+            <span class="text-[11px] font-medium text-zinc-500 tracking-normal leading-none mt-0.5">
+              Saprodi &bull; Irigasi &bull; Greenhouse
+            </span>
+          </div>
         </a>
 
-        <!-- Desktop Navigation Links (Focused 4 Core Items) -->
-        <nav class="hidden lg:flex items-center gap-8 text-sm font-semibold text-ink-secondary">
+        <!-- Desktop Navigation Links (Pill Navigation) -->
+        <nav class="hidden lg:flex items-center gap-1.5 p-1 bg-zinc-100/70 border border-zinc-200/60 rounded-full text-sm font-medium">
           {MAIN_NAVIGATION.map((item) => {
             const isActive = currentPath.startsWith(item.href);
             return (
               <a
                 href={item.href}
                 class:list={[
-                  'py-2 border-b-2 transition-colors',
+                  'px-4 py-1.5 rounded-full transition-all text-xs font-semibold',
                   isActive
-                    ? 'border-agri-700 text-agri-700 font-bold'
-                    : 'border-transparent hover:text-ink-primary hover:border-surface-border',
+                    ? 'bg-white text-zinc-950 shadow-xs'
+                    : 'text-zinc-600 hover:text-zinc-950 hover:bg-white/60',
                 ]}
               >
                 {item.label}
@@ -75,12 +82,12 @@ const waInquiryUrl = generateGeneralInquiryUrl('header-cta');
             href={waInquiryUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-md bg-agri-700 hover:bg-agri-800 text-white font-bold text-xs uppercase tracking-wider transition-colors select-none"
+            class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-zinc-900 hover:bg-zinc-800 text-white font-medium text-xs tracking-normal shadow-xs hover:shadow transition-all select-none"
           >
-            <svg class="w-4 h-4 text-emerald-300" viewBox="0 0 24 24" fill="currentColor">
+            <svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
             </svg>
-            <span>Konsultasi WhatsApp</span>
+            <span>Konsultasi WA</span>
           </a>
 
           <!-- Mobile Menu Button (Min 44px) -->
@@ -88,9 +95,9 @@ const waInquiryUrl = generateGeneralInquiryUrl('header-cta');
             id="mobile-menu-btn"
             type="button"
             aria-label="Buka Menu"
-            class="lg:hidden w-11 h-11 flex items-center justify-center rounded-md border border-surface-border text-ink-primary hover:bg-surface-subtle active:bg-surface-border transition-colors select-none"
+            class="lg:hidden w-11 h-11 flex items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-900 hover:bg-zinc-50 active:bg-zinc-100 transition-colors select-none shadow-xs"
           >
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
             </svg>
           </button>
@@ -103,32 +110,32 @@ const waInquiryUrl = generateGeneralInquiryUrl('header-cta');
   <!-- Mobile Drawer Scrim / Backdrop -->
   <div
     id="mobile-drawer-backdrop"
-    class="fixed inset-0 bg-ink-primary/50 z-40 transition-opacity duration-200 opacity-0 pointer-events-none lg:hidden"
+    class="fixed inset-0 bg-black/40 backdrop-blur-sm z-50 transition-opacity duration-200 opacity-0 pointer-events-none lg:hidden"
     aria-hidden="true"
   ></div>
 
-  <!-- Mobile Drawer Panel -->
+  <!-- Mobile Drawer Panel (Apple-style rounded sheet) -->
   <aside
     id="mobile-drawer"
-    class="hidden fixed inset-y-0 right-0 w-80 max-w-[85vw] bg-surface-card z-50 border-l border-surface-border flex flex-col justify-between lg:hidden"
+    class="hidden fixed inset-y-2 right-2 w-80 max-w-[88vw] bg-white z-50 rounded-3xl border border-zinc-200 shadow-2xl flex flex-col justify-between overflow-hidden lg:hidden"
     role="dialog"
     aria-modal="true"
     aria-label="Menu Navigasi Mobile"
   >
     <!-- Drawer Top -->
-    <div>
-      <div class="p-4 border-b border-surface-border flex items-center justify-between bg-surface-subtle">
+    <div class="overflow-y-auto">
+      <div class="p-5 border-b border-zinc-100 flex items-center justify-between">
         <div class="flex flex-col">
-          <span class="font-bold text-sm text-ink-primary tracking-tight">Agrokomplek Cemerlang</span>
-          <span class="text-[10px] font-medium text-ink-muted uppercase">Pertanian &bull; Proteksi &bull; Irigasi &bull; Konstruksi</span>
+          <span class="font-bold text-sm text-zinc-900 tracking-tight">Agrokomplek Cemerlang</span>
+          <span class="text-[11px] text-zinc-500">Malang &bull; Seluruh Indonesia</span>
         </div>
         <button
           id="mobile-drawer-close"
           type="button"
           aria-label="Tutup Menu"
-          class="w-10 h-10 flex items-center justify-center rounded-md border border-surface-border text-ink-primary hover:bg-surface-card transition-colors select-none"
+          class="w-9 h-9 flex items-center justify-center rounded-full bg-zinc-100 text-zinc-700 hover:bg-zinc-200 transition-colors select-none"
         >
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
           </svg>
         </button>
@@ -136,21 +143,21 @@ const waInquiryUrl = generateGeneralInquiryUrl('header-cta');
 
       <!-- Primary Navigation Links -->
       <nav class="p-4 space-y-1">
-        <span class="text-[10px] font-bold uppercase tracking-wider text-ink-muted px-3 block mb-2">Menu Utama</span>
+        <span class="text-[11px] font-semibold text-zinc-400 px-3 block mb-2 uppercase tracking-wider">Menu Utama</span>
         {MAIN_NAVIGATION.map((item) => {
           const isActive = currentPath.startsWith(item.href);
           return (
             <a
               href={item.href}
               class:list={[
-                'flex items-center justify-between px-3 py-3 rounded-md text-sm font-bold transition-colors',
+                'flex items-center justify-between px-3.5 py-2.5 rounded-xl text-sm font-medium transition-colors',
                 isActive
-                  ? 'bg-agri-50 text-agri-700'
-                  : 'text-ink-primary hover:bg-surface-subtle',
+                  ? 'bg-emerald-50 text-emerald-800 font-semibold'
+                  : 'text-zinc-800 hover:bg-zinc-100',
               ]}
             >
               <span>{item.label}</span>
-              <svg class="w-4 h-4 text-surface-border-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
               </svg>
             </a>
@@ -158,18 +165,18 @@ const waInquiryUrl = generateGeneralInquiryUrl('header-cta');
         })}
 
         <!-- Secondary Navigation Links -->
-        <div class="pt-4 mt-4 border-t border-surface-border space-y-1">
-          <span class="text-[10px] font-bold uppercase tracking-wider text-ink-muted px-3 block mb-1">Informasi Lain</span>
+        <div class="pt-4 mt-4 border-t border-zinc-100 space-y-1">
+          <span class="text-[11px] font-semibold text-zinc-400 px-3 block mb-1 uppercase tracking-wider">Informasi Lain</span>
           {SECONDARY_NAVIGATION.map((item) => {
             const isActive = currentPath.startsWith(item.href);
             return (
               <a
                 href={item.href}
                 class:list={[
-                  'flex items-center justify-between px-3 py-2 text-xs font-semibold transition-colors',
+                  'flex items-center justify-between px-3.5 py-2 text-xs font-medium transition-colors rounded-lg',
                   isActive
-                    ? 'text-agri-700 font-bold'
-                    : 'text-ink-secondary hover:text-ink-primary',
+                    ? 'text-emerald-700 font-semibold bg-emerald-50/50'
+                    : 'text-zinc-600 hover:text-zinc-900 hover:bg-zinc-50',
                 ]}
               >
                 <span>{item.label}</span>
@@ -181,18 +188,18 @@ const waInquiryUrl = generateGeneralInquiryUrl('header-cta');
     </div>
 
     <!-- Drawer Bottom Contact -->
-    <div class="p-4 border-t border-surface-border bg-surface-subtle space-y-3">
-      <div class="text-xs text-ink-muted leading-relaxed">
-        <p class="font-semibold text-ink-primary">Gudang & Toko Malang:</p>
-        <p>Jl. KH. Malik Dalam RT 01 RW 07, Buring, Kedungkandang, Malang</p>
+    <div class="p-4 border-t border-zinc-100 bg-zinc-50/80 space-y-3">
+      <div class="text-xs text-zinc-600 leading-relaxed">
+        <p class="font-semibold text-zinc-900">Gudang & Toko Malang:</p>
+        <p class="text-[11px] text-zinc-500">Jl. KH. Malik Dalam, Kedungkandang, Kota Malang</p>
       </div>
       <a
         href={waInquiryUrl}
         target="_blank"
         rel="noopener noreferrer"
-        class="w-full flex items-center justify-center gap-2 py-3 rounded-md bg-agri-700 hover:bg-agri-800 text-white font-bold text-xs uppercase tracking-wider transition-colors select-none"
+        class="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-zinc-900 hover:bg-zinc-800 text-white font-medium text-xs tracking-normal transition-colors select-none shadow-xs"
       >
-        <svg class="w-4 h-4 text-emerald-300" viewBox="0 0 24 24" fill="currentColor">
+        <svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
         </svg>
         <span>Hubungi WhatsApp</span>

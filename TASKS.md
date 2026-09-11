@@ -113,3 +113,50 @@
 - [x] **TASK-26: Production Build & Cloudflare Pages Deployment Audit**
   - **Files:** Whole project build artifact in `dist/`
   - **Done when:** `bun run build` succeeds with zero errors (28 static pages generated), all routes respond with HTTP 200, JSON-LD schemas pass validation, and clean cutover is proven.
+
+---
+
+## Phase 6: Shopify-Grade Direct-to-WA Storefront Evolution (Word Data Integration)
+- [x] **TASK-27: Ingest and Optimize Authentic Photography from Word Document and KUMPULAN FOTO**
+  - **Primary requirement:** REQ-07
+  - **Files:** `public/images/products/`, `public/images/greenhouse/`
+  - **Done when:** All 6 images from `DATA WEBSITE GH.docx` and high-res images from `KUMPULAN FOTO/` are converted to optimized WebP, placed in `public/images/`, and mapped to their respective products and services.
+- [x] **TASK-28: Extend Content Schema with Structured Variants and Update Product Collections**
+  - **Primary requirement:** REQ-02
+  - **Files:** `src/content/config.ts`, `src/content/produk/*.md`
+  - **Done when:** Zod schema supports `variants` array (name, price, priceDisplay, sku, unit), and products (Plastik UV, Paranet, Insectnet, Hidroponik) define realistic multi-variant tiers with verified frontmatter.
+- [x] **TASK-29: Build Interactive Shopify-Grade Variant Selector and Dynamic Pricing Island**
+  - **Primary requirement:** REQ-02, REQ-03
+  - **Files:** `src/components/products/ProductVariantSelector.tsx`, `src/pages/produk/[slug].astro`
+  - **Done when:** PDP renders variant pill buttons, interactive quantity stepper `[-] 1 [+]`, dynamic subtotal calculation, and zero-form 1-click "Beli Sekarang via WhatsApp" trigger generating pre-filled encoded `wa.me` URL.
+- [x] **TASK-30: Build Mobile Sticky Conversion Dock on Product Detail Pages**
+  - **Primary requirement:** REQ-05, REQ-03
+  - **Files:** `src/pages/produk/[slug].astro`, `src/components/common/MobileStickyBar.astro`
+  - **Done when:** On screens < 768px, mobile dock renders live price, selected variant name, quantity badge, and direct "Beli via WA" button with zero form inputs.
+- [x] **TASK-31: Update Product Catalog Cards with Variant Count and Direct WhatsApp Inquiries**
+  - **Primary requirement:** REQ-01, REQ-03
+  - **Files:** `src/components/products/ProductCard.astro`, `src/pages/produk/index.astro`
+  - **Done when:** Product cards display variant count badges (e.g. "3 Pilihan Ukuran") and quick WhatsApp direct trigger.
+- [x] **TASK-32: Build Verification, End-to-End Link Formatting & Edge Audit**
+  - **Primary requirement:** REQ-07
+  - **Files:** Entire project build output
+  - **Done when:** `bun run build` generates all pages cleanly, all WhatsApp URLs are validated with proper URI encoding and line breaks, and page load remains < 1s with 0 server backend dependencies.
+
+---
+
+## Phase 7: Apple & Google UI/UX Design System Overhaul
+- [x] **TASK-33: Modern Color Token & Typography Calibration**
+  - **Files:** `tailwind.config.mjs`, `src/styles/global.css`, `src/layouts/BaseLayout.astro`
+  - **Done when:** Muddy `#f7f6f2` canvas replaced with pure white `#ffffff` canvas, subtle slate `#fafafa`/`#f4f4f5`, rich zinc typography (`zinc-900`/`zinc-600`), squircle radii (`rounded-3xl`, `rounded-2xl`, `rounded-full`), and soft diffuse ambient shadows.
+- [x] **TASK-34: Translucent Glass Header & Floating Mobile Dock Redesign**
+  - **Files:** `src/components/common/Header.astro`, `src/components/common/MobileStickyBar.astro`, `src/components/common/Footer.astro`
+  - **Done when:** Navbar upgraded to frosted glass backdrop (`bg-white/80 backdrop-blur-xl`), pill navigation, rounded-3xl drawer, and clean light-mode footer without box-in-a-box visual clutter.
+- [x] **TASK-35: Apple Store E-Commerce Product Experience & Preact Variant Selector**
+  - **Files:** `src/components/products/ProductCard.astro`, `src/components/products/ProductVariantSelector.tsx`, `src/pages/produk/[slug].astro`, `src/components/products/ProductFilter.tsx`
+  - **Done when:** PDP features clean borderless hero photo, segmented pill variant cards with radio indicator, minimalist pill stepper, large typography, subtotal preview, sticky mobile dock, and zero-form 1-click WhatsApp checkout.
+- [x] **TASK-36: Greenhouse Calculator & Secondary Pages Elevation**
+  - **Files:** `src/components/greenhouse/EstimationCalculator.tsx`, `src/pages/jasa/pembuatan-greenhouse.astro`, `src/pages/proyek/index.astro`, `src/pages/proyek/[slug].astro`, `src/pages/lokasi.astro`, `src/pages/wilayah-layanan.astro`, `src/pages/kontak.astro`, `src/pages/tentang-kami.astro`, `src/pages/artikel/index.astro`, `src/pages/artikel/[slug].astro`, `src/pages/404.astro`
+  - **Done when:** All cards use rounded-3xl with diffuse shadows, pill controls, Apple-dark summary cards, and all legacy tokens are eradicated.
+- [x] **TASK-37: Production Build & Multi-Endpoint HTTP Verification**
+  - **Files:** Whole project build artifact in `dist/`
+  - **Done when:** `astro check && astro build` finishes with 0 errors/warnings across 38 files, 30 static pages built in < 6s, and all key routes respond with HTTP 200.

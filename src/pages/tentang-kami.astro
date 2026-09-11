@@ -11,102 +11,106 @@ import { BUSINESS_INFO } from '../data/businessInfo';
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">
     <Breadcrumb items={[{ label: 'Tentang Kami' }]} />
 
-    <div class="my-8 space-y-2">
-      <span class="text-xs font-bold text-agri-700 uppercase tracking-wider bg-agri-50 border border-agri-100 px-3 py-1 rounded-sm inline-block">
-        Profil Bisnis &amp; Prinsip
-      </span>
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-ink-primary tracking-tight">
+    <div class="my-10 space-y-3">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/60">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+        Profil & Filosofi Bisnis
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight leading-[1.15]">
         Mendukung Pertanian dari Kebutuhan Dasar hingga Infrastruktur Modern
       </h1>
     </div>
 
-    <div class="space-y-8 text-sm sm:text-base text-ink-secondary leading-relaxed">
+    <div class="space-y-8 text-sm sm:text-base text-zinc-600 leading-relaxed">
       <p>
-        Pertanian yang berkembang dan menguntungkan berawal dari perencanaan yang matang: penggunaan sarana produksi (saprodi) yang tepat, perlengkapan budidaya yang efisien, serta infrastruktur greenhouse yang kokoh dan disesuaikan dengan kondisi iklim mikro setempat.
+        Pertanian yang bertumbuh dan berkelanjutan berawal dari perencanaan yang matang: sarana produksi (saprodi) yang presisi, perlengkapan budidaya yang efisien, serta infrastruktur greenhouse yang kokoh dan dirancang sesuai iklim tropis setempat.
       </p>
 
       <p>
-        <strong class="text-ink-primary">Agrokomplek Cemerlang</strong> menyediakan kebutuhan Saprodi Pertanian, Material Greenhouse, Perlengkapan Irigasi, serta Jasa Pembuatan Greenhouse. Produk yang tersedia meliputi plastik UV greenhouse, paranet, mulsa pertanian, insect net, selang drip, perlengkapan hidroponik, dan berbagai komponen pendukung budidaya lainnya.
+        <strong class="text-zinc-900 font-semibold">Agrokomplek Cemerlang</strong> menyediakan kebutuhan Saprodi Pertanian, Material Greenhouse, Perlengkapan Irigasi, serta Jasa Pembuatan Greenhouse. Seluruh produk seperti plastik UV greenhouse, paranet, mulsa pertanian, insect net, selang drip, hingga komponen hidroponik dikurasi langsung dengan spesifikasi teknis yang transparan.
       </p>
 
       <!-- Tagline Callout -->
-      <div class="p-6 rounded-lg bg-surface-subtle border border-surface-border space-y-2">
-        <span class="text-xs font-bold uppercase tracking-wider text-agri-700 block">Filosofi Kerja Kami</span>
-        <h2 class="text-lg font-bold text-ink-primary">
+      <div class="p-7 sm:p-9 rounded-3xl bg-zinc-50/80 border border-zinc-200/80 space-y-3">
+        <span class="text-xs font-semibold text-emerald-700 uppercase tracking-wider block">Filosofi Kerja Kami</span>
+        <h2 class="text-xl sm:text-2xl font-bold text-zinc-900">
           "{BUSINESS_INFO.tagline}"
         </h2>
-        <p class="text-xs sm:text-sm text-ink-secondary leading-relaxed">
-          Kami menolak pendekatan <em>overselling</em> atau memaksakan spesifikasi mahal yang tidak relevan. Rekomendasi material dan desain greenhouse kami selalu diselaraskan dengan jenis komoditas, daya dukung lahan, dan anggaran modal Anda.
+        <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed">
+          Kami menolak pendekatan <em>overselling</em> atau memaksakan spesifikasi mahal yang tidak relevan. Rekomendasi material dan desain greenhouse kami selalu diselaraskan dengan jenis komoditas, daya dukung lahan, dan kapasitas investasi Anda.
         </p>
       </div>
 
-      <!-- 2 Pillars -->
-      <div class="space-y-4 pt-2">
-        <h3 class="text-2xl sm:text-3xl font-extrabold text-ink-primary border-b border-surface-border pb-3">
-          Empat Pilar Solusi Pertanian &amp; Greenhouse
-        </h3>
+      <!-- 4 Pillars -->
+      <div class="space-y-6 pt-4">
+        <div>
+          <span class="text-xs font-semibold text-emerald-700 uppercase tracking-wider block">Solusi Terintegrasi</span>
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight mt-1">
+            Empat Pilar Solusi Pertanian & Greenhouse
+          </h3>
+        </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div class="p-6 rounded-lg bg-surface-card border border-surface-border space-y-3">
-            <div class="w-8 h-8 rounded-sm bg-agri-700 text-white flex items-center justify-center font-bold text-xs">
+          <div class="p-7 sm:p-8 rounded-3xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-all space-y-4">
+            <div class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center font-bold text-xs text-emerald-800">
               01
             </div>
-            <h4 class="font-extrabold text-ink-primary text-lg sm:text-xl">Saprodi Pertanian</h4>
-            <p class="text-xs text-ink-secondary leading-relaxed">
-              Menyediakan pupuk NPK dan organik berkualitas, nutrisi hidroponik AB Mix, media tanam siap pakai, dan benih sayuran unggul untuk produktivitas panen maksimal.
+            <h4 class="font-bold text-zinc-900 text-lg sm:text-xl">Saprodi Pertanian</h4>
+            <p class="text-xs text-zinc-600 leading-relaxed">
+              Menyediakan pupuk NPK dan organik berkualitas, nutrisi hidroponik AB Mix, media tanam siap pakai, dan benih sayuran unggul untuk produktivitas panen optimal.
             </p>
             <div class="pt-2">
-              <a href="/produk/saprodi-pertanian/" class="text-xs font-bold text-agri-700 hover:underline inline-flex items-center gap-1">
+              <a href="/produk/saprodi-pertanian/" class="text-xs font-semibold text-emerald-700 hover:text-emerald-800 inline-flex items-center gap-1 group">
                 <span>Katalog Saprodi</span>
-                <span aria-hidden="true">&rarr;</span>
+                <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">&rarr;</span>
               </a>
             </div>
           </div>
 
-          <div class="p-6 rounded-lg bg-surface-card border border-surface-border space-y-3">
-            <div class="w-8 h-8 rounded-sm bg-agri-700 text-white flex items-center justify-center font-bold text-xs">
+          <div class="p-7 sm:p-8 rounded-3xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-all space-y-4">
+            <div class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center font-bold text-xs text-emerald-800">
               02
             </div>
-            <h4 class="font-extrabold text-ink-primary text-lg sm:text-xl">Material Greenhouse</h4>
-            <p class="text-xs text-ink-secondary leading-relaxed">
-              Suplai plastik UV greenhouse 14% &amp; 20% (200 mikron), paranet shading net 65%-75%, insect net 50 mesh micro-barrier, spring clip, dan profil lock galvanis.
+            <h4 class="font-bold text-zinc-900 text-lg sm:text-xl">Material Greenhouse</h4>
+            <p class="text-xs text-zinc-600 leading-relaxed">
+              Suplai plastik UV greenhouse 14% & 20% (200 mikron), paranet shading net 65%-75%, insect net 50 mesh micro-barrier, spring clip, dan profil lock galvanis.
             </p>
             <div class="pt-2">
-              <a href="/produk/perlengkapan-greenhouse/" class="text-xs font-bold text-agri-700 hover:underline inline-flex items-center gap-1">
+              <a href="/produk/perlengkapan-greenhouse/" class="text-xs font-semibold text-emerald-700 hover:text-emerald-800 inline-flex items-center gap-1 group">
                 <span>Material Greenhouse</span>
-                <span aria-hidden="true">&rarr;</span>
+                <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">&rarr;</span>
               </a>
             </div>
           </div>
 
-          <div class="p-6 rounded-lg bg-surface-card border border-surface-border space-y-3">
-            <div class="w-8 h-8 rounded-sm bg-agri-700 text-white flex items-center justify-center font-bold text-xs">
+          <div class="p-7 sm:p-8 rounded-3xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-all space-y-4">
+            <div class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center font-bold text-xs text-emerald-800">
               03
             </div>
-            <h4 class="font-extrabold text-ink-primary text-lg sm:text-xl">Perlengkapan Irigasi &amp; Lahan</h4>
-            <p class="text-xs text-ink-secondary leading-relaxed">
+            <h4 class="font-bold text-zinc-900 text-lg sm:text-xl">Perlengkapan Irigasi & Lahan</h4>
+            <p class="text-xs text-zinc-600 leading-relaxed">
               Menyediakan selang drip 16mm, sprayer elektrik 16L, mulsa plastik hitam perak (MPHP), perlengkapan hidroponik gully/PVC, dan fitting irigasi tetes presisi.
             </p>
             <div class="pt-2">
-              <a href="/produk/perlengkapan-pertanian/" class="text-xs font-bold text-agri-700 hover:underline inline-flex items-center gap-1">
-                <span>Alat Irigasi &amp; Lahan</span>
-                <span aria-hidden="true">&rarr;</span>
+              <a href="/produk/perlengkapan-pertanian/" class="text-xs font-semibold text-emerald-700 hover:text-emerald-800 inline-flex items-center gap-1 group">
+                <span>Alat Irigasi & Lahan</span>
+                <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">&rarr;</span>
               </a>
             </div>
           </div>
 
-          <div class="p-6 rounded-lg bg-surface-card border border-surface-border space-y-3">
-            <div class="w-8 h-8 rounded-sm bg-ochre-700 text-white flex items-center justify-center font-bold text-xs">
+          <div class="p-7 sm:p-8 rounded-3xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-all space-y-4">
+            <div class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center font-bold text-xs text-emerald-800">
               04
             </div>
-            <h4 class="font-extrabold text-ink-primary text-lg sm:text-xl">Jasa Pembuatan Greenhouse</h4>
-            <p class="text-xs text-ink-secondary leading-relaxed">
+            <h4 class="font-bold text-zinc-900 text-lg sm:text-xl">Jasa Pembuatan Greenhouse</h4>
+            <p class="text-xs text-zinc-600 leading-relaxed">
               Layanan konstruksi greenhouse (Pipa Galvanis Hot-Dip, Rangka Bambu Presisi, Baja Ringan, dan Tunnel Garam Pesisir) dengan tim aplikator ke seluruh Indonesia.
             </p>
             <div class="pt-2">
-              <a href="/jasa/pembuatan-greenhouse/" class="text-xs font-bold text-ochre-700 hover:underline inline-flex items-center gap-1">
-                <span>Simulasi &amp; Estimasi RAB</span>
-                <span aria-hidden="true">&rarr;</span>
+              <a href="/jasa/pembuatan-greenhouse/" class="text-xs font-semibold text-emerald-700 hover:text-emerald-800 inline-flex items-center gap-1 group">
+                <span>Simulasi & Estimasi RAB</span>
+                <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">&rarr;</span>
               </a>
             </div>
           </div>
@@ -114,14 +118,14 @@ import { BUSINESS_INFO } from '../data/businessInfo';
       </div>
 
       <!-- Store Location snippet -->
-      <div class="p-6 rounded-lg bg-surface-card border border-surface-border flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div>
-          <h4 class="font-bold text-ink-primary text-sm">Ingin Berkunjung ke Gudang Kami di Malang?</h4>
-          <p class="text-xs text-ink-muted mt-0.5">{BUSINESS_INFO.address.fullFormatted}</p>
+      <div class="p-7 sm:p-9 rounded-3xl bg-zinc-900 text-white border border-zinc-800 shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+        <div class="space-y-1">
+          <h4 class="font-bold text-white text-base sm:text-lg">Ingin Berkunjung ke Gudang Kami di Malang?</h4>
+          <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed">{BUSINESS_INFO.address.fullFormatted}</p>
         </div>
         <a
           href="/lokasi/"
-          class="px-5 py-2.5 rounded-md bg-agri-700 hover:bg-agri-800 text-white font-bold text-xs uppercase tracking-wider transition-colors shrink-0 select-none"
+          class="px-7 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs transition-all shadow-md shrink-0 select-none"
         >
           Lihat Peta Lokasi &rarr;
         </a>

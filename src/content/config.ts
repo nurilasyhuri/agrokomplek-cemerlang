@@ -14,6 +14,13 @@ const produkCollection = defineCollection({
     specs: z.record(z.string()).optional(),
     brand: z.string().optional(),
     orderPriority: z.number().default(99),
+    variants: z.array(z.object({
+      name: z.string(),
+      price: z.number(),
+      priceDisplay: z.string(),
+      sku: z.string().optional(),
+      unit: z.string().optional(),
+    })).optional(),
   }),
 });
 

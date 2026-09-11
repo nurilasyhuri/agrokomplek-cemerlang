@@ -2,8 +2,8 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/common/Breadcrumb.astro';
 import ProductCard from '../../components/products/ProductCard.astro';
+import ProductVariantSelector from '../../components/products/ProductVariantSelector';
 import { getProductSchema, getBreadcrumbSchema } from '../../utils/seo';
-import { generateProductInquiryUrl } from '../../utils/whatsapp';
 import { getCollection, type CollectionEntry } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -33,12 +33,6 @@ const categoryLabels: Record<string, string> = {
 };
 
 const categoryName = categoryLabels[product.data.category] || product.data.category;
-
-const waUrl = generateProductInquiryUrl(
-  product.data.title,
-  categoryName,
-  product.data.brand
-);
 
 const productSchema = getProductSchema({
   title: product.data.title,
@@ -77,148 +71,191 @@ const breadcrumbSchema = getBreadcrumbSchema([
     />
 
     <!-- Main Product Presentation (2 cols) -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mt-6">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 mt-8 items-start">
       
-      <!-- Left Column: Product Imagery (5 cols) -->
-      <div class="lg:col-span-5 space-y-4">
-        <div class="border border-surface-border bg-surface-card rounded-lg overflow-hidden p-2">
-          <div class="aspect-square bg-surface-subtle rounded-md overflow-hidden relative border border-surface-border">
-            <img
-              src={product.data.thumbnail}
-              alt={product.data.title}
-              width="800"
-              height="800"
-              class="w-full h-full object-cover"
-              loading="eager"
-              decoding="async"
-            />
-            <!-- Stock Badge -->
-            <div class="absolute top-3 left-3">
-              <span class="inline-block px-2.5 py-1 rounded-sm text-xs font-bold uppercase tracking-wider bg-surface-card text-ink-primary border border-surface-border shadow-sm">
+      <!-- Left Column: Product Imagery & Trust (Desktop Sticky, 5 cols) -->
+      <div class="lg:col-span-5 space-y-6 lg:sticky lg:top-24 self-start">
+        <div class="aspect-square bg-white rounded-3xl border border-zinc-200/80 overflow-hidden relative p-4 sm:p-6 flex items-center justify-center shadow-sm">
+          <img
+            src={product.data.thumbnail}
+            alt={product.data.title}
+            width="800"
+            height="800"
+            class="w-full h-full object-cover rounded-2xl"
+            loading="eager"
+            decoding="async"
+          />
+          <!-- Stock Pill Badge -->
+          <div class="absolute top-4 left-4">
+            <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-white/95 backdrop-blur-md text-zinc-900 shadow-xs border border-zinc-200/70">
+              <span class:list={[
+                'w-2 h-2 rounded-full',
+                product.data.stockStatus === 'ready' ? 'bg-emerald-500 animate-pulse' : 'bg-amber-500'
+              ]}></span>
+              <span>
                 {product.data.stockStatus === 'ready'
-                  ? 'Ready Stok di Gudang Malang'
+                  ? 'Ready Stok di Malang'
                   : product.data.stockStatus === 'po'
-                  ? 'Pre-Order / Indent'
+                  ? 'Pre-Order Pabrik'
                   : 'Cek Ketersediaan'}
+              </span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Verified Credibility & Social Proof Strip -->
+        <div class="p-4 rounded-2xl bg-zinc-50 border border-zinc-200/80 flex items-center justify-between text-xs">
+          <div class="flex items-center gap-1.5 text-amber-500">
+            <span class="font-bold text-zinc-900">5.0</span>
+            <div class="flex text-amber-400">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            </div>
+          </div>
+          <span class="text-zinc-500 font-medium">Pilihan Praktisi &amp; Petani Tropis</span>
+        </div>
+
+        <!-- 3-Pillar Trust Highlights (Clean Apple Style) -->
+        <div class="p-6 rounded-3xl bg-white border border-zinc-200/80 space-y-4 text-xs text-zinc-600 shadow-2xs">
+          <div class="flex items-start gap-3.5">
+            <div class="w-8 h-8 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-100 mt-0.5">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <div>
+              <span class="font-bold text-zinc-900 block text-sm">100% Produk Original Bergaransi</span>
+              <span class="text-zinc-500 leading-relaxed block mt-0.5">Material berspesifikasi pabrik resmi, teruji tahan iklim ekstrem lapangan.</span>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3.5 pt-3 border-t border-zinc-100">
+            <div class="w-8 h-8 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-100 mt-0.5">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+              </svg>
+            </div>
+            <div>
+              <span class="font-bold text-zinc-900 block text-sm">Toko Fisik &amp; Gudang Malang</span>
+              <span class="text-zinc-500 leading-relaxed block mt-0.5">Bisa cek fisik sampel dan ambil langsung di Kedungkandang, Kota Malang.</span>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3.5 pt-3 border-t border-zinc-100">
+            <div class="w-8 h-8 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-100 mt-0.5">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+              </svg>
+            </div>
+            <div>
+              <span class="font-bold text-zinc-900 block text-sm">Armada Kargo Seluruh Indonesia</span>
+              <span class="text-zinc-500 leading-relaxed block mt-0.5">Bebas pilih ekspedisi kargo darat/laut (Indah, Baraka, Dakota, dll) tarif hemat.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Product Information & Purchase Path (7 cols) -->
+      <div class="lg:col-span-7 space-y-7">
+        
+        <div class="space-y-3">
+          <div class="flex items-center gap-2">
+            <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/60">
+              {categoryName}
+            </span>
+            {product.data.brand && (
+              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-zinc-100 text-zinc-700">
+                Merek: {product.data.brand}
+              </span>
+            )}
+          </div>
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-900 leading-[1.15]">
+            {product.data.title}
+          </h1>
+          <p class="text-sm sm:text-base text-zinc-600 leading-relaxed">
+            {product.data.description}
+          </p>
+        </div>
+
+        <!-- Shopify-Grade Variant Selector & Direct WhatsApp Purchase Island -->
+        <ProductVariantSelector
+          client:load
+          productTitle={product.data.title}
+          productSlug={product.slug}
+          categoryName={categoryName}
+          brand={product.data.brand}
+          basePrice={product.data.price}
+          basePriceDisplay={product.data.priceDisplay}
+          variants={product.data.variants}
+          stockStatus={product.data.stockStatus}
+        />
+
+        <!-- Technical Specifications (Apple Minimalist Spec Sheet) -->
+        <div class="rounded-3xl bg-zinc-50/70 border border-zinc-200/80 p-6 sm:p-7 space-y-4">
+          <div class="flex items-center justify-between pb-3 border-b border-zinc-200/80">
+            <h2 class="text-base sm:text-lg font-bold text-zinc-900 tracking-tight">
+              Spesifikasi Detail Produk
+            </h2>
+            <span class="text-xs text-zinc-500 font-medium">Standar Industri</span>
+          </div>
+
+          <div class="divide-y divide-zinc-200/60 text-xs sm:text-sm">
+            {product.data.brand && (
+              <div class="py-3 flex items-baseline justify-between">
+                <span class="font-medium text-zinc-500">Merek / Produsen</span>
+                <span class="font-bold text-zinc-900">{product.data.brand}</span>
+              </div>
+            )}
+            {product.data.specs && Object.entries(product.data.specs).map(([key, val]) => (
+              <div class="py-3 flex items-baseline justify-between">
+                <span class="font-medium text-zinc-500 capitalize">
+                  {key.replace(/([A-Z])/g, ' $1').trim()}
+                </span>
+                <span class="font-bold text-zinc-900">{String(val)}</span>
+              </div>
+            ))}
+            <div class="py-3 flex items-baseline justify-between">
+              <span class="font-medium text-zinc-500">Kesiapan Stok</span>
+              <span class="font-bold text-emerald-700">
+                {product.data.stockStatus === 'ready' ? 'Stok Fisik Tersedia di Gudang Malang' : 'Indent Pabrik'}
               </span>
             </div>
           </div>
         </div>
 
-        <!-- Verification Quick Box -->
-        <div class="border border-surface-border bg-surface-card p-4 rounded-lg space-y-2 text-xs text-ink-secondary">
-          <p class="flex items-center gap-2">
-            <span class="w-1.5 h-1.5 bg-agri-700"></span>
-            <span>100% Produk Asli & Teruji Lapangan</span>
-          </p>
-          <p class="flex items-center gap-2">
-            <span class="w-1.5 h-1.5 bg-agri-700"></span>
-            <span>Tersedia pengambilan langsung di Kedungkandang, Malang</span>
-          </p>
-          <p class="flex items-center gap-2">
-            <span class="w-1.5 h-1.5 bg-agri-700"></span>
-            <span>Bisa kirim kargo ekonomis ke seluruh Nusantara</span>
-          </p>
-        </div>
-      </div>
-
-      <!-- Right Column: Product Information & Purchase Path (7 cols) -->
-      <div class="lg:col-span-7 space-y-6">
-        
-        <div>
-          <span class="text-xs font-bold uppercase tracking-wider text-agri-700">
-            {categoryName} {product.data.brand ? `• Merek: ${product.data.brand}` : ''}
-          </span>
-          <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-ink-primary mt-1">
-            {product.data.title}
-          </h1>
-        </div>
-
-        <!-- Availability & Order Action Box -->
-        <div class="p-5 border border-surface-border bg-surface-card rounded-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div>
-            <span class="text-xs font-bold text-agri-700 block uppercase tracking-wider">Ketersediaan &amp; Pemesanan</span>
-            <span class="text-lg sm:text-xl font-extrabold text-ink-primary mt-0.5 block">
-              Stok Gudang Malang &bull; Siap Kirim Seluruh Indonesia
-            </span>
-            <p class="text-xs text-ink-muted mt-1">
-              Melayani pembelian eceran, rol/balen grosir, serta pengadaan proyek pertanian.
-            </p>
+        <!-- Logistics Information Card -->
+        <div class="p-6 rounded-3xl bg-white border border-zinc-200/80 text-xs sm:text-sm space-y-3 text-zinc-600 shadow-2xs">
+          <span class="font-bold text-zinc-900 block text-sm">Ketentuan Pengambilan &amp; Pengiriman:</span>
+          <div class="space-y-2">
+            <p><strong class="text-zinc-900">1. Ambil Langsung di Toko:</strong> Pelanggan di area Malang Raya dapat berkunjung langsung ke workshop/gudang kami di Buring, Kedungkandang.</p>
+            <p><strong class="text-zinc-900">2. Kirim Ekspedisi Kargo:</strong> Didukung armada kargo rekanan (Indah Kargo, Baraka, Dakota, Truk Balen) dengan proteksi packing ekstra aman.</p>
           </div>
-
-          <a
-            href={waUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-agri-700 hover:bg-agri-800 text-white font-bold text-xs uppercase tracking-wider transition-colors select-none shrink-0 shadow-xs"
-          >
-            <svg class="w-4 h-4 text-emerald-300" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
-            </svg>
-            <span>Tanya Stok &amp; Pemesanan via WA</span>
-          </a>
-        </div>
-
-        <!-- Technical Specifications Table -->
-        <div class="space-y-3">
-          <h2 class="text-base sm:text-lg font-bold text-ink-primary border-b border-surface-border pb-2">
-            Spesifikasi Teknis Produk
-          </h2>
-
-          <div class="border border-surface-border bg-surface-card rounded-lg overflow-hidden">
-            <table class="w-full text-xs text-left">
-              <tbody class="divide-y divide-surface-border">
-                {product.data.brand && (
-                  <tr>
-                    <td class="px-4 py-2.5 font-bold text-ink-primary bg-surface-subtle w-1/3">Merek / Produsen</td>
-                    <td class="px-4 py-2.5 text-ink-secondary">{product.data.brand}</td>
-                  </tr>
-                )}
-                {product.data.specs && Object.entries(product.data.specs).map(([key, val]) => (
-                  <tr>
-                    <td class="px-4 py-2.5 font-bold text-ink-primary bg-surface-subtle w-1/3 capitalize">
-                      {key.replace(/([A-Z])/g, ' $1').trim()}
-                    </td>
-                    <td class="px-4 py-2.5 text-ink-secondary">{String(val)}</td>
-                  </tr>
-                ))}
-                <tr>
-                  <td class="px-4 py-2.5 font-bold text-ink-primary bg-surface-subtle w-1/3">Status Gudang</td>
-                  <td class="px-4 py-2.5 text-ink-secondary">
-                    {product.data.stockStatus === 'ready' ? 'Stok Fisik Tersedia di Kedungkandang Malang' : 'Indent Pabrik'}
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- Logistics Information Box -->
-        <div class="p-4 border border-surface-border bg-surface-subtle rounded-lg text-xs space-y-2 text-ink-secondary">
-          <span class="font-bold text-ink-primary block uppercase tracking-wider">Opsi Pengambilan & Logistik:</span>
-          <p><strong>1. Ambil Langsung:</strong> Silakan ambil langsung di gudang kami di Buring, Kedungkandang, Malang pada jam operasional kerja.</p>
-          <p><strong>2. Ekspedisi Kargo:</strong> Melayani pengiriman ke luar kota dan luar pulau menggunakan ekspedisi rekanan (Indah Kargo, Baraka, KIB, atau kargo laut pilihan Anda).</p>
         </div>
 
       </div>
 
     </div>
 
-    <!-- Long-form Description -->
-    <div class="mt-12 pt-8 border-t border-surface-border">
-      <h2 class="text-xl sm:text-2xl font-extrabold text-ink-primary mb-4">Deskripsi &amp; Panduan Penggunaan</h2>
-      <div class="prose prose-emerald max-w-none text-ink-secondary text-sm leading-relaxed">
-        <Content />
+    <!-- Long-form Description (Clean White Card) -->
+    <div class="mt-14 pt-8 border-t border-zinc-200/80">
+      <div class="p-6 sm:p-10 rounded-3xl bg-white border border-zinc-200/80 shadow-2xs">
+        <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 mb-6">Deskripsi &amp; Panduan Penggunaan</h2>
+        <div class="prose prose-emerald max-w-none text-zinc-600 text-sm leading-relaxed">
+          <Content />
+        </div>
       </div>
     </div>
 
     <!-- Related Products -->
     {relatedProducts.length > 0 && (
-      <div class="mt-16 pt-10 border-t border-surface-border">
-        <div class="flex items-center justify-between mb-6">
-          <h2 class="text-xl sm:text-2xl font-extrabold text-ink-primary">Produk Terkait Lainnya</h2>
-          <a href="/produk/" class="text-xs font-bold uppercase tracking-wider text-agri-700 hover:underline">
-            Semua Produk &rarr;
+      <div class="mt-20 pt-12 border-t border-zinc-200/80">
+        <div class="flex items-center justify-between mb-8">
+          <div>
+            <span class="text-xs font-semibold text-emerald-700 uppercase tracking-wider block">Koleksi Terkait</span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight mt-1">Produk Pelengkap Lainnya</h2>
+          </div>
+          <a href="/produk/" class="text-xs font-semibold text-emerald-700 hover:text-emerald-800 inline-flex items-center gap-1 group">
+            <span>Semua Produk</span>
+            <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">&rarr;</span>
           </a>
         </div>
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
@@ -231,6 +268,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
                 priceDisplay: rel.data.priceDisplay,
                 stockStatus: rel.data.stockStatus,
                 thumbnail: rel.data.thumbnail,
+                brand: rel.data.brand,
                 slug: rel.slug,
               }}
             />
@@ -240,28 +278,4 @@ const breadcrumbSchema = getBreadcrumbSchema([
     )}
 
   </div>
-
-  <!-- Mobile Sticky Conversion Bar for PDP (Single Deck Dock) -->
-  <aside
-    class="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-surface-card border-t border-surface-border px-4 py-2.5 safe-area-pb flex items-center justify-between gap-3 shadow-md select-none"
-    aria-label="Aksi Pemesanan Cepat"
-  >
-    <div class="overflow-hidden min-w-0 flex-1">
-      <span class="text-[10px] text-agri-700 uppercase block leading-tight font-bold">Stok Gudang Malang</span>
-      <span class="text-xs font-extrabold text-ink-primary truncate block">
-        Siap Ambil &amp; Kirim Kargo
-      </span>
-    </div>
-    <a
-      href={waUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md bg-agri-700 active:bg-agri-800 text-white font-bold text-xs uppercase tracking-wider shrink-0 select-none shadow-sm touch-target"
-    >
-      <svg class="w-4 h-4 text-emerald-300" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
-      </svg>
-      <span>Tanya Stok WA</span>
-    </a>
-  </aside>
 </BaseLayout>

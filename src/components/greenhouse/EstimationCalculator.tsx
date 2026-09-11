@@ -71,75 +71,100 @@ export default function EstimationCalculator() {
   };
 
   return (
-    <div class="border border-surface-border bg-surface-card rounded-lg overflow-hidden">
+    <div class="bg-white rounded-3xl border border-zinc-200/80 shadow-sm overflow-hidden">
       {/* Calculator Header */}
-      <div class="p-6 border-b border-surface-border bg-surface-subtle">
-        <span class="text-xs font-bold uppercase tracking-wider text-agri-700 block">Kalkulator Teknis</span>
-        <h3 class="text-xl sm:text-2xl font-extrabold text-ink-primary tracking-tight mt-1">
+      <div class="p-6 sm:p-8 lg:p-10 border-b border-zinc-100 bg-zinc-50/50">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/60">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+          Kalkulator & Estimasi Biaya
+        </span>
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight mt-3">
           Simulasi Kebutuhan & Estimasi Anggaran Greenhouse
         </h3>
-        <p class="text-xs sm:text-sm text-ink-secondary mt-1.5 leading-relaxed">
-          Pilih tipe konstruksi dan tentukan perkiraan ukuran lahan Anda untuk menghitung luas serta estimasi anggaran awal sebelum konsultasi teknis.
+        <p class="text-sm text-zinc-600 mt-2 max-w-2xl leading-relaxed">
+          Tentukan tipe struktur dan ukuran lahan Anda. Sistem akan menghitung dimensi serta menyiapkan ringkasan teknis untuk konsultasi langsung dengan tim aplikator kami.
         </p>
       </div>
 
       {/* Main Form */}
-      <form onSubmit={handleWhatsAppSubmit} class="p-6 sm:p-8 space-y-8">
+      <form onSubmit={handleWhatsAppSubmit} class="p-6 sm:p-8 lg:p-10 space-y-8">
         
         {/* Step 1: Model Selection */}
-        <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-ink-primary mb-3">
-            1. Pilih Tipe Konstruksi Rangka
-          </label>
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3">
-            {MODELS.map((model) => (
-              <button
-                type="button"
-                key={model.id}
-                onClick={() => setSelectedModelId(model.id)}
-                class={`p-3 sm:p-4 rounded-md text-left border transition-colors select-none flex flex-col justify-between ${
-                  selectedModelId === model.id
-                    ? 'border-agri-700 bg-agri-50'
-                    : 'border-surface-border bg-surface-canvas hover:bg-surface-subtle'
-                }`}
-              >
-                <div>
-                  <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-1.5">
-                    <span class={`text-[9px] sm:text-[10px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-xs w-fit ${
-                      selectedModelId === model.id ? 'bg-agri-700 text-white' : 'bg-surface-subtle text-ink-muted'
-                    }`}>
-                      {model.badge}
-                    </span>
-                    <span class="text-[9px] sm:text-[10px] text-ink-muted">{model.lifespan}</span>
+        <div class="space-y-3">
+          <div class="flex items-center justify-between">
+            <label class="text-sm font-bold text-zinc-900">
+              1. Pilih Tipe Konstruksi Rangka
+            </label>
+            <span class="text-xs text-zinc-500 font-medium">Klik untuk memilih</span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            {MODELS.map((model) => {
+              const isSelected = selectedModelId === model.id;
+              return (
+                <button
+                  type="button"
+                  key={model.id}
+                  onClick={() => setSelectedModelId(model.id)}
+                  class={`p-4 sm:p-5 rounded-2xl text-left border transition-all select-none flex flex-col justify-between ${
+                    isSelected
+                      ? 'border-emerald-600 bg-emerald-50/40 shadow-sm ring-2 ring-emerald-600/20'
+                      : 'border-zinc-200/80 bg-white hover:border-zinc-300 hover:bg-zinc-50/50'
+                  }`}
+                >
+                  <div class="space-y-3">
+                    <div class="flex items-center justify-between gap-2">
+                      <span class={`text-[11px] font-semibold px-2.5 py-0.5 rounded-full ${
+                        isSelected ? 'bg-emerald-600 text-white' : 'bg-zinc-100 text-zinc-600'
+                      }`}>
+                        {model.badge}
+                      </span>
+                      <div class={`w-4 h-4 rounded-full border flex items-center justify-center transition-colors ${
+                        isSelected ? 'border-emerald-600 bg-emerald-600' : 'border-zinc-300 bg-white'
+                      }`}>
+                        {isSelected && (
+                          <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+                        )}
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-sm sm:text-base text-zinc-900 leading-snug">{model.name}</h4>
+                      <p class="text-xs text-zinc-500 mt-1 leading-relaxed line-clamp-2">{model.frameSpec}</p>
+                    </div>
                   </div>
-                  <h4 class="font-bold text-sm sm:text-base text-ink-primary leading-snug">{model.name}</h4>
-                  <p class="text-[10px] sm:text-[11px] text-ink-muted mt-1 leading-tight line-clamp-2">{model.frameSpec}</p>
-                </div>
-                <p class="text-[11px] font-bold uppercase tracking-wider text-agri-700 mt-2">
-                  Spesifikasi Model &rarr;
-                </p>
-              </button>
-            ))}
+
+                  <div class="pt-3 mt-3 border-t border-zinc-100 flex items-center justify-between text-xs">
+                    <span class="text-zinc-500">Masa pakai</span>
+                    <span class="font-semibold text-zinc-900">{model.lifespan}</span>
+                  </div>
+                </button>
+              );
+            })}
           </div>
         </div>
 
-        {/* Step 2: Dimension Sliders & Inputs */}
-        <div class="border-t border-surface-border pt-6">
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
-            <label class="text-xs font-bold uppercase tracking-wider text-ink-primary">
-              2. Tentukan Dimensi Lahan (Meter)
-            </label>
-            <div class="text-xs font-bold text-ink-primary bg-surface-subtle px-3 py-1 rounded-sm border border-surface-border self-start sm:self-auto">
-              Total Luas: <span class="text-agri-700">{area} m²</span> ({length}m &times; {width}m)
+        {/* Step 2: Dimension Sliders */}
+        <div class="pt-6 border-t border-zinc-100 space-y-4">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div>
+              <label class="text-sm font-bold text-zinc-900">
+                2. Tentukan Dimensi Lahan (Meter)
+              </label>
+              <p class="text-xs text-zinc-500 mt-0.5">Geser slider untuk menyesuaikan panjang dan lebar lahan Anda</p>
+            </div>
+            <div class="inline-flex items-center gap-2 text-xs font-semibold text-zinc-900 bg-zinc-100 px-4 py-1.5 rounded-full border border-zinc-200/80 self-start sm:self-auto">
+              <span>Total Luas:</span>
+              <span class="text-emerald-700 font-extrabold text-sm">{area} m²</span>
+              <span class="text-zinc-400">({length}m &times; {width}m)</span>
             </div>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Panjang */}
-            <div class="space-y-2 border border-surface-border bg-surface-canvas p-4 rounded-md">
+            <div class="bg-zinc-50/70 border border-zinc-200/80 p-5 rounded-2xl space-y-3">
               <div class="flex justify-between items-center text-xs">
-                <span class="font-bold text-ink-primary">Panjang Greenhouse:</span>
-                <span class="font-extrabold text-sm text-agri-700">{length} Meter</span>
+                <span class="font-semibold text-zinc-700">Panjang Greenhouse:</span>
+                <span class="font-extrabold text-base text-emerald-700">{length} Meter</span>
               </div>
               <input
                 type="range"
@@ -148,20 +173,20 @@ export default function EstimationCalculator() {
                 step={2}
                 value={length}
                 onInput={(e) => setLength(Number((e.target as HTMLInputElement).value))}
-                class="w-full accent-agri-700 cursor-pointer h-8"
+                class="w-full accent-emerald-600 cursor-pointer h-2 bg-zinc-200 rounded-full"
               />
-              <div class="flex justify-between text-[10px] text-ink-muted">
+              <div class="flex justify-between text-[11px] text-zinc-500">
                 <span>Min: 6m</span>
-                <span>Standar: 20m - 50m</span>
+                <span class="text-zinc-600 font-medium">Standar: 20 - 50m</span>
                 <span>Max: 100m</span>
               </div>
             </div>
 
             {/* Lebar */}
-            <div class="space-y-2 border border-surface-border bg-surface-canvas p-4 rounded-md">
+            <div class="bg-zinc-50/70 border border-zinc-200/80 p-5 rounded-2xl space-y-3">
               <div class="flex justify-between items-center text-xs">
-                <span class="font-bold text-ink-primary">Lebar Greenhouse:</span>
-                <span class="font-extrabold text-sm text-agri-700">{width} Meter</span>
+                <span class="font-semibold text-zinc-700">Lebar Greenhouse:</span>
+                <span class="font-extrabold text-base text-emerald-700">{width} Meter</span>
               </div>
               <input
                 type="range"
@@ -170,11 +195,11 @@ export default function EstimationCalculator() {
                 step={2}
                 value={width}
                 onInput={(e) => setWidth(Number((e.target as HTMLInputElement).value))}
-                class="w-full accent-agri-700 cursor-pointer h-8"
+                class="w-full accent-emerald-600 cursor-pointer h-2 bg-zinc-200 rounded-full"
               />
-              <div class="flex justify-between text-[10px] text-ink-muted">
+              <div class="flex justify-between text-[11px] text-zinc-500">
                 <span>Min: 4m</span>
-                <span>Standar: 8m - 12m</span>
+                <span class="text-zinc-600 font-medium">Standar: 8 - 12m</span>
                 <span>Max: 40m</span>
               </div>
             </div>
@@ -182,94 +207,101 @@ export default function EstimationCalculator() {
         </div>
 
         {/* Step 3: Project Location & Target Info */}
-        <div class="border-t border-surface-border pt-6">
-          <label class="block text-xs font-bold uppercase tracking-wider text-ink-primary mb-3">
-            3. Rincian Lokasi & Rencana Tanam
-          </label>
+        <div class="pt-6 border-t border-zinc-100 space-y-4">
+          <div>
+            <label class="text-sm font-bold text-zinc-900">
+              3. Rincian Lokasi & Rencana Tanam
+            </label>
+            <p class="text-xs text-zinc-500 mt-0.5">Informasi pendukung agar tim teknisi dapat menghitung beban angin & kebutuhan logistik</p>
+          </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div>
-              <label class="block text-xs font-semibold text-ink-muted mb-1">
-                Lokasi Proyek (Kota / Kabupaten) *
+              <label class="block text-xs font-semibold text-zinc-700 mb-1.5">
+                Lokasi Proyek (Kota / Kab) <span class="text-emerald-700">*</span>
               </label>
               <input
                 type="text"
                 required
-                placeholder="Misal: Kota Batu / Malang / Kediri"
+                placeholder="Contoh: Malang / Batu / Kediri"
                 value={location}
                 onInput={(e) => setLocation((e.target as HTMLInputElement).value)}
-                class="w-full px-3.5 py-2.5 rounded-md border border-surface-border bg-surface-canvas text-ink-primary text-base sm:text-sm focus:outline-none focus:border-agri-700 min-h-[44px]"
+                class="w-full px-4 py-3 rounded-2xl border border-zinc-200/80 bg-white text-zinc-900 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600/20 focus:border-emerald-600 transition-all"
               />
             </div>
 
             <div>
-              <label class="block text-xs font-semibold text-ink-muted mb-1">
+              <label class="block text-xs font-semibold text-zinc-700 mb-1.5">
                 Komoditas Tanaman
               </label>
               <input
                 type="text"
-                placeholder="Misal: Melon Hidroponik / Cabai"
+                placeholder="Contoh: Melon Hidroponik / Sayuran"
                 value={crops}
                 onInput={(e) => setCrops((e.target as HTMLInputElement).value)}
-                class="w-full px-3.5 py-2.5 rounded-md border border-surface-border bg-surface-canvas text-ink-primary text-base sm:text-sm focus:outline-none focus:border-agri-700 min-h-[44px]"
+                class="w-full px-4 py-3 rounded-2xl border border-zinc-200/80 bg-white text-zinc-900 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600/20 focus:border-emerald-600 transition-all"
               />
             </div>
 
             <div>
-              <label class="block text-xs font-semibold text-ink-muted mb-1">
-                Target Waktu Realisasi
+              <label class="block text-xs font-semibold text-zinc-700 mb-1.5">
+                Target Waktu Pengerjaan
               </label>
               <select
                 value={timeline}
                 onChange={(e) => setTimeline((e.target as HTMLSelectElement).value)}
-                class="w-full px-3.5 py-2.5 rounded-md border border-surface-border bg-surface-canvas text-ink-primary text-base sm:text-sm focus:outline-none focus:border-agri-700 min-h-[44px]"
+                class="w-full px-4 py-3 rounded-2xl border border-zinc-200/80 bg-white text-zinc-900 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600/20 focus:border-emerald-600 transition-all"
               >
                 <option value="Bulan Ini">Bulan Ini (Segera)</option>
                 <option value="1 - 2 Bulan ke Depan">1 - 2 Bulan ke Depan</option>
-                <option value="Tahap Perencanaan / Studi Kelayakan">Tahap Studi Kelayakan</option>
+                <option value="Tahap Perencanaan / Studi Kelayakan">Tahap Perencanaan</option>
               </select>
             </div>
           </div>
         </div>
 
-        {/* Step 4: Real-time Budget Estimation Summary & Submit */}
-        <div class="border-t border-surface-border pt-6">
-          <div class="border border-surface-border bg-surface-subtle p-4 sm:p-6 rounded-lg space-y-4">
-            
-            <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-surface-border pb-4">
-              <div>
-                <span class="text-xs font-bold uppercase tracking-wider text-agri-700 block">Rencana Anggaran Biaya (RAB) Proyek</span>
-                <div class="text-lg sm:text-xl font-extrabold text-ink-primary mt-0.5">
-                  Spesifikasi: {selectedModel.name} &bull; {area} m²
+        {/* Step 4: Budget Estimation Summary Card */}
+        <div class="pt-6 border-t border-zinc-100">
+          <div class="rounded-3xl bg-zinc-900 text-white p-6 sm:p-8 lg:p-10 shadow-xl space-y-6">
+            <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+              <div class="space-y-2">
+                <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-emerald-950/80 text-emerald-300 border border-emerald-700/50">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                  Rencana Anggaran Biaya (RAB) Siap Dihitung
+                </span>
+                <div class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+                  {selectedModel.name} &bull; {area} m²
                 </div>
-                <p class="text-xs text-ink-muted mt-1 leading-relaxed">
-                  Dapatkan rincian RAB resmi berdasarkan ukuran lahan <strong>{area} m²</strong> ({length}m &times; {width}m) dan survei teknis dari tim aplikator Agrokomplek Cemerlang.
+                <p class="text-xs sm:text-sm text-zinc-300 max-w-xl leading-relaxed">
+                  Dapatkan rincian RAB resmi berdasarkan ukuran lahan <strong>{area} m²</strong> ({length}m &times; {width}m) dan panduan teknis dari tim aplikator Agrokomplek Cemerlang langsung ke WhatsApp Anda.
                 </p>
               </div>
 
               <button
                 type="submit"
-                class="w-full md:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-md bg-agri-700 hover:bg-agri-800 text-white font-bold text-xs uppercase tracking-wider transition-colors shrink-0 select-none cursor-pointer min-h-[44px] shadow-xs"
+                class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition-all shadow-lg hover:shadow-emerald-900/50 shrink-0 select-none cursor-pointer"
               >
-                <svg class="w-4 h-4 text-emerald-300 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                <svg class="w-5 h-5 text-emerald-200 shrink-0" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
                 </svg>
                 <span>Kirim Rincian ke Teknisi WA</span>
               </button>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-ink-muted">
-              <div>
-                <strong class="text-ink-primary">Spesifikasi Rangka:</strong> {selectedModel.frameSpec}
+            <div class="pt-6 border-t border-zinc-800 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-zinc-400">
+              <div class="space-y-1">
+                <span class="text-zinc-500 block">Spesifikasi Rangka</span>
+                <span class="font-medium text-zinc-200">{selectedModel.frameSpec}</span>
               </div>
-              <div>
-                <strong class="text-ink-primary">Masa Pakai Konstruksi:</strong> {selectedModel.lifespan}
+              <div class="space-y-1">
+                <span class="text-zinc-500 block">Masa Pakai Konstruksi</span>
+                <span class="font-medium text-zinc-200">{selectedModel.lifespan}</span>
               </div>
-              <div>
-                <strong class="text-ink-primary">Konsultasi Teknis:</strong> Langsung dengan praktisi fabrikasi
+              <div class="space-y-1">
+                <span class="text-zinc-500 block">Dukungan Aplikator</span>
+                <span class="font-medium text-emerald-400">Konsultasi langsung praktisi fabrikasi</span>
               </div>
             </div>
-
           </div>
         </div>
 

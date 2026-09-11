@@ -87,17 +87,18 @@ graph TD
 
 ## 5. Functional Requirements (EARS Format)
 - **REQ-01 (Catalog Navigation):** *When* a visitor accesses `/produk/`, *the system shall* display categorized products with responsive filter pills, search bar, and instant WhatsApp inquiry triggers.
-- **REQ-02 (Product Inquiry):** *When* a user clicks "Tanya Stok / Pesan via WhatsApp" on `/produk/[slug]/`, *the system shall* construct a pre-filled WhatsApp link containing product name, SKU, requested variant, and current page URL.
-- **REQ-03 (Greenhouse Quote Builder):** *When* a user completes the interactive greenhouse estimation form on `/jasa/pembuatan-greenhouse/`, *the system shall* generate a structured WhatsApp message containing: Project Type, Land Dimensions (L × W), Location (City/Province), Target Crops, and Timeline.
-- **REQ-04 (Local SEO Structured Data):** *When* any page is rendered, *the system shall* inject JSON-LD schemas: `LocalBusiness/Store` on homepage/location, `Service` on greenhouse services, `Product` on product detail pages, `Article` on blog posts, and `BreadcrumbList` on all hierarchical routes.
-- **REQ-05 (Mobile Sticky Conversion Bar):** *While* browsing on mobile viewports (< 768px), *the system shall* render a non-intrusive floating bottom bar with direct actions: **Katalog Produk**, **WhatsApp Cepat**, and **Petunjuk Arah (Maps)**.
-- **REQ-06 (Cloudflare Edge Optimization):** *When* deployed to Cloudflare Pages, *the system shall* serve pre-rendered static assets via Cloudflare's global edge CDN, apply strict HTTP headers via `public/_headers`, handle client redirects via `public/_redirects`, and achieve LCP < 1.0s.
-- **REQ-07 (Security & Privacy):** *When* static pages are compiled, *the system shall* apply strict Content Security Policy (CSP), subresource integrity where applicable, sanitize all query strings, and ensure no customer data or private farm coordinates are exposed without explicit consent.
+- **REQ-02 (Interactive PDP Variant Selector):** *When* a customer selects a product variant (e.g. Plastik UV 14% vs 20%, Paranet 65% vs 75% vs 85%, roll dimensions), *the system shall* dynamically update the price display, SKU, and unit specifications on the product detail page without page reload.
+- **REQ-03 (Direct 1-Click Buy to WhatsApp):** *When* a customer clicks "Beli Sekarang via WhatsApp" on `/produk/[slug]/`, *the system shall* immediately launch WhatsApp (`wa.me/6285183002070`) without any intermediate web form, containing a pre-filled structured message with: Product Name, Selected Variant, Quantity, Calculated Total Price, Product URL, and Customer Delivery Data template.
+- **REQ-04 (Greenhouse Quote Builder):** *When* a customer configures dimensions on `/jasa/pembuatan-greenhouse/`, *the system shall* compute material specs and tier estimates, and generate a pre-formatted WhatsApp consultation message.
+- **REQ-05 (Mobile Sticky Buy Dock):** *While* browsing a product on mobile viewports (< 768px), *the system shall* render a compact sticky bottom action bar displaying the dynamic variant price, quantity stepper, and direct "Beli via WA" CTA.
+- **REQ-06 (Local SEO Structured Data):** *When* any page is rendered, *the system shall* inject JSON-LD schemas: `LocalBusiness/Store` on homepage/location, `Service` on greenhouse services, `Product` on product detail pages, `Article` on blog posts, and `BreadcrumbList` on all hierarchical routes.
+- **REQ-07 (Cloudflare Edge Zero-Backend Performance):** *When* deployed to Cloudflare Pages, *the system shall* serve 100% pre-rendered static assets via Cloudflare global edge CDN with 0kB unnecessary client JS, achieving LCP < 0.8s and zero server/database operational cost.
 
 ---
 
-## 6. Non-Goals (Out of Scope for Initial Launch)
-- ❌ Direct payment gateway checkout / full cart ecommerce (Transaction is high-touch assisted sales via WhatsApp & Bank Transfer).
-- ❌ User authentication / member portal.
-- ❌ Doorway/mass programmatic location spam pages (e.g. 500 duplicate city pages).
+## 6. Non-Goals (Scope Boundary)
+- ❌ Zero web checkout forms / address forms on site (all customer address & cargo logistics discussions happen directly inside WhatsApp chat).
+- ❌ Backend database or server-side API (pure Jamstack; product catalog is statically compiled via Astro Content Collections).
+- ❌ Traditional admin panel / user auth / login portal (updates done via Git / markdown or optional lightweight client CMS).
+- ❌ Direct online payment gateways (transactions are finalized via Bank Transfer / COD after direct WhatsApp verification with store CS).
 - ❌ AI-hallucinated testimonials, fake project counters, or unverified claims.

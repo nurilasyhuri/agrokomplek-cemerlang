@@ -12,18 +12,19 @@ const schema = getLocalBusinessSchema();
   description="Kunjungi toko fisik &amp; gudang Agrokomplek Cemerlang di Buring, Kedungkandang, Kota Malang. Cek sampel plastik UV, paranet, irigasi, dan konsultasi greenhouse."
   jsonLd={schema}
 >
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">
     <Breadcrumb items={[{ label: 'Lokasi & Toko' }]} />
 
-    <div class="my-8 text-center max-w-3xl mx-auto space-y-2">
-      <span class="text-xs font-bold text-agri-700 uppercase tracking-wider bg-agri-50 border border-agri-100 px-3 py-1 rounded-sm inline-block">
+    <div class="my-10 text-center max-w-3xl mx-auto space-y-3">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/60">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
         Toko Fisik & Pusat Operasional
-      </span>
-      <h1 class="text-3xl sm:text-4xl font-extrabold text-ink-primary tracking-tight">
+      </div>
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight">
         Toko Pertanian Agrokomplek Cemerlang di Malang
       </h1>
-      <p class="text-sm sm:text-base text-ink-secondary leading-relaxed">
-        Bagi pelanggan di Malang Raya (Kedungkandang, Buring, Gadang, Tajinan, Kota Malang, Kota Batu, dan Kabupaten Malang), silakan berkunjung langsung untuk melihat fisik produk dan konsultasi teknis greenhouse.
+      <p class="text-sm sm:text-base text-zinc-600 leading-relaxed">
+        Bagi pelanggan di Malang Raya (Kedungkandang, Buring, Gadang, Tajinan, Kota Malang, Kota Batu, dan sekitarnya), silakan berkunjung langsung untuk melihat sampel produk dan konsultasi teknis greenhouse.
       </p>
     </div>
 
@@ -31,8 +32,8 @@ const schema = getLocalBusinessSchema();
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 my-10 items-start">
       
       <!-- Interactive Google Maps Container -->
-      <div class="lg:col-span-7 bg-surface-card p-2 rounded-lg border border-surface-border">
-        <div class="aspect-[4/3] rounded-md overflow-hidden bg-surface-subtle relative border border-surface-border">
+      <div class="lg:col-span-7 bg-white p-3 rounded-3xl border border-zinc-200/80 shadow-sm overflow-hidden">
+        <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-100 relative">
           <iframe
             src="https://maps.google.com/maps?q=-7.9984,112.6456&z=15&output=embed"
             width="100%"
@@ -47,33 +48,33 @@ const schema = getLocalBusinessSchema();
 
       <!-- NAP & Landmarks -->
       <div class="lg:col-span-5 space-y-6">
-        <div class="p-6 rounded-lg bg-surface-card border border-surface-border space-y-4">
-          <h3 class="text-base sm:text-lg font-bold text-ink-primary border-b border-surface-border pb-3 uppercase tracking-wider">
-            Informasi Alamat &amp; Kontak Toko
+        <div class="p-6 sm:p-8 rounded-3xl bg-white border border-zinc-200/80 shadow-sm space-y-6">
+          <h3 class="text-lg font-bold text-zinc-900 border-b border-zinc-100 pb-3">
+            Informasi Alamat & Kontak Toko
           </h3>
 
-          <div class="space-y-3.5 text-xs sm:text-sm text-ink-secondary">
+          <div class="space-y-4 text-xs sm:text-sm text-zinc-600">
             <div>
-              <span class="font-bold text-ink-primary block uppercase text-xs">Alamat Lengkap:</span>
-              <span class="mt-0.5 block leading-relaxed">{BUSINESS_INFO.address.fullFormatted}</span>
+              <span class="font-semibold text-zinc-900 block text-xs uppercase tracking-wider text-zinc-500">Alamat Lengkap</span>
+              <span class="mt-1 block leading-relaxed text-zinc-700">{BUSINESS_INFO.address.fullFormatted}</span>
             </div>
 
-            <div class="border-t border-surface-border pt-3">
-              <span class="font-bold text-ink-primary block uppercase text-xs">WhatsApp / Telepon:</span>
-              <a href={`https://wa.me/${BUSINESS_INFO.contact.whatsappRaw}`} class="text-agri-700 font-bold hover:underline mt-0.5 inline-block">
+            <div class="border-t border-zinc-100 pt-4">
+              <span class="font-semibold block text-xs uppercase tracking-wider text-zinc-500">WhatsApp / Telepon</span>
+              <a href={`https://wa.me/${BUSINESS_INFO.contact.whatsappRaw}`} class="text-emerald-700 font-bold hover:underline mt-1 inline-block text-base">
                 {BUSINESS_INFO.contact.phone}
               </a>
             </div>
 
-            <div class="border-t border-surface-border pt-3">
-              <span class="font-bold text-ink-primary block uppercase text-xs">Jam Buka Toko Fisik:</span>
-              <span class="mt-0.5 block">{BUSINESS_INFO.hours.physicalStore}</span>
-              <span class="text-[11px] text-ink-muted">(Konsultasi Online WhatsApp 24 Jam)</span>
+            <div class="border-t border-zinc-100 pt-4">
+              <span class="font-semibold block text-xs uppercase tracking-wider text-zinc-500">Jam Buka Toko Fisik</span>
+              <span class="mt-1 block font-medium text-zinc-800">{BUSINESS_INFO.hours.physicalStore}</span>
+              <span class="text-xs text-zinc-500">(Konsultasi Online WhatsApp 24 Jam)</span>
             </div>
 
-            <div class="border-t border-surface-border pt-3">
-              <span class="font-bold text-ink-primary block uppercase text-xs">Email:</span>
-              <span class="mt-0.5 block">{BUSINESS_INFO.contact.email}</span>
+            <div class="border-t border-zinc-100 pt-4">
+              <span class="font-semibold block text-xs uppercase tracking-wider text-zinc-500">Email</span>
+              <span class="mt-1 block text-zinc-700">{BUSINESS_INFO.contact.email}</span>
             </div>
           </div>
 
@@ -82,7 +83,7 @@ const schema = getLocalBusinessSchema();
               href={BUSINESS_INFO.geo.mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              class="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-md bg-agri-700 hover:bg-agri-800 text-white font-bold text-xs uppercase tracking-wider transition-colors select-none"
+              class="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition-all shadow-sm select-none"
             >
               <span>Buka Navigasi Google Maps</span>
               <span aria-hidden="true">&rarr;</span>
@@ -91,20 +92,20 @@ const schema = getLocalBusinessSchema();
         </div>
 
         <!-- Landmarks & Guidance -->
-        <div class="p-5 rounded-lg bg-surface-subtle border border-surface-border space-y-3">
-          <h4 class="text-sm sm:text-base font-bold uppercase tracking-wider text-ink-primary">Petunjuk Rute &amp; Akses Gudang:</h4>
-          <ul class="text-xs text-ink-secondary space-y-2 leading-relaxed">
-            <li class="flex items-start gap-2">
-              <span class="w-1.5 h-1.5 bg-agri-700 rounded-none shrink-0 mt-1.5"></span>
+        <div class="p-6 sm:p-7 rounded-3xl bg-zinc-50/70 border border-zinc-200/80 space-y-4">
+          <h4 class="text-sm sm:text-base font-bold text-zinc-900">Petunjuk Rute & Akses Gudang</h4>
+          <ul class="text-xs text-zinc-600 space-y-3 leading-relaxed">
+            <li class="flex items-start gap-2.5">
+              <span class="w-1.5 h-1.5 bg-emerald-600 rounded-full shrink-0 mt-2"></span>
               <span><strong>Dari Terminal Gadang:</strong> Ambil arah Buring / Kedungkandang (sekitar 7-10 menit berkendara).</span>
             </li>
-            <li class="flex items-start gap-2">
-              <span class="w-1.5 h-1.5 bg-agri-700 rounded-none shrink-0 mt-1.5"></span>
+            <li class="flex items-start gap-2.5">
+              <span class="w-1.5 h-1.5 bg-emerald-600 rounded-full shrink-0 mt-2"></span>
               <span><strong>Dari Alun-alun Kota Malang:</strong> Melalui Jl. Kolonel Sugiono mengarah ke Jl. KH. Malik Dalam.</span>
             </li>
-            <li class="flex items-start gap-2">
-              <span class="w-1.5 h-1.5 bg-agri-700 rounded-none shrink-0 mt-1.5"></span>
-              <span><strong>Akses Truk & Muatan:</strong> Akses jalan memadai untuk mobil pikap, truk engkel, hingga truk CDD kargo.</span>
+            <li class="flex items-start gap-2.5">
+              <span class="w-1.5 h-1.5 bg-emerald-600 rounded-full shrink-0 mt-2"></span>
+              <span><strong>Akses Truk & Muatan:</strong> Akses jalan lebar memadai untuk pikap, truk engkel, hingga truk CDD ekspedisi.</span>
             </li>
           </ul>
         </div>

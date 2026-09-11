@@ -4,23 +4,26 @@
 
 @layer base {
   :root {
-    --color-bg-canvas: #f7f6f2;
+    --color-bg-canvas: #fafafa;
     --color-bg-card: #ffffff;
-    --color-bg-subtle: #efece4;
-    --color-border: #dcd9d0;
-    --color-ink-primary: #111713;
-    --color-ink-secondary: #364239;
-    --color-ink-muted: #637066;
-    --color-agri-700: #165334;
-    --color-agri-800: #0f3c25;
+    --color-bg-subtle: #f4f4f5;
+    --color-border: #e4e4e7;
+    --color-ink-primary: #09090b;
+    --color-ink-secondary: #52525b;
+    --color-ink-muted: #71717a;
+    --color-agri-600: #059669;
+    --color-agri-700: #047857;
+    --color-agri-800: #065f46;
   }
 
   html {
     scroll-behavior: smooth;
     background-color: var(--color-bg-canvas);
     color: var(--color-ink-primary);
-    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   body {
@@ -31,6 +34,7 @@
     overflow-x: hidden;
     background-color: var(--color-bg-canvas);
     color: var(--color-ink-primary);
+    text-rendering: optimizeLegibility;
   }
 
   /* Prevent iOS Safari auto-zoom on form inputs */
@@ -43,15 +47,15 @@
     }
   }
 
-  /* Clean solid selection */
+  /* Clean subtle selection */
   ::selection {
-    background-color: #b1d2b8;
-    color: #0a2919;
+    background-color: #d1fae5;
+    color: #064e3b;
   }
 
-  /* Accessible focus rings */
+  /* Accessible smooth focus rings */
   a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
-    outline: 2px solid #165334;
+    outline: 2px solid #059669;
     outline-offset: 2px;
   }
 }
