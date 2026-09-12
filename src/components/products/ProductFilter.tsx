@@ -208,35 +208,34 @@ export default function ProductFilter({ products }: Props) {
                         (e.currentTarget as HTMLImageElement).src = '/images/products/plastik-uv-greenhouse.webp';
                       }}
                     />
-                    
-                    {/* Live Stock Pulse Badge */}
-                    <div class="absolute top-3 left-3 sm:top-4 sm:left-4">
-                      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-medium bg-white/95 backdrop-blur-md text-zinc-800 shadow-xs border border-zinc-200/60">
+                  </a>
+
+                  <div class="p-4 sm:p-5 space-y-1.5 sm:space-y-2">
+                    <div class="flex items-center justify-between gap-2">
+                      {product.brand ? (
+                        <span class="text-[11px] font-semibold text-emerald-700 tracking-normal block">
+                          {product.brand}
+                        </span>
+                      ) : (
+                        <span></span>
+                      )}
+                      
+                      {/* Stock Status Badge (Under image, zero overlay) */}
+                      <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-medium bg-zinc-100 text-zinc-700">
                         {product.stockStatus === 'ready' ? (
-                          <span class="relative flex h-2 w-2">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-                          </span>
+                          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
                         ) : (
-                          <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+                          <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
                         )}
                         <span>
                           {product.stockStatus === 'ready'
-                            ? 'Ready Malang'
+                            ? 'Ready'
                             : product.stockStatus === 'po'
                             ? 'Pre-Order'
                             : 'Cek Stok'}
                         </span>
                       </span>
                     </div>
-                  </a>
-
-                  <div class="p-4 sm:p-5 space-y-1.5 sm:space-y-2">
-                    {product.brand && (
-                      <span class="text-[11px] font-semibold text-emerald-700 tracking-normal block">
-                        {product.brand}
-                      </span>
-                    )}
 
                     <h3 class="font-semibold text-zinc-900 text-sm sm:text-base leading-snug line-clamp-2">
                       <a href={`/produk/${product.slug}/`} class="hover:text-emerald-700 transition-colors">

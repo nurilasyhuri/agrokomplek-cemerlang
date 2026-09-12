@@ -1,145 +1,92 @@
 ---
-import { generateGeneralInquiryUrl } from '../../utils/whatsapp';
+import { generateGeneralInquiryUrl } from "../../utils/whatsapp";
 
-const waConsultUrl = generateGeneralInquiryUrl('hero-primary');
+const waHeroUrl = generateGeneralInquiryUrl("hero-primary");
 ---
 
-<section class="relative overflow-hidden bg-gradient-to-b from-zinc-50/80 via-white to-white border-b border-zinc-200/80">
-  <!-- Subtle ambient background glow -->
-  <div class="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-20%,rgba(16,185,129,0.08),rgba(255,255,255,0))] pointer-events-none"></div>
-
-  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16 lg:pt-16 lg:pb-24">
+<section class="w-full bg-[#18181b] text-white border-b border-zinc-800 font-sans overflow-hidden py-12 sm:py-20 lg:py-24">
+  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
     
-    <!-- Top Hero Content: Editorial & CTAs -->
-    <div class="text-center max-w-3xl mx-auto space-y-6">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
       
-      <!-- Live Status Pill Kicker -->
-      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200/70 text-xs font-semibold shadow-2xs">
-        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-        <span>Pusat Suplai Pertanian Malang &bull; Kontraktor Greenhouse Nasional</span>
-      </div>
-
-      <!-- Flagship Headline -->
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-zinc-900 leading-[1.12]">
-        Solusi Pertanian Modern &amp; Fabrikasi Greenhouse Presisi
-      </h1>
-
-      <!-- Grounded Lead Copy -->
-      <p class="text-base sm:text-lg text-zinc-600 leading-relaxed max-w-2xl mx-auto">
-        Penyedia resmi material greenhouse terstandar, perlengkapan irigasi presisi, dan sarana produksi pertanian. Didukung tim teknisi aplikator berpengalaman untuk rancang bangun struktur tahan iklim tropis.
-      </p>
-
-      <!-- Apple Pill Action Buttons -->
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-        <a
-          href="/produk/"
-          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-zinc-900 hover:bg-zinc-800 text-white font-semibold text-sm tracking-normal shadow-sm hover:shadow-md transition-all duration-200 select-none"
-        >
-          <span>Jelajahi Katalog Produk</span>
-          <svg class="w-4 h-4 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-          </svg>
-        </a>
-
-        <a
-          href={waConsultUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full border border-zinc-200/90 bg-white hover:bg-zinc-50 text-zinc-900 font-semibold text-sm tracking-normal transition-all duration-200 shadow-2xs select-none"
-        >
-          <svg class="w-4 h-4 text-emerald-600" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
-          </svg>
-          <span>Konsultasi Proyek via WhatsApp</span>
-        </a>
-      </div>
-
-    </div>
-
-    <!-- Centerpiece Flagship Visual Showcase (The Generated High-Res Greenhouse Photography) -->
-    <div class="mt-12 lg:mt-16">
-      <div class="relative rounded-3xl lg:rounded-[32px] overflow-hidden border border-zinc-200/80 bg-zinc-100 shadow-xl group">
+      <!-- Left Column: Copy & CTAs (7 cols) - Modeled after screenshot -->
+      <div class="lg:col-span-7 text-left">
         
-        <!-- Hero Background Visual -->
-        <div class="aspect-[16/9] sm:aspect-[21/10] lg:aspect-[21/9] w-full relative overflow-hidden">
-          <img
-            src="/images/hero-greenhouse-bg.webp"
-            alt="Fasilitas Greenhouse Komersial Modern Agrokomplek Cemerlang"
-            width="1920"
-            height="1080"
-            class="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
-            loading="eager"
-            decoding="async"
-          />
-          <!-- Subtle vignette overlay -->
-          <div class="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20 pointer-events-none"></div>
+        <!-- Kicker Pill Badge (translucent with border & pulse dot) -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-white text-xs font-bold tracking-wider uppercase mb-6 select-none">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>READY STOCK &bull; KIRIM SE-INDONESIA</span>
         </div>
 
-        <!-- Floating Frosted Glass Feature Badges (Apple Style Glassmorphism) -->
-        <div class="absolute top-4 left-4 sm:top-6 sm:left-6">
-          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md text-zinc-900 border border-white/60 text-xs font-semibold shadow-md">
-            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-            <span>Instalasi Komersial Teruji Lapangan</span>
-          </div>
-        </div>
+        <!-- Punchy 2-Line Headline with Colored Second Line and Periods -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight leading-[1.08] mb-6 text-white font-sans">
+          <span>Jasa Pembuatan Greenhouse.</span><br />
+          <span class="text-emerald-400">Supplier Saprodi Pertanian.</span>
+        </h1>
 
-        <div class="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 max-w-xs sm:max-w-md">
-          <div class="p-3 sm:p-4 rounded-2xl bg-zinc-900/80 backdrop-blur-md text-white border border-white/20 shadow-lg space-y-1">
-            <span class="text-[10px] sm:text-xs font-semibold text-emerald-400 uppercase tracking-wider block">
-              Standar Konstruksi Tropis
-            </span>
-            <p class="text-xs sm:text-sm text-zinc-200 leading-snug">
-              Rangka pipa galvanis hot-dip tahan korosi dengan atap plastik UV 200 mikron anti-drip untuk fotosintesis tanaman optimal.
-            </p>
-          </div>
-        </div>
+        <!-- Subtitle / Lead Paragraph -->
+        <p class="text-base sm:text-lg text-zinc-300 font-normal leading-relaxed mb-8 max-w-xl">
+          Solusi kebutuhan greenhouse, sarana produksi pertanian, irigasi, dan perlengkapan kebun dari Malang untuk berbagai wilayah Indonesia. Tersedia plastik UV 200 mikron, paranet, insect net, selang drip, mulsa, pupuk, hingga pembuatan greenhouse bambu, galvanis, dan baja ringan.
+        </p>
 
-        <div class="hidden sm:block absolute bottom-6 right-6">
+        <!-- Two Rounded-Full Pill Buttons (Exact shape from screenshot) -->
+        <div class="flex flex-wrap items-center gap-3.5 sm:gap-4 mb-10">
           <a
-            href="/jasa/pembuatan-greenhouse/"
-            class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/95 backdrop-blur-md hover:bg-white text-zinc-900 text-xs font-semibold border border-white/60 shadow-lg transition-all"
+            href={waHeroUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="px-8 py-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase shadow-lg shadow-emerald-950/50 hover:scale-[1.03] active:scale-[0.97] transition-all inline-flex items-center justify-center gap-2.5 select-none"
           >
-            <span>Simulasi RAB Greenhouse</span>
-            <span aria-hidden="true">&rarr;</span>
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.276-.1-.477-.15-.678.15-.2.301-.777.978-.953 1.179-.176.2-.351.226-.652.075-1.558-.78-2.573-1.393-3.606-3.167-.272-.468.272-.435.778-1.45.084-.176.042-.326-.021-.451-.063-.125-.678-1.633-.928-2.237-.244-.588-.492-.508-.678-.518-.176-.01-.377-.01-.578-.01-.2 0-.528.075-.804.376-.276.301-1.054 1.03-1.054 2.512 0 1.482 1.079 2.913 1.23 3.114.15.2 2.124 3.243 5.145 4.548 2.052.887 2.858.966 3.882.814.733-.109 2.257-.923 2.576-1.815.318-.892.318-1.656.223-1.815-.095-.16-.351-.25-.652-.401z"/>
+            </svg>
+            <span>Konsultasi via WhatsApp</span>
+          </a>
+
+          <a
+            href="/produk/"
+            class="px-8 py-4 rounded-full bg-white/10 hover:bg-white/15 text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase border border-white/20 hover:border-white/40 hover:scale-[1.03] active:scale-[0.97] transition-all inline-flex items-center justify-center gap-2 select-none"
+          >
+            <span>Lihat Semua Katalog</span>
+            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            </svg>
           </a>
         </div>
 
+        <!-- Metrics Proof Strip -->
+        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-white/15 max-w-lg select-none">
+          <div>
+            <span class="block font-black text-2xl sm:text-3xl text-white tracking-tight leading-none mb-1">150+</span>
+            <span class="text-xs font-medium text-zinc-400 leading-tight block">Greenhouse Terpasang</span>
+          </div>
+          <div>
+            <span class="block font-black text-2xl sm:text-3xl text-white tracking-tight leading-none mb-1">100%</span>
+            <span class="text-xs font-medium text-zinc-400 leading-tight block">Material Teruji</span>
+          </div>
+          <div>
+            <span class="block font-black text-2xl sm:text-3xl text-white tracking-tight leading-none mb-1">Nusantara</span>
+            <span class="text-xs font-medium text-zinc-400 leading-tight block">Pengiriman Kargo</span>
+          </div>
+        </div>
+
       </div>
-    </div>
 
-    <!-- 4 Core Service Pillars Strip (Below Hero) -->
-    <div class="mt-8 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
-      <a href="/produk/saprodi-pertanian/" class="p-4 rounded-2xl bg-white border border-zinc-200/80 shadow-2xs hover:border-zinc-300 hover:shadow-xs transition-all group">
-        <div class="flex items-center justify-between mb-1">
-          <span class="font-bold text-zinc-900 text-sm group-hover:text-emerald-700 transition-colors">Saprodi Pertanian</span>
-          <span class="text-zinc-400 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+      <!-- Right Column: Pure Clean Image - GAMBAR HANYA GAMBAR SAJA, ZERO TEXT OVERLAY -->
+      <div class="lg:col-span-5">
+        <div class="rounded-3xl overflow-hidden border border-white/15 shadow-2xl aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/5] bg-zinc-900">
+          <img
+            src="/images/hero-greenhouse-bg.webp"
+            alt="Greenhouse Modern Agrokomplek Cemerlang Malang"
+            width="800"
+            height="1000"
+            class="w-full h-full object-cover object-center"
+            loading="eager"
+            decoding="async"
+          />
         </div>
-        <p class="text-xs text-zinc-500 leading-relaxed">Pupuk NPK &amp; organik, nutrisi AB Mix, media tanam, dan benih.</p>
-      </a>
+      </div>
 
-      <a href="/produk/perlengkapan-greenhouse/" class="p-4 rounded-2xl bg-white border border-zinc-200/80 shadow-2xs hover:border-zinc-300 hover:shadow-xs transition-all group">
-        <div class="flex items-center justify-between mb-1">
-          <span class="font-bold text-zinc-900 text-sm group-hover:text-emerald-700 transition-colors">Material Greenhouse</span>
-          <span class="text-zinc-400 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
-        </div>
-        <p class="text-xs text-zinc-500 leading-relaxed">Plastik UV 14%-20%, paranet 65%-75%, insectnet 50 mesh, spring clip.</p>
-      </a>
-
-      <a href="/produk/perlengkapan-pertanian/" class="p-4 rounded-2xl bg-white border border-zinc-200/80 shadow-2xs hover:border-zinc-300 hover:shadow-xs transition-all group">
-        <div class="flex items-center justify-between mb-1">
-          <span class="font-bold text-zinc-900 text-sm group-hover:text-emerald-700 transition-colors">Sistem Irigasi</span>
-          <span class="text-zinc-400 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
-        </div>
-        <p class="text-xs text-zinc-500 leading-relaxed">Selang drip 16mm, sprayer elektrik 16L, mulsa MPHP, fitting presisi.</p>
-      </a>
-
-      <a href="/jasa/pembuatan-greenhouse/" class="p-4 rounded-2xl bg-white border border-zinc-200/80 shadow-2xs hover:border-zinc-300 hover:shadow-xs transition-all group">
-        <div class="flex items-center justify-between mb-1">
-          <span class="font-bold text-zinc-900 text-sm group-hover:text-emerald-700 transition-colors">Jasa Greenhouse</span>
-          <span class="text-zinc-400 text-xs group-hover:translate-x-0.5 transition-transform">&rarr;</span>
-        </div>
-        <p class="text-xs text-zinc-500 leading-relaxed">Fabrikasi pipa galvanis, bambu presisi, baja ringan, dan tunnel garam.</p>
-      </a>
     </div>
 
   </div>

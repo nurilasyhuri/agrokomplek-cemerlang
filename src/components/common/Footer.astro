@@ -1,190 +1,131 @@
 ---
 import { BUSINESS_INFO } from '../../data/businessInfo';
-import { generateGeneralInquiryUrl } from '../../utils/whatsapp';
-
-const waConsultUrl = generateGeneralInquiryUrl('footer');
 ---
 
-<footer class="bg-zinc-50/90 border-t border-zinc-200/80 text-zinc-600 text-sm">
-  <!-- Main Footer Content -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 lg:py-20">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-12">
+<footer class="bg-secondary text-dark pt-16 pb-8 border-t border-border relative overflow-hidden font-sans">
+  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 mb-12">
       
-      <!-- Col 1: Business Identity & Address (5 cols) -->
-      <div class="lg:col-span-5 space-y-5">
-        <div class="space-y-1.5">
-          <div class="flex items-center gap-2.5">
-            <div class="w-8 h-8 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center text-emerald-700">
-              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
-                <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
-              </svg>
-            </div>
-            <span class="text-lg font-bold tracking-tight text-zinc-900">
-              Agrokomplek Cemerlang
-            </span>
-          </div>
-          <span class="text-xs font-semibold text-emerald-700 block">
-            Saprodi Pertanian &bull; Greenhouse &bull; Irigasi &bull; Konstruksi
-          </span>
-        </div>
-
-        <p class="text-xs text-zinc-500 leading-relaxed max-w-md">
-          Dari kebutuhan sarana produksi retail hingga proyek greenhouse berskala komersial di seluruh wilayah Indonesia. Siap melayani konsultasi dan pengiriman kargo terpercaya.
-        </p>
-
-        <!-- Structured Contact & Location Panel -->
-        <div class="bg-white border border-zinc-200/80 rounded-3xl p-5 space-y-4 text-xs shadow-2xs">
-          <!-- Alamat Fisik & Peta -->
-          <div class="flex items-start gap-3">
-            <div class="w-7 h-7 rounded-full bg-zinc-100 flex items-center justify-center shrink-0 text-zinc-600 mt-0.5">
-              <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-                <circle cx="12" cy="10" r="3"/>
-              </svg>
-            </div>
-            <div class="space-y-1">
-              <span class="font-semibold text-zinc-900 block text-xs">Gudang &amp; Toko Fisik Malang</span>
-              <p class="text-zinc-500 leading-relaxed text-[11px]">
-                Jl. KH. Malik Dalam RT 01 RW 07, Buring, Kedungkandang, Kota Malang, Jawa Timur 65136
-              </p>
-              <a
-                href={BUSINESS_INFO.geo.mapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="inline-flex items-center gap-1 font-semibold text-emerald-700 hover:text-emerald-800 pt-0.5"
-              >
-                <span>Buka Google Maps</span>
-                <span aria-hidden="true">&rarr;</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- WhatsApp & Jam Buka -->
-          <div class="border-t border-zinc-100 pt-3.5 grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <div class="flex items-start gap-2.5">
-              <div class="w-7 h-7 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
-                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
-                </svg>
-              </div>
-              <div>
-                <span class="font-semibold text-zinc-900 block text-[11px]">WhatsApp Hotline</span>
-                <a
-                  href={`https://wa.me/${BUSINESS_INFO.contact.whatsappRaw}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="font-medium text-emerald-700 hover:underline text-xs"
-                >
-                  {BUSINESS_INFO.contact.phone}
-                </a>
-              </div>
-            </div>
-
-            <div class="flex items-start gap-2.5">
-              <div class="w-7 h-7 rounded-full bg-zinc-100 text-zinc-600 flex items-center justify-center shrink-0">
-                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"/>
-                  <polyline points="12 6 12 12 16 14"/>
-                </svg>
-              </div>
-              <div>
-                <span class="font-semibold text-zinc-900 block text-[11px]">Jam Buka</span>
-                <span class="text-zinc-500 text-[11px]">Senin &ndash; Minggu<br />07.30 &ndash; 17.00 WIB</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Col 2: PRODUK (3 cols) -->
-      <div class="lg:col-span-3 space-y-4">
-        <h3 class="text-xs font-semibold uppercase tracking-wider text-zinc-900">
-          Katalog Produk
-        </h3>
-        <ul class="space-y-2 text-xs">
-          <li><a href="/produk/saprodi-pertanian/" class="text-zinc-500 hover:text-zinc-900 transition-colors">Saprodi Pertanian</a></li>
-          <li><a href="/produk/plastik-uv-greenhouse-14/" class="text-zinc-500 hover:text-zinc-900 transition-colors">Plastik UV Greenhouse</a></li>
-          <li><a href="/produk/paranet-tanaman/" class="text-zinc-500 hover:text-zinc-900 transition-colors">Paranet Shading Tanaman</a></li>
-          <li><a href="/produk/insectnet-kasa-greenhouse/" class="text-zinc-500 hover:text-zinc-900 transition-colors">Insect Net 50 Mesh</a></li>
-          <li><a href="/produk/selang-drip-irigasi-16mm/" class="text-zinc-500 hover:text-zinc-900 transition-colors">Selang Drip Irigasi 16mm</a></li>
-          <li><a href="/produk/mulsa-plastik-hitam-perak/" class="text-zinc-500 hover:text-zinc-900 transition-colors">Mulsa Hitam Perak (MPHP)</a></li>
-          <li><a href="/produk/paket-instalasi-hidroponik/" class="text-zinc-500 hover:text-zinc-900 transition-colors">Perlengkapan Hidroponik</a></li>
-          <li class="pt-2">
-            <a href="/produk/" class="text-emerald-700 font-semibold hover:underline">
-              Semua Katalog Produk &rarr;
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Col 3: KONSTRUKSI (2 cols) -->
-      <div class="lg:col-span-2 space-y-4">
-        <h3 class="text-xs font-semibold uppercase tracking-wider text-zinc-900">
-          Konstruksi
-        </h3>
-        <ul class="space-y-2 text-xs">
-          <li><a href="/proyek/greenhouse-bambu-kedungkandang-malang/" class="text-zinc-500 hover:text-zinc-900 transition-colors">Greenhouse Bambu</a></li>
-          <li><a href="/proyek/greenhouse-galvanis-batu-malang/" class="text-zinc-500 hover:text-zinc-900 transition-colors">Greenhouse Galvanis</a></li>
-          <li><a href="/proyek/greenhouse-baja-ringan-malang/" class="text-zinc-500 hover:text-zinc-900 transition-colors">Greenhouse Baja Ringan</a></li>
-          <li><a href="/proyek/tunnel-garam-pesisir-madura/" class="text-zinc-500 hover:text-zinc-900 transition-colors">Tunnel Garam Prisma</a></li>
-          <li class="pt-2">
-            <a href="/jasa/pembuatan-greenhouse/#kalkulator" class="text-emerald-700 font-semibold hover:underline">
-              Estimasi RAB Proyek &rarr;
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Col 4: INFORMASI (2 cols) -->
-      <div class="lg:col-span-2 space-y-4">
-        <h3 class="text-xs font-semibold uppercase tracking-wider text-zinc-900">
-          Informasi
-        </h3>
-        <ul class="space-y-2 text-xs">
-          <li><a href="/wilayah-layanan/" class="text-zinc-500 hover:text-zinc-900 transition-colors">Wilayah &amp; Kargo</a></li>
-          <li><a href="/proyek/" class="text-zinc-500 hover:text-zinc-900 transition-colors">Portofolio Proyek</a></li>
-          <li><a href="/lokasi/" class="text-zinc-500 hover:text-zinc-900 transition-colors">Lokasi Toko Malang</a></li>
-          <li><a href="/tentang-kami/" class="text-zinc-500 hover:text-zinc-900 transition-colors">Tentang Kami</a></li>
-          <li><a href="/kontak/" class="text-zinc-500 hover:text-zinc-900 transition-colors">Kontak Resmi</a></li>
-        </ul>
-      </div>
-
-    </div>
-
-    <!-- Brand Commitment Callout & Quick Action Bar -->
-    <div class="mt-14 pt-8 border-t border-zinc-200/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-      <div>
-        <span class="font-bold text-sm text-zinc-900 block">Agrokomplek Cemerlang</span>
-        <p class="text-xs text-zinc-500 mt-0.5">
-          Solusi Pertanian Terlindungi. Lebih Efisien. Siap Menghadapi Iklim Tropis.
-        </p>
-      </div>
-
-      <div class="flex items-center gap-3 shrink-0">
-        <a
-          href="/produk/"
-          class="px-5 py-2.5 rounded-full bg-white hover:bg-zinc-100 border border-zinc-200/80 text-zinc-900 font-medium text-xs transition-all shadow-2xs"
-        >
-          Lihat Katalog
+      <!-- Branding & Address (Col 1-2) -->
+      <div class="lg:col-span-2 pr-0 lg:pr-8">
+        <a href="/" title="Agrokomplek Cemerlang" class="font-sans text-2xl font-extrabold tracking-tight text-dark mb-1 block">
+          Agrokomplek Cemerlang
         </a>
+        <p class="text-xs font-semibold text-primary mb-3">
+          Supplier Saprodi, Material Pertanian &amp; Jasa Pembuatan Greenhouse
+        </p>
+        <p class="text-dark/80 text-xs sm:text-sm mb-6 leading-relaxed font-sans">
+          Melayani kebutuhan material pertanian dan pembangunan greenhouse dari Malang untuk berbagai wilayah Indonesia.
+        </p>
+        
+        <div class="space-y-2 text-xs text-muted mb-6">
+          <p class="flex items-start gap-2">
+            <span class="text-primary font-bold">📍</span>
+            <span><strong>Alamat:</strong> Jl. KH. Malik Dalam RT 01 RW 07, Kedungkandang, Kota Malang, Jawa Timur 65136</span>
+          </p>
+          <p class="flex items-center gap-2">
+            <span class="text-primary font-bold">💬</span>
+            <a href="https://wa.me/6285183002070" target="_blank" rel="noopener noreferrer" class="text-dark hover:text-primary transition-colors">
+              <strong>WhatsApp:</strong> 0851-8300-2070
+            </a>
+          </p>
+          <p class="flex items-center gap-2">
+            <span class="text-primary font-bold">⏰</span>
+            <span><strong>Jam Operasional:</strong> Senin &ndash; Minggu, 07.30 &ndash; 17.00 WIB</span>
+          </p>
+        </div>
+
+        <!-- Action Badge -->
         <a
-          href={waConsultUrl}
+          href={BUSINESS_INFO.geo.mapsUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="px-5 py-2.5 rounded-full bg-zinc-900 hover:bg-zinc-800 text-white font-medium text-xs transition-all shadow-xs"
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white border border-border text-dark hover:text-primary hover:border-primary/40 text-xs font-bold transition-all shadow-xs"
         >
-          Konsultasi Proyek
+          <span>Petunjuk Arah Google Maps</span>
+          <span>&rarr;</span>
         </a>
       </div>
-    </div>
-  </div>
 
-  <!-- Bottom Legal Strip -->
-  <div class="border-t border-zinc-200/80 py-5 px-4 text-xs text-zinc-400">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left text-[11px]">
-      <p>&copy; {new Date().getFullYear()} Agrokomplek Cemerlang. Hak cipta dilindungi undang-undang.</p>
-      <p>Pertanian &bull; Proteksi &bull; Irigasi &bull; Konstruksi Greenhouse Indonesia</p>
+      <!-- Links Columns (Col 3-5) -->
+      <div class="lg:col-span-3 grid grid-cols-2 md:grid-cols-4 gap-8 font-sans text-sm">
+        
+        <!-- KATALOG -->
+        <div>
+          <h4 class="font-extrabold text-dark/70 text-xs tracking-wider uppercase mb-4">KATALOG</h4>
+          <ul class="space-y-2.5 font-bold text-xs text-dark">
+            <li><a href="/produk/" class="hover:underline hover:text-primary">Semua Produk</a></li>
+            <li><a href="/produk/saprodi-pertanian/" class="hover:underline hover:text-primary">Saprodi &amp; Pupuk</a></li>
+            <li><a href="/produk/plastik-uv-greenhouse-14/" class="hover:underline hover:text-primary">Plastik UV 200µm</a></li>
+            <li><a href="/produk/paranet-tanaman/" class="hover:underline hover:text-primary">Paranet Tanaman</a></li>
+            <li><a href="/produk/insectnet-kasa-greenhouse/" class="hover:underline hover:text-primary">Insect Net 50 Mesh</a></li>
+            <li><a href="/produk/selang-drip-irigasi-16mm/" class="hover:underline hover:text-primary">Selang Drip 16mm</a></li>
+            <li><a href="/produk/mulsa-plastik-hitam-perak/" class="hover:underline hover:text-primary">Mulsa MPHP</a></li>
+            <li><a href="/produk/paket-instalasi-hidroponik/" class="hover:underline hover:text-primary">Hidroponik NFT</a></li>
+          </ul>
+        </div>
+
+        <!-- LAYANAN -->
+        <div>
+          <h4 class="font-extrabold text-dark/70 text-xs tracking-wider uppercase mb-4">LAYANAN</h4>
+          <ul class="space-y-2.5 font-bold text-xs text-dark">
+            <li><a href="/jasa/pembuatan-greenhouse/" class="hover:underline hover:text-primary">Jasa Greenhouse</a></li>
+            <li><a href="/jasa/pembuatan-greenhouse/#kalkulator" class="text-primary font-extrabold hover:underline">Kalkulator RAB</a></li>
+            <li><a href="/jasa/pembuatan-greenhouse/#bambu" class="hover:underline hover:text-primary">Greenhouse Bambu</a></li>
+            <li><a href="/jasa/pembuatan-greenhouse/#galvanis" class="hover:underline hover:text-primary">Greenhouse Galvanis</a></li>
+            <li><a href="/jasa/pembuatan-greenhouse/#baja-ringan" class="hover:underline hover:text-primary">Greenhouse Baja Ringan</a></li>
+            <li><a href="/jasa/pembuatan-greenhouse/#tunnel-garam" class="hover:underline hover:text-primary">Tunnel Garam Prisma</a></li>
+          </ul>
+        </div>
+
+        <!-- PANDUAN -->
+        <div>
+          <h4 class="font-extrabold text-dark/70 text-xs tracking-wider uppercase mb-4">PANDUAN</h4>
+          <ul class="space-y-2.5 font-bold text-xs text-dark">
+            <li><a href="/artikel/" class="hover:underline hover:text-primary">Blog &amp; Panduan Tani</a></li>
+            <li><a href="/artikel/biaya-pembuatan-greenhouse/" class="hover:underline hover:text-primary">Estimasi Biaya RAB</a></li>
+            <li><a href="/artikel/panduan-konstruksi-tunnel-garam/" class="hover:underline hover:text-primary">Konstruksi Tunnel Garam</a></li>
+            <li><a href="/artikel/plastik-uv-dan-paranet-perbedaan-fungsi/" class="hover:underline hover:text-primary">Plastik UV vs Paranet</a></li>
+            <li><a href="/proyek/" class="hover:underline hover:text-primary">Galeri Proyek Selesai</a></li>
+          </ul>
+        </div>
+
+        <!-- PERUSAHAAN -->
+        <div>
+          <h4 class="font-extrabold text-dark/70 text-xs tracking-wider uppercase mb-4">PERUSAHAAN</h4>
+          <ul class="space-y-2.5 font-bold text-xs text-dark">
+            <li><a href="/tentang-kami/" class="hover:underline hover:text-primary">Tentang Kami</a></li>
+            <li><a href="/lokasi/" class="hover:underline hover:text-primary">Lokasi Toko Malang</a></li>
+            <li><a href="/wilayah-layanan/" class="hover:underline hover:text-primary">Wilayah &amp; Ekspedisi Kargo</a></li>
+            <li><a href="/kontak/" class="hover:underline hover:text-primary">Kontak Resmi</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Bar (Shopify style with copyright, legal links & payment/cargo badges) -->
+    <div class="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+      <div class="flex flex-col md:flex-row items-center gap-2 md:gap-6 text-xs text-dark font-medium">
+        <span>&copy; {new Date().getFullYear()} Agrokomplek Cemerlang. Hak cipta dilindungi.</span>
+        <div class="flex flex-wrap justify-center gap-4 text-xs font-sans uppercase font-bold">
+          <a href="/tentang-kami/" class="hover:underline hover:text-primary">Profil Usaha</a>
+          <a href="/wilayah-layanan/" class="hover:underline hover:text-primary">Info Kargo</a>
+          <a href="/kontak/" class="hover:underline hover:text-primary">Bantuan</a>
+        </div>
+      </div>
+
+      <!-- Payment & Expedition Cargo Badges -->
+      <div class="flex flex-wrap items-center gap-2 select-none">
+        <span class="text-[10px] font-bold text-muted uppercase tracking-wider mr-1">Pembayaran &amp; Kargo:</span>
+        <span class="px-2 py-1 bg-white border border-border rounded-lg text-[10px] font-black text-blue-800 shadow-2xs">BCA</span>
+        <span class="px-2 py-1 bg-white border border-border rounded-lg text-[10px] font-black text-amber-600 shadow-2xs">MANDIRI</span>
+        <span class="px-2 py-1 bg-white border border-border rounded-lg text-[10px] font-black text-blue-600 shadow-2xs">BRI</span>
+        <span class="px-2 py-1 bg-white border border-border rounded-lg text-[10px] font-black text-teal-700 shadow-2xs">QRIS</span>
+        <span class="px-2 py-1 bg-white border border-border rounded-lg text-[10px] font-black text-red-600 shadow-2xs">J&amp;T CARGO</span>
+        <span class="px-2 py-1 bg-white border border-border rounded-lg text-[10px] font-black text-zinc-700 shadow-2xs">INDAH LOGISTIK</span>
+      </div>
     </div>
   </div>
 </footer>
+

@@ -2,9 +2,9 @@ export const BUSINESS_INFO = {
   name: 'Agrokomplek Cemerlang',
   legalName: 'Agrokomplek Cemerlang Malang',
   tagline: 'Membangun Pertanian yang Lebih Terlindungi. Lebih Efisien. Lebih Siap Berkembang.',
-  positioning: 'Solusi Infrastruktur Budidaya dari Material hingga Instalasi',
+  positioning: 'Distributor Saprodi Pertanian & Kontraktor Jasa Pembuatan Greenhouse',
   brandPillars: 'PERTANIAN • PROTEKSI • IRIGASI • KONSTRUKSI',
-  description: 'Agrokomplek Cemerlang menyediakan sarana produksi pertanian, material greenhouse, perlengkapan irigasi, sistem hidroponik, serta jasa pembuatan dan instalasi greenhouse untuk mendukung petani dan pelaku agribisnis di Indonesia.',
+  description: 'Agrokomplek Cemerlang adalah distributor saprodi pertanian terlengkap, penyedia material greenhouse (plastik UV, paranet, insect net), perlengkapan irigasi, serta kontraktor jasa pembuatan greenhouse di Malang melayani seluruh Indonesia.',
   address: {
     street: 'Jl. KH. Malik Dalam RT 01 RW 07',
     village: 'Buring',

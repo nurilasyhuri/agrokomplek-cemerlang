@@ -38,8 +38,8 @@ const projectSchema = getProjectSchema({
 ---
 
 <BaseLayout
-  title={`${project.data.title} - Portofolio Proyek`}
-  description={`Studi kasus pengerjaan ${project.data.greenhouseType} di ${project.data.locationCity}, ${project.data.locationProvince}. Dimensi: ${project.data.dimensions}.`}
+  title={`${project.data.title} | Proyek Greenhouse`}
+  description={`Studi kasus konstruksi ${project.data.greenhouseType} di ${project.data.locationCity}, ${project.data.locationProvince} (Dimensi ${project.data.dimensions}). Dokumentasi & spek material.`}
   image={project.data.coverImage}
   jsonLd={[projectSchema, breadcrumbSchema]}
 >

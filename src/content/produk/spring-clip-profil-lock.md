@@ -1,6 +1,6 @@
 ---
 title: 'Spring Clip & Profil Lock Rangka Greenhouse'
-description: 'Sistem pengunci plastik UV dan paranet ke rangka pipa galvanis atau baja ringan. Menjepit plastik dengan kencang, rapi, dan tidak merobek lembaran penutup.'
+description: 'Sistem pengunci profil lock C galvanis & kawat spring clip untuk menjepit plastik UV dan paranet ke rangka pipa greenhouse tanpa merobek lembaran plastik.'
 category: 'perlengkapan-greenhouse'
 price: 25000
 priceDisplay: 'Mulai Rp 25.000 / batang'

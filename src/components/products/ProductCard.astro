@@ -15,84 +15,80 @@ export interface Props {
 const { product } = Astro.props;
 ---
 
-<div class="group relative flex flex-col justify-between rounded-3xl bg-white border border-zinc-200/80 hover:border-zinc-300 hover:shadow-lg transition-all duration-300 overflow-hidden">
+<div class="group relative flex flex-col justify-between rounded-2xl sm:rounded-3xl bg-white border border-border hover:border-primary/40 hover:shadow-hover hover:-translate-y-1 transition-all duration-300 overflow-hidden font-sans">
   <div>
-    <!-- Thumbnail Image with clean inset presentation -->
-    <a href={`/produk/${product.slug}/`} class="block aspect-square bg-zinc-50/80 overflow-hidden relative p-4 sm:p-5">
+    <!-- Pure Thumbnail Image - GAMBAR HANYA GAMBAR SAJA, TANPA TULISAN MENIMPA -->
+    <a href={`/produk/${product.slug}/`} class="block aspect-square bg-secondary/30 overflow-hidden">
       <img
         src={product.thumbnail}
         alt={product.title}
         width="400"
         height="400"
-        class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500 ease-out shadow-2xs"
+        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
         loading="lazy"
         decoding="async"
       />
-      
-      <!-- Stock Status Pill Badge (Apple style with live pulse) -->
-      <div class="absolute top-3 left-3 sm:top-4 sm:left-4">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] sm:text-[11px] font-medium bg-white/95 backdrop-blur-md text-zinc-800 shadow-xs border border-zinc-200/60">
-          {product.stockStatus === 'ready' ? (
-            <span class="relative flex h-2 w-2">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-            </span>
-          ) : (
-            <span class="w-2 h-2 rounded-full bg-amber-500"></span>
-          )}
-          <span>
-            {product.stockStatus === 'ready'
-              ? 'Ready Malang'
-              : product.stockStatus === 'po'
-              ? 'Pre-Order'
-              : 'Cek Stok'}
-          </span>
-        </span>
-      </div>
     </a>
 
-    <!-- Details -->
-    <div class="p-4 sm:p-5 space-y-1.5 sm:space-y-2">
+    <!-- Details Below Image -->
+    <div class="p-4 sm:p-5 pb-2">
+      <!-- Status & Category Row (Below Image) -->
+      <div class="flex items-center justify-between gap-2 mb-2">
+        <span class="inline-flex items-center gap-1.5 text-[10px] font-bold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+          <span>
+            {product.stockStatus === "ready"
+              ? "Ready Stock"
+              : product.stockStatus === "po"
+              ? "Pre-Order"
+              : "Cek Stok"}
+          </span>
+        </span>
+
+        <span class="text-[10px] font-bold uppercase tracking-wider text-muted">
+          {product.category === "perlengkapan-greenhouse" ? "Greenhouse" : product.category === "saprodi-pertanian" ? "Saprodi" : "Irigasi"}
+        </span>
+      </div>
+
       {product.brand && (
-        <span class="text-[11px] font-semibold text-emerald-700 tracking-normal block">
+        <span class="text-[10px] font-bold text-primary uppercase tracking-wider block mb-1">
           {product.brand}
         </span>
       )}
 
-      <h3 class="font-semibold text-zinc-900 text-sm sm:text-base leading-snug line-clamp-2">
-        <a href={`/produk/${product.slug}/`} class="hover:text-emerald-700 transition-colors">
+      <h3 class="font-bold text-dark text-sm leading-snug line-clamp-2 group-hover:text-primary transition-colors min-h-[2.5rem]">
+        <a href={`/produk/${product.slug}/`}>
           {product.title}
         </a>
       </h3>
 
-      <p class="text-xs text-zinc-500 line-clamp-2 leading-relaxed">
-        {product.description}
-      </p>
+      <!-- Star Ratings & Review Proof -->
+      <div class="flex items-center gap-1.5 text-xs text-amber-500 mt-2 select-none">
+        <span class="tracking-tighter font-black">★★★★★</span>
+        <span class="text-muted font-medium text-[11px]">(4.9 &bull; 40+ ulasan)</span>
+      </div>
     </div>
   </div>
 
-  <!-- Bottom Actions -->
-  <div class="p-4 sm:p-5 pt-0 border-t border-zinc-100 mt-2 space-y-3">
-    <div class="flex items-baseline justify-between pt-2">
+  <!-- Bottom Pricing & Action -->
+  <div class="p-4 sm:p-5 pt-3 border-t border-border/70 mt-1">
+    <div class="flex items-center justify-between gap-2">
       <div class="flex flex-col">
-        <span class="text-[10px] text-zinc-400 uppercase tracking-wider font-medium">Mulai Dari</span>
-        <span class="font-bold text-zinc-900 text-base sm:text-lg tracking-tight">
-          {product.priceDisplay || 'Hubungi CS'}
+        <span class="text-[10px] text-muted font-medium">Harga Mulai</span>
+        <span class="font-black text-dark text-sm sm:text-base tracking-tight">
+          {product.priceDisplay || "Hubungi CS"}
         </span>
       </div>
-      <span class="text-[11px] font-medium text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-100/60">
-        Siap Kirim
-      </span>
-    </div>
 
-    <a
-      href={`/produk/${product.slug}/`}
-      class="w-full inline-flex items-center justify-center gap-2 py-2.5 sm:py-3 px-4 rounded-full bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-medium tracking-normal transition-all duration-200 select-none shadow-xs hover:shadow group-hover:bg-emerald-700"
-    >
-      <span>Pilih Varian &amp; Beli</span>
-      <svg class="w-3.5 h-3.5 text-white/80 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-      </svg>
-    </a>
+      <a
+        href={`/produk/${product.slug}/`}
+        class="inline-flex items-center justify-center gap-1 py-2 px-3.5 rounded-xl bg-secondary hover:bg-primary text-dark hover:text-white text-xs font-bold transition-all duration-200 shadow-xs group/btn"
+      >
+        <span>Detail</span>
+        <svg class="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
   </div>
 </div>

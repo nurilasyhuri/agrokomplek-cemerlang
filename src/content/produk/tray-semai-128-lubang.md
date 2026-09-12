@@ -1,6 +1,6 @@
 ---
 title: 'Tray Semai 128 Lubang Pembibitan'
-description: 'Wadah semai benih plastik hitam tebal isi 128 lubang untuk penyemaian benih cabai, tomat, terong, melon, dan sayuran daun. Memudahkan proses transplanting bibit.'
+description: 'Tray semai plastik elastis 128 lubang untuk persemaian bibit cabai, tomat, melon, dan sayuran. Perakaran rapi, kokoh, dan mudah dipindah tanam.'
 category: 'perlengkapan-pertanian'
 stockStatus: 'ready'
 featured: false

@@ -18,7 +18,7 @@ const {
 } = Astro.props;
 
 const siteName = 'Agrokomplek Cemerlang';
-const formattedTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
+const formattedTitle = title.includes(siteName) || title.includes('Agrokomplek') ? title : `${title} | ${siteName}`;
 const fullImageUrl = image.startsWith('http') ? image : `https://agrokomplekcemerlang.com${image}`;
 ---
 

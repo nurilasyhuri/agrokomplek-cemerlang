@@ -4,6 +4,16 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Shopify-style Direct Tokens (matching babyfit.us theme architecture)
+        primary: '#047857',
+        'primary-hover': '#065f46',
+        dark: '#09090b',
+        muted: '#71717a',
+        secondary: '#f4f4f5',
+        border: '#e4e4e7',
+        bg: '#fafafa',
+        peach: '#ecfdf5',
+        sand: '#f5f5f4',
         // Modern Pristine Canvas & Card Structure (Apple/Google design language)
         surface: {
           canvas: '#fafafa',     // Clean subtle off-white ground

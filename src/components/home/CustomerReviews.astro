@@ -1,0 +1,112 @@
+---
+const reviews = [
+  {
+    name: 'Pak Hendra Pratama',
+    initials: 'HP',
+    role: 'Petani Melon Hidroponik',
+    location: 'Batu, Jawa Timur',
+    item: 'Plastik UV 200μm & Spring Clip',
+    rating: 5,
+    title: 'Plastik UV Tebal & Tahan Angin Gunung',
+    comment: 'Sudah 3 tahun pakai plastik UV 14% dari Agrokomplek di kebun melon Batu. Kualitasnya jempolan, tidak getas kena panas dingin pegunungan, dan lumut tidak gampang nempel.',
+  },
+  {
+    name: 'Bpk. Ir. Danang Wibowo',
+    initials: 'DW',
+    role: 'Pengelola Agrowisata Sayur',
+    location: 'Kediri, Jawa Timur',
+    item: 'Greenhouse Galvanis 400m²',
+    rating: 5,
+    title: 'Pengerjaan Cepat & RAB Sangat Transparan',
+    comment: 'Puas sekali bangun greenhouse galvanis lewat tim Agrokomplek. Desain ventilasi monitor roof bikin sirkulasi udara adem, tanaman stroberi dan selada tumbuh prima.',
+  },
+  {
+    name: 'Ibu Ratna Kumalasari',
+    initials: 'RK',
+    role: 'Pemilik Nursery Bunga',
+    location: 'Bandung Barat, Jawa Barat',
+    item: 'Paranet 75% & Selang Drip 16mm',
+    rating: 5,
+    title: 'Pengiriman Kargo Rapi & Aman Luar Pulau',
+    comment: 'Pesan paranet 75% dan selang drip kirim ke Bandung pakai J&T Cargo, packing peti kayu rapi tanpa sobek. Resi cepat diinfo dan customer service ramah solutif.',
+  },
+  {
+    name: 'Haji Mansur',
+    initials: 'HM',
+    role: 'Sentra Garam Rakyat',
+    location: 'Sumenep, Madura',
+    item: 'Tunnel Garam Prisma 10 Unit',
+    rating: 5,
+    title: 'Produksi Garam Naik & Kristal Lebih Putih',
+    comment: 'Tunnel garam bambu prisma dengan plastik UV tahan garam laut mempercepat panen garam dari 2 minggu jadi 5 hari. Hasil kristal garam bersih kualitas premium.',
+  },
+];
+---
+
+<section class="py-16 sm:py-24 bg-secondary/30 border-b border-border font-sans">
+  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header (Shopify style) -->
+    <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-peach text-primary text-[11px] font-bold uppercase tracking-wider mb-2.5">
+        <span>Ulasan Mitra Tani</span>
+      </div>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-dark tracking-tight mb-2.5">
+        Dipercaya Ratusan Petani &amp; Pelaku Agribisnis
+      </h2>
+      <div class="flex items-center justify-center gap-2 text-xs sm:text-sm font-semibold text-muted">
+        <span class="text-amber-500 tracking-wider font-black">★★★★★</span>
+        <span class="text-dark font-bold">4.9 / 5.0</span>
+        <span>&bull;</span>
+        <span>320+ Ulasan Nyata se-Indonesia</span>
+      </div>
+    </div>
+
+    <!-- Reviews Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+      {reviews.map((r) => (
+        <div class="rounded-2xl sm:rounded-3xl bg-white border border-border p-6 shadow-xs hover:border-primary/40 hover:shadow-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <!-- Stars & Verified Badge -->
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <div class="text-amber-500 text-xs tracking-wider font-black">
+                {'★'.repeat(r.rating)}
+              </div>
+              <span class="inline-flex items-center gap-1 text-[10px] font-bold text-primary bg-peach px-2.5 py-0.5 rounded-full">
+                <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+                <span>Terverifikasi</span>
+              </span>
+            </div>
+
+            <!-- Review Title -->
+            <h3 class="font-bold text-xs sm:text-sm text-dark mb-2 leading-snug">
+              {r.title}
+            </h3>
+
+            <!-- Review Comment -->
+            <p class="text-xs text-muted leading-relaxed mb-4">
+              &ldquo;{r.comment}&rdquo;
+            </p>
+          </div>
+
+          <!-- Customer Identity & Purchased Item -->
+          <div class="pt-4 border-t border-border/70 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-peach text-primary font-bold text-xs flex items-center justify-center shrink-0 border border-primary/20">
+              {r.initials}
+            </div>
+            <div class="min-w-0 flex-1">
+              <p class="font-bold text-xs text-dark truncate">{r.name}</p>
+              <p class="text-[11px] text-muted truncate">{r.role} &bull; {r.location}</p>
+              <p class="text-[10px] font-medium text-primary truncate mt-0.5">
+                Item: {r.item}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>

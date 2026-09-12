@@ -2,67 +2,53 @@
 import { BUSINESS_INFO } from '../../data/businessInfo';
 ---
 
-<section class="py-14 lg:py-24 bg-zinc-50/60 border-b border-zinc-200/80">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<section class="py-16 sm:py-24 bg-bg border-b border-border font-sans">
+  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
     
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
       
       <!-- Left Column: Logistics Info (7 cols) -->
       <div class="lg:col-span-7 space-y-6">
         <div>
-          <span class="text-xs font-semibold text-emerald-700 uppercase tracking-wider block mb-1">Jangkauan Logistik &amp; Instalasi</span>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-900 leading-[1.15]">
-            Material Bisa Dikirim. Tim Kami Siap Datang.
+          <span class="text-xs font-semibold text-primary block mb-1">
+            Jangkauan Pengiriman
+          </span>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-dark tracking-tight leading-[1.2]">
+            Melayani Pengiriman Material Pertanian ke Berbagai Wilayah Indonesia
           </h2>
         </div>
 
-        <p class="text-sm sm:text-base text-zinc-600 leading-relaxed">
-          Agrokomplek Cemerlang melayani kebutuhan material perkebunan dan instalasi greenhouse untuk berbagai wilayah di seluruh kepulauan Indonesia.
+        <p class="text-xs sm:text-sm text-muted font-normal leading-relaxed">
+          Agrokomplek Cemerlang melayani kebutuhan pelanggan di Jawa Timur dan berbagai wilayah Indonesia, termasuk pengiriman menuju:
         </p>
 
-        <!-- 2 Workflows (Apple Cards) -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-          <div class="rounded-3xl bg-white border border-zinc-200/80 p-6 shadow-xs space-y-2">
-            <span class="text-xs font-semibold text-emerald-700 block">
-              01 &mdash; Pengiriman Material
-            </span>
-            <p class="text-xs font-bold text-zinc-900">
-              Plastik UV &bull; Paranet &bull; Mulsa &bull; Spring Clip &bull; Irigasi
-            </p>
-            <p class="text-xs text-zinc-500 leading-relaxed">
-              Pengiriman melalui ekspedisi kargo rekanan terpercaya (darat &amp; laut) sesuai volume dan alamat tujuan Anda.
-            </p>
-          </div>
-
-          <div class="rounded-3xl bg-white border border-zinc-200/80 p-6 shadow-xs space-y-2">
-            <span class="text-xs font-semibold text-emerald-700 block">
-              02 &mdash; Tim Instalasi Proyek
-            </span>
-            <p class="text-xs font-bold text-zinc-900">
-              Jawa &bull; Sumatera &bull; Kalimantan &bull; Sulawesi
-            </p>
-            <p class="text-xs text-zinc-500 leading-relaxed">
-              Untuk proyek greenhouse komersial, tim teknisi aplikator kami dapat dijadwalkan langsung ke lokasi lahan Anda.
-            </p>
-          </div>
+        <!-- Island Badges Strip -->
+        <div class="p-4 rounded-2xl bg-white border border-border">
+          <p class="text-xs sm:text-sm font-bold text-dark text-center leading-relaxed">
+            Jawa &bull; Sumatera &bull; Kalimantan &bull; Sulawesi &bull; Bali &bull; Nusa Tenggara &bull; Maluku &bull; Papua
+          </p>
         </div>
 
-        <!-- Action Links (Pill Buttons) -->
+        <p class="text-xs sm:text-sm text-muted leading-relaxed">
+          Jenis dan biaya pengiriman akan menyesuaikan berat, volume barang, ekspedisi, serta lokasi tujuan. Untuk material berukuran besar seperti rol plastik UV, paranet, pipa, atau perlengkapan konstruksi, tim kami dapat membantu menentukan pilihan pengiriman yang paling efisien dan aman.
+        </p>
+
+        <!-- Action Link -->
         <div class="pt-2 flex flex-wrap gap-3">
           <a
-            href="/wilayah-layanan/"
-            class="px-6 py-3 rounded-full bg-zinc-900 hover:bg-zinc-800 text-white font-semibold text-xs tracking-normal transition-all shadow-xs select-none"
+            href={`https://wa.me/${BUSINESS_INFO.contact.whatsappRaw}?text=${encodeURIComponent('Halo Agrokomplek Cemerlang, saya ingin menanyakan ongkir dan pilihan pengiriman material ke wilayah saya.')}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white font-extrabold text-xs sm:text-sm transition-all shadow-xs select-none hover:scale-[1.02] active:scale-[0.98]"
           >
-            <span>Pelajari Jangkauan Layanan</span>
+            <span>Tanyakan Ongkir &amp; Pengiriman</span>
             <span aria-hidden="true">&rarr;</span>
           </a>
           <a
-            href={`https://wa.me/${BUSINESS_INFO.contact.whatsappRaw}?text=${encodeURIComponent('Halo Agrokomplek Cemerlang, saya ingin cek ongkir material / layanan perakitan untuk lokasi proyek saya.')}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="px-6 py-3 rounded-full bg-white hover:bg-zinc-100 text-zinc-900 font-semibold text-xs border border-zinc-200/80 transition-all select-none shadow-2xs"
+            href="/wilayah-layanan/"
+            class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-secondary text-dark font-bold text-xs sm:text-sm border border-border transition-all select-none shadow-xs"
           >
-            <span>Konsultasi Logistik WA</span>
+            <span>Informasi Wilayah Layanan</span>
             <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
@@ -70,36 +56,36 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
 
       <!-- Right Column: Verification Data Box (5 cols) -->
       <div class="lg:col-span-5">
-        <div class="rounded-3xl bg-white border border-zinc-200/80 p-6 sm:p-8 shadow-xs space-y-5">
-          <h3 class="text-sm font-semibold text-zinc-900 uppercase tracking-wider border-b border-zinc-100 pb-3">
-            Standar Pengemasan &amp; Pengiriman
+        <div class="rounded-3xl bg-white border border-border p-6 sm:p-8 shadow-xs space-y-5">
+          <h3 class="text-xs font-bold text-dark uppercase tracking-wider border-b border-border pb-3">
+            Pilihan Ekspedisi &amp; Kargo
           </h3>
 
           <div class="space-y-4 text-xs">
             <div class="space-y-1">
-              <span class="font-semibold text-zinc-900 text-sm block">
-                01 &mdash; Packing Ekstra Aman
+              <span class="font-bold text-dark text-sm block">
+                Ekspedisi Kargo Terpercaya
               </span>
-              <p class="text-zinc-500 leading-relaxed">
-                Rol plastik UV dan material peka dikemas dengan perlindungan ganda untuk meminimalkan risiko goresan selama ekspedisi kargo.
+              <p class="text-muted leading-relaxed">
+                Bekerja sama dengan Indah Logistik, Baraka Sarana Tama, Dakota Cargo, J&amp;T Cargo, dan armada kargo laut untuk tarif yang bersahabat pada muatan berat.
               </p>
             </div>
             
             <div class="space-y-1">
-              <span class="font-semibold text-zinc-900 text-sm block">
-                02 &mdash; Resi Transparan &amp; Tracking
+              <span class="font-bold text-dark text-sm block">
+                Pengemasan Berlapis
               </span>
-              <p class="text-zinc-500 leading-relaxed">
-                Foto bukti timbang dan nomor resi kargo resmi langsung dikirimkan via WhatsApp setelah serah terima ekspedisi.
+              <p class="text-muted leading-relaxed">
+                Rol plastik UV dan material peka dikemas aman dengan lapisan pelindung untuk menjaga kondisi material tetap prima saat tiba di lokasi kebun.
               </p>
             </div>
 
             <div class="space-y-1">
-              <span class="font-semibold text-zinc-900 text-sm block">
-                03 &mdash; Panduan Teknis Pemasangan
+              <span class="font-bold text-dark text-sm block">
+                Nomor Resi &amp; Pemantauan
               </span>
-              <p class="text-zinc-500 leading-relaxed">
-                Pelanggan yang merakit mandiri didukung sesi konsultasi teknis via WhatsApp dan video call oleh aplikator kami.
+              <p class="text-muted leading-relaxed">
+                Bukti pengiriman dan nomor resi kargo resmi dibagikan langsung melalui WhatsApp sehingga pergerakan pesanan dapat dipantau hingga tujuan.
               </p>
             </div>
           </div>

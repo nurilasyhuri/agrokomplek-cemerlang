@@ -1,6 +1,6 @@
 ---
-title: 'Biaya Pembuatan Greenhouse: Faktor yang Menentukan Anggaran RAB Proyek'
-description: 'Panduan lengkap rincian estimasi biaya pembuatan greenhouse per meter persegi. Pahami perbedaan biaya rangka bambu, baja ringan, pipa galvanis, dan spesifikasi atap.'
+title: 'Biaya Pembuatan Greenhouse: Panduan Hitung RAB per Meter'
+description: 'Panduan estimasi biaya pembuatan greenhouse per meter. Pahami rincian RAB rangka bambu, baja ringan, pipa galvanis, dan atap plastik UV 200 mikron.'
 publishDate: '2 September 2026'
 author: 'Tim Ahli Agrokomplek Cemerlang'
 category: 'Panduan Konstruksi'

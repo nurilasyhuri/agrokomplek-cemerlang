@@ -1,6 +1,6 @@
 ---
 title: 'Pupuk NPK Mutiara 16-16-16'
-description: 'Pupuk majemuk lengkap dengan kandungan Nitrogen, Fosfat, dan Kalium seimbang untuk memacu pertumbuhan vegetatif awal dan pembentukan bunga/buah.'
+description: 'Pupuk NPK 16-16-16 formula seimbang untuk memacu pertumbuhan vegetatif, perakaran, dan pembuahan tanaman hortikultura & sayuran pangan.'
 category: 'saprodi-pertanian'
 stockStatus: 'ready'
 featured: false

@@ -1,0 +1,69 @@
+---
+const faqs = [
+  {
+    q: 'Berapa biaya pembuatan greenhouse per meter?',
+    a: 'Biaya tidak bisa ditentukan hanya berdasarkan luas bangunan. Jenis rangka, plastik UV, insect net, ventilasi, pondasi, kondisi lokasi, dan perlengkapan tambahan juga memengaruhi total biaya. Gunakan kalkulator RAB untuk mendapatkan estimasi awal atau kirim ukuran lahan melalui WhatsApp untuk konsultasi langsung.',
+  },
+  {
+    q: 'Apakah bisa kirim plastik UV dan paranet ke luar Malang?',
+    a: 'Bisa. Kami melayani pengiriman material pertanian ke berbagai wilayah Indonesia menggunakan layanan ekspedisi atau kargo yang menyesuaikan berat, ukuran barang, dan tujuan pengiriman.',
+  },
+  {
+    q: 'Apa perbedaan plastik UV dan plastik biasa?',
+    a: 'Plastik UV greenhouse dirancang khusus untuk penggunaan pertanian dan memiliki karakteristik yang berbeda dari plastik umum. Spesifikasi setiap produk dapat berbeda, jadi sebaiknya periksa ketebalan, kandungan UV stabilizer, ukuran, serta rekomendasi penggunaannya sebelum membeli.',
+  },
+  {
+    q: 'Apakah plastik UV dan paranet bisa dibeli eceran?',
+    a: 'Ketersediaan ukuran atau potongan tertentu tergantung jenis produk dan stok yang berjalan. Silakan hubungi admin via WhatsApp untuk mengecek ukuran atau potongan yang tersedia.',
+  },
+  {
+    q: 'Bagaimana proses pembuatan greenhouse?',
+    a: 'Secara umum prosesnya meliputi: 1) Konsultasi kebutuhan dan jenis tanaman, 2) Pengumpulan informasi ukuran serta kondisi lahan, 3) Pemilihan tipe rangka dan material, 4) Penyusunan estimasi kebutuhan dan biaya (RAB), 5) Survei apabila diperlukan, 6) Persiapan material di workshop, 7) Pemasangan dan instalasi di lokasi lahan, 8) Pemeriksaan dan serah terima pekerjaan.',
+  },
+  {
+    q: 'Apakah bisa konsultasi terlebih dahulu?',
+    a: 'Bisa. Anda dapat mengirimkan informasi awal berupa lokasi lahan, panjang × lebar lahan, jenis tanaman yang akan dibudidayakan, foto atau video lokasi, dan rencana perkiraan anggaran. Informasi tersebut akan membantu pembahasan awal menjadi lebih terarah.',
+  },
+];
+---
+
+<section class="py-16 sm:py-24 bg-bg border-b border-border font-sans">
+  <div class="max-w-[900px] mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-10 sm:mb-14">
+      <span class="text-xs font-semibold text-primary block mb-1">
+        FAQ
+      </span>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-dark tracking-tight mb-2.5">
+        Pertanyaan Seputar Greenhouse &amp; Saprodi
+      </h2>
+      <p class="text-xs sm:text-sm text-muted font-normal max-w-lg mx-auto">
+        Jawaban praktis untuk pertanyaan yang sering diajukan sebelum membeli material atau memulai proyek greenhouse.
+      </p>
+    </div>
+
+    <!-- Accordion List -->
+    <div class="space-y-3.5">
+      {faqs.map((faq, i) => (
+        <details class="group rounded-2xl bg-white border border-border overflow-hidden transition-all duration-200 hover:border-primary/40 open:border-primary/50 open:shadow-xs">
+          <summary class="flex items-center justify-between gap-4 p-5 sm:p-6 cursor-pointer select-none text-left list-none font-bold text-sm sm:text-base text-dark group-hover:text-primary transition-colors">
+            <span class="flex items-center gap-3">
+              <span class="text-primary font-bold text-xs">0{i + 1}.</span>
+              <span>{faq.q}</span>
+            </span>
+            <span class="w-7 h-7 rounded-full bg-secondary flex items-center justify-center shrink-0 text-muted group-hover:text-primary transition-transform duration-300 group-open:rotate-180">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </span>
+          </summary>
+          <div class="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-muted leading-relaxed border-t border-border/60 mt-1">
+            {faq.a}
+          </div>
+        </details>
+      ))}
+    </div>
+
+  </div>
+</section>

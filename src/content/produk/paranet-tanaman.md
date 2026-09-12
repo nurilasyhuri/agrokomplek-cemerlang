@@ -1,6 +1,6 @@
 ---
 title: 'Paranet Tanaman 65% & 75% Shading Net'
-description: 'Jaring peneduh / shading net kerapatan 65% dan 75% untuk mengontrol intensitas cahaya matahari dan suhu di dalam greenhouse maupun kebun pembibitan.'
+description: 'Paranet peneduh tanaman kerapatan 65%, 75%, 85% bahan HDPE monofilament. Jaring shading net greenhouse dan persemaian bibit tahan panas dan anti getas.'
 category: 'perlengkapan-greenhouse'
 price: 950000
 priceDisplay: 'Mulai Rp 950.000 / roll'

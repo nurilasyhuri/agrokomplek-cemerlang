@@ -1,6 +1,6 @@
 ---
 title: 'Sprayer Elektrik Pertanian 16 Liter'
-description: 'Alat semprot punggung elektrik kapasitas 16 liter dengan baterai lithium rechargeable. Tekanan semprot stabil untuk aplikasi pupuk cair dan pestisida.'
+description: 'Alat semprot punggung elektrik 16 liter baterai 12V rechargeable. Tekanan semprot kabut konstan untuk aplikasi pupuk daun dan pestisida tanaman.'
 category: 'perlengkapan-pertanian'
 stockStatus: 'ready'
 featured: true

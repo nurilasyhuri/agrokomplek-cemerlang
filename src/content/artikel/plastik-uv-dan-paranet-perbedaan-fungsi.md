@@ -1,6 +1,6 @@
 ---
-title: 'Plastik UV vs Paranet: Perbedaan Fungsi, Karakteristik, dan Cara Memilih'
-description: 'Ketahui kapan harus menggunakan Plastik UV 14%-20% dan kapan membutuhkan Paranet shading net untuk perlindungan optimal tanaman agribisnis Anda.'
+title: 'Plastik UV vs Paranet: Perbedaan Fungsi & Cara Memilih'
+description: 'Ketahui perbedaan fungsi plastik UV 14%-20% dan paranet shading net 65%-75% untuk perlindungan optimal greenhouse tanaman hortikultura Anda.'
 publishDate: '1 September 2026'
 author: 'Tim Ahli Agrokomplek Cemerlang'
 category: 'Edukasi Produk'

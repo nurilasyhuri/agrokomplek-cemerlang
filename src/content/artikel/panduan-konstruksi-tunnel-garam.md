@@ -1,6 +1,6 @@
 ---
-title: 'Panduan Konstruksi Tunnel Garam untuk Peningkatan Kualitas Produksi Garam Rakyat'
-description: 'Teknologi greenhouse tunnel prisma garam memungkinkan petani garam memproduksi garam kualitas industri sepanjang tahun tanpa terhenti musim hujan.'
+title: 'Konstruksi Tunnel Garam: Panduan Prisma Garam Pesisir'
+description: 'Teknologi greenhouse tunnel prisma garam memungkinkan produksi garam kualitas industri sepanjang tahun tanpa terhenti musim hujan di sentra pesisir.'
 publishDate: '28 Agustus 2026'
 author: 'Tim Ahli Agrokomplek Cemerlang'
 category: 'Inovasi Agribisnis'

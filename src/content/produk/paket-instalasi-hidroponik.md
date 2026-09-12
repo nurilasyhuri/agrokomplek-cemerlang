@@ -1,6 +1,6 @@
 ---
 title: 'Paket Instalasi Hidroponik NFT & DFT'
-description: 'Paket instalasi hidroponik untuk kebutuhan hobi, edukasi, nursery maupun skala komersial. Tersedia konfigurasi dengan pipa PVC food grade / gully, pompa, tandon nutrisi, dan manifold pembagi aliran.'
+description: 'Paket instalasi hidroponik NFT & DFT modular pipa PVC food grade anti-lumut lengkap dengan pompa, tandon nutrisi, dan manifold pembagi aliran.'
 category: 'perlengkapan-greenhouse'
 price: 1850000
 priceDisplay: 'Mulai Rp 1.850.000 / paket'

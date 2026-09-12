@@ -1,6 +1,6 @@
 ---
 title: 'Mulsa Plastik Hitam Perak (MPHP) 120 cm'
-description: 'Mulsa dua warna yang membantu menjaga kelembapan tanah, menekan pertumbuhan gulma, dan memantulkan cahaya matahari. Pilihan praktis untuk berbagai kebutuhan budidaya hortikultura.'
+description: 'Mulsa plastik hitam perak (MPHP) lebar 120 cm tebal 0.35 mm. Menjaga kelembapan tanah, memantulkan sinar UV pengusir hama, dan menekan gulma bedengan.'
 category: 'perlengkapan-pertanian'
 stockStatus: 'ready'
 featured: true

@@ -1,6 +1,6 @@
 ---
-title: 'Plastik UV Greenhouse 14% : 200 Micron'
-description: 'Plastik UV dengan ketebalan 200 micron / 0,20 mm dan kandungan UV stabilizer 14%. Pilihan untuk kebutuhan greenhouse yang membutuhkan material pelindung terhadap radiasi UV dan kondisi cuaca tropis.'
+title: 'Plastik UV Greenhouse 14% 200 Micron'
+description: 'Plastik UV ketebalan 200 micron (0,20 mm) dengan 14% UV stabilizer. Atap pelindung greenhouse tanaman hortikultura tahan panas matahari dan hujan tropis.'
 category: 'perlengkapan-greenhouse'
 price: 2300000
 priceDisplay: 'Mulai Rp 2.300.000 / roll'

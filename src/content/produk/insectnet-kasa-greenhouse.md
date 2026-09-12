@@ -1,6 +1,6 @@
 ---
-title: 'Insect Net 50 Mesh : Kasa Hijau / Putih'
-description: 'Kasa pelindung tanaman dengan 50 mesh yang membantu mengurangi masuknya kutu kebul, thrips, ulat, dan berbagai serangga pengganggu. Dirancang untuk tetap memberikan sirkulasi udara sambil membantu menciptakan lingkungan budidaya yang lebih terlindungi.'
+title: 'Kasa Insect Net 50 Mesh Anti Kutu Kebul'
+description: 'Kasa insect net 50 mesh micro-barrier untuk ventilasi greenhouse. Menghalau hama kutu kebul, thrips, dan kutu daun dengan sirkulasi udara tetap lancar.'
 category: 'perlengkapan-greenhouse'
 price: 1250000
 priceDisplay: 'Mulai Rp 1.250.000 / roll'

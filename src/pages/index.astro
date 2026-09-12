@@ -1,10 +1,17 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroSection from '../components/home/HeroSection.astro';
+import TrustBar from '../components/home/TrustBar.astro';
 import CategoryGrid from '../components/home/CategoryGrid.astro';
-import GreenhouseServiceHighlight from '../components/home/GreenhouseServiceHighlight.astro';
-import NationwideCoverage from '../components/home/NationwideCoverage.astro';
 import ProductCard from '../components/products/ProductCard.astro';
+import ValueHighlights from '../components/home/ValueHighlights.astro';
+import GreenhouseServiceHighlight from '../components/home/GreenhouseServiceHighlight.astro';
+import DualPathChooser from '../components/home/DualPathChooser.astro';
+import CustomerReviews from '../components/home/CustomerReviews.astro';
+import NationwideCoverage from '../components/home/NationwideCoverage.astro';
+import HomeBlogSection from '../components/home/HomeBlogSection.astro';
+import HomeFaq from '../components/home/HomeFaq.astro';
+import CtaBanner from '../components/home/CtaBanner.astro';
 import { getLocalBusinessSchema } from '../utils/seo';
 import { getCollection } from 'astro:content';
 
@@ -15,40 +22,46 @@ const localSchema = getLocalBusinessSchema();
 ---
 
 <BaseLayout
-  title="Distributor Saprodi Pertanian &amp; Jasa Pembuatan Greenhouse"
-  description="Agrokomplek Cemerlang: distributor saprodi pertanian, material greenhouse, irigasi, dan jasa pembuatan greenhouse komersial di Malang &amp; seluruh Indonesia."
+  title="Jasa Pembuatan Greenhouse & Supplier Saprodi Pertanian | Agrokomplek Cemerlang"
+  description="Solusi kebutuhan greenhouse, sarana produksi pertanian, irigasi, dan perlengkapan kebun dari Malang untuk berbagai wilayah Indonesia."
   jsonLd={[localSchema]}
 >
-  <!-- 1. Hero Section -->
+  <!-- 1. Hero Banner (Shopify Style Split Layout) -->
   <HeroSection />
-  <!-- 2. Category Grid -->
+
+  <!-- 2. Trust Strip (Shopify Feature Bar) -->
+  <TrustBar />
+
+  <!-- 3. Kebutuhan Pertanian dalam Satu Tempat (Category Grid) -->
   <CategoryGrid />
-  <!-- 4. Featured Products (If available) -->
+
+  <!-- 4. Produk Pertanian Pilihan (Featured Products Grid) -->
   {featuredProducts.length > 0 && (
-    <section class="py-16 sm:py-24 bg-white border-b border-zinc-200/80">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-6 mb-12 pb-6 border-b border-zinc-200/80">
+    <section class="py-16 sm:py-24 bg-white border-b border-border font-sans">
+      <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 pb-5 border-b border-border gap-4">
           <div>
-            <span class="text-xs font-semibold text-emerald-700 uppercase tracking-wider block mb-1">
-              Pilihan Unggulan
+            <span class="text-xs font-semibold text-primary block mb-1">
+              Produk Pertanian Pilihan
             </span>
-            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight leading-[1.15]">
-              Produk Pertanian &amp; Greenhouse
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-dark tracking-tight">
+              Material yang Banyak Digunakan untuk Greenhouse &amp; Kebun
             </h2>
-            <p class="text-sm sm:text-base text-zinc-600 mt-1.5">
-              Material pilihan yang paling banyak dibutuhkan petani dan pengusaha agribisnis.
-            </p>
           </div>
+          
           <a
             href="/produk/"
-            class="inline-flex items-center gap-2 text-xs font-semibold text-zinc-800 hover:text-zinc-950 bg-zinc-100 hover:bg-zinc-200/80 px-5 py-2.5 rounded-full transition-all shrink-0"
+            class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-primary-hover transition-colors shrink-0"
           >
             <span>Lihat Semua Katalog</span>
             <span aria-hidden="true">&rarr;</span>
           </a>
         </div>
 
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+        <!-- 4-Column Product Grid -->
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {featuredProducts.map((p) => (
             <ProductCard
               product={{
@@ -64,15 +77,33 @@ const localSchema = getLocalBusinessSchema();
             />
           ))}
         </div>
+
       </div>
     </section>
   )}
 
-  <!-- 5. Greenhouse Service Highlight -->
+  <!-- 5. Jasa Pembuatan Greenhouse (Technical Services & Types) -->
   <GreenhouseServiceHighlight />
 
-  <!-- 6. Nationwide Logistics -->
+  <!-- 6. Mengapa Memilih Agrokomplek Cemerlang? (5 Core Pillars) -->
+  <ValueHighlights />
+
+  <!-- 7. Melayani Pengiriman Material Pertanian ke Berbagai Wilayah Indonesia -->
   <NationwideCoverage />
 
+  <!-- 8. Belanja Material atau Bangun Greenhouse? (Dual Path Chooser) -->
+  <DualPathChooser />
+
+  <!-- 9. Customer Reviews & Social Proof -->
+  <CustomerReviews />
+
+  <!-- 10. Panduan Pertanian & Greenhouse (From the Blog) -->
+  <HomeBlogSection />
+
+  <!-- 11. Pertanyaan Seputar Greenhouse & Saprodi (FAQ) -->
+  <HomeFaq />
+
+  <!-- 12. Butuh Saprodi atau Greenhouse? (WhatsApp Consultation CTA) -->
+  <CtaBanner />
 
 </BaseLayout>
