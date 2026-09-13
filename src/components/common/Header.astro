@@ -335,57 +335,7 @@ const waInquiryUrl = generateGeneralInquiryUrl('header-cta');
 
       </nav>
 
-      <!-- User Icons (Search, WhatsApp Consult, Catalog / Inquiry) -->
-      <div class="flex items-center space-x-1 sm:space-x-2 z-10">
-        
-        <!-- Search Trigger Button -->
-        <button
-          id="search-trigger"
-          type="button"
-          class="text-dark hover:text-primary bg-transparent hover:bg-secondary/60 p-2.5 lg:px-3.5 active:scale-[0.97] transition-all duration-200 cursor-pointer rounded-xl flex items-center justify-center gap-1.5 relative"
-          aria-label="Buka Pencarian"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
-            <path d="m21 21-4.34-4.34"></path>
-            <circle cx="11" cy="11" r="8"></circle>
-          </svg>
-          <span class="hidden lg:inline text-sm font-bold">Search</span>
-        </button>
-
-        <!-- Direct WhatsApp Consultation Link -->
-        <a
-          href={waInquiryUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="hidden sm:flex text-dark hover:text-primary bg-transparent hover:bg-secondary/60 p-2.5 lg:px-3.5 active:scale-[0.97] transition-all duration-200 rounded-xl items-center justify-center gap-1.5"
-          aria-label="Konsultasi WhatsApp"
-        >
-          <svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
-          </svg>
-          <span class="hidden lg:inline text-sm font-bold">Kontak</span>
-        </a>
-
-        <!-- Catalog / Inquiry Badge Button -->
-        <a
-          href="/produk/"
-          class="text-dark hover:text-primary bg-transparent hover:bg-secondary/60 p-2.5 lg:px-3.5 active:scale-[0.97] transition-all duration-200 relative cursor-pointer rounded-xl flex items-center justify-center gap-1.5"
-          aria-label="Katalog Saprodi"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
-            <path d="M16 10a4 4 0 0 1-8 0"></path>
-            <path d="M3.103 6.034h17.794"></path>
-            <path d="M3.4 5.467a2 2 0 0 0-.4 1.2V20a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6.667a2 2 0 0 0-.4-1.2l-2-2.667A2 2 0 0 0 17 2H7a2 2 0 0 0-1.6.8z"></path>
-          </svg>
-          <span class="hidden lg:inline text-sm font-bold">Katalog</span>
-          <!-- Friendly rounded badge -->
-          <span class="bg-primary text-white text-[10px] font-bold h-4 min-w-[18px] px-1 border border-white shadow-sm flex items-center justify-center select-none rounded-full absolute -top-0.5 -right-0.5">
-            10+
-          </span>
-        </a>
-
       </div>
-    </div>
   </div>
 </header>
 
