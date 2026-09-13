@@ -113,11 +113,20 @@ export function getWebsiteSchema() {
     '@id': `${CANONICAL_BASE}/#website`,
     url: `${CANONICAL_BASE}/`,
     name: BUSINESS_INFO.name,
+    alternateName: 'Agrokomplek Cemerlang Malang',
     description: BUSINESS_INFO.description,
     publisher: {
       '@id': `${CANONICAL_BASE}/#business`,
     },
     inLanguage: 'id-ID',
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${CANONICAL_BASE}/produk/?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
+    },
   };
 }
 
