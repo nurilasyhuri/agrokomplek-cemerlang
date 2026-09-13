@@ -6,20 +6,27 @@ export interface Props {
   image?: string;
   type?: 'website' | 'article' | 'product';
   jsonLd?: Record<string, any> | Array<Record<string, any>>;
+  noindex?: boolean;
 }
 
 const {
   title,
   description,
-  canonical = Astro.url.href,
+  canonical,
   image = '/images/og/default-og.jpg',
   type = 'website',
   jsonLd,
+  noindex = false,
 } = Astro.props;
 
 const siteName = 'Agrokomplek Cemerlang';
 const formattedTitle = title.includes(siteName) || title.includes('Agrokomplek') ? title : `${title} | ${siteName}`;
 const fullImageUrl = image.startsWith('http') ? image : `https://agrokomplekcemerlang.com${image}`;
+
+// Compute canonical URL strictly anchored to authoritative domain
+const canonicalUrl = canonical
+  ? (canonical.startsWith('http') ? canonical : `https://agrokomplekcemerlang.com${canonical}`)
+  : Astro.url.href.replace(/^https?:\/\/[^\/]+/, 'https://agrokomplekcemerlang.com');
 ---
 
 <!-- Global Metadata -->
@@ -28,24 +35,43 @@ const fullImageUrl = image.startsWith('http') ? image : `https://agrokomplekceme
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
 
+<!-- Robots & Indexing Directives -->
+<meta
+  name="robots"
+  content={noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'}
+/>
+<meta
+  name="googlebot"
+  content={noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'}
+/>
+
 <!-- Primary Meta Tags -->
 <title>{formattedTitle}</title>
 <meta name="title" content={formattedTitle} />
 <meta name="description" content={description} />
-<link rel="canonical" href={canonical} />
+<link rel="canonical" href={canonicalUrl} />
+
+<!-- Indonesian Geo-Targeting Metadata (Malang, Jawa Timur, Indonesia) -->
+<meta name="geo.region" content="ID-JI" />
+<meta name="geo.placename" content="Kota Malang" />
+<meta name="geo.position" content="-7.9984;112.6456" />
+<meta name="ICBM" content="-7.9984, 112.6456" />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content={type} />
-<meta property="og:url" content={canonical} />
+<meta property="og:url" content={canonicalUrl} />
 <meta property="og:title" content={formattedTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:image" content={fullImageUrl} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={formattedTitle} />
 <meta property="og:site_name" content={siteName} />
 <meta property="og:locale" content="id_ID" />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={canonical} />
+<meta property="twitter:url" content={canonicalUrl} />
 <meta property="twitter:title" content={formattedTitle} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={fullImageUrl} />
@@ -63,6 +89,6 @@ const fullImageUrl = image.startsWith('http') ? image : `https://agrokomplekceme
   <script
     is:inline
     type="application/ld+json"
-    set:html={JSON.stringify(jsonLd)}
+    set:html={JSON.stringify(Array.isArray(jsonLd) && jsonLd.length === 1 ? jsonLd[0] : jsonLd)}
   />
 )}

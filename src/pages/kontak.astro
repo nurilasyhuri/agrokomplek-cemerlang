@@ -2,11 +2,20 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumb from '../components/common/Breadcrumb.astro';
 import { BUSINESS_INFO } from '../data/businessInfo';
+import { getContactPageSchema, getBreadcrumbSchema } from '../utils/seo';
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Beranda', url: 'https://agrokomplekcemerlang.com/' },
+  { name: 'Kontak', url: 'https://agrokomplekcemerlang.com/kontak/' },
+]);
+
+const contactSchema = getContactPageSchema();
 ---
 
 <BaseLayout
-  title="Kontak Toko Pertanian &amp; Greenhouse Malang | Agrokomplek"
-  description="Hubungi Agrokomplek Cemerlang via WhatsApp 0851-8300-2070 untuk pemesanan saprodi pertanian, cek stok material, &amp; konsultasi greenhouse di Malang."
+  title="Kontak Toko Pertanian &amp; Jasa Greenhouse Malang | Agrokomplek Cemerlang"
+  description="Hubungi Agrokomplek Cemerlang via WhatsApp 0851-8300-2070 untuk pemesanan saprodi pertanian, cek ketersediaan stok, &amp; survei greenhouse di Malang &amp; sekitarnya."
+  jsonLd={[contactSchema, breadcrumbSchema]}
 >
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">
     <Breadcrumb items={[{ label: 'Kontak' }]} />
@@ -20,7 +29,7 @@ import { BUSINESS_INFO } from '../data/businessInfo';
         Kontak Toko Pertanian &amp; Jasa Pembuatan Greenhouse Malang
       </h1>
       <p class="text-sm sm:text-base text-zinc-600 leading-relaxed">
-        Konsultasikan kebutuhan produk pertanian, cek ketersediaan stok, atau ajukan permintaan survei proyek greenhouse Anda.
+        Konsultasikan kebutuhan produk pertanian, cek ketersediaan stok, atau ajukan permintaan survei proyek greenhouse Anda bersama tim Agrokomplek Cemerlang.
       </p>
     </div>
 
@@ -34,48 +43,52 @@ import { BUSINESS_INFO } from '../data/businessInfo';
 
           <div class="space-y-4 text-xs sm:text-sm text-zinc-600 mt-4">
             <div>
-              <span class="text-xs uppercase tracking-wider text-zinc-500 font-semibold block">WhatsApp Utama:</span>
+              <span class="text-zinc-500 block">WhatsApp Customer Service:</span>
               <a
                 href={`https://wa.me/${BUSINESS_INFO.contact.whatsappRaw}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="text-lg font-extrabold text-emerald-700 hover:underline mt-1 inline-block"
+                class="font-bold text-emerald-700 hover:text-emerald-800 text-base"
               >
                 {BUSINESS_INFO.contact.phone}
               </a>
+              <span class="block text-zinc-500 text-[11px] mt-0.5">Respon cepat konsultasi spesifikasi &amp; pesanan</span>
             </div>
 
-            <div class="border-t border-zinc-100 pt-4">
-              <span class="text-xs uppercase tracking-wider text-zinc-500 font-semibold block">Email Bisnis:</span>
-              <span class="font-medium text-zinc-900 mt-1 block">{BUSINESS_INFO.contact.email}</span>
+            <div>
+              <span class="text-zinc-500 block">Email Resmi:</span>
+              <a
+                href={`mailto:${BUSINESS_INFO.contact.email}`}
+                class="font-bold text-zinc-900 hover:text-emerald-700"
+              >
+                {BUSINESS_INFO.contact.email}
+              </a>
             </div>
 
-            <div class="border-t border-zinc-100 pt-4">
-              <span class="text-xs uppercase tracking-wider text-zinc-500 font-semibold block">Alamat Gudang & Toko:</span>
-              <span class="leading-relaxed text-zinc-700 block mt-1">
+            <div>
+              <span class="text-zinc-500 block">Jam Layanan:</span>
+              <p class="font-medium text-zinc-800">
+                {BUSINESS_INFO.hours.physicalStore}
+              </p>
+              <p class="text-[11px] text-zinc-500">Konsultasi pesan WhatsApp dilayani setiap hari</p>
+            </div>
+
+            <div>
+              <span class="text-zinc-500 block">Alamat Gudang &amp; Toko:</span>
+              <p class="font-medium text-zinc-800 mt-0.5 leading-relaxed">
                 {BUSINESS_INFO.address.fullFormatted}
-              </span>
-            </div>
-
-            <div class="border-t border-zinc-100 pt-4">
-              <span class="text-xs uppercase tracking-wider text-zinc-500 font-semibold block">Jam Operasional:</span>
-              <span class="block mt-1 text-zinc-700">
-                Toko Fisik: {BUSINESS_INFO.hours.physicalStore} <br />
-                WhatsApp: Konsultasi Online 24 Jam
-              </span>
+              </p>
             </div>
           </div>
         </div>
 
         <div class="pt-4 border-t border-zinc-100">
           <a
-            href={BUSINESS_INFO.geo.mapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-full border border-zinc-200 hover:bg-zinc-50 text-zinc-900 font-semibold text-xs transition-all shadow-xs select-none"
+            href="/lokasi/"
+            class="text-xs font-semibold text-emerald-700 hover:text-emerald-800 flex items-center justify-between"
           >
-            <span>Buka Petunjuk Arah Google Maps</span>
-            <span aria-hidden="true">&rarr;</span>
+            <span>Petunjuk Arah &amp; Peta Google Maps</span>
+            <span>&rarr;</span>
           </a>
         </div>
       </div>
@@ -85,39 +98,45 @@ import { BUSINESS_INFO } from '../data/businessInfo';
         <div class="space-y-3">
           <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950/80 text-emerald-300 border border-emerald-700/50">
             <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-            Respon Cepat Tim Spesialis
+            Direct WhatsApp Action
           </span>
-          <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-            Chat WhatsApp dengan Tim Kami
+          <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight">
+            Hubungi Sesuai Kebutuhan Anda
           </h3>
           <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
-            Pilih kebutuhan Anda untuk langsung terhubung dengan admin toko atau teknisi greenhouse kami dengan pesan pembuka otomatis:
+            Pilih jalur pesan agar kami dapat langsung mengarahkan Anda ke admin produk saprodi atau teknisi konstruksi greenhouse kami:
           </p>
         </div>
 
         <div class="space-y-3 pt-4">
           <a
-            href="https://wa.me/6285183002070?text=Halo%20Agrokomplek%20Cemerlang%2C%20saya%20ingin%20cek%20stok%20dan%20harga%20produk%20pertanian."
+            href="https://wa.me/6285183002070?text=Halo%20Agrokomplek%20Cemerlang%2C%20saya%20ingin%20konsultasi%20pembuatan%20greenhouse."
             target="_blank"
             rel="noopener noreferrer"
-            class="w-full flex items-center justify-center gap-2.5 py-4 px-6 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition-all shadow-lg hover:shadow-emerald-900/50 select-none"
+            class="w-full flex items-center justify-between p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700 text-white text-xs sm:text-sm font-semibold transition-all border border-zinc-700"
           >
-            <svg class="w-4 h-4 text-emerald-200 shrink-0" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
-            </svg>
-            <span>Tanya Stok Produk Pertanian</span>
+            <span>Konsultasi Pembuatan Greenhouse</span>
+            <span>&rarr;</span>
           </a>
 
           <a
-            href="https://wa.me/6285183002070?text=Halo%20Agrokomplek%20Cemerlang%2C%20saya%20ingin%20konsultasi%20pembuatan%20proyek%20greenhouse."
+            href="https://wa.me/6285183002070?text=Halo%20Agrokomplek%20Cemerlang%2C%20saya%20ingin%20cek%20stok%20dan%20harga%20material%20greenhouse%20(Plastik%20UV%2FParanet%2FInsect%20Net)."
             target="_blank"
             rel="noopener noreferrer"
-            class="w-full flex items-center justify-center gap-2.5 py-4 px-6 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white border border-zinc-700 font-semibold text-sm transition-all shadow-md select-none"
+            class="w-full flex items-center justify-between p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700 text-white text-xs sm:text-sm font-semibold transition-all border border-zinc-700"
           >
-            <svg class="w-4 h-4 text-emerald-300 shrink-0" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
-            </svg>
-            <span>Konsultasi Jasa Greenhouse</span>
+            <span>Cek Stok Plastik UV &amp; Paranet</span>
+            <span>&rarr;</span>
+          </a>
+
+          <a
+            href="https://wa.me/6285183002070?text=Halo%20Agrokomplek%20Cemerlang%2C%20saya%20ingin%20memesan%20saprodi%20pertanian%20%2F%20selang%20irigasi%20drip."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="w-full flex items-center justify-between p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700 text-white text-xs sm:text-sm font-semibold transition-all border border-zinc-700"
+          >
+            <span>Pemesanan Saprodi &amp; Irigasi Drip</span>
+            <span>&rarr;</span>
           </a>
         </div>
       </div>

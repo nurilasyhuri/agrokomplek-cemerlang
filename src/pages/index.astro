@@ -12,19 +12,22 @@ import NationwideCoverage from '../components/home/NationwideCoverage.astro';
 import HomeBlogSection from '../components/home/HomeBlogSection.astro';
 import HomeFaq from '../components/home/HomeFaq.astro';
 import CtaBanner from '../components/home/CtaBanner.astro';
-import { getLocalBusinessSchema } from '../utils/seo';
+import { getLocalBusinessSchema, getWebsiteSchema, getFaqSchema } from '../utils/seo';
+import { HOME_FAQS } from '../data/faqs';
 import { getCollection } from 'astro:content';
 
 const allProducts = await getCollection('produk');
 const featuredProducts = allProducts.filter((p) => p.data.featured).slice(0, 4);
 
 const localSchema = getLocalBusinessSchema();
+const websiteSchema = getWebsiteSchema();
+const faqSchema = getFaqSchema(HOME_FAQS);
 ---
 
 <BaseLayout
   title="Jasa Pembuatan Greenhouse & Supplier Saprodi Pertanian | Agrokomplek Cemerlang"
-  description="Solusi kebutuhan greenhouse, sarana produksi pertanian, irigasi, dan perlengkapan kebun dari Malang untuk berbagai wilayah Indonesia."
-  jsonLd={[localSchema]}
+  description="Kontraktor jasa pembuatan greenhouse & distributor saprodi pertanian (plastik UV 200 mikron, paranet, selang drip, mulsa) di Malang melayani seluruh Indonesia."
+  jsonLd={[localSchema, websiteSchema, faqSchema]}
 >
   <!-- 1. Hero Banner (Shopify Style Split Layout) -->
   <HeroSection />
@@ -39,7 +42,6 @@ const localSchema = getLocalBusinessSchema();
   {featuredProducts.length > 0 && (
     <section class="py-16 sm:py-24 bg-white border-b border-border font-sans">
       <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-        
         <!-- Section Header -->
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 pb-5 border-b border-border gap-4">
           <div>
@@ -50,7 +52,6 @@ const localSchema = getLocalBusinessSchema();
               Material yang Banyak Digunakan untuk Greenhouse &amp; Kebun
             </h2>
           </div>
-          
           <a
             href="/produk/"
             class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-primary-hover transition-colors shrink-0"
@@ -62,22 +63,19 @@ const localSchema = getLocalBusinessSchema();
 
         <!-- 4-Column Product Grid -->
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          {featuredProducts.map((p) => (
+          {featuredProducts.map((product) => (
             <ProductCard
-              product={{
-                title: p.data.title,
-                description: p.data.description,
-                category: p.data.category,
-                priceDisplay: p.data.priceDisplay,
-                stockStatus: p.data.stockStatus,
-                thumbnail: p.data.thumbnail,
-                brand: p.data.brand,
-                slug: p.slug,
-              }}
+              title={product.data.title}
+              description={product.data.description}
+              category={product.data.category}
+              priceDisplay={product.data.priceDisplay}
+              stockStatus={product.data.stockStatus}
+              thumbnail={product.data.thumbnail}
+              slug={product.slug}
+              brand={product.data.brand}
             />
           ))}
         </div>
-
       </div>
     </section>
   )}

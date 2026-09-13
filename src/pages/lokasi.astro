@@ -2,15 +2,19 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumb from '../components/common/Breadcrumb.astro';
 import { BUSINESS_INFO } from '../data/businessInfo';
-import { getLocalBusinessSchema } from '../utils/seo';
+import { getLocalBusinessSchema, getBreadcrumbSchema } from '../utils/seo';
 
 const schema = getLocalBusinessSchema();
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Beranda', url: 'https://agrokomplekcemerlang.com/' },
+  { name: 'Lokasi & Toko Fisik', url: 'https://agrokomplekcemerlang.com/lokasi/' },
+]);
 ---
 
 <BaseLayout
-  title="Toko Pertanian Kedungkandang Malang | Agrokomplek"
-  description="Kunjungi toko fisik &amp; gudang Agrokomplek Cemerlang di Buring, Kedungkandang, Kota Malang. Cek sampel plastik UV, paranet, pupuk, &amp; konsultasi greenhouse."
-  jsonLd={schema}
+  title="Toko Pertanian Kedungkandang Malang &amp; Supplier Greenhouse | Agrokomplek Cemerlang"
+  description="Kunjungi toko fisik &amp; gudang Agrokomplek Cemerlang di Buring, Kedungkandang, Kota Malang. Cek fisik sampel plastik UV 200 mikron, paranet, selang drip, &amp; konsultasi greenhouse."
+  jsonLd={[schema, breadcrumbSchema]}
 >
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">
     <Breadcrumb items={[{ label: 'Lokasi & Toko' }]} />
@@ -50,63 +54,44 @@ const schema = getLocalBusinessSchema();
       <div class="lg:col-span-5 space-y-6">
         <div class="p-6 sm:p-8 rounded-3xl bg-white border border-zinc-200/80 shadow-sm space-y-6">
           <h3 class="text-lg font-bold text-zinc-900 border-b border-zinc-100 pb-3">
-            Informasi Alamat & Kontak Toko
+            Informasi Alamat &amp; Kontak Toko
           </h3>
 
           <div class="space-y-4 text-xs sm:text-sm text-zinc-600">
             <div>
-              <span class="font-semibold text-zinc-900 block text-xs uppercase tracking-wider text-zinc-500">Alamat Lengkap</span>
+              <span class="font-semibold block text-xs uppercase tracking-wider text-zinc-500">Alamat Lengkap</span>
               <span class="mt-1 block leading-relaxed text-zinc-700">{BUSINESS_INFO.address.fullFormatted}</span>
             </div>
 
             <div class="border-t border-zinc-100 pt-4">
               <span class="font-semibold block text-xs uppercase tracking-wider text-zinc-500">WhatsApp / Telepon</span>
-              <a href={`https://wa.me/${BUSINESS_INFO.contact.whatsappRaw}`} class="text-emerald-700 font-bold hover:underline mt-1 inline-block text-base">
+              <a href={`https://wa.me/${BUSINESS_INFO.contact.whatsappRaw}`} class="mt-1 block font-bold text-emerald-700 hover:text-emerald-800 text-sm">
                 {BUSINESS_INFO.contact.phone}
               </a>
             </div>
 
             <div class="border-t border-zinc-100 pt-4">
-              <span class="font-semibold block text-xs uppercase tracking-wider text-zinc-500">Jam Buka Toko Fisik</span>
-              <span class="mt-1 block font-medium text-zinc-800">{BUSINESS_INFO.hours.physicalStore}</span>
-              <span class="text-xs text-zinc-500">(Konsultasi Online WhatsApp 24 Jam)</span>
+              <span class="font-semibold block text-xs uppercase tracking-wider text-zinc-500">Jam Layanan Toko Fisik</span>
+              <span class="mt-1 block text-zinc-700">{BUSINESS_INFO.hours.physicalStore}</span>
+              <span class="text-[11px] text-zinc-400 mt-0.5 block">{BUSINESS_INFO.hours.display}</span>
             </div>
 
             <div class="border-t border-zinc-100 pt-4">
-              <span class="font-semibold block text-xs uppercase tracking-wider text-zinc-500">Email</span>
-              <span class="mt-1 block text-zinc-700">{BUSINESS_INFO.contact.email}</span>
+              <span class="font-semibold block text-xs uppercase tracking-wider text-zinc-500">Kesiapan Sampel Fisik</span>
+              <p class="mt-1 text-zinc-600 leading-relaxed text-xs">
+                Tersedia sampel fisik plastik UV 200 mikron, paranet 65%-75%, kasa insect net 50 mesh, selang drip, dan mulsa MPHP untuk diperiksa langsung.
+              </p>
             </div>
-          </div>
-
-          <div class="pt-2">
-            <a
-              href={BUSINESS_INFO.geo.mapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm transition-all shadow-sm select-none"
-            >
-              <span>Buka Navigasi Google Maps</span>
-              <span aria-hidden="true">&rarr;</span>
-            </a>
           </div>
         </div>
 
         <!-- Landmarks & Guidance -->
         <div class="p-6 sm:p-7 rounded-3xl bg-zinc-50/70 border border-zinc-200/80 space-y-4">
-          <h4 class="text-sm sm:text-base font-bold text-zinc-900">Petunjuk Rute & Akses Gudang</h4>
-          <ul class="text-xs text-zinc-600 space-y-3 leading-relaxed">
-            <li class="flex items-start gap-2.5">
-              <span class="w-1.5 h-1.5 bg-emerald-600 rounded-full shrink-0 mt-2"></span>
-              <span><strong>Dari Terminal Gadang:</strong> Ambil arah Buring / Kedungkandang (sekitar 7-10 menit berkendara).</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="w-1.5 h-1.5 bg-emerald-600 rounded-full shrink-0 mt-2"></span>
-              <span><strong>Dari Alun-alun Kota Malang:</strong> Melalui Jl. Kolonel Sugiono mengarah ke Jl. KH. Malik Dalam.</span>
-            </li>
-            <li class="flex items-start gap-2.5">
-              <span class="w-1.5 h-1.5 bg-emerald-600 rounded-full shrink-0 mt-2"></span>
-              <span><strong>Akses Truk & Muatan:</strong> Akses jalan lebar memadai untuk pikap, truk engkel, hingga truk CDD ekspedisi.</span>
-            </li>
+          <h4 class="font-bold text-zinc-900 text-sm">Akses &amp; Panduan Menuju Lokasi</h4>
+          <ul class="text-xs text-zinc-600 space-y-2 list-disc list-inside">
+            <li>Dapat diakses kendaraan roda dua, mobil pick-up, hingga truk engkel kargo.</li>
+            <li>Berada di kawasan Kedungkandang (Buring), dekat dengan jalur lingkar timur Malang.</li>
+            <li>Melayani pengangkutan langsung ke armada kendaraan pembeli.</li>
           </ul>
         </div>
 

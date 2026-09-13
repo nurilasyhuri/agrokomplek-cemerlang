@@ -2,11 +2,13 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/common/Breadcrumb.astro';
 import EstimationCalculator from '../../components/greenhouse/EstimationCalculator';
-import { getGreenhouseServiceSchema, getBreadcrumbSchema } from '../../utils/seo';
+import { getGreenhouseServiceSchema, getBreadcrumbSchema, getFaqSchema } from '../../utils/seo';
+import { GREENHOUSE_FAQS } from '../../data/faqs';
 import { generateGeneralInquiryUrl } from '../../utils/whatsapp';
 
 const waConsultUrl = generateGeneralInquiryUrl('greenhouse-landing-primary');
 const serviceSchema = getGreenhouseServiceSchema();
+const faqSchema = getFaqSchema(GREENHOUSE_FAQS);
 
 const breadcrumbSchema = getBreadcrumbSchema([
   { name: 'Beranda', url: 'https://agrokomplekcemerlang.com/' },
@@ -15,9 +17,9 @@ const breadcrumbSchema = getBreadcrumbSchema([
 ---
 
 <BaseLayout
-  title="Jasa Pembuatan Greenhouse Malang &amp; Indonesia | Agrokomplek"
-  description="Kontraktor jasa pembuatan greenhouse di Malang. Spesialis rancang bangun struktur pipa galvanis, bambu, baja ringan, dan tunnel garam seluruh Indonesia."
-  jsonLd={[serviceSchema, breadcrumbSchema]}
+  title="Jasa Pembuatan Greenhouse Malang &amp; Kontraktor Indonesia | Agrokomplek Cemerlang"
+  description="Kontraktor jasa pembuatan greenhouse di Malang. Spesialis rancang bangun struktur pipa galvanis hot-dip, bambu awet, baja ringan, &amp; tunnel garam seluruh Indonesia."
+  jsonLd={[serviceSchema, breadcrumbSchema, faqSchema]}
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-20 space-y-12">
     
@@ -63,7 +65,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
     <!-- 4 Core Engineering Principles -->
     <div class="space-y-6">
       <div>
-        <span class="text-xs font-semibold text-emerald-700 uppercase tracking-wider block">Pendekatan Rekayasa</span>
+        <span class="text-xs font-semibold text-emerald-700 uppercase tracking-wider block">Pendekatan Rekayasa Tropis</span>
         <h2 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight mt-1">
           Mengapa Desain Greenhouse Membutuhkan Perhitungan Teknis
         </h2>
@@ -74,9 +76,9 @@ const breadcrumbSchema = getBreadcrumbSchema([
           <div class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center text-xs font-bold text-emerald-800">
             01
           </div>
-          <h3 class="font-bold text-zinc-900 text-base sm:text-lg leading-snug">Ventilasi Chimney Tropis</h3>
+          <h3 class="font-bold text-zinc-900 text-base sm:text-lg leading-snug">Ventilasi Monitor Roof</h3>
           <p class="text-xs text-zinc-600 leading-relaxed">
-            Menghindari jebakan hawa panas terperangkap dengan desain bukaan atap (monitor roof) sehingga sirkulasi udara panas keluar alami.
+            Menghindari hawa panas terperangkap dengan bukaan atap alami (chimney effect) sehingga suhu ruangan dalam greenhouse tetap sejuk dan tanaman tidak stres panas.
           </p>
         </div>
 
@@ -84,9 +86,9 @@ const breadcrumbSchema = getBreadcrumbSchema([
           <div class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center text-xs font-bold text-emerald-800">
             02
           </div>
-          <h3 class="font-bold text-zinc-900 text-base sm:text-lg leading-snug">Kemiringan Atap & Anti-Drip</h3>
+          <h3 class="font-bold text-zinc-900 text-base sm:text-lg leading-snug">Kemiringan &amp; Anti-Drip</h3>
           <p class="text-xs text-zinc-600 leading-relaxed">
-            Mencegah tetesan air embun jatuh langsung ke daun tanaman yang menjadi pemicu utama serangan jamur dan busuk pucuk.
+            Mencegah tetesan air embun jatuh langsung ke daun tanaman hortikultura yang menjadi pemicu utama serangan spora jamur dan busuk daun.
           </p>
         </div>
 
@@ -94,9 +96,9 @@ const breadcrumbSchema = getBreadcrumbSchema([
           <div class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center text-xs font-bold text-emerald-800">
             03
           </div>
-          <h3 class="font-bold text-zinc-900 text-base sm:text-lg leading-snug">Daya Tahan Terpaan Angin</h3>
+          <h3 class="font-bold text-zinc-900 text-base sm:text-lg leading-snug">Kekokohan Beban Angin</h3>
           <p class="text-xs text-zinc-600 leading-relaxed">
-            Perhitungan jarak gording, kedalaman pondasi cor strouss, dan ketahanan terhadap beban gantungan buah melon serta instalasi hidroponik.
+            Perhitungan jarak gording, kedalaman fondasi cor angkur strouss, dan ketahanan terhadap beban gantungan melon bertonase tinggi.
           </p>
         </div>
 
@@ -104,10 +106,98 @@ const breadcrumbSchema = getBreadcrumbSchema([
           <div class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center text-xs font-bold text-emerald-800">
             04
           </div>
-          <h3 class="font-bold text-zinc-900 text-base sm:text-lg leading-snug">Difusi Cahaya & PAR UV</h3>
+          <h3 class="font-bold text-zinc-900 text-base sm:text-lg leading-snug">Difusi Cahaya &amp; PAR UV</h3>
           <p class="text-xs text-zinc-600 leading-relaxed">
-            Penggunaan plastik UV impor dengan aditif EVA dan anti-dust agar radiasi fotosintesis maksimal tanpa membakar tajuk tanaman.
+            Penggunaan plastik UV 200 mikron 14% dengan aditif perata cahaya (light diffusion) agar fotosintesis merata ke seluruh lapisan daun tanaman.
           </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pilihan Tipe Rangka Greenhouse -->
+    <div class="space-y-6 border-t border-zinc-200/80 pt-12">
+      <div>
+        <span class="text-xs font-semibold text-emerald-700 uppercase tracking-wider block">Spesifikasi Konstruksi</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight mt-1">
+          Pilihan Rangka Greenhouse Sesuai Kebutuhan &amp; Anggaran
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+        <div class="bg-white border border-zinc-200/80 p-6 rounded-3xl space-y-4 shadow-sm hover:border-emerald-300 transition-all flex flex-col justify-between">
+          <div class="space-y-2">
+            <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-800 border border-amber-200">Ekonomis</span>
+            <h3 class="text-lg font-bold text-zinc-900">Greenhouse Bambu</h3>
+            <p class="text-xs text-zinc-600 leading-relaxed">
+              Menggunakan bambu petung pilihan yang diawetkan. Solusi berbiaya paling terjangkau untuk kebun pemula atau persemaian bibit.
+            </p>
+            <div class="pt-2 text-xs text-zinc-500 space-y-1">
+              <p>• Ketahanan: 3 - 5 Tahun</p>
+              <p>• Estimasi: Rp 100rb - 175rb/m²</p>
+              <p>• Komoditas: Sayuran daun, bibit</p>
+            </div>
+          </div>
+          <a href={generateGeneralInquiryUrl('konsultasi-gh-bambu')} target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center justify-between pt-3 border-t border-zinc-100">
+            <span>Konsultasi Bambu</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+
+        <div class="bg-white border border-zinc-200/80 p-6 rounded-3xl space-y-4 shadow-sm hover:border-emerald-300 transition-all flex flex-col justify-between">
+          <div class="space-y-2">
+            <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-blue-50 text-blue-800 border border-blue-200">Instalasi Cepat</span>
+            <h3 class="text-lg font-bold text-zinc-900">Greenhouse Baja Ringan</h3>
+            <p class="text-xs text-zinc-600 leading-relaxed">
+              Rangka kanal C dan reng zincalume anti-karat berbobot ringan, proses perakitan cepat, dan tampilan rapi terstandar.
+            </p>
+            <div class="pt-2 text-xs text-zinc-500 space-y-1">
+              <p>• Ketahanan: 7 - 10 Tahun</p>
+              <p>• Estimasi: Rp 200rb - 350rb/m²</p>
+              <p>• Komoditas: Sayuran, stroberi, melon</p>
+            </div>
+          </div>
+          <a href={generateGeneralInquiryUrl('konsultasi-gh-baja-ringan')} target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center justify-between pt-3 border-t border-zinc-100">
+            <span>Konsultasi Baja Ringan</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+
+        <div class="bg-white border border-emerald-200 p-6 rounded-3xl space-y-4 shadow-md hover:border-emerald-400 transition-all flex flex-col justify-between relative">
+          <div class="space-y-2">
+            <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-800 border border-emerald-200">Rekomendasi Komersial</span>
+            <h3 class="text-lg font-bold text-zinc-900">Greenhouse Pipa Galvanis</h3>
+            <p class="text-xs text-zinc-600 leading-relaxed">
+              Pipa galvanis hot-dip anti-karat untuk perkebunan intensif jangka panjang. Menopang beban gantung melon dan cuaca ekstrem.
+            </p>
+            <div class="pt-2 text-xs text-zinc-500 space-y-1">
+              <p>• Ketahanan: 10 - 15+ Tahun</p>
+              <p>• Estimasi: Rp 350rb - 650rb+/m²</p>
+              <p>• Komoditas: Melon hidroponik, tomat, paprika</p>
+            </div>
+          </div>
+          <a href={generateGeneralInquiryUrl('konsultasi-gh-galvanis')} target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center justify-between pt-3 border-t border-zinc-100">
+            <span>Konsultasi Galvanis</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+
+        <div class="bg-white border border-zinc-200/80 p-6 rounded-3xl space-y-4 shadow-sm hover:border-emerald-300 transition-all flex flex-col justify-between">
+          <div class="space-y-2">
+            <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-cyan-50 text-cyan-800 border border-cyan-200">Spesialis Pesisir</span>
+            <h3 class="text-lg font-bold text-zinc-900">Tunnel Garam (Prisma)</h3>
+            <p class="text-xs text-zinc-600 leading-relaxed">
+              Inovasi greenhouse meja kristalisasi garam tahan asam air laut. Panen garam industri bersih terus berlanjut tanpa terganggu hujan.
+            </p>
+            <div class="pt-2 text-xs text-zinc-500 space-y-1">
+              <p>• Ketahanan: 5 - 10 Tahun</p>
+              <p>• Rangka: Pipa lengkung anti korosi</p>
+              <p>• Manfaat: Kadar NaCl 95%+, panen 365 hari</p>
+            </div>
+          </div>
+          <a href={generateGeneralInquiryUrl('konsultasi-tunnel-garam')} target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center justify-between pt-3 border-t border-zinc-100">
+            <span>Konsultasi Tunnel Garam</span>
+            <span>&rarr;</span>
+          </a>
         </div>
       </div>
     </div>
@@ -131,7 +221,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
           <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-zinc-900 border border-zinc-200 shadow-xs">
             Langkah 01
           </span>
-          <h3 class="font-bold text-zinc-900 text-base sm:text-lg leading-snug">Konsultasi Kebutuhan & RAB</h3>
+          <h3 class="font-bold text-zinc-900 text-base sm:text-lg leading-snug">Konsultasi Kebutuhan &amp; RAB</h3>
           <p class="text-xs text-zinc-600 leading-relaxed">
             Diskusikan komoditas, ukuran lahan, target waktu, dan budget. Kami susunkan rincian spesifikasi material dan perkiraan anggaran transparan.
           </p>
@@ -141,7 +231,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
           <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-zinc-900 border border-zinc-200 shadow-xs">
             Langkah 02
           </span>
-          <h3 class="font-bold text-zinc-900 text-base sm:text-lg leading-snug">Survei Lahan & Desain Kerja</h3>
+          <h3 class="font-bold text-zinc-900 text-base sm:text-lg leading-snug">Survei Lahan &amp; Desain Kerja</h3>
           <p class="text-xs text-zinc-600 leading-relaxed">
             Tim teknisi memeriksa kontur tanah, arah terpaan angin, serta ketersediaan sumber air dan listrik di lokasi proyek Anda.
           </p>
@@ -151,7 +241,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
           <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-zinc-900 border border-zinc-200 shadow-xs">
             Langkah 03
           </span>
-          <h3 class="font-bold text-zinc-900 text-base sm:text-lg leading-snug">Fabrikasi & Pengiriman</h3>
+          <h3 class="font-bold text-zinc-900 text-base sm:text-lg leading-snug">Fabrikasi &amp; Pengiriman</h3>
           <p class="text-xs text-zinc-600 leading-relaxed">
             Material pipa, plastik UV, dan aksesoris dipersiapkan di workshop Malang, kemudian dikirim via armada kargo terpercaya ke lokasi Anda.
           </p>
@@ -161,7 +251,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
           <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-zinc-900 border border-zinc-200 shadow-xs">
             Langkah 04
           </span>
-          <h3 class="font-bold text-zinc-900 text-base sm:text-lg leading-snug">Perakitan & Serah Terima</h3>
+          <h3 class="font-bold text-zinc-900 text-base sm:text-lg leading-snug">Perakitan &amp; Serah Terima</h3>
           <p class="text-xs text-zinc-600 leading-relaxed">
             Tim aplikator lapangan merakit struktur hingga tuntas, memasang plastik UV dan insect net, serta uji kekokohan sebelum serah terima.
           </p>
@@ -169,6 +259,104 @@ const breadcrumbSchema = getBreadcrumbSchema([
       </div>
     </div>
 
+    <!-- Material Rekomendasi Terkait (Internal Linking Silo) -->
+    <div class="border-t border-zinc-200/80 pt-12 space-y-6">
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+        <div>
+          <span class="text-xs font-semibold text-emerald-700 uppercase tracking-wider block">Komponen Berkualitas</span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight mt-1">
+            Material Standar Utama yang Kami Pasang
+          </h2>
+        </div>
+        <a href="/produk/" class="text-xs font-bold text-emerald-700 hover:text-emerald-800 inline-flex items-center gap-1">
+          <span>Lihat Semua Katalog Material</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <a href="/produk/plastik-uv-greenhouse-14/" class="p-5 rounded-3xl bg-white border border-zinc-200/80 hover:border-emerald-300 hover:shadow-md transition-all group">
+          <span class="text-2xl mb-2 block">☀️</span>
+          <h3 class="font-bold text-zinc-900 text-sm group-hover:text-emerald-700 transition-colors">Plastik UV 200 Mikron 14%</h3>
+          <p class="text-xs text-zinc-500 mt-1 leading-relaxed">Atap pelindung tahan panas &amp; hujan dengan aditif UV stabilizer anti-getas.</p>
+        </a>
+        <a href="/produk/paranet-tanaman/" class="p-5 rounded-3xl bg-white border border-zinc-200/80 hover:border-emerald-300 hover:shadow-md transition-all group">
+          <span class="text-2xl mb-2 block">🌿</span>
+          <h3 class="font-bold text-zinc-900 text-sm group-hover:text-emerald-700 transition-colors">Paranet Shading Net 65%-75%</h3>
+          <p class="text-xs text-zinc-500 mt-1 leading-relaxed">Jaring peneduh pengatur intensitas radiasi matahari dan penurun suhu.</p>
+        </a>
+        <a href="/produk/insectnet-kasa-greenhouse/" class="p-5 rounded-3xl bg-white border border-zinc-200/80 hover:border-emerald-300 hover:shadow-md transition-all group">
+          <span class="text-2xl mb-2 block">🛡️</span>
+          <h3 class="font-bold text-zinc-900 text-sm group-hover:text-emerald-700 transition-colors">Kasa Insect Net 50 Mesh</h3>
+          <p class="text-xs text-zinc-500 mt-1 leading-relaxed">Dinding pelindung pencegah kutu kebul, thrips, dan hama mikro.</p>
+        </a>
+        <a href="/produk/selang-drip-irigasi-16mm/" class="p-5 rounded-3xl bg-white border border-zinc-200/80 hover:border-emerald-300 hover:shadow-md transition-all group">
+          <span class="text-2xl mb-2 block">💧</span>
+          <h3 class="font-bold text-zinc-900 text-sm group-hover:text-emerald-700 transition-colors">Selang Drip Irigasi 16mm</h3>
+          <p class="text-xs text-zinc-500 mt-1 leading-relaxed">Distribusi air dan pupuk fertigasi tetes presisi langsung ke akar.</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- FAQ Jasa Pembuatan Greenhouse -->
+    <div class="border-t border-zinc-200/80 pt-12 space-y-6">
+      <div class="text-center max-w-2xl mx-auto space-y-2">
+        <span class="text-xs font-semibold text-emerald-700 uppercase tracking-wider block">FAQ Jasa Konstruksi</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight">
+          Pertanyaan Seputar Jasa Pembuatan Greenhouse
+        </h2>
+        <p class="text-xs sm:text-sm text-zinc-500">
+          Hal-hal penting seputar biaya per m², cakupan pekerjaan, sistem kontrak, dan instalasi luar kota.
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto space-y-3.5 pt-4">
+        {GREENHOUSE_FAQS.map((faq, i) => (
+          <details class="group rounded-2xl bg-white border border-zinc-200/80 overflow-hidden transition-all duration-200 hover:border-emerald-300 open:border-emerald-400 open:shadow-xs">
+            <summary class="flex items-center justify-between gap-4 p-5 sm:p-6 cursor-pointer select-none text-left list-none font-bold text-sm sm:text-base text-zinc-900 group-hover:text-emerald-700 transition-colors">
+              <span class="flex items-center gap-3">
+                <span class="text-emerald-700 font-bold text-xs">0{i + 1}.</span>
+                <span>{faq.question}</span>
+              </span>
+              <span class="w-7 h-7 rounded-full bg-zinc-100 flex items-center justify-center shrink-0 text-zinc-500 group-hover:text-emerald-700 transition-transform duration-300 group-open:rotate-180">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
+              </span>
+            </summary>
+            <div class="px-5 sm:px-6 pb-6 pt-1 text-xs sm:text-sm text-zinc-600 leading-relaxed border-t border-zinc-100 mt-1">
+              {faq.answer}
+            </div>
+          </details>
+        ))}
+      </div>
+    </div>
+
+    <!-- Final Call to Action -->
+    <div class="p-8 sm:p-12 rounded-3xl bg-zinc-900 text-white text-center space-y-5 shadow-xl border border-zinc-800">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950/80 text-emerald-300 border border-emerald-700/50">
+        Konsultasi &amp; Survei Lokasi
+      </div>
+      <h3 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight max-w-2xl mx-auto">
+        Rencanakan Konstruksi Greenhouse Anda Bersama Tim Teknis Kami
+      </h3>
+      <p class="text-xs sm:text-sm text-zinc-300 max-w-xl mx-auto leading-relaxed">
+        Kirimkan rencana komoditas, lokasi lahan, dan perkiraan ukuran melalui WhatsApp. Kami buatkan proposal rancangan dan estimasi RAB gratis untuk Anda.
+      </p>
+      <div class="pt-2">
+        <a
+          href={waConsultUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm transition-all shadow-lg select-none"
+        >
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
+          </svg>
+          <span>Chat WhatsApp Tim Konstruksi Greenhouse</span>
+        </a>
+      </div>
+    </div>
 
   </div>
 </BaseLayout>

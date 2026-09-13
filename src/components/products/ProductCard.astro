@@ -1,6 +1,6 @@
 ---
 export interface Props {
-  product: {
+  product?: {
     title: string;
     description: string;
     category: string;
@@ -10,9 +10,27 @@ export interface Props {
     slug: string;
     brand?: string;
   };
+  title?: string;
+  description?: string;
+  category?: string;
+  priceDisplay?: string;
+  stockStatus?: string;
+  thumbnail?: string;
+  slug?: string;
+  brand?: string;
 }
 
-const { product } = Astro.props;
+const props = Astro.props;
+const product = props.product || {
+  title: props.title || '',
+  description: props.description || '',
+  category: props.category || '',
+  priceDisplay: props.priceDisplay || '',
+  stockStatus: props.stockStatus || 'ready',
+  thumbnail: props.thumbnail || '',
+  slug: props.slug || '',
+  brand: props.brand || '',
+};
 ---
 
 <div class="group relative flex flex-col justify-between rounded-2xl sm:rounded-3xl bg-white border border-border hover:border-primary/40 hover:shadow-hover hover:-translate-y-1 transition-all duration-300 overflow-hidden font-sans">

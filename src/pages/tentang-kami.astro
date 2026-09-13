@@ -2,11 +2,20 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumb from '../components/common/Breadcrumb.astro';
 import { BUSINESS_INFO } from '../data/businessInfo';
+import { getAboutPageSchema, getBreadcrumbSchema } from '../utils/seo';
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Beranda', url: 'https://agrokomplekcemerlang.com/' },
+  { name: 'Tentang Kami', url: 'https://agrokomplekcemerlang.com/tentang-kami/' },
+]);
+
+const aboutSchema = getAboutPageSchema();
 ---
 
 <BaseLayout
-  title="Tentang Agrokomplek Cemerlang: Solusi Pertanian &amp; Greenhouse"
-  description="Profil Agrokomplek Cemerlang: distributor saprodi pertanian, supplier material greenhouse, dan kontraktor greenhouse berbasis di Malang untuk Indonesia."
+  title="Tentang Agrokomplek Cemerlang: Solusi Pertanian &amp; Greenhouse Malang"
+  description="Profil Agrokomplek Cemerlang: distributor saprodi pertanian, supplier material greenhouse terpercaya, dan kontraktor greenhouse berbasis di Malang untuk seluruh Indonesia."
+  jsonLd={[aboutSchema, breadcrumbSchema]}
 >
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">
     <Breadcrumb items={[{ label: 'Tentang Kami' }]} />
@@ -46,7 +55,7 @@ import { BUSINESS_INFO } from '../data/businessInfo';
         <div>
           <span class="text-xs font-semibold text-emerald-700 uppercase tracking-wider block">Solusi Terintegrasi</span>
           <h3 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight mt-1">
-            Empat Pilar Solusi Pertanian & Greenhouse
+            Empat Pilar Solusi Pertanian &amp; Greenhouse
           </h3>
         </div>
 
@@ -73,7 +82,7 @@ import { BUSINESS_INFO } from '../data/businessInfo';
             </div>
             <h4 class="font-bold text-zinc-900 text-lg sm:text-xl">Material Greenhouse</h4>
             <p class="text-xs text-zinc-600 leading-relaxed">
-              Suplai plastik UV greenhouse 14% & 20% (200 mikron), paranet shading net 65%-75%, insect net 50 mesh micro-barrier, spring clip, dan profil lock galvanis.
+              Suplai plastik UV greenhouse 14% &amp; 20% (200 mikron), paranet shading net 65%-75%, insect net 50 mesh micro-barrier, spring clip, dan profil lock galvanis.
             </p>
             <div class="pt-2">
               <a href="/produk/perlengkapan-greenhouse/" class="text-xs font-semibold text-emerald-700 hover:text-emerald-800 inline-flex items-center gap-1 group">
@@ -87,13 +96,13 @@ import { BUSINESS_INFO } from '../data/businessInfo';
             <div class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center font-bold text-xs text-emerald-800">
               03
             </div>
-            <h4 class="font-bold text-zinc-900 text-lg sm:text-xl">Perlengkapan Irigasi & Lahan</h4>
+            <h4 class="font-bold text-zinc-900 text-lg sm:text-xl">Perlengkapan Irigasi &amp; Lahan</h4>
             <p class="text-xs text-zinc-600 leading-relaxed">
               Menyediakan selang drip 16mm, sprayer elektrik 16L, mulsa plastik hitam perak (MPHP), perlengkapan hidroponik gully/PVC, dan fitting irigasi tetes presisi.
             </p>
             <div class="pt-2">
               <a href="/produk/perlengkapan-pertanian/" class="text-xs font-semibold text-emerald-700 hover:text-emerald-800 inline-flex items-center gap-1 group">
-                <span>Alat Irigasi & Lahan</span>
+                <span>Alat Irigasi &amp; Lahan</span>
                 <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">&rarr;</span>
               </a>
             </div>
@@ -109,7 +118,7 @@ import { BUSINESS_INFO } from '../data/businessInfo';
             </p>
             <div class="pt-2">
               <a href="/jasa/pembuatan-greenhouse/" class="text-xs font-semibold text-emerald-700 hover:text-emerald-800 inline-flex items-center gap-1 group">
-                <span>Simulasi & Estimasi RAB</span>
+                <span>Simulasi &amp; Estimasi RAB</span>
                 <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">&rarr;</span>
               </a>
             </div>

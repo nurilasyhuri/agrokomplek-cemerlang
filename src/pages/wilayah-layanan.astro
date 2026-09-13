@@ -1,11 +1,18 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumb from '../components/common/Breadcrumb.astro';
+import { getBreadcrumbSchema } from '../utils/seo';
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Beranda', url: 'https://agrokomplekcemerlang.com/' },
+  { name: 'Wilayah Layanan', url: 'https://agrokomplekcemerlang.com/wilayah-layanan/' },
+]);
 ---
 
 <BaseLayout
-  title="Jasa Greenhouse &amp; Suplai Kargo Indonesia | Agrokomplek"
-  description="Layanan pembuatan greenhouse &amp; pengiriman saprodi ke Jawa, Sumatera, Kalimantan, Sulawesi, hingga Papua via ekspedisi kargo darat &amp; laut."
+  title="Wilayah Layanan Greenhouse &amp; Suplai Saprodi Indonesia | Agrokomplek Cemerlang"
+  description="Layanan pembuatan greenhouse &amp; pengiriman saprodi pertanian ke Jawa, Bali, Sumatera, Kalimantan, Sulawesi, hingga Papua via kargo darat &amp; laut terpercaya."
+  jsonLd={[breadcrumbSchema]}
 >
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">
     <Breadcrumb items={[{ label: 'Wilayah Layanan' }]} />
@@ -26,47 +33,47 @@ import Breadcrumb from '../components/common/Breadcrumb.astro';
     <!-- 3 Key Delivery Mechanisms -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 my-12">
       <div class="p-7 sm:p-8 rounded-3xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
-        <div>
-          <div class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs mb-4">
-            01
+        <div class="space-y-3">
+          <div class="w-10 h-10 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold text-lg border border-emerald-100">
+            🚚
           </div>
-          <h3 class="text-lg font-bold text-zinc-900 mb-2">Pengiriman Saprodi & Perlengkapan</h3>
-          <p class="text-xs text-zinc-600 leading-relaxed">
-            Didukung armada kargo darat, laut, dan ekspedisi reguler (Indah Logistik, Baraka Sarana Tama, KIB Cepat, truk balen) untuk pesanan plastik UV rol, paranet, sprayer, selang drip, benih, dan pupuk.
+          <h3 class="text-xl font-bold text-zinc-900">Area Malang Raya &amp; Jatim</h3>
+          <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed">
+            Pengiriman langsung via armada operasional kami, ojek online kargo, atau ambil sendiri di gudang Kedungkandang. Layanan same-day / next-day delivery untuk produk saprodi ready stock.
           </p>
         </div>
-        <div class="pt-4 border-t border-zinc-100 text-xs text-zinc-500">
-          Estimasi: 2 - 5 hari (Jawa/Bali) &bull; 4 - 9 hari (Luar Pulau)
+        <div class="pt-3 border-t border-zinc-100 text-xs font-semibold text-emerald-700">
+          Malang, Batu, Pasuruan, Blitar, Kediri, Surabaya &amp; sekitarnya
         </div>
       </div>
 
       <div class="p-7 sm:p-8 rounded-3xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
-        <div>
-          <div class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs mb-4">
-            02
+        <div class="space-y-3">
+          <div class="w-10 h-10 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold text-lg border border-emerald-100">
+            🚛
           </div>
-          <h3 class="text-lg font-bold text-zinc-900 mb-2">Paket Material Knockdown + Panduan</h3>
-          <p class="text-xs text-zinc-600 leading-relaxed">
-            Untuk pelanggan dengan tenaga kerja lokal mandiri: material rangka pipa galvanis, klem tanpa las, baut, spring clip, dan penutup dipotong presisi di workshop Malang dan dikirim dengan blueprint teknis perakitan.
+          <h3 class="text-xl font-bold text-zinc-900">Pulau Jawa, Madura &amp; Bali</h3>
+          <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed">
+            Didukung kemitraan ekspedisi kargo truk reguler (Indah Kargo, Baraka, Dakota, Kobra, Truk Balen). Biaya per kilogram sangat hemat untuk gulungan plastik UV, roll paranet, dan mulsa.
           </p>
         </div>
-        <div class="pt-4 border-t border-zinc-100 text-xs text-zinc-500">
-          Termasuk panduan video call teknisi pemasangan
+        <div class="pt-3 border-t border-zinc-100 text-xs font-semibold text-emerald-700">
+          Jawa Tengah, Jawa Barat, DIY Yogyakarta, Jabodetabek, Banten &amp; Bali
         </div>
       </div>
 
       <div class="p-7 sm:p-8 rounded-3xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-all flex flex-col justify-between space-y-4">
-        <div>
-          <div class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-xs mb-4">
-            03
+        <div class="space-y-3">
+          <div class="w-10 h-10 rounded-2xl bg-emerald-50 text-emerald-700 flex items-center justify-center font-bold text-lg border border-emerald-100">
+            🚢
           </div>
-          <h3 class="text-lg font-bold text-zinc-900 mb-2">Pengerjaan Penuh Tim Teknisi</h3>
-          <p class="text-xs text-zinc-600 leading-relaxed">
-            Tim aplikator spesialis Agrokomplek Cemerlang siap diberangkatkan langsung ke lokasi proyek Anda di pulau Jawa, Sumatera, Kalimantan, Sulawesi, Bali, NTB, NTT hingga Papua untuk instalasi tuntas kunci.
+          <h3 class="text-xl font-bold text-zinc-900">Luar Pulau (Kargo Laut &amp; Kontainer)</h3>
+          <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed">
+            Pengiriman via pelabuhan Tanjung Perak Surabaya menggunakan kapal kargo atau kontainer LCL/FCL. Packing ekstra rapi dengan proteksi berlapis tahan guncangan laut.
           </p>
         </div>
-        <div class="pt-4 border-t border-zinc-100 text-xs text-zinc-500">
-          Pondasi cor strouss &bull; Rangka &bull; Pemasangan plastik & net
+        <div class="pt-3 border-t border-zinc-100 text-xs font-semibold text-emerald-700">
+          Sumatera, Kalimantan, Sulawesi, NTB, NTT, Maluku &amp; Papua
         </div>
       </div>
     </div>
@@ -74,16 +81,15 @@ import Breadcrumb from '../components/common/Breadcrumb.astro';
     <!-- CTA Box -->
     <div class="p-8 sm:p-12 rounded-3xl bg-zinc-900 text-white border border-zinc-800 text-center space-y-4 shadow-xl">
       <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950/80 text-emerald-300 border border-emerald-700/50">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-        Konsultasi Kargo & Jadwal
+        Konsultasi Ekspedisi &amp; Ongkir
       </span>
-      <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Ingin Mengetahui Jadwal & Estimasi Ongkir ke Wilayah Anda?</h3>
+      <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Ingin Mengetahui Jadwal &amp; Estimasi Ongkir ke Wilayah Anda?</h3>
       <p class="text-xs sm:text-sm text-zinc-300 max-w-xl mx-auto leading-relaxed">
         Kirimkan alamat kecamatan dan kabupaten Anda ke WhatsApp kami untuk pengecekan rute armada ekspedisi paling hemat dan aman.
       </p>
       <div class="pt-2">
         <a
-          href="https://wa.me/6285183002070?text=Halo%20Agrokomplek%20Cemerlang%2C%20saya%20ingin%20cek%20estimasi%20ongkir%20%2F%20layanan%20greenhouse%20ke%20kota%20saya."
+          href="https://wa.me/6285183002070?text=Halo%20Agrokomplek%20Cemerlang%2C%20saya%20ingin%20cek%20estimasi%20ongkir%20kargo%20ke%20daerah%20saya."
           target="_blank"
           rel="noopener noreferrer"
           class="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition-all shadow-lg hover:shadow-emerald-900/50 select-none"
@@ -91,7 +97,7 @@ import Breadcrumb from '../components/common/Breadcrumb.astro';
           <svg class="w-4 h-4 text-emerald-200" viewBox="0 0 24 24" fill="currentColor">
             <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
           </svg>
-          <span>Hubungi WhatsApp Logistik</span>
+          <span>Cek Ongkir Kargo via WhatsApp</span>
         </a>
       </div>
     </div>

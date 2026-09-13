@@ -2,7 +2,9 @@
 import { getCollection } from 'astro:content';
 
 const articles = await getCollection('artikel');
-const latestArticles = articles.slice(0, 3);
+const latestArticles = articles
+  .sort((a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime())
+  .slice(0, 3);
 ---
 
 <section class="py-16 sm:py-24 bg-white border-b border-border font-sans">
@@ -25,7 +27,7 @@ const latestArticles = articles.slice(0, 3);
         href="/artikel/"
         class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-primary-hover transition-colors shrink-0"
       >
-        <span>Lihat Semua Artikel</span>
+        <span>Lihat Semua Panduan</span>
         <span aria-hidden="true">&rarr;</span>
       </a>
     </div>

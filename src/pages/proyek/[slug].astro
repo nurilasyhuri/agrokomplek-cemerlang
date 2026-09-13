@@ -20,9 +20,9 @@ const { project } = Astro.props;
 const { Content } = await project.render();
 
 const breadcrumbSchema = getBreadcrumbSchema([
-  { name: 'Beranda', url: '/' },
-  { name: 'Portofolio Proyek', url: '/proyek/' },
-  { name: project.data.title, url: `/proyek/${project.slug}/` },
+  { name: 'Beranda', url: 'https://agrokomplekcemerlang.com/' },
+  { name: 'Portofolio Proyek', url: 'https://agrokomplekcemerlang.com/proyek/' },
+  { name: project.data.title, url: `https://agrokomplekcemerlang.com/proyek/${project.slug}/` },
 ]);
 
 const projectSchema = getProjectSchema({
@@ -38,8 +38,8 @@ const projectSchema = getProjectSchema({
 ---
 
 <BaseLayout
-  title={`${project.data.title} | Proyek Greenhouse`}
-  description={`Studi kasus konstruksi ${project.data.greenhouseType} di ${project.data.locationCity}, ${project.data.locationProvince} (Dimensi ${project.data.dimensions}). Dokumentasi & spek material.`}
+  title={`${project.data.title} | Portofolio Greenhouse Agrokomplek`}
+  description={`Studi kasus konstruksi ${project.data.greenhouseType} di ${project.data.locationCity}, ${project.data.locationProvince} (Dimensi ${project.data.dimensions}). Dokumentasi instalasi, spesifikasi material, & hasil panen.`}
   image={project.data.coverImage}
   jsonLd={[projectSchema, breadcrumbSchema]}
 >
@@ -53,66 +53,65 @@ const projectSchema = getProjectSchema({
 
     <div class="my-8 space-y-3">
       <div class="flex flex-wrap items-center gap-2">
-        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/60">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+        <span class="inline-block text-xs font-semibold text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/60">
           {project.data.greenhouseType}
         </span>
-        <span class="text-xs font-medium bg-zinc-100 border border-zinc-200 text-zinc-600 px-3 py-1 rounded-full">
-          Kategori Klien: {project.data.clientType}
+        <span class="inline-block text-xs font-medium text-zinc-600 bg-zinc-100 px-3 py-1 rounded-full">
+          {project.data.locationCity}, {project.data.locationProvince}
         </span>
       </div>
-
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight leading-tight">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight leading-[1.15]">
         {project.data.title}
       </h1>
+      <p class="text-sm sm:text-base text-zinc-600 leading-relaxed max-w-3xl">
+        Studi kasus pelaksanaan konstruksi dan instalasi lapangan untuk budidaya hortikultura terstandar.
+      </p>
     </div>
 
     <!-- Main Image Frame -->
     <div class="rounded-3xl overflow-hidden bg-zinc-100 border border-zinc-200/80 mb-8 shadow-sm">
-      <div class="aspect-video relative overflow-hidden">
-        <img
-          src={project.data.coverImage}
-          alt={project.data.title}
-          class="w-full h-full object-cover"
-          loading="eager"
-          decoding="async"
-        />
-      </div>
+      <img
+        src={project.data.coverImage}
+        alt={project.data.title}
+        width="1200"
+        height="750"
+        class="w-full aspect-[16/10] object-cover"
+        loading="eager"
+        decoding="async"
+      />
     </div>
 
     <!-- Project Metadata Cards -->
     <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-6 sm:p-7 rounded-3xl bg-zinc-50/70 border border-zinc-200/80 mb-8 text-xs">
       <div>
-        <span class="text-[11px] text-zinc-500 font-semibold block uppercase">Lokasi Proyek</span>
-        <span class="font-bold text-zinc-900 mt-1 block text-sm">
-          {project.data.locationCity}, {project.data.locationProvince}
-        </span>
-      </div>
-      <div>
-        <span class="text-[11px] text-zinc-500 font-semibold block uppercase">Dimensi Lahan</span>
-        <span class="font-bold text-zinc-900 mt-1 block text-sm">
-          {project.data.dimensions}
-        </span>
-      </div>
-      <div>
-        <span class="text-[11px] text-zinc-500 font-semibold block uppercase">Waktu Selesai</span>
-        <span class="font-bold text-zinc-900 mt-1 block text-sm">
-          {project.data.completionDate}
-        </span>
-      </div>
-      <div>
-        <span class="text-[11px] text-zinc-500 font-semibold block uppercase">Tipe Struktur</span>
-        <span class="font-bold text-emerald-700 mt-1 block text-sm">
+        <span class="text-zinc-500 block">Tipe Struktur</span>
+        <strong class="text-zinc-900 font-bold text-sm sm:text-base block mt-1">
           {project.data.greenhouseType}
-        </span>
+        </strong>
+      </div>
+      <div>
+        <span class="text-zinc-500 block">Dimensi Lahan</span>
+        <strong class="text-zinc-900 font-bold text-sm sm:text-base block mt-1">
+          {project.data.dimensions}
+        </strong>
+      </div>
+      <div>
+        <span class="text-zinc-500 block">Lokasi Proyek</span>
+        <strong class="text-zinc-900 font-bold text-sm sm:text-base block mt-1">
+          {project.data.locationCity}
+        </strong>
+      </div>
+      <div>
+        <span class="text-zinc-500 block">Status Proyek</span>
+        <strong class="text-emerald-700 font-bold text-sm sm:text-base block mt-1">
+          Selesai &amp; Serah Terima
+        </strong>
       </div>
     </div>
 
     <!-- Main Materials -->
     <div class="p-6 sm:p-7 rounded-3xl bg-white border border-zinc-200/80 mb-8 shadow-sm">
-      <h4 class="text-xs font-bold uppercase tracking-wider text-zinc-500 mb-3">
-        Material Utama yang Digunakan:
-      </h4>
+      <h2 class="text-base font-bold text-zinc-900 mb-3">Material Utama yang Digunakan</h2>
       <div class="flex flex-wrap gap-2">
         {project.data.mainMaterials.map((mat) => (
           <span class="px-3.5 py-1.5 rounded-full bg-zinc-100 border border-zinc-200/80 text-xs font-medium text-zinc-800">
@@ -127,7 +126,7 @@ const projectSchema = getProjectSchema({
       <Content />
     </div>
 
-    <!-- Consultation Box -->
+    <!-- Consultation & Internal Linking Box -->
     <div class="p-8 sm:p-10 rounded-3xl bg-zinc-900 text-white text-center space-y-4 shadow-xl border border-zinc-800">
       <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950/80 text-emerald-300 border border-emerald-700/50">
         <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
@@ -135,9 +134,9 @@ const projectSchema = getProjectSchema({
       </span>
       <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Ingin Membangun Greenhouse Serupa?</h3>
       <p class="text-xs sm:text-sm text-zinc-300 max-w-xl mx-auto leading-relaxed">
-        Diskusikan ukuran lahan, target komoditas, dan anggaran bersama tim teknisi aplikator Agrokomplek Cemerlang.
+        Diskusikan ukuran lahan, target komoditas, dan anggaran bersama tim teknisi aplikator Agrokomplek Cemerlang. Hitung perkiraan biaya secara online atau hubungi tim via WhatsApp.
       </p>
-      <div class="pt-2">
+      <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
         <a
           href={`https://wa.me/6285183002070?text=${encodeURIComponent(
             `Halo Agrokomplek Cemerlang, saya melihat portofolio proyek ${project.data.title} dan ingin konsultasi pembuatan greenhouse serupa.`
@@ -150,6 +149,13 @@ const projectSchema = getProjectSchema({
             <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
           </svg>
           <span>Konsultasi Proyek via WhatsApp</span>
+        </a>
+        <a
+          href="/jasa/pembuatan-greenhouse/#kalkulator"
+          class="inline-flex items-center gap-2 px-7 py-4 rounded-full bg-zinc-800 hover:bg-zinc-700 text-white font-semibold text-sm transition-all border border-zinc-700 select-none"
+        >
+          <span>Kalkulator Estimasi RAB</span>
+          <span>&rarr;</span>
         </a>
       </div>
     </div>

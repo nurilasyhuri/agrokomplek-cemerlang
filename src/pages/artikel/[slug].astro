@@ -19,10 +19,15 @@ interface Props {
 const { article } = Astro.props;
 const { Content } = await article.render();
 
+const allArticles = await getCollection('artikel');
+const relatedArticles = allArticles
+  .filter((a) => a.slug !== article.slug)
+  .slice(0, 2);
+
 const breadcrumbSchema = getBreadcrumbSchema([
-  { name: 'Beranda', url: '/' },
-  { name: 'Artikel', url: '/artikel/' },
-  { name: article.data.title, url: `/artikel/${article.slug}/` },
+  { name: 'Beranda', url: 'https://agrokomplekcemerlang.com/' },
+  { name: 'Artikel & Panduan', url: 'https://agrokomplekcemerlang.com/artikel/' },
+  { name: article.data.title, url: `https://agrokomplekcemerlang.com/artikel/${article.slug}/` },
 ]);
 
 const articleSchema = getArticleSchema({
@@ -37,7 +42,7 @@ const articleSchema = getArticleSchema({
 ---
 
 <BaseLayout
-  title={`${article.data.title} | Agrokomplek`}
+  title={`${article.data.title} | Panduan Agrokomplek Cemerlang`}
   description={article.data.description}
   image={article.data.heroImage}
   type="article"
@@ -46,7 +51,7 @@ const articleSchema = getArticleSchema({
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">
     <Breadcrumb
       items={[
-        { label: 'Artikel', href: '/artikel/' },
+        { label: 'Artikel & Panduan', href: '/artikel/' },
         { label: article.data.title },
       ]}
     />
@@ -72,6 +77,8 @@ const articleSchema = getArticleSchema({
         <img
           src={article.data.heroImage}
           alt={article.data.title}
+          width="1200"
+          height="675"
           class="w-full h-full object-cover"
           loading="eager"
           decoding="async"
@@ -83,8 +90,27 @@ const articleSchema = getArticleSchema({
         <Content />
       </div>
 
+      <!-- Related Guides & Services -->
+      <div class="mt-14 pt-8 border-t border-zinc-200/80">
+        <h2 class="text-xl font-bold text-zinc-900 mb-6">Panduan Terkait Lainnya</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {relatedArticles.map((rel) => (
+            <a
+              href={`/artikel/${rel.slug}/`}
+              class="p-5 rounded-2xl bg-zinc-50/70 border border-zinc-200/80 hover:border-emerald-300 hover:bg-white transition-all block group"
+            >
+              <span class="text-xs font-semibold text-emerald-700">{rel.data.category}</span>
+              <h3 class="font-bold text-zinc-900 text-sm mt-1 group-hover:text-emerald-700 transition-colors">
+                {rel.data.title}
+              </h3>
+              <p class="text-xs text-zinc-500 mt-1 line-clamp-2">{rel.data.description}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+
       <!-- Bottom Author / CTA Box -->
-      <div class="mt-16 p-8 sm:p-10 rounded-3xl bg-zinc-900 text-white border border-zinc-800 shadow-xl">
+      <div class="mt-12 p-8 sm:p-10 rounded-3xl bg-zinc-900 text-white border border-zinc-800 shadow-xl">
         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div class="space-y-2">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950/80 text-emerald-300 border border-emerald-700/50">
@@ -93,7 +119,7 @@ const articleSchema = getArticleSchema({
             </span>
             <h4 class="text-xl sm:text-2xl font-extrabold text-white tracking-tight">Butuh Diskusi Teknis Lebih Lanjut?</h4>
             <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed max-w-xl">
-              Tim spesialis Agrokomplek Cemerlang siap membantu menjawab pertanyaan spesifik seputar proyek budidaya atau pembangunan fasilitas greenhouse Anda.
+              Tim spesialis Agrokomplek Cemerlang siap membantu menjawab pertanyaan spesifik seputar pemilihan material atau pembangunan fasilitas greenhouse Anda.
             </p>
           </div>
           <a

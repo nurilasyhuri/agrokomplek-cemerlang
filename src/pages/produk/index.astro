@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/common/Breadcrumb.astro';
 import ProductFilter from '../../components/products/ProductFilter';
+import { getCollectionPageSchema, getBreadcrumbSchema } from '../../utils/seo';
 import { getCollection } from 'astro:content';
 
 const products = await getCollection('produk');
@@ -15,11 +16,28 @@ const mappedProducts = products.map((p) => ({
   slug: p.slug,
   brand: p.data.brand,
 }));
+
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Beranda', url: 'https://agrokomplekcemerlang.com/' },
+  { name: 'Katalog Produk', url: 'https://agrokomplekcemerlang.com/produk/' },
+]);
+
+const collectionSchema = getCollectionPageSchema({
+  name: 'Katalog Saprodi Pertanian, Material Greenhouse & Irigasi',
+  description: 'Distributor sarana produksi pertanian terlengkap di Malang: plastik UV 200 mikron, paranet, selang drip 16mm, mulsa, pupuk NPK, dan perlengkapan kebun.',
+  url: 'https://agrokomplekcemerlang.com/produk/',
+  items: products.map((p) => ({
+    name: p.data.title,
+    url: `https://agrokomplekcemerlang.com/produk/${p.slug}/`,
+    description: p.data.description,
+  })),
+});
 ---
 
 <BaseLayout
-  title="Katalog Produk Pertanian &amp; Greenhouse | Agrokomplek"
-  description="Distributor saprodi pertanian, plastik UV 200 mikron, paranet shading net, kasa insect net 50 mesh, selang drip 16mm, &amp; mulsa MPHP di Malang."
+  title="Katalog Saprodi Pertanian &amp; Material Greenhouse Malang | Agrokomplek Cemerlang"
+  description="Distributor resmi saprodi pertanian, plastik UV 200 mikron 14%, paranet 65%-75%, kasa insect net 50 mesh, selang drip 16mm, &amp; mulsa MPHP di Malang kirim se-Indonesia."
+  jsonLd={[collectionSchema, breadcrumbSchema]}
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-20">
     <Breadcrumb items={[{ label: 'Katalog Produk' }]} />
@@ -27,13 +45,13 @@ const mappedProducts = products.map((p) => ({
     <div class="my-10 text-center max-w-3xl mx-auto space-y-3">
       <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/60">
         <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
-        Distributor Saprodi &amp; Material Greenhouse
+        Distributor Saprodi &amp; Material Greenhouse Terlengkap
       </div>
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight">
         Katalog Saprodi Pertanian, Material Greenhouse &amp; Irigasi
       </h1>
       <p class="text-sm sm:text-base text-zinc-600 leading-relaxed">
-        Distributor resmi kebutuhan pertanian modern: sarana produksi (pupuk NPK &amp; nutrisi), plastik UV greenhouse 200 mikron, paranet shading net, selang drip irigasi tetes 16mm, dan perlengkapan hidroponik dengan stok fisik di gudang Malang.
+        Distributor resmi kebutuhan pertanian modern: sarana produksi (pupuk NPK 16-16-16, media tanam, benih), plastik UV greenhouse 200 mikron 14%, paranet shading net, selang drip irigasi tetes 16mm, dan perlengkapan hidroponik dengan stok fisik di gudang Malang.
       </p>
     </div>
 

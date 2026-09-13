@@ -13,9 +13,19 @@ export interface Props {
   type?: 'website' | 'article' | 'product';
   jsonLd?: Record<string, any> | Array<Record<string, any>>;
   hideMobileStickyBar?: boolean;
+  noindex?: boolean;
 }
 
-const { title, description, canonical, image, type, jsonLd, hideMobileStickyBar = false } = Astro.props;
+const {
+  title,
+  description,
+  canonical,
+  image,
+  type,
+  jsonLd,
+  hideMobileStickyBar = false,
+  noindex = false,
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -28,6 +38,7 @@ const { title, description, canonical, image, type, jsonLd, hideMobileStickyBar 
       image={image}
       type={type}
       jsonLd={jsonLd}
+      noindex={noindex}
     />
   </head>
   <body class="bg-white text-zinc-900 antialiased selection:bg-emerald-100 selection:text-emerald-900 font-sans">
