@@ -6,7 +6,7 @@ const currentPath = Astro.url.pathname;
 const waInquiryUrl = generateGeneralInquiryUrl('header-cta');
 ---
 
-<!-- Top Promotional Bar (matching babyfit.us announcement bar) -->
+<!-- Top Promotional Bar -->
 <div class="bg-[#faf8f5] text-zinc-900 text-xs font-bold font-sans py-2.5 px-4 border-b border-[#eee8df] select-none">
   <div class="max-w-[1200px] mx-auto sm:px-6 lg:px-8 flex justify-between items-center">
     <!-- Left: Delivery & Service Highlights -->
@@ -21,7 +21,7 @@ const waInquiryUrl = generateGeneralInquiryUrl('header-cta');
         </svg>
         <span>PENGIRIMAN KARGO SELURUH INDONESIA</span>
       </span>
-      <span class="">•</span>
+      <span class="text-zinc-300">•</span>
       <span class="hidden md:inline text-zinc-700 font-bold tracking-normal normal-case text-xs">
         Gratis Konsultasi Teknis &amp; Estimasi RAB Greenhouse
       </span>
@@ -33,7 +33,7 @@ const waInquiryUrl = generateGeneralInquiryUrl('header-cta');
         <span>ID (IDR)</span>
         <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg>
       </span>
-      <span class="">•</span>
+      <span class="text-zinc-300">•</span>
       <a
         href={waInquiryUrl}
         target="_blank"
@@ -86,182 +86,260 @@ const waInquiryUrl = generateGeneralInquiryUrl('header-cta');
         </a>
       </div>
 
-      <!-- Desktop Navigation Links (Shopify-style with Mega Menu) -->
-      <nav class="hidden lg:flex items-center gap-7 h-full">
-        <a
-          href="/produk/"
-          class:list={[
-            'transition-colors duration-300 font-sans font-bold text-sm hover:text-primary',
-            currentPath === '/produk/' || currentPath === '/produk' ? 'text-primary' : 'text-dark',
-          ]}
-        >
-          Semua Produk
-        </a>
-
-        <!-- Collections / Kategori Dropdown Mega-Menu -->
+      <!-- Desktop Navigation Links (Clean 4-Cluster Grouping) -->
+      <nav class="hidden lg:flex items-center gap-6 xl:gap-8 h-full">
+        
+        <!-- 1. Produk & Material (Mega Dropdown) -->
         <div class="relative group h-full flex items-center">
           <button
             type="button"
             aria-haspopup="true"
-            class="flex items-center gap-1.5 transition-colors duration-300 font-sans font-bold text-sm cursor-pointer text-dark hover:text-primary"
+            class:list={[
+              'flex items-center gap-1.5 transition-colors duration-200 font-sans font-bold text-sm cursor-pointer hover:text-primary',
+              currentPath.startsWith('/produk') ? 'text-primary' : 'text-dark',
+            ]}
           >
-            <span>Kategori Material</span>
+            <span>Produk &amp; Material</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180">
               <path d="m6 9 6 6 6-6"></path>
             </svg>
           </button>
 
-          <!-- Dropdown Mega Panel (Bridge with pt-3) -->
-          <div class="invisible opacity-0 translate-y-1 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 absolute top-full left-1/2 -translate-x-[40%] pt-3 z-50">
-            <div class="w-[840px] bg-white border border-border rounded-3xl shadow-card p-6 grid grid-cols-4 gap-6 text-left select-none">
-              
-              <!-- Col 1: Saprodi & Nutrisi -->
-              <div class="flex flex-col">
-                <p class="text-[10px] font-extrabold uppercase tracking-wider text-primary mb-3.5 border-b border-border/60 pb-1.5">
-                  Saprodi Pertanian
-                </p>
-                <div class="flex flex-col gap-1">
-                  <a href="/produk/pupuk-npk-16-16-16/" class="group/item flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13px] font-bold text-dark hover:bg-secondary/60 hover:text-primary transition-all">
-                    <span class="w-7 h-7 shrink-0 flex items-center justify-center rounded-lg border text-primary bg-secondary border-border group-hover/item:bg-white text-xs">🌱</span>
-                    <span class="flex-1 truncate">Pupuk NPK 16-16-16</span>
+          <!-- Dropdown Mega Panel -->
+          <div class="invisible opacity-0 translate-y-1 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 absolute top-full left-1/2 -translate-x-[35%] pt-3 z-50">
+            <div class="w-[840px] bg-white border border-border rounded-3xl shadow-card p-6 flex flex-col gap-5 text-left select-none">
+              <div class="grid grid-cols-4 gap-6">
+                <!-- Col 1: Saprodi & Nutrisi -->
+                <div class="flex flex-col">
+                  <a href="/produk/saprodi-pertanian/" class="text-[11px] font-extrabold uppercase tracking-wider text-primary mb-3.5 border-b border-border/60 pb-1.5 hover:text-primary-hover flex items-center justify-between">
+                    <span>Saprodi Pertanian</span>
+                    <span>&rarr;</span>
                   </a>
-                  <a href="/produk/tray-semai-128-lubang/" class="group/item flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13px] font-bold text-dark hover:bg-secondary/60 hover:text-primary transition-all">
-                    <span class="w-7 h-7 shrink-0 flex items-center justify-center rounded-lg border text-primary bg-secondary border-border group-hover/item:bg-white text-xs">🪴</span>
-                    <span class="flex-1 truncate">Tray Semai 128 Lubang</span>
+                  <div class="flex flex-col gap-1">
+                    <a href="/produk/pupuk-npk-16-16-16/" class="group/item flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13px] font-bold text-dark hover:bg-secondary/60 hover:text-primary transition-all">
+                      <span class="w-7 h-7 shrink-0 flex items-center justify-center rounded-lg border text-primary bg-secondary border-border group-hover/item:bg-white text-xs">🌱</span>
+                      <span class="flex-1 truncate">Pupuk NPK 16-16-16</span>
+                    </a>
+                    <a href="/produk/tray-semai-128-lubang/" class="group/item flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13px] font-bold text-dark hover:bg-secondary/60 hover:text-primary transition-all">
+                      <span class="w-7 h-7 shrink-0 flex items-center justify-center rounded-lg border text-primary bg-secondary border-border group-hover/item:bg-white text-xs">🪴</span>
+                      <span class="flex-1 truncate">Tray Semai 128 Lubang</span>
+                    </a>
+                    <a href="/produk/saprodi-pertanian/" class="group/item flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13px] font-bold text-dark hover:bg-secondary/60 hover:text-primary transition-all">
+                      <span class="w-7 h-7 shrink-0 flex items-center justify-center rounded-lg border text-primary bg-secondary border-border group-hover/item:bg-white text-xs">🧪</span>
+                      <span class="flex-1 truncate">Semua Saprodi</span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Col 2: Material Greenhouse -->
+                <div class="flex flex-col">
+                  <a href="/produk/perlengkapan-greenhouse/" class="text-[11px] font-extrabold uppercase tracking-wider text-primary mb-3.5 border-b border-border/60 pb-1.5 hover:text-primary-hover flex items-center justify-between">
+                    <span>Material Greenhouse</span>
+                    <span>&rarr;</span>
                   </a>
-                  <a href="/produk/saprodi-pertanian/" class="group/item flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13px] font-bold text-dark hover:bg-secondary/60 hover:text-primary transition-all">
-                    <span class="w-7 h-7 shrink-0 flex items-center justify-center rounded-lg border text-primary bg-secondary border-border group-hover/item:bg-white text-xs">🧪</span>
-                    <span class="flex-1 truncate">Semua Saprodi</span>
+                  <div class="flex flex-col gap-1">
+                    <a href="/produk/plastik-uv-greenhouse-14/" class="group/item flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13px] font-bold text-dark hover:bg-secondary/60 hover:text-primary transition-all">
+                      <span class="w-7 h-7 shrink-0 flex items-center justify-center rounded-lg border text-primary bg-secondary border-border group-hover/item:bg-white text-xs">☀️</span>
+                      <span class="flex-1 truncate">Plastik UV 200 Mikron</span>
+                    </a>
+                    <a href="/produk/paranet-tanaman/" class="group/item flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13px] font-bold text-dark hover:bg-secondary/60 hover:text-primary transition-all">
+                      <span class="w-7 h-7 shrink-0 flex items-center justify-center rounded-lg border text-primary bg-secondary border-border group-hover/item:bg-white text-xs">🌿</span>
+                      <span class="flex-1 truncate">Paranet Peneduh 65-75%</span>
+                    </a>
+                    <a href="/produk/insectnet-kasa-greenhouse/" class="group/item flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13px] font-bold text-dark hover:bg-secondary/60 hover:text-primary transition-all">
+                      <span class="w-7 h-7 shrink-0 flex items-center justify-center rounded-lg border text-primary bg-secondary border-border group-hover/item:bg-white text-xs">🛡️</span>
+                      <span class="flex-1 truncate">Insect Net 50 Mesh</span>
+                    </a>
+                    <a href="/produk/spring-clip-profil-lock/" class="group/item flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13px] font-bold text-dark hover:bg-secondary/60 hover:text-primary transition-all">
+                      <span class="w-7 h-7 shrink-0 flex items-center justify-center rounded-lg border text-primary bg-secondary border-border group-hover/item:bg-white text-xs">🔒</span>
+                      <span class="flex-1 truncate">Spring Clip &amp; Kanal C</span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Col 3: Irigasi & Mulsa -->
+                <div class="flex flex-col">
+                  <a href="/produk/perlengkapan-pertanian/" class="text-[11px] font-extrabold uppercase tracking-wider text-primary mb-3.5 border-b border-border/60 pb-1.5 hover:text-primary-hover flex items-center justify-between">
+                    <span>Irigasi &amp; Mulsa</span>
+                    <span>&rarr;</span>
+                  </a>
+                  <div class="flex flex-col gap-1">
+                    <a href="/produk/selang-drip-irigasi-16mm/" class="group/item flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13px] font-bold text-dark hover:bg-secondary/60 hover:text-primary transition-all">
+                      <span class="w-7 h-7 shrink-0 flex items-center justify-center rounded-lg border text-primary bg-secondary border-border group-hover/item:bg-white text-xs">💧</span>
+                      <span class="flex-1 truncate">Selang Drip 16mm</span>
+                    </a>
+                    <a href="/produk/mulsa-plastik-hitam-perak/" class="group/item flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13px] font-bold text-dark hover:bg-secondary/60 hover:text-primary transition-all">
+                      <span class="w-7 h-7 shrink-0 flex items-center justify-center rounded-lg border text-primary bg-secondary border-border group-hover/item:bg-white text-xs">⚫</span>
+                      <span class="flex-1 truncate">Mulsa Plastik MPHP</span>
+                    </a>
+                    <a href="/produk/sprayer-elektrik-16-liter/" class="group/item flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13px] font-bold text-dark hover:bg-secondary/60 hover:text-primary transition-all">
+                      <span class="w-7 h-7 shrink-0 flex items-center justify-center rounded-lg border text-primary bg-secondary border-border group-hover/item:bg-white text-xs">🔋</span>
+                      <span class="flex-1 truncate">Sprayer Elektrik 16L</span>
+                    </a>
+                    <a href="/produk/paket-instalasi-hidroponik/" class="group/item flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13px] font-bold text-dark hover:bg-secondary/60 hover:text-primary transition-all">
+                      <span class="w-7 h-7 shrink-0 flex items-center justify-center rounded-lg border text-primary bg-secondary border-border group-hover/item:bg-white text-xs">🥬</span>
+                      <span class="flex-1 truncate">Paket Hidroponik NFT</span>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Col 4: Featured Promo Card -->
+                <div class="bg-gradient-to-br from-peach via-peach/40 to-secondary border border-border/80 p-5 rounded-2xl flex flex-col justify-between h-full min-h-[200px]">
+                  <div>
+                    <span class="bg-primary text-white text-[9px] font-extrabold tracking-wider px-2.5 py-1 rounded-full uppercase select-none">
+                      KONTRAKTOR RESMI
+                    </span>
+                    <h4 class="font-sans font-extrabold text-dark text-sm mt-3.5">
+                      Kalkulator RAB Greenhouse
+                    </h4>
+                    <p class="text-xs text-muted leading-relaxed mt-1.5 font-medium">
+                      Hitung estimasi kebutuhan material &amp; jasa pembuatan per m² secara transparan.
+                    </p>
+                  </div>
+                  <a
+                    href="/jasa/pembuatan-greenhouse/#kalkulator"
+                    class="flex items-center gap-2 text-xs font-bold text-primary hover:text-primary-hover group/btn mt-4"
+                  >
+                    <span>Hitung RAB Sekarang</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-0.5">
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg>
                   </a>
                 </div>
               </div>
 
-              <!-- Col 2: Material Greenhouse -->
-              <div class="flex flex-col">
-                <p class="text-[10px] font-extrabold uppercase tracking-wider text-primary mb-3.5 border-b border-border/60 pb-1.5">
-                  Material Greenhouse
-                </p>
-                <div class="flex flex-col gap-1">
-                  <a href="/produk/plastik-uv-greenhouse-14/" class="group/item flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13px] font-bold text-dark hover:bg-secondary/60 hover:text-primary transition-all">
-                    <span class="w-7 h-7 shrink-0 flex items-center justify-center rounded-lg border text-primary bg-secondary border-border group-hover/item:bg-white text-xs">☀️</span>
-                    <span class="flex-1 truncate">Plastik UV 200 Mikron</span>
-                  </a>
-                  <a href="/produk/paranet-tanaman/" class="group/item flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13px] font-bold text-dark hover:bg-secondary/60 hover:text-primary transition-all">
-                    <span class="w-7 h-7 shrink-0 flex items-center justify-center rounded-lg border text-primary bg-secondary border-border group-hover/item:bg-white text-xs">🌿</span>
-                    <span class="flex-1 truncate">Paranet Peneduh 65-75%</span>
-                  </a>
-                  <a href="/produk/insectnet-kasa-greenhouse/" class="group/item flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13px] font-bold text-dark hover:bg-secondary/60 hover:text-primary transition-all">
-                    <span class="w-7 h-7 shrink-0 flex items-center justify-center rounded-lg border text-primary bg-secondary border-border group-hover/item:bg-white text-xs">🛡️</span>
-                    <span class="flex-1 truncate">Insect Net 50 Mesh</span>
-                  </a>
-                  <a href="/produk/spring-clip-profil-lock/" class="group/item flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13px] font-bold text-dark hover:bg-secondary/60 hover:text-primary transition-all">
-                    <span class="w-7 h-7 shrink-0 flex items-center justify-center rounded-lg border text-primary bg-secondary border-border group-hover/item:bg-white text-xs">🔒</span>
-                    <span class="flex-1 truncate">Spring Clip &amp; Kanal C</span>
-                  </a>
+              <!-- Bottom Bar: View All Products -->
+              <a
+                href="/produk/"
+                class="flex items-center justify-between p-3 rounded-2xl bg-secondary/60 hover:bg-secondary text-dark text-xs font-bold transition-colors border border-border/50"
+              >
+                <div class="flex items-center gap-2">
+                  <span class="w-2 h-2 rounded-full bg-emerald-600"></span>
+                  <span>Buka Semua Katalog Produk &amp; Material Pertanian</span>
                 </div>
-              </div>
-
-              <!-- Col 3: Irigasi & Mulsa -->
-              <div class="flex flex-col">
-                <p class="text-[10px] font-extrabold uppercase tracking-wider text-primary mb-3.5 border-b border-border/60 pb-1.5">
-                  Irigasi &amp; Mulsa
-                </p>
-                <div class="flex flex-col gap-1">
-                  <a href="/produk/selang-drip-irigasi-16mm/" class="group/item flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13px] font-bold text-dark hover:bg-secondary/60 hover:text-primary transition-all">
-                    <span class="w-7 h-7 shrink-0 flex items-center justify-center rounded-lg border text-primary bg-secondary border-border group-hover/item:bg-white text-xs">💧</span>
-                    <span class="flex-1 truncate">Selang Drip 16mm</span>
-                  </a>
-                  <a href="/produk/mulsa-plastik-hitam-perak/" class="group/item flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13px] font-bold text-dark hover:bg-secondary/60 hover:text-primary transition-all">
-                    <span class="w-7 h-7 shrink-0 flex items-center justify-center rounded-lg border text-primary bg-secondary border-border group-hover/item:bg-white text-xs">⚫</span>
-                    <span class="flex-1 truncate">Mulsa Plastik MPHP</span>
-                  </a>
-                  <a href="/produk/sprayer-elektrik-16-liter/" class="group/item flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13px] font-bold text-dark hover:bg-secondary/60 hover:text-primary transition-all">
-                    <span class="w-7 h-7 shrink-0 flex items-center justify-center rounded-lg border text-primary bg-secondary border-border group-hover/item:bg-white text-xs">🔋</span>
-                    <span class="flex-1 truncate">Sprayer Elektrik 16L</span>
-                  </a>
-                  <a href="/produk/paket-instalasi-hidroponik/" class="group/item flex items-center gap-2.5 px-2.5 py-1.5 rounded-xl text-[13px] font-bold text-dark hover:bg-secondary/60 hover:text-primary transition-all">
-                    <span class="w-7 h-7 shrink-0 flex items-center justify-center rounded-lg border text-primary bg-secondary border-border group-hover/item:bg-white text-xs">🥬</span>
-                    <span class="flex-1 truncate">Paket Hidroponik NFT</span>
-                  </a>
-                </div>
-              </div>
-
-              <!-- Col 4: Featured Promo Card (Babyfit style) -->
-              <div class="bg-gradient-to-br from-peach via-peach/40 to-secondary border border-border/80 p-5 rounded-2xl flex flex-col justify-between h-full min-h-[200px]">
-                <div>
-                  <span class="bg-primary text-white text-[9px] font-extrabold tracking-wider px-2.5 py-1 rounded-full uppercase select-none">
-                    KONTRAKTOR RESMI
-                  </span>
-                  <h4 class="font-sans font-extrabold text-dark text-sm mt-3.5">
-                    Kalkulator RAB Greenhouse
-                  </h4>
-                  <p class="text-xs text-muted leading-relaxed mt-1.5 font-medium">
-                    Hitung estimasi kebutuhan material &amp; jasa pembuatan per m² secara transparan.
-                  </p>
-                </div>
-                <a
-                  href="/jasa/pembuatan-greenhouse/#kalkulator"
-                  class="flex items-center gap-2 text-xs font-bold text-primary hover:text-primary-hover group/btn mt-4"
-                >
-                  <span>Hitung RAB Sekarang</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 transition-transform group-hover/btn:translate-x-0.5">
-                    <path d="M5 12h14"></path>
-                    <path d="m12 5 7 7-7 7"></path>
-                  </svg>
-                </a>
-              </div>
-
+                <span class="text-primary font-extrabold flex items-center gap-1">
+                  <span>Lihat Seluruh Produk (10+)</span>
+                  <span>&rarr;</span>
+                </span>
+              </a>
             </div>
           </div>
         </div>
 
-        <a
-          href="/jasa/pembuatan-greenhouse/"
-          class:list={[
-            'transition-colors duration-300 font-sans font-bold text-sm hover:text-primary',
-            currentPath.startsWith('/jasa/') ? 'text-primary' : 'text-dark',
-          ]}
-        >
-          Jasa Greenhouse
-        </a>
+        <!-- 2. Layanan Greenhouse (Dropdown) -->
+        <div class="relative group h-full flex items-center">
+          <button
+            type="button"
+            aria-haspopup="true"
+            class:list={[
+              'flex items-center gap-1.5 transition-colors duration-200 font-sans font-bold text-sm cursor-pointer hover:text-primary',
+              currentPath.startsWith('/jasa/') || currentPath.startsWith('/proyek') || currentPath.startsWith('/wilayah-layanan') ? 'text-primary' : 'text-dark',
+            ]}
+          >
+            <span>Layanan Greenhouse</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180">
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </button>
 
-        <a
-          href="/proyek/"
-          class:list={[
-            'transition-colors duration-300 font-sans font-bold text-sm hover:text-primary',
-            currentPath.startsWith('/proyek/') ? 'text-primary' : 'text-dark',
-          ]}
-        >
-          Portofolio
-        </a>
+          <div class="invisible opacity-0 translate-y-1 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 absolute top-full left-0 pt-3 z-50">
+            <div class="w-80 bg-white border border-border rounded-3xl shadow-card p-3 flex flex-col gap-1 text-left select-none">
+              <a href="/jasa/pembuatan-greenhouse/" class="group/item flex items-start gap-3 p-3 rounded-2xl hover:bg-secondary/60 transition-all">
+                <span class="w-8 h-8 shrink-0 flex items-center justify-center rounded-xl border text-primary bg-secondary border-border group-hover/item:bg-white text-sm">🏗️</span>
+                <div>
+                  <span class="font-bold text-sm text-dark group-hover/item:text-primary block transition-colors">Jasa Pembuatan Greenhouse</span>
+                  <span class="text-xs text-muted leading-snug block mt-0.5">Rancang bangun galvanis, bambu, baja ringan, &amp; tunnel garam.</span>
+                </div>
+              </a>
+              <a href="/jasa/pembuatan-greenhouse/#kalkulator" class="group/item flex items-start gap-3 p-3 rounded-2xl hover:bg-secondary/60 transition-all">
+                <span class="w-8 h-8 shrink-0 flex items-center justify-center rounded-xl border text-primary bg-secondary border-border group-hover/item:bg-white text-sm">🧮</span>
+                <div>
+                  <span class="font-bold text-sm text-dark group-hover/item:text-primary block transition-colors">Kalkulator Estimasi RAB</span>
+                  <span class="text-xs text-muted leading-snug block mt-0.5">Simulasi kebutuhan biaya material &amp; jasa per m² online.</span>
+                </div>
+              </a>
+              <a href="/proyek/" class="group/item flex items-start gap-3 p-3 rounded-2xl hover:bg-secondary/60 transition-all">
+                <span class="w-8 h-8 shrink-0 flex items-center justify-center rounded-xl border text-primary bg-secondary border-border group-hover/item:bg-white text-sm">📸</span>
+                <div>
+                  <span class="font-bold text-sm text-dark group-hover/item:text-primary block transition-colors">Portofolio Proyek</span>
+                  <span class="text-xs text-muted leading-snug block mt-0.5">Dokumentasi hasil pengerjaan tim di berbagai daerah.</span>
+                </div>
+              </a>
+              <a href="/wilayah-layanan/" class="group/item flex items-start gap-3 p-3 rounded-2xl hover:bg-secondary/60 transition-all border-t border-border/60 mt-1 pt-3">
+                <span class="w-8 h-8 shrink-0 flex items-center justify-center rounded-xl border text-primary bg-secondary border-border group-hover/item:bg-white text-sm">🚚</span>
+                <div>
+                  <span class="font-bold text-sm text-dark group-hover/item:text-primary block transition-colors">Ekspedisi &amp; Wilayah Layanan</span>
+                  <span class="text-xs text-muted leading-snug block mt-0.5">Pengiriman material &amp; instalasi proyek se-Indonesia.</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
 
+        <!-- 3. Panduan & Blog (Direct Link) -->
         <a
           href="/artikel/"
           class:list={[
-            'transition-colors duration-300 font-sans font-bold text-sm hover:text-primary',
-            currentPath.startsWith('/artikel/') ? 'text-primary' : 'text-dark',
+            'transition-colors duration-200 font-sans font-bold text-sm hover:text-primary',
+            currentPath.startsWith('/artikel') ? 'text-primary' : 'text-dark',
           ]}
         >
           Panduan &amp; Blog
         </a>
 
-        <!-- Highlighted RAB item matching Gift Guide in screenshot -->
+        <!-- 4. Tentang Kami (Dropdown) -->
+        <div class="relative group h-full flex items-center">
+          <button
+            type="button"
+            aria-haspopup="true"
+            class:list={[
+              'flex items-center gap-1.5 transition-colors duration-200 font-sans font-bold text-sm cursor-pointer hover:text-primary',
+              currentPath.startsWith('/tentang-kami') || currentPath.startsWith('/lokasi') || currentPath.startsWith('/kontak') ? 'text-primary' : 'text-dark',
+            ]}
+          >
+            <span>Tentang Kami</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 transition-transform duration-200 group-hover:rotate-180">
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </button>
+
+          <div class="invisible opacity-0 translate-y-1 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200 absolute top-full right-0 pt-3 z-50">
+            <div class="w-72 bg-white border border-border rounded-3xl shadow-card p-3 flex flex-col gap-1 text-left select-none">
+              <a href="/tentang-kami/" class="group/item flex items-start gap-3 p-3 rounded-2xl hover:bg-secondary/60 transition-all">
+                <span class="w-8 h-8 shrink-0 flex items-center justify-center rounded-xl border text-primary bg-secondary border-border group-hover/item:bg-white text-sm">🏢</span>
+                <div>
+                  <span class="font-bold text-sm text-dark group-hover/item:text-primary block transition-colors">Profil Perusahaan</span>
+                  <span class="text-xs text-muted leading-snug block mt-0.5">Filosofi kerja &amp; empat pilar solusi pertanian.</span>
+                </div>
+              </a>
+              <a href="/lokasi/" class="group/item flex items-start gap-3 p-3 rounded-2xl hover:bg-secondary/60 transition-all">
+                <span class="w-8 h-8 shrink-0 flex items-center justify-center rounded-xl border text-primary bg-secondary border-border group-hover/item:bg-white text-sm">📍</span>
+                <div>
+                  <span class="font-bold text-sm text-dark group-hover/item:text-primary block transition-colors">Toko &amp; Gudang Malang</span>
+                  <span class="text-xs text-muted leading-snug block mt-0.5">Alamat fisik, cek sampel produk, &amp; jam buka.</span>
+                </div>
+              </a>
+              <a href="/kontak/" class="group/item flex items-start gap-3 p-3 rounded-2xl hover:bg-secondary/60 transition-all border-t border-border/60 mt-1 pt-3">
+                <span class="w-8 h-8 shrink-0 flex items-center justify-center rounded-xl border text-primary bg-secondary border-border group-hover/item:bg-white text-sm">💬</span>
+                <div>
+                  <span class="font-bold text-sm text-dark group-hover/item:text-primary block transition-colors">Kontak Resmi &amp; CS</span>
+                  <span class="text-xs text-muted leading-snug block mt-0.5">Konsultasi WhatsApp pemesanan &amp; survei.</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Quick Highlight CTA: Kalkulator RAB Button -->
         <a
           href="/jasa/pembuatan-greenhouse/#kalkulator"
-          class="transition-colors duration-300 font-sans font-extrabold text-sm text-primary hover:text-primary-hover"
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-200/80 text-xs font-extrabold transition-all hover:scale-[1.02] active:scale-[0.98] select-none shrink-0"
         >
-          Kalkulator RAB
+          <span>🧮</span>
+          <span>Hitung RAB</span>
         </a>
 
-        <a
-          href="/tentang-kami/"
-          class:list={[
-            'transition-colors duration-300 font-sans font-bold text-sm hover:text-primary',
-            currentPath.startsWith('/tentang-kami/') ? 'text-primary' : 'text-dark',
-          ]}
-        >
-          Tentang Kami
-        </a>
       </nav>
 
       <!-- User Icons (Search, WhatsApp Consult, Catalog / Inquiry) -->
@@ -318,7 +396,7 @@ const waInquiryUrl = generateGeneralInquiryUrl('header-cta');
   </div>
 </header>
 
-<!-- Search Overlay Drawer Modal (Shopify style matching babyfit.us) -->
+<!-- Search Overlay Drawer Modal -->
 <div
   id="search-overlay"
   class="fixed inset-0 bg-black/80 z-50 hidden opacity-0 transition-opacity duration-300 flex items-start justify-center p-0 lg:pt-16"
@@ -334,28 +412,24 @@ const waInquiryUrl = generateGeneralInquiryUrl('header-cta');
     <div class="w-16 h-1 border-b border-border mx-auto mb-1 flex-shrink-0 lg:hidden"></div>
 
     <!-- Search Input Header -->
-    <div class="flex items-center justify-between gap-4 w-full border-b border-border pb-4">
-      <div class="flex-1 relative font-sans">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-3.5 top-1/2 -translate-y-1/2 w-5 h-5 text-dark">
-          <path d="m21 21-4.34-4.34"></path>
+    <div class="flex items-center justify-between border-b border-border pb-4">
+      <div class="flex items-center gap-3 flex-1">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 text-muted">
           <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.34-4.34"></path>
         </svg>
         <input
-          type="search"
           id="search-input"
-          placeholder="Cari plastik UV, paranet, selang drip, pupuk NPK..."
-          class="w-full pl-11 pr-16 py-3 rounded-xl border border-border focus:outline-none focus:bg-secondary text-base font-bold text-dark bg-white shadow-sm placeholder:text-muted"
+          type="search"
+          placeholder="Cari plastik UV, paranet, selang drip, atau jasa greenhouse..."
+          class="w-full bg-transparent border-none text-dark focus:outline-none text-base placeholder:text-muted font-sans font-medium"
         />
-        <!-- ESC shortcut indicator -->
-        <div class="hidden lg:flex items-center absolute right-3.5 top-1/2 -translate-y-1/2 gap-1 select-none">
-          <kbd class="px-2 py-0.5 border border-border bg-secondary text-primary text-xs font-sans rounded-xl shadow-sm">ESC</kbd>
-        </div>
       </div>
       <button
         id="close-search-btn"
         type="button"
-        class="p-2 text-dark hover:bg-secondary rounded-xl transition-colors cursor-pointer"
-        aria-label="Tutup Pencarian"
+        aria-label="Tutup pencarian"
+        class="text-muted hover:text-dark p-2 hover:bg-secondary rounded-xl transition-colors cursor-pointer"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5">
           <path d="M18 6 6 18"></path>
@@ -364,12 +438,9 @@ const waInquiryUrl = generateGeneralInquiryUrl('header-cta');
       </button>
     </div>
 
-    <!-- Popular Searches / Quick Collections -->
-    <div class="border-t border-border pt-4 text-left font-sans" id="search-popular-tags">
-      <p class="text-xs uppercase tracking-wider font-bold text-dark mb-3 flex items-center gap-1.5">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-3.5 h-3.5 text-primary">
-          <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"></path>
-        </svg>
+    <!-- Popular Searches Pills -->
+    <div>
+      <p class="text-[10px] font-extrabold uppercase tracking-wider text-muted mb-3 font-sans">
         PENCARIAN POPULER
       </p>
       <div class="flex flex-wrap gap-2.5 text-xs font-bold">
@@ -420,8 +491,8 @@ const waInquiryUrl = generateGeneralInquiryUrl('header-cta');
             <span>Jasa Pembuatan Greenhouse</span>
             <span>&rarr;</span>
           </a>
-          <a href="/artikel/biaya-pembuatan-greenhouse/" class="flex items-center justify-between p-2 rounded-xl hover:bg-secondary text-dark text-sm font-bold transition-colors">
-            <span>Panduan Hitung RAB Greenhouse</span>
+          <a href="/jasa/pembuatan-greenhouse/#kalkulator" class="flex items-center justify-between p-2 rounded-xl hover:bg-secondary text-dark text-sm font-bold transition-colors">
+            <span>Kalkulator Estimasi RAB</span>
             <span>&rarr;</span>
           </a>
           <a href="/wilayah-layanan/" class="flex items-center justify-between p-2 rounded-xl hover:bg-secondary text-dark text-sm font-bold transition-colors">
@@ -442,7 +513,7 @@ const waInquiryUrl = generateGeneralInquiryUrl('header-cta');
   aria-hidden="true"
 ></div>
 
-<!-- Mobile Bottom-Sheet Drawer (Shopify mobile navigation matching babyfit.us) -->
+<!-- Mobile Bottom-Sheet Drawer -->
 <aside
   id="mobile-drawer"
   class="fixed bottom-0 left-0 right-0 w-full max-h-[88vh] bg-white z-50 transform translate-y-full flex flex-col rounded-t-3xl border-t border-border pb-6 transition-transform duration-300 overflow-hidden font-sans lg:hidden"
@@ -473,47 +544,74 @@ const waInquiryUrl = generateGeneralInquiryUrl('header-cta');
     </button>
   </div>
 
-  <!-- Drawer Body Navigation -->
-  <div class="overflow-y-auto px-6 py-4 space-y-4">
-    <div class="space-y-1">
-      <p class="text-[10px] font-extrabold uppercase tracking-wider text-muted mb-2">Navigasi Utama</p>
-      <a href="/produk/" class="flex items-center justify-between py-2.5 px-3 rounded-xl text-dark hover:bg-secondary font-bold text-sm">
-        <span>Semua Produk &amp; Material</span>
-        <span>&rarr;</span>
-      </a>
-      <a href="/jasa/pembuatan-greenhouse/" class="flex items-center justify-between py-2.5 px-3 rounded-xl text-dark hover:bg-secondary font-bold text-sm">
-        <span>Jasa Pembuatan Greenhouse</span>
-        <span>&rarr;</span>
-      </a>
-      <a href="/proyek/" class="flex items-center justify-between py-2.5 px-3 rounded-xl text-dark hover:bg-secondary font-bold text-sm">
-        <span>Portofolio Proyek</span>
-        <span>&rarr;</span>
-      </a>
-      <a href="/artikel/" class="flex items-center justify-between py-2.5 px-3 rounded-xl text-dark hover:bg-secondary font-bold text-sm">
-        <span>Panduan Tani &amp; Blog</span>
-        <span>&rarr;</span>
-      </a>
-      <a href="/lokasi/" class="flex items-center justify-between py-2.5 px-3 rounded-xl text-dark hover:bg-secondary font-bold text-sm">
-        <span>Lokasi Gudang Malang</span>
-        <span>&rarr;</span>
-      </a>
+  <!-- Drawer Body Navigation (Organized Grouping) -->
+  <div class="overflow-y-auto px-6 py-4 space-y-5">
+    
+    <!-- 1. Produk & Material -->
+    <div>
+      <p class="text-[10px] font-extrabold uppercase tracking-wider text-muted mb-2 font-sans">Katalog Produk &amp; Material</p>
+      <div class="space-y-1">
+        <a href="/produk/" class="flex items-center justify-between py-2.5 px-3 rounded-xl text-dark hover:bg-secondary font-bold text-sm">
+          <span>Semua Produk &amp; Material</span>
+          <span class="text-primary">&rarr;</span>
+        </a>
+        <a href="/produk/perlengkapan-greenhouse/" class="flex items-center justify-between py-2 px-3 rounded-xl text-zinc-700 hover:bg-secondary text-xs font-semibold">
+          <span>Material Greenhouse (Plastik UV &amp; Paranet)</span>
+          <span>&rarr;</span>
+        </a>
+        <a href="/produk/perlengkapan-pertanian/" class="flex items-center justify-between py-2 px-3 rounded-xl text-zinc-700 hover:bg-secondary text-xs font-semibold">
+          <span>Irigasi &amp; Mulsa (Selang Drip 16mm &amp; MPHP)</span>
+          <span>&rarr;</span>
+        </a>
+        <a href="/produk/saprodi-pertanian/" class="flex items-center justify-between py-2 px-3 rounded-xl text-zinc-700 hover:bg-secondary text-xs font-semibold">
+          <span>Saprodi Pertanian (Pupuk NPK &amp; Media Tanam)</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
     </div>
 
-    <!-- Quick Material Categories -->
-    <div class="pt-3 border-t border-border space-y-1">
-      <p class="text-[10px] font-extrabold uppercase tracking-wider text-muted mb-2">Kategori Material Terlaris</p>
-      <div class="grid grid-cols-2 gap-2 text-xs font-semibold">
-        <a href="/produk/plastik-uv-greenhouse-14/" class="p-2.5 rounded-xl bg-secondary/80 text-dark hover:bg-peach hover:text-primary">
-          ☀️ Plastik UV 200µm
+    <!-- 2. Layanan Greenhouse & Proyek -->
+    <div class="pt-3 border-t border-border">
+      <p class="text-[10px] font-extrabold uppercase tracking-wider text-muted mb-2 font-sans">Layanan Konstruksi &amp; Jasa</p>
+      <div class="space-y-1">
+        <a href="/jasa/pembuatan-greenhouse/" class="flex items-center justify-between py-2.5 px-3 rounded-xl text-dark hover:bg-secondary font-bold text-sm">
+          <span>Jasa Pembuatan Greenhouse</span>
+          <span class="text-primary">&rarr;</span>
         </a>
-        <a href="/produk/paranet-tanaman/" class="p-2.5 rounded-xl bg-secondary/80 text-dark hover:bg-peach hover:text-primary">
-          🌿 Paranet Peneduh
+        <a href="/jasa/pembuatan-greenhouse/#kalkulator" class="flex items-center justify-between py-2 px-3 rounded-xl text-emerald-800 bg-emerald-50/80 font-bold text-xs">
+          <span>🧮 Hitung Estimasi Biaya (RAB Online)</span>
+          <span>&rarr;</span>
         </a>
-        <a href="/produk/selang-drip-irigasi-16mm/" class="p-2.5 rounded-xl bg-secondary/80 text-dark hover:bg-peach hover:text-primary">
-          💧 Selang Drip 16mm
+        <a href="/proyek/" class="flex items-center justify-between py-2 px-3 rounded-xl text-zinc-700 hover:bg-secondary text-xs font-semibold">
+          <span>Portofolio Proyek Terpasang</span>
+          <span>&rarr;</span>
         </a>
-        <a href="/produk/pupuk-npk-16-16-16/" class="p-2.5 rounded-xl bg-secondary/80 text-dark hover:bg-peach hover:text-primary">
-          🌱 Pupuk NPK
+        <a href="/wilayah-layanan/" class="flex items-center justify-between py-2 px-3 rounded-xl text-zinc-700 hover:bg-secondary text-xs font-semibold">
+          <span>Jangkauan Ekspedisi Kargo Indonesia</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 3. Edukasi & Profil -->
+    <div class="pt-3 border-t border-border">
+      <p class="text-[10px] font-extrabold uppercase tracking-wider text-muted mb-2 font-sans">Edukasi &amp; Informasi Usaha</p>
+      <div class="space-y-1">
+        <a href="/artikel/" class="flex items-center justify-between py-2 px-3 rounded-xl text-zinc-800 hover:bg-secondary text-xs font-bold">
+          <span>Panduan Tani &amp; Blog</span>
+          <span>&rarr;</span>
+        </a>
+        <a href="/tentang-kami/" class="flex items-center justify-between py-2 px-3 rounded-xl text-zinc-800 hover:bg-secondary text-xs font-semibold">
+          <span>Tentang Agrokomplek Cemerlang</span>
+          <span>&rarr;</span>
+        </a>
+        <a href="/lokasi/" class="flex items-center justify-between py-2 px-3 rounded-xl text-zinc-800 hover:bg-secondary text-xs font-semibold">
+          <span>Lokasi Toko &amp; Gudang Malang</span>
+          <span>&rarr;</span>
+        </a>
+        <a href="/kontak/" class="flex items-center justify-between py-2 px-3 rounded-xl text-zinc-800 hover:bg-secondary text-xs font-semibold">
+          <span>Kontak Resmi &amp; Alur Pemesanan</span>
+          <span>&rarr;</span>
         </a>
       </div>
     </div>
