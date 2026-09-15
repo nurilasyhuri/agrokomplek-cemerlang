@@ -9,23 +9,23 @@ export const HOME_FAQS: FaqItem[] = [
     answer: 'Biaya tidak bisa ditentukan hanya berdasarkan luas bangunan. Jenis rangka (bambu, baja ringan, pipa galvanis), ketebalan plastik UV, kerapatan insect net, ventilasi, kedalaman fondasi, dan sistem irigasi menentukan total biaya. Gunakan kalkulator RAB online kami untuk estimasi awal atau konsultasikan ukuran lahan via WhatsApp.',
   },
   {
-    question: 'Apakah bisa kirim plastik UV dan paranet ke luar Malang?',
-    answer: 'Bisa. Kami melayani pengiriman sarana produksi pertanian dan material greenhouse ke seluruh Indonesia (Jawa, Sumatera, Kalimantan, Sulawesi, hingga Papua) menggunakan ekspedisi kargo darat dan laut dengan tarif hemat dan aman.',
+    question: 'Apakah melayani survei lahan dan instalasi greenhouse ke luar Jawa Timur?',
+    answer: 'Ya. Kami berbasis di Malang dan melayani pengiriman material sistem knock-down, supervisi teknis, hingga instalasi penuh oleh tim teknisi berpengalaman ke seluruh Indonesia (Jawa Timur, Jawa Tengah, Jawa Barat, Bali, Sumatera, Kalimantan, Sulawesi, hingga Papua).',
   },
   {
     question: 'Apa perbedaan plastik UV greenhouse dan plastik biasa?',
     answer: 'Plastik UV greenhouse mengandung aditif UV stabilizer (14%-20%) dengan ketebalan standar 200 mikron (0.20 mm). Berfungsi menyaring sinar ultraviolet berlebih, menahan benturan angin/hujan, anti-drip (mencegah tetesan kondensasi jamur), dan bertahan 3-5 tahun di bawah iklim tropis.',
   },
   {
-    question: 'Apakah plastik UV dan paranet bisa dibeli eceran?',
-    answer: 'Bisa. Kami menyediakan pembelian per roll utuh (panjang 100 meter untuk skala kebun/proyek) maupun eceran potongan meteran di toko fisik kami di Kedungkandang Malang atau pemesanan online.',
+    question: 'Berapa lama garansi dan daya tahan struktur greenhouse yang dibangun?',
+    answer: 'Daya tahan bergantung pada tipe struktur yang dipilih: Greenhouse pipa galvanis hot-dip bertahan 10-15+ tahun, baja ringan 7-10 tahun, dan bambu awet 3-5 tahun. Plastik UV 200 mikron yang kami pasang memiliki ketahanan paparan sinar ultraviolet 3 hingga 5 tahun.',
   },
   {
     question: 'Bagaimana alur dan proses pembuatan greenhouse?',
     answer: 'Proses mencakup: 1) Konsultasi kebutuhan dan jenis tanaman, 2) Pengumpulan informasi ukuran lahan, 3) Pemilihan tipe rangka dan spesifikasi penutup, 4) Penyusunan RAB transparan, 5) Survei lokasi, 6) Fabrikasi material di workshop Malang, 7) Pengiriman dan perakitan di lokasi, 8) Uji kekokohan dan serah terima kunci.',
   },
   {
-    question: 'Apakah bisa konsultasi teknis terlebih dahulu sebelum membeli?',
+    question: 'Apakah bisa konsultasi teknis terlebih dahulu sebelum membuat proyek?',
     answer: 'Tentu. Anda dapat berkonsultasi secara gratis dengan tim teknis kami mengenai estimasi kebutuhan material, arah angin, pemilihan ventilasi monitor roof, atau perhitungan kebutuhan selang drip irigasi melalui WhatsApp.',
   },
 ];

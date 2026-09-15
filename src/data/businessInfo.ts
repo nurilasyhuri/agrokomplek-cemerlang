@@ -1,10 +1,10 @@
 export const BUSINESS_INFO = {
   name: 'Agrokomplek Cemerlang',
   legalName: 'Agrokomplek Cemerlang Malang',
-  tagline: 'Membangun Pertanian yang Lebih Terlindungi. Lebih Efisien. Lebih Siap Berkembang.',
-  positioning: 'Distributor Saprodi Pertanian & Kontraktor Jasa Pembuatan Greenhouse',
-  brandPillars: 'PERTANIAN • PROTEKSI • IRIGASI • KONSTRUKSI',
-  description: 'Agrokomplek Cemerlang adalah distributor saprodi pertanian terlengkap, penyedia material greenhouse (plastik UV, paranet, insect net), perlengkapan irigasi, serta kontraktor jasa pembuatan greenhouse di Malang melayani seluruh Indonesia.',
+  tagline: 'Membangun Greenhouse Modern yang Lebih Kokoh, Presisi, dan Tahan Iklim Tropis.',
+  positioning: 'Kontraktor Spesialis Jasa Pembuatan Greenhouse Berpengalaman',
+  brandPillars: 'KONSTRUKSI • PROTEKSI • OTOMASI • IRIGASI',
+  description: 'Agrokomplek Cemerlang adalah kontraktor spesialis jasa pembuatan greenhouse di Malang yang melayani survei, rancang bangun struktur galvanis, baja ringan, bambu, tunnel garam, instalasi irigasi, serta pengiriman material konstruksi ke seluruh Indonesia.',
   address: {
     street: 'Jl. KH. Malik Dalam RT 01 RW 07',
     village: 'Buring',
@@ -28,13 +28,14 @@ export const BUSINESS_INFO = {
     mapsEmbedIframe: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.0!2d112.6456!3d-7.9984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNTknNTQuMiJTIDExMsKwMzgnNDQuMiJF!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid',
   },
   hours: {
-    display: 'Buka Setiap Hari (Online Konsultasi 24 Jam)',
+    display: 'Buka Setiap Hari (Konsultasi Teknis & RAB 24 Jam)',
     physicalStore: 'Senin - Minggu: 07.30 - 17.00 WIB',
   },
   greenhouseTypes: [
-    { id: 'bambu', name: 'Greenhouse Bambu', durability: '3 - 5 Tahun', costTier: 'Ekonomis', suitableFor: 'Sayuran daun, pembibitan, hidroponik pemula' },
-    { id: 'galvanis', name: 'Greenhouse Galvanis', durability: '10 - 15+ Tahun', costTier: 'Standar Industri', suitableFor: 'Melon hidroponik, hortikultura intensif, komersial' },
-    { id: 'baja-ringan', name: 'Greenhouse Baja Ringan', durability: '7 - 10 Tahun', costTier: 'Menengah', suitableFor: 'Tanaman buah, persemaian modern, instalasi cepat' },
-    { id: 'tunnel-garam', name: 'Tunnel Garam (Prisma Garam)', durability: '5 - 10 Tahun', costTier: 'Spesialis Pesisir', suitableFor: 'Kristalisasi garam meja tahan hujan & bersih' },
+    { id: 'galvanis', name: 'Greenhouse Galvanis', durability: '10 - 15+ Tahun', costTier: 'Standar Industri', suitableFor: 'Melon hidroponik, hortikultura komersial intensif, kebun skala besar' },
+    { id: 'baja-ringan', name: 'Greenhouse Baja Ringan', durability: '7 - 10 Tahun', costTier: 'Menengah Populer', suitableFor: 'Tanaman buah, persemaian modern, sayuran daun, instalasi cepat' },
+    { id: 'bambu', name: 'Greenhouse Bambu Awet', durability: '3 - 5 Tahun', costTier: 'Ekonomis Efisien', suitableFor: 'Kelompok tani, pembibitan, hidroponik pemula, dataran tinggi' },
+    { id: 'tunnel-garam', name: 'Tunnel Garam (Prisma Garam)', durability: '5 - 10 Tahun', costTier: 'Spesialis Pesisir', suitableFor: 'Kristalisasi garam meja higienis tahan hujan & korosi air laut' },
+    { id: 'smart-greenhouse', name: 'Smart Greenhouse & Otomasi', durability: '10 - 15+ Tahun', costTier: 'High-Tech Otomatis', suitableFor: 'Pengendalian suhu mikroklimat otomatis, exhaust fan, & fertigasi cerdas' },
   ],
 };

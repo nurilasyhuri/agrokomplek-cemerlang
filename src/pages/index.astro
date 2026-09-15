@@ -3,7 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroSection from '../components/home/HeroSection.astro';
 import TrustBar from '../components/home/TrustBar.astro';
 import CategoryGrid from '../components/home/CategoryGrid.astro';
-import ProductCard from '../components/products/ProductCard.astro';
 import ValueHighlights from '../components/home/ValueHighlights.astro';
 import GreenhouseServiceHighlight from '../components/home/GreenhouseServiceHighlight.astro';
 import DualPathChooser from '../components/home/DualPathChooser.astro';
@@ -14,10 +13,6 @@ import HomeFaq from '../components/home/HomeFaq.astro';
 import CtaBanner from '../components/home/CtaBanner.astro';
 import { getLocalBusinessSchema, getWebsiteSchema, getFaqSchema } from '../utils/seo';
 import { HOME_FAQS } from '../data/faqs';
-import { getCollection } from 'astro:content';
-
-const allProducts = await getCollection('produk');
-const featuredProducts = allProducts.filter((p) => p.data.featured).slice(0, 4);
 
 const localSchema = getLocalBusinessSchema();
 const websiteSchema = getWebsiteSchema();
@@ -25,83 +20,41 @@ const faqSchema = getFaqSchema(HOME_FAQS);
 ---
 
 <BaseLayout
-  title="Jasa Pembuatan Greenhouse &amp; Supplier Saprodi Pertanian - Agrokomplek Cemerlang"
-  description="Kontraktor jasa pembuatan greenhouse &amp; distributor saprodi pertanian (plastik UV 200 mikron, paranet, selang drip, mulsa) di Malang melayani seluruh Indonesia."
+  title="Jasa Pembuatan Greenhouse &amp; Kontraktor Konstruksi - Agrokomplek Cemerlang"
+  description="Kontraktor spesialis jasa pembuatan greenhouse (galvanis, baja ringan, bambu, tunnel garam) di Malang. Melayani survei lahan, desain teknis, estimasi RAB transparan, &amp; instalasi se-Indonesia."
   jsonLd={[localSchema, websiteSchema, faqSchema]}
 >
-  <!-- 1. Hero Banner (Shopify Style Split Layout) -->
+  <!-- 1. Hero Banner (5-Slide Greenhouse Showcase Slider) -->
   <HeroSection />
 
-  <!-- 2. Trust Strip (Shopify Feature Bar) -->
+  <!-- 2. Trust Strip (Contractor Quality Highlights) -->
   <TrustBar />
 
-  <!-- 3. Kebutuhan Pertanian dalam Satu Tempat (Category Grid) -->
+  <!-- 3. Pilihan Tipe Konstruksi Greenhouse (4 Core Types Grid) -->
   <CategoryGrid />
 
-  <!-- 4. Produk Pertanian Pilihan (Featured Products Grid) -->
-  {featuredProducts.length > 0 && (
-    <section class="py-16 sm:py-24 bg-white border-b border-border font-sans">
-      <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-        <!-- Section Header -->
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 pb-5 border-b border-border gap-4">
-          <div>
-            <span class="text-xs font-semibold text-primary block mb-1">
-              Produk Pertanian Pilihan
-            </span>
-            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-dark tracking-tight">
-              Material yang Banyak Digunakan untuk Greenhouse &amp; Kebun
-            </h2>
-          </div>
-          <a
-            href="/produk/"
-            class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-primary-hover transition-colors shrink-0"
-          >
-            <span>Lihat Semua Katalog</span>
-            <span aria-hidden="true">&rarr;</span>
-          </a>
-        </div>
-
-        <!-- 4-Column Product Grid -->
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          {featuredProducts.map((product) => (
-            <ProductCard
-              title={product.data.title}
-              description={product.data.description}
-              category={product.data.category}
-              priceDisplay={product.data.priceDisplay}
-              stockStatus={product.data.stockStatus}
-              thumbnail={product.data.thumbnail}
-              slug={product.slug}
-              brand={product.data.brand}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  )}
-
-  <!-- 5. Jasa Pembuatan Greenhouse (Technical Services & Types) -->
+  <!-- 4. Jasa Pembuatan Greenhouse (Technical Services & Types) -->
   <GreenhouseServiceHighlight />
 
-  <!-- 6. Mengapa Memilih Agrokomplek Cemerlang? (5 Core Pillars) -->
+  <!-- 5. Mengapa Memilih Agrokomplek Cemerlang? (5 Core Pillars) -->
   <ValueHighlights />
 
-  <!-- 7. Melayani Pengiriman Material Pertanian ke Berbagai Wilayah Indonesia -->
+  <!-- 6. Melayani Pengiriman & Instalasi Greenhouse ke Seluruh Indonesia -->
   <NationwideCoverage />
 
-  <!-- 8. Belanja Material atau Bangun Greenhouse? (Dual Path Chooser) -->
+  <!-- 7. Pilihan Solusi: Material Rangka atau Bangun Terima Jadi? -->
   <DualPathChooser />
 
-  <!-- 9. Customer Reviews & Social Proof -->
+  <!-- 8. Customer Reviews & Social Proof -->
   <CustomerReviews />
 
-  <!-- 10. Panduan Pertanian & Greenhouse (From the Blog) -->
+  <!-- 9. Panduan Konstruksi & Greenhouse (From the Blog) -->
   <HomeBlogSection />
 
-  <!-- 11. Pertanyaan Seputar Greenhouse & Saprodi (FAQ) -->
+  <!-- 10. Pertanyaan Seputar Jasa Pembuatan Greenhouse (FAQ) -->
   <HomeFaq />
 
-  <!-- 12. Butuh Saprodi atau Greenhouse? (WhatsApp Consultation CTA) -->
+  <!-- 11. Konsultasikan Rancang Bangun Greenhouse Anda (WhatsApp CTA) -->
   <CtaBanner />
 
 </BaseLayout>

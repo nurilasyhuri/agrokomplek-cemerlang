@@ -1,93 +1,470 @@
 ---
 import { generateGeneralInquiryUrl } from "../../utils/whatsapp";
 
-const waHeroUrl = generateGeneralInquiryUrl("hero-primary");
+const waHeroUrl = generateGeneralInquiryUrl("hero-slider");
+
+const slides = [
+  {
+    id: "greenhouse-modern",
+    tag: "KONTRAKTOR SPESIALIS GREENHOUSE",
+    headlineLine1: "Jasa Pembuatan Greenhouse.",
+    headlineLine2: "Struktur Kokoh & Tahan Cuaca.",
+    subtitle: "Rancang bangun greenhouse modern rangka pipa galvanis, baja ringan, hingga bambu awet berstandar agribisnis. Melayani survei lahan, desain teknis, instalasi irigasi, dan pengerjaan proyek dari Malang untuk seluruh Indonesia.",
+    ctaPrimaryText: "Konsultasi via WhatsApp",
+    ctaPrimaryUrl: waHeroUrl,
+    ctaSecondaryText: "Hitung Estimasi RAB",
+    ctaSecondaryUrl: "/jasa/pembuatan-greenhouse/#kalkulator",
+    imageWebp: "/images/hero/slides/slide-1.webp",
+    imageJpg: "/images/hero/slides/slide-1.jpg",
+    alt: "Konstruksi Greenhouse Galvanis Modern Agrokomplek Cemerlang",
+    navLabel: "Greenhouse",
+    metrics: [
+      { num: "150+", label: "Greenhouse Terpasang" },
+      { num: "15+ Tahun", label: "Daya Tahan Struktur" },
+      { num: "Nusantara", label: "Survei & Pemasangan" }
+    ]
+  },
+  {
+    id: "greenhouse-galvanis",
+    tag: "STANDAR INDUSTRI KOMERSIAL",
+    headlineLine1: "Greenhouse Galvanis Modern.",
+    headlineLine2: "Investasi Jangka Panjang 15+ Tahun.",
+    subtitle: "Struktur pipa galvanis hot-dip tahan puluhan tahun terhadap korosi iklim tropis. Dirancang khusus untuk komoditas hortikultura bernilai tinggi seperti melon hidroponik, tomat cherry, paprika, dan kebun skala industri.",
+    ctaPrimaryText: "Simulasi Biaya Galvanis",
+    ctaPrimaryUrl: "/jasa/pembuatan-greenhouse/#kalkulator",
+    ctaSecondaryText: "Lihat Portofolio Proyek",
+    ctaSecondaryUrl: "/proyek/",
+    imageWebp: "/images/hero/slides/slide-2.webp",
+    imageJpg: "/images/hero/slides/slide-2.jpg",
+    alt: "Greenhouse Galvanis Hot-Dip Agrokomplek Cemerlang",
+    navLabel: "Galvanis",
+    metrics: [
+      { num: "Hot-Dip", label: "Anti Karat Maksimal" },
+      { num: "15+ Tahun", label: "Usia Pakai Struktur" },
+      { num: "Komersial", label: "Standar Industri" }
+    ]
+  },
+  {
+    id: "greenhouse-baja-ringan",
+    tag: "EFISIENSI BIAYA & CEPAT PASANG",
+    headlineLine1: "Greenhouse Baja Ringan.",
+    headlineLine2: "Presisi Rapi & Ramah Anggaran.",
+    subtitle: "Kombinasi rangka kanal C dan reng baja ringan anti karat dengan bentang luas dan pencahayaan merata. Solusi tepat untuk kebun pembibitan (nursery), sayuran hidroponik, dan budidaya semi-komersial berbiaya efisien.",
+    ctaPrimaryText: "Hitung RAB Baja Ringan",
+    ctaPrimaryUrl: "/jasa/pembuatan-greenhouse/#kalkulator",
+    ctaSecondaryText: "Konsultasi Teknis",
+    ctaSecondaryUrl: waHeroUrl,
+    imageWebp: "/images/hero/slides/slide-3.webp",
+    imageJpg: "/images/hero/slides/slide-3.jpg",
+    alt: "Greenhouse Baja Ringan Presisi Agrokomplek Cemerlang",
+    navLabel: "Baja Ringan",
+    metrics: [
+      { num: "Cepat Pasang", label: "Instalasi Ringkas" },
+      { num: "7-10 Tahun", label: "Ketahanan Rangka" },
+      { num: "Presisi", label: "Bentang Rapi" }
+    ]
+  },
+  {
+    id: "greenhouse-bambu",
+    tag: "SOLUSI RAMAH INVESTASI PETANI",
+    headlineLine1: "Greenhouse Bambu Awet.",
+    headlineLine2: "Kuat, Terjangkau, & Teruji Lapangan.",
+    subtitle: "Pilihan bijak untuk kelompok tani, budidaya sayuran daun, dan petani pemula. Struktur bambu pilihan dengan perlakuan anti rayap serta sistem kuncian spring clip kanal C tahan angin kencang.",
+    ctaPrimaryText: "Simulasi Biaya Bambu",
+    ctaPrimaryUrl: "/jasa/pembuatan-greenhouse/#kalkulator",
+    ctaSecondaryText: "Tanya Spesifikasi",
+    ctaSecondaryUrl: waHeroUrl,
+    imageWebp: "/images/hero/slides/slide-4.webp",
+    imageJpg: "/images/hero/slides/slide-4.jpg",
+    alt: "Greenhouse Bambu Kokoh Ekonomis Petani Nusantara",
+    navLabel: "Bambu Awet",
+    metrics: [
+      { num: "Ekonomis", label: "Mulai Rp 150rb/m²" },
+      { num: "Spring Clip", label: "Kuncian Tahan Angin" },
+      { num: "3-5 Tahun", label: "Usia Pakai Terawat" }
+    ]
+  },
+  {
+    id: "tunnel-garam",
+    tag: "INOVASI PRODUKSI PESISIR NUSANTARA",
+    headlineLine1: "Tunnel Prisma Garam Higienis.",
+    headlineLine2: "Panen Garam Meja Tanpa Terhenti Hujan.",
+    subtitle: "Inovasi rumah kristalisasi tertutup anti-hujan dengan geomembrane HDPE dan penutup plastik UV khusus. Menghasilkan garam putih bersih kualitas super sepanjang tahun tanpa terhenti musim penghujan.",
+    ctaPrimaryText: "Panduan Tunnel Garam",
+    ctaPrimaryUrl: "/artikel/panduan-konstruksi-tunnel-garam/",
+    ctaSecondaryText: "Konsultasi Proyek Garam",
+    ctaSecondaryUrl: waHeroUrl,
+    imageWebp: "/images/hero/slides/slide-5.webp",
+    imageJpg: "/images/hero/slides/slide-5.jpg",
+    alt: "Tunnel Garam Prisma Garam Agrokomplek Cemerlang",
+    navLabel: "Tunnel Garam",
+    metrics: [
+      { num: "Bebas Hujan", label: "Panen Sepanjang Tahun" },
+      { num: "Super Putih", label: "Garam Meja Higienis" },
+      { num: "Pesisir", label: "Tahan Korosi Air Laut" }
+    ]
+  }
+];
 ---
 
-<section class="w-full bg-[#18181b] text-white border-b border-zinc-800 font-sans overflow-hidden py-12 sm:py-20 lg:py-24">
-  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-      
-      <!-- Left Column: Copy & CTAs (7 cols) - Modeled after screenshot -->
-      <div class="lg:col-span-7 text-left">
-        
-        <!-- Kicker Pill Badge (translucent with border & pulse dot) -->
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/15 text-white text-xs font-bold tracking-wider uppercase mb-6 select-none">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span>READY STOCK &bull; KIRIM SE-INDONESIA</span>
-        </div>
-
-        <!-- Punchy 2-Line Headline with Colored Second Line and Periods -->
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight leading-[1.08] mb-6 text-white font-sans">
-          <span>Jasa Pembuatan Greenhouse.</span><br />
-          <span class="text-emerald-400">Supplier Saprodi Pertanian.</span>
-        </h1>
-
-        <!-- Subtitle / Lead Paragraph -->
-        <p class="text-base sm:text-lg text-zinc-300 font-normal leading-relaxed mb-8 max-w-xl">
-          Solusi kebutuhan greenhouse, sarana produksi pertanian, irigasi, dan perlengkapan kebun dari Malang untuk berbagai wilayah Indonesia. Tersedia plastik UV 200 mikron, paranet, insect net, selang drip, mulsa, pupuk, hingga pembuatan greenhouse bambu, galvanis, dan baja ringan.
-        </p>
-
-        <!-- Two Rounded-Full Pill Buttons (Exact shape from screenshot) -->
-        <div class="flex flex-wrap items-center gap-3.5 sm:gap-4 mb-10">
-          <a
-            href={waHeroUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="px-8 py-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase shadow-lg shadow-emerald-950/50 hover:scale-[1.03] active:scale-[0.97] transition-all inline-flex items-center justify-center gap-2.5 select-none"
-          >
-            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.276-.1-.477-.15-.678.15-.2.301-.777.978-.953 1.179-.176.2-.351.226-.652.075-1.558-.78-2.573-1.393-3.606-3.167-.272-.468.272-.435.778-1.45.084-.176.042-.326-.021-.451-.063-.125-.678-1.633-.928-2.237-.244-.588-.492-.508-.678-.518-.176-.01-.377-.01-.578-.01-.2 0-.528.075-.804.376-.276.301-1.054 1.03-1.054 2.512 0 1.482 1.079 2.913 1.23 3.114.15.2 2.124 3.243 5.145 4.548 2.052.887 2.858.966 3.882.814.733-.109 2.257-.923 2.576-1.815.318-.892.318-1.656.223-1.815-.095-.16-.351-.25-.652-.401z"/>
-            </svg>
-            <span>Konsultasi via WhatsApp</span>
-          </a>
-
-          <a
-            href="/produk/"
-            class="px-8 py-4 rounded-full bg-white/10 hover:bg-white/15 text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase border border-white/20 hover:border-white/40 hover:scale-[1.03] active:scale-[0.97] transition-all inline-flex items-center justify-center gap-2 select-none"
-          >
-            <span>Lihat Semua Katalog</span>
-            <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-            </svg>
-          </a>
-        </div>
-
-        <!-- Metrics Proof Strip -->
-        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-white/15 max-w-lg select-none">
-          <div>
-            <span class="block font-black text-2xl sm:text-3xl text-white tracking-tight leading-none mb-1">150+</span>
-            <span class="text-xs font-medium text-zinc-400 leading-tight block">Greenhouse Terpasang</span>
-          </div>
-          <div>
-            <span class="block font-black text-2xl sm:text-3xl text-white tracking-tight leading-none mb-1">100%</span>
-            <span class="text-xs font-medium text-zinc-400 leading-tight block">Material Teruji</span>
-          </div>
-          <div>
-            <span class="block font-black text-2xl sm:text-3xl text-white tracking-tight leading-none mb-1">Nusantara</span>
-            <span class="text-xs font-medium text-zinc-400 leading-tight block">Pengiriman Kargo</span>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Right Column: Pure Clean Image - GAMBAR HANYA GAMBAR SAJA, ZERO TEXT OVERLAY -->
-      <div class="lg:col-span-5">
-        <div class="rounded-3xl overflow-hidden border border-white/15 shadow-2xl aspect-[4/3] sm:aspect-[16/11] lg:aspect-[4/5] bg-zinc-900">
+<section
+  id="hero-slider-section"
+  class="relative w-full bg-[#121316] text-white font-sans overflow-hidden min-h-[580px] sm:min-h-[640px] lg:min-h-[690px] flex flex-col justify-between border-b border-zinc-800"
+  aria-label="Hero Showcase Jasa Pembuatan Greenhouse Agrokomplek Cemerlang"
+>
+  <!-- Background Image Carousel Layers -->
+  <div class="absolute inset-0 z-0 overflow-hidden select-none" id="hero-background-container">
+    {slides.map((slide, idx) => (
+      <div
+        data-slide-bg={idx}
+        class:list={[
+          "absolute inset-0 transition-opacity duration-1000 ease-out",
+          idx === 0 ? "opacity-100 z-10" : "opacity-0 z-0"
+        ]}
+      >
+        <picture>
+          <source srcset={slide.imageWebp} type="image/webp" />
           <img
-            src="/images/hero-greenhouse-bg.webp"
-            alt="Greenhouse Modern Agrokomplek Cemerlang Malang"
-            width="800"
-            height="1000"
-            class="w-full h-full object-cover object-center"
-            loading="eager"
+            src={slide.imageJpg}
+            alt={slide.alt}
+            width="1600"
+            height="900"
+            class="w-full h-full object-cover object-center scale-105 transition-transform duration-10000 ease-out"
+            loading={idx === 0 ? "eager" : "lazy"}
             decoding="async"
           />
+        </picture>
+        <!-- Layered Cinematic Overlays for 100% Text Legibility -->
+        <!-- 1. Deep lateral vignette from left to right -->
+        <div class="absolute inset-0 bg-gradient-to-r from-black/95 via-black/75 to-black/30 lg:to-black/20"></div>
+        <!-- 2. Vertical bottom gradient to ground the metrics and tabs -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/40"></div>
+        <!-- 3. Soft ambient color tint matching agriculture theme -->
+        <div class="absolute inset-0 bg-emerald-950/20 mix-blend-multiply"></div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Foreground Content Area -->
+  <div class="relative z-20 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-16 lg:pt-20 pb-8 flex-1 flex items-center w-full">
+    <div class="w-full max-w-3xl text-left">
+      {slides.map((slide, idx) => (
+        <div
+          data-slide-content={idx}
+          class:list={[
+            "transition-all duration-700 ease-out transform",
+            idx === 0 ? "block opacity-100 translate-y-0" : "hidden opacity-0 translate-y-4"
+          ]}
+        >
+          <!-- Category & Tag Kicker Pill -->
+          <div class="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] sm:text-xs font-extrabold tracking-wider uppercase mb-5 sm:mb-6 select-none shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>{slide.tag}</span>
+          </div>
+
+          <!-- Dynamic Main Headline -->
+          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] mb-5 text-white font-sans drop-shadow-md">
+            <span>{slide.headlineLine1}</span><br />
+            <span class="text-emerald-400">{slide.headlineLine2}</span>
+          </h1>
+
+          <!-- Descriptive Subtitle -->
+          <p class="text-sm sm:text-base lg:text-lg text-zinc-200 font-normal leading-relaxed mb-8 max-w-2xl text-shadow-sm">
+            {slide.subtitle}
+          </p>
+
+          <!-- Action Buttons Group -->
+          <div class="flex flex-wrap items-center gap-3 sm:gap-4 mb-8 sm:mb-10">
+            <!-- Primary CTA -->
+            <a
+              href={slide.ctaPrimaryUrl}
+              target={slide.ctaPrimaryUrl.includes("wa.me") ? "_blank" : "_self"}
+              rel={slide.ctaPrimaryUrl.includes("wa.me") ? "noopener noreferrer" : undefined}
+              class="px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase shadow-lg shadow-emerald-950/60 hover:scale-[1.02] active:scale-[0.98] transition-all inline-flex items-center justify-center gap-2.5 select-none"
+            >
+              {slide.ctaPrimaryUrl.includes("wa.me") ? (
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.276-.1-.477-.15-.678.15-.2.301-.777.978-.953 1.179-.176.2-.351.226-.652.075-1.558-.78-2.573-1.393-3.606-3.167-.272-.468.272-.435.778-1.45.084-.176.042-.326-.021-.451-.063-.125-.678-1.633-.928-2.237-.244-.588-.492-.508-.678-.518-.176-.01-.377-.01-.578-.01-.2 0-.528.075-.804.376-.276.301-1.054 1.03-1.054 2.512 0 1.482 1.079 2.913 1.23 3.114.15.2 2.124 3.243 5.145 4.548 2.052.887 2.858.966 3.882.814.733-.109 2.257-.923 2.576-1.815.318-.892.318-1.656.223-1.815-.095-.16-.351-.25-.652-.401z"/>
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              )}
+              <span>{slide.ctaPrimaryText}</span>
+            </a>
+
+            <!-- Secondary CTA -->
+            <a
+              href={slide.ctaSecondaryUrl}
+              target={slide.ctaSecondaryUrl.includes("wa.me") ? "_blank" : "_self"}
+              rel={slide.ctaSecondaryUrl.includes("wa.me") ? "noopener noreferrer" : undefined}
+              class="px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase border border-white/25 hover:border-white/40 hover:scale-[1.02] active:scale-[0.98] transition-all inline-flex items-center justify-center gap-2 select-none"
+            >
+              <span>{slide.ctaSecondaryText}</span>
+              <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Slide Specific Metrics Strip -->
+          <div class="grid grid-cols-3 gap-3 sm:gap-6 pt-5 border-t border-white/15 max-w-lg select-none">
+            {slide.metrics.map(metric => (
+              <div>
+                <span class="block font-black text-xl sm:text-2xl lg:text-3xl text-white tracking-tight leading-none mb-1">
+                  {metric.num}
+                </span>
+                <span class="text-[11px] sm:text-xs font-medium text-zinc-300 leading-tight block">
+                  {metric.label}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Bottom Interactive Bar: Tab Progress Indicators & Arrow Controls -->
+  <div class="relative z-30 w-full border-t border-white/15 bg-black/40 backdrop-blur-md">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
+      
+      <!-- 5 Interactive Horizontal Progress Tabs -->
+      <div class="flex items-center justify-between sm:justify-start gap-1.5 sm:gap-3 w-full sm:w-auto overflow-x-auto no-scrollbar py-1" id="hero-slider-tabs">
+        {slides.map((slide, idx) => (
+          <button
+            type="button"
+            data-tab-target={idx}
+            aria-label={`Pindah ke slide ${idx + 1}: ${slide.navLabel}`}
+            class:list={[
+              "group flex flex-col items-start text-left cursor-pointer transition-all duration-300 rounded-lg p-1.5 sm:px-3 sm:py-1.5 select-none focus:outline-none",
+              idx === 0 ? "bg-white/10" : "hover:bg-white/5 opacity-70 hover:opacity-100"
+            ]}
+          >
+            <!-- Progress Pill Line -->
+            <div class="w-12 sm:w-20 md:w-28 h-1 sm:h-1.5 bg-white/20 rounded-full overflow-hidden mb-1.5 relative">
+              <div
+                data-tab-fill={idx}
+                class:list={[
+                  "h-full bg-emerald-400 rounded-full transition-all duration-300",
+                  idx === 0 ? "w-full" : "w-0"
+                ]}
+              ></div>
+            </div>
+            <!-- Tab Text Label -->
+            <div class="flex items-center gap-1.5">
+              <span class="text-[9px] sm:text-[10px] font-mono font-bold text-zinc-400 group-hover:text-white">
+                0{idx + 1}
+              </span>
+              <span class="text-[10px] sm:text-xs font-bold text-white tracking-wide truncate max-w-[80px] sm:max-w-none">
+                {slide.navLabel}
+              </span>
+            </div>
+          </button>
+        ))}
+      </div>
+
+      <!-- Arrow Controls (Prev & Next) -->
+      <div class="hidden sm:flex items-center gap-2">
+        <button
+          type="button"
+          id="hero-prev-btn"
+          aria-label="Slide sebelumnya"
+          class="p-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white transition-all hover:scale-105 active:scale-95 cursor-pointer"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <button
+          type="button"
+          id="hero-next-btn"
+          aria-label="Slide berikutnya"
+          class="p-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white transition-all hover:scale-105 active:scale-95 cursor-pointer"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
       </div>
 
     </div>
-
   </div>
 </section>
+
+<script>
+  function initHeroSlider() {
+    const section = document.getElementById("hero-slider-section");
+    if (!section) return;
+
+    const bgSlides = section.querySelectorAll<HTMLElement>("[data-slide-bg]");
+    const contentSlides = section.querySelectorAll<HTMLElement>("[data-slide-content]");
+    const tabButtons = section.querySelectorAll<HTMLElement>("[data-tab-target]");
+    const tabFills = section.querySelectorAll<HTMLElement>("[data-tab-fill]");
+    const prevBtn = document.getElementById("hero-prev-btn");
+    const nextBtn = document.getElementById("hero-next-btn");
+
+    const totalSlides = bgSlides.length;
+    if (totalSlides <= 1) return;
+
+    let currentIndex = 0;
+    let timer: NodeJS.Timeout | null = null;
+    let autoPlayInterval = 6500; // 6.5s per slide
+    let isPaused = false;
+
+    function goToSlide(targetIndex: number) {
+      if (targetIndex === currentIndex) return;
+
+      currentIndex = (targetIndex + totalSlides) % totalSlides;
+
+      // 1. Update Backgrounds
+      bgSlides.forEach((bg, i) => {
+        if (i === currentIndex) {
+          bg.classList.remove("opacity-0", "z-0");
+          bg.classList.add("opacity-100", "z-10");
+        } else {
+          bg.classList.remove("opacity-100", "z-10");
+          bg.classList.add("opacity-0", "z-0");
+        }
+      });
+
+      // 2. Update Content
+      contentSlides.forEach((content, i) => {
+        if (i === currentIndex) {
+          content.classList.remove("hidden");
+          setTimeout(() => {
+            content.classList.remove("opacity-0", "translate-y-4");
+            content.classList.add("opacity-100", "translate-y-0");
+          }, 20);
+        } else {
+          content.classList.remove("opacity-100", "translate-y-0");
+          content.classList.add("opacity-0", "translate-y-4");
+          setTimeout(() => {
+            if (i !== currentIndex) content.classList.add("hidden");
+          }, 350);
+        }
+      });
+
+      // 3. Update Tabs & Progress Fill
+      tabButtons.forEach((tab, i) => {
+        if (i === currentIndex) {
+          tab.classList.add("bg-white/10");
+          tab.classList.remove("opacity-70");
+        } else {
+          tab.classList.remove("bg-white/10");
+          tab.classList.add("opacity-70");
+        }
+      });
+
+      tabFills.forEach((fill, i) => {
+        if (i === currentIndex) {
+          fill.classList.remove("w-0");
+          fill.classList.add("w-full");
+        } else {
+          fill.classList.remove("w-full");
+          fill.classList.add("w-0");
+        }
+      });
+    }
+
+    function nextSlide() {
+      goToSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+      goToSlide(currentIndex - 1);
+    }
+
+    function startAutoPlay() {
+      stopAutoPlay();
+      timer = setInterval(() => {
+        if (!isPaused) {
+          nextSlide();
+        }
+      }, autoPlayInterval);
+    }
+
+    function stopAutoPlay() {
+      if (timer) {
+        clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    // Attach Click Events to Tabs
+    tabButtons.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const target = parseInt(tab.getAttribute("data-tab-target") || "0", 10);
+        goToSlide(target);
+        startAutoPlay();
+      });
+    });
+
+    // Attach Controls
+    prevBtn?.addEventListener("click", () => {
+      prevSlide();
+      startAutoPlay();
+    });
+
+    nextBtn?.addEventListener("click", () => {
+      nextSlide();
+      startAutoPlay();
+    });
+
+    // Pause on Hover
+    section.addEventListener("mouseenter", () => {
+      isPaused = true;
+    });
+
+    section.addEventListener("mouseleave", () => {
+      isPaused = false;
+    });
+
+    // Touch Swipe Support for Mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    section.addEventListener(
+      "touchstart",
+      (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+      },
+      { passive: true }
+    );
+
+    section.addEventListener(
+      "touchend",
+      (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diffX = touchStartX - touchEndX;
+        if (Math.abs(diffX) > 45) {
+          if (diffX > 0) {
+            nextSlide();
+          } else {
+            prevSlide();
+          }
+          startAutoPlay();
+        }
+      },
+      { passive: true }
+    );
+
+    // Keyboard navigation
+    window.addEventListener("keydown", (e) => {
+      if (document.activeElement?.tagName === "INPUT") return;
+      if (e.key === "ArrowRight") {
+        nextSlide();
+        startAutoPlay();
+      } else if (e.key === "ArrowLeft") {
+        prevSlide();
+        startAutoPlay();
+      }
+    });
+
+    startAutoPlay();
+  }
+
+  initHeroSlider();
+  document.addEventListener("astro:page-load", initHeroSlider);
+</script>

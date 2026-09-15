@@ -12,26 +12,26 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
           Agrokomplek Cemerlang
         </a>
         <p class="text-xs font-semibold text-primary mb-3">
-          Supplier Saprodi, Material Pertanian &amp; Jasa Pembuatan Greenhouse
+          Kontraktor Spesialis Jasa Pembuatan Greenhouse
         </p>
         <p class="text-dark/80 text-xs sm:text-sm mb-6 leading-relaxed font-sans">
-          Melayani kebutuhan material pertanian dan pembangunan greenhouse dari Malang untuk berbagai wilayah Indonesia.
+          Melayani rancang bangun greenhouse galvanis, baja ringan, bambu awet, tunnel garam, dan instalasi irigasi fertigasi dari Malang untuk berbagai wilayah Indonesia.
         </p>
         
         <div class="space-y-2 text-xs text-muted mb-6">
           <p class="flex items-start gap-2">
             <span class="text-primary font-bold">📍</span>
-            <span><strong>Alamat:</strong> Jl. KH. Malik Dalam RT 01 RW 07, Kedungkandang, Kota Malang, Jawa Timur 65136</span>
+            <span><strong>Workshop &amp; Kantor:</strong> {BUSINESS_INFO.address.fullFormatted}</span>
           </p>
           <p class="flex items-center gap-2">
             <span class="text-primary font-bold">💬</span>
             <a href="https://wa.me/6285183002070" target="_blank" rel="noopener noreferrer" class="text-dark hover:text-primary transition-colors">
-              <strong>WhatsApp:</strong> 0851-8300-2070
+              <strong>WhatsApp Konsultasi:</strong> {BUSINESS_INFO.contact.phone}
             </a>
           </p>
           <p class="flex items-center gap-2">
             <span class="text-primary font-bold">⏰</span>
-            <span><strong>Jam Operasional:</strong> Senin &ndash; Minggu, 07.30 &ndash; 17.00 WIB</span>
+            <span><strong>Jam Operasional:</strong> {BUSINESS_INFO.hours.physicalStore}</span>
           </p>
         </div>
 
@@ -50,15 +50,15 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
       <!-- Links Columns (Col 3-5) -->
       <div class="lg:col-span-3 grid grid-cols-2 md:grid-cols-4 gap-8 font-sans text-sm">
         
-        <!-- KATALOG -->
+        <!-- MATERIAL STRUKTUR -->
         <div>
-          <h4 class="font-extrabold text-dark/70 text-xs tracking-wider uppercase mb-4">KATALOG</h4>
+          <h4 class="font-extrabold text-dark/70 text-xs tracking-wider uppercase mb-4">MATERIAL STRUKTUR</h4>
           <ul class="space-y-2.5 font-bold text-xs text-dark">
-            <li><a href="/produk/" class="hover:underline hover:text-primary">Semua Produk</a></li>
-            <li><a href="/produk/saprodi-pertanian/" class="hover:underline hover:text-primary">Saprodi &amp; Pupuk</a></li>
+            <li><a href="/produk/perlengkapan-greenhouse/" class="hover:underline hover:text-primary">Material Greenhouse</a></li>
             <li><a href="/produk/plastik-uv-greenhouse-14/" class="hover:underline hover:text-primary">Plastik UV 200µm</a></li>
             <li><a href="/produk/paranet-tanaman/" class="hover:underline hover:text-primary">Paranet Tanaman</a></li>
             <li><a href="/produk/insectnet-kasa-greenhouse/" class="hover:underline hover:text-primary">Insect Net 50 Mesh</a></li>
+            <li><a href="/produk/spring-clip-profil-lock/" class="hover:underline hover:text-primary">Spring Clip &amp; Kanal C</a></li>
             <li><a href="/produk/selang-drip-irigasi-16mm/" class="hover:underline hover:text-primary">Selang Drip 16mm</a></li>
             <li><a href="/produk/mulsa-plastik-hitam-perak/" class="hover:underline hover:text-primary">Mulsa MPHP</a></li>
             <li><a href="/produk/paket-instalasi-hidroponik/" class="hover:underline hover:text-primary">Hidroponik NFT</a></li>
@@ -74,15 +74,15 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
             <li><a href="/jasa/pembuatan-greenhouse/#bambu" class="hover:underline hover:text-primary">Greenhouse Bambu</a></li>
             <li><a href="/jasa/pembuatan-greenhouse/#galvanis" class="hover:underline hover:text-primary">Greenhouse Galvanis</a></li>
             <li><a href="/jasa/pembuatan-greenhouse/#baja-ringan" class="hover:underline hover:text-primary">Greenhouse Baja Ringan</a></li>
-            <li><a href="/jasa/pembuatan-greenhouse/#tunnel-garam" class="hover:underline hover:text-primary">Tunnel Garam Prisma</a></li>
+            <li><a href="/proyek/tunnel-garam-pesisir-madura/" class="hover:underline hover:text-primary">Tunnel Garam Prisma</a></li>
           </ul>
         </div>
 
         <!-- PANDUAN -->
         <div>
-          <h4 class="font-extrabold text-dark/70 text-xs tracking-wider uppercase mb-4">PANDUAN</h4>
+          <h4 class="font-extrabold text-dark/70 text-xs tracking-wider uppercase mb-4">PANDUAN &amp; BIAYA</h4>
           <ul class="space-y-2.5 font-bold text-xs text-dark">
-            <li><a href="/artikel/" class="hover:underline hover:text-primary">Blog &amp; Panduan Tani</a></li>
+            <li><a href="/artikel/" class="hover:underline hover:text-primary">Blog &amp; Panduan</a></li>
             <li><a href="/artikel/biaya-pembuatan-greenhouse/" class="hover:underline hover:text-primary">Estimasi Biaya RAB</a></li>
             <li><a href="/artikel/panduan-konstruksi-tunnel-garam/" class="hover:underline hover:text-primary">Konstruksi Tunnel Garam</a></li>
             <li><a href="/artikel/plastik-uv-dan-paranet-perbedaan-fungsi/" class="hover:underline hover:text-primary">Plastik UV vs Paranet</a></li>
@@ -95,7 +95,7 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
           <h4 class="font-extrabold text-dark/70 text-xs tracking-wider uppercase mb-4">PERUSAHAAN</h4>
           <ul class="space-y-2.5 font-bold text-xs text-dark">
             <li><a href="/tentang-kami/" class="hover:underline hover:text-primary">Tentang Kami</a></li>
-            <li><a href="/lokasi/" class="hover:underline hover:text-primary">Lokasi Toko Malang</a></li>
+            <li><a href="/lokasi/" class="hover:underline hover:text-primary">Workshop Malang</a></li>
             <li><a href="/wilayah-layanan/" class="hover:underline hover:text-primary">Wilayah &amp; Ekspedisi Kargo</a></li>
             <li><a href="/kontak/" class="hover:underline hover:text-primary">Kontak Resmi</a></li>
           </ul>
@@ -109,9 +109,9 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
       <div class="flex flex-col md:flex-row items-center gap-2 md:gap-6 text-xs text-dark font-medium">
         <span>&copy; {new Date().getFullYear()} Agrokomplek Cemerlang. Hak cipta dilindungi.</span>
         <div class="flex flex-wrap justify-center gap-4 text-xs font-sans uppercase font-bold">
-          <a href="/tentang-kami/" class="hover:underline hover:text-primary">Profil Usaha</a>
+          <a href="/tentang-kami/" class="hover:underline hover:text-primary">Profil Kontraktor</a>
           <a href="/wilayah-layanan/" class="hover:underline hover:text-primary">Info Kargo</a>
-          <a href="/kontak/" class="hover:underline hover:text-primary">Bantuan</a>
+          <a href="/kontak/" class="hover:underline hover:text-primary">Konsultasi</a>
         </div>
       </div>
 
@@ -121,11 +121,10 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
         <span class="px-2 py-1 bg-white border border-border rounded-lg text-[10px] font-black text-blue-800 shadow-2xs">BCA</span>
         <span class="px-2 py-1 bg-white border border-border rounded-lg text-[10px] font-black text-amber-600 shadow-2xs">MANDIRI</span>
         <span class="px-2 py-1 bg-white border border-border rounded-lg text-[10px] font-black text-blue-600 shadow-2xs">BRI</span>
-        <span class="px-2 py-1 bg-white border border-border rounded-lg text-[10px] font-black text-teal-700 shadow-2xs">QRIS</span>
-        <span class="px-2 py-1 bg-white border border-border rounded-lg text-[10px] font-black text-red-600 shadow-2xs">J&amp;T CARGO</span>
-        <span class="px-2 py-1 bg-white border border-border rounded-lg text-[10px] font-black text-zinc-700 shadow-2xs">INDAH LOGISTIK</span>
+        <span class="px-2 py-1 bg-white border border-border rounded-lg text-[10px] font-black text-emerald-700 shadow-2xs">DAKOTA</span>
+        <span class="px-2 py-1 bg-white border border-border rounded-lg text-[10px] font-black text-red-700 shadow-2xs">BARAKA</span>
+        <span class="px-2 py-1 bg-white border border-border rounded-lg text-[10px] font-black text-zinc-800 shadow-2xs">INDAH CARGO</span>
       </div>
     </div>
   </div>
 </footer>
-

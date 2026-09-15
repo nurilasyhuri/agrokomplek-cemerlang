@@ -13,13 +13,13 @@ function ensureAbsoluteUrl(url: string): string {
 export function getLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': ['HomeAndConstructionBusiness', 'Store', 'GardenStore'],
+    '@type': ['HomeAndConstructionBusiness', 'GeneralContractor'],
     '@id': `${CANONICAL_BASE}/#business`,
     name: BUSINESS_INFO.name,
     alternateName: [
       'Agrokomplek Cemerlang Malang',
-      'Toko Pertanian & Jasa Greenhouse Agrokomplek Cemerlang',
-      'Distributor Saprodi & Kontraktor Greenhouse Agrokomplek',
+      'Kontraktor Spesialis Jasa Pembuatan Greenhouse',
+      'Jasa Pembuatan Greenhouse Malang Agrokomplek Cemerlang',
     ],
     url: `${CANONICAL_BASE}/`,
     logo: `${CANONICAL_BASE}/favicon.svg`,
@@ -67,7 +67,7 @@ export function getLocalBusinessSchema() {
     ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Katalog Produk & Jasa Pertanian Agrokomplek Cemerlang',
+      name: 'Katalog Jasa Pembuatan Greenhouse & Material Agrokomplek Cemerlang',
       itemListElement: [
         {
           '@type': 'OfferCatalog',
@@ -93,12 +93,12 @@ export function getLocalBusinessSchema() {
         },
         {
           '@type': 'OfferCatalog',
-          name: 'Sistem Irigasi & Saprodi Lahan',
+          name: 'Sistem Irigasi & Fertigasi Presisi',
           itemListElement: [
             { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Selang Drip Irigasi 16mm' } },
             { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Mulsa Plastik Hitam Perak MPHP' } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Pupuk NPK 16-16-16' } },
-            { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Tray Semai 128 Lubang' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Paket Instalasi Hidroponik NFT' } },
+            { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Sprayer Elektrik 16L' } },
           ],
         },
       ],

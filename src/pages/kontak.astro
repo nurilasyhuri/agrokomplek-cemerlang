@@ -4,17 +4,16 @@ import Breadcrumb from '../components/common/Breadcrumb.astro';
 import { BUSINESS_INFO } from '../data/businessInfo';
 import { getContactPageSchema, getBreadcrumbSchema } from '../utils/seo';
 
-const breadcrumbSchema = getBreadcrumbSchema([
-  { name: 'Beranda', url: 'https://agrokomplekcemerlang.com/' },
-  { name: 'Kontak', url: 'https://agrokomplekcemerlang.com/kontak/' },
-]);
-
 const contactSchema = getContactPageSchema();
+const breadcrumbSchema = getBreadcrumbSchema([
+  { name: 'Beranda', url: '/' },
+  { name: 'Kontak', url: '/kontak/' },
+]);
 ---
 
 <BaseLayout
-  title="Kontak Toko Pertanian &amp; Jasa Greenhouse Malang - Agrokomplek Cemerlang"
-  description="Hubungi Agrokomplek Cemerlang via WhatsApp 0851-8300-2070 untuk pemesanan saprodi pertanian, cek ketersediaan stok, &amp; survei greenhouse di Malang &amp; sekitarnya."
+  title="Kontak Kontraktor Jasa Greenhouse Malang - Agrokomplek Cemerlang"
+  description="Hubungi tim teknisi Agrokomplek Cemerlang via WhatsApp 0851-8300-2070 untuk konsultasi desain greenhouse, estimasi RAB, &amp; survei lokasi di Malang &amp; sekitarnya."
   jsonLd={[contactSchema, breadcrumbSchema]}
 >
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">
@@ -23,13 +22,13 @@ const contactSchema = getContactPageSchema();
     <div class="my-10 text-center max-w-2xl mx-auto space-y-3">
       <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/60">
         <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
-        Konsultasi &amp; Pemesanan Resmi
+        Konsultasi Teknis &amp; RAB Proyek
       </div>
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight">
-        Kontak Toko Pertanian &amp; Jasa Pembuatan Greenhouse Malang
+        Kontak Kontraktor Jasa Pembuatan Greenhouse Malang
       </h1>
       <p class="text-sm sm:text-base text-zinc-600 leading-relaxed">
-        Konsultasikan kebutuhan produk pertanian, cek ketersediaan stok, atau ajukan permintaan survei proyek greenhouse Anda bersama tim Agrokomplek Cemerlang.
+        Konsultasikan rencana struktur greenhouse Anda, diskusikan kebutuhan material penutup atap, atau ajukan permintaan survei lokasi bersama tim teknis Agrokomplek Cemerlang.
       </p>
     </div>
 
@@ -52,7 +51,7 @@ const contactSchema = getContactPageSchema();
               >
                 {BUSINESS_INFO.contact.phone}
               </a>
-              <span class="block text-zinc-500 text-[11px] mt-0.5">Respon cepat konsultasi spesifikasi &amp; pesanan</span>
+              <span class="block text-zinc-500 text-[11px] mt-0.5">Respon cepat konsultasi spesifikasi &amp; estimasi RAB</span>
             </div>
 
             <div>
@@ -70,11 +69,11 @@ const contactSchema = getContactPageSchema();
               <p class="font-medium text-zinc-800">
                 {BUSINESS_INFO.hours.physicalStore}
               </p>
-              <p class="text-[11px] text-zinc-500">Konsultasi pesan WhatsApp dilayani setiap hari</p>
+              <p class="text-[11px] text-zinc-500">Konsultasi pesan WhatsApp dilayani setiap hari nonstop</p>
             </div>
 
             <div>
-              <span class="text-zinc-500 block">Alamat Gudang &amp; Toko:</span>
+              <span class="text-zinc-500 block">Alamat Workshop &amp; Kantor:</span>
               <p class="font-medium text-zinc-800 mt-0.5 leading-relaxed">
                 {BUSINESS_INFO.address.fullFormatted}
               </p>
@@ -104,13 +103,13 @@ const contactSchema = getContactPageSchema();
             Hubungi Sesuai Kebutuhan Anda
           </h3>
           <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
-            Pilih jalur pesan agar kami dapat langsung mengarahkan Anda ke admin produk saprodi atau teknisi konstruksi greenhouse kami:
+            Pilih jalur pesan agar kami dapat langsung mengarahkan Anda ke teknisi konstruksi greenhouse atau admin material kami:
           </p>
         </div>
 
         <div class="space-y-3 pt-4">
           <a
-            href="https://wa.me/6285183002070?text=Halo%20Agrokomplek%20Cemerlang%2C%20saya%20ingin%20konsultasi%20pembuatan%20greenhouse."
+            href="https://wa.me/6285183002070?text=Halo%20Agrokomplek%20Cemerlang%2C%20saya%20ingin%20konsultasi%20jasa%20pembuatan%20greenhouse."
             target="_blank"
             rel="noopener noreferrer"
             class="w-full flex items-center justify-between p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700 text-white text-xs sm:text-sm font-semibold transition-all border border-zinc-700"
@@ -120,22 +119,22 @@ const contactSchema = getContactPageSchema();
           </a>
 
           <a
-            href="https://wa.me/6285183002070?text=Halo%20Agrokomplek%20Cemerlang%2C%20saya%20ingin%20cek%20stok%20dan%20harga%20material%20greenhouse%20(Plastik%20UV%2FParanet%2FInsect%20Net)."
+            href="https://wa.me/6285183002070?text=Halo%20Agrokomplek%20Cemerlang%2C%20saya%20ingin%20cek%20stok%20material%20greenhouse%20(Plastik%20UV%20%2F%20Paranet%20%2F%20Insect%20Net)."
             target="_blank"
             rel="noopener noreferrer"
             class="w-full flex items-center justify-between p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700 text-white text-xs sm:text-sm font-semibold transition-all border border-zinc-700"
           >
-            <span>Cek Stok Plastik UV &amp; Paranet</span>
+            <span>Cek Material (Plastik UV &amp; Paranet)</span>
             <span>&rarr;</span>
           </a>
 
           <a
-            href="https://wa.me/6285183002070?text=Halo%20Agrokomplek%20Cemerlang%2C%20saya%20ingin%20memesan%20saprodi%20pertanian%20%2F%20selang%20irigasi%20drip."
+            href="https://wa.me/6285183002070?text=Halo%20Agrokomplek%20Cemerlang%2C%20saya%20ingin%20estimasi%20RAB%20dan%20jadwal%20survei%20lahan."
             target="_blank"
             rel="noopener noreferrer"
             class="w-full flex items-center justify-between p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700 text-white text-xs sm:text-sm font-semibold transition-all border border-zinc-700"
           >
-            <span>Pemesanan Saprodi &amp; Irigasi Drip</span>
+            <span>Simulasi RAB &amp; Survei Lokasi Lahan</span>
             <span>&rarr;</span>
           </a>
         </div>
