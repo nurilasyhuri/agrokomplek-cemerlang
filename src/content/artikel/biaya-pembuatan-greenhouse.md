@@ -2,7 +2,7 @@
 title: 'Biaya Pembuatan Greenhouse per Meter: Panduan Hitung RAB Lengkap'
 description: 'Rincian estimasi biaya pembuatan greenhouse per m2 di Indonesia. Bandingkan RAB rangka bambu, baja ringan, pipa galvanis hot-dip, & material plastik UV 200 mikron.'
 publishDate: '2 September 2026'
-author: 'Tim Ahli Agrokomplek Cemerlang'
+author: 'Tim Ahli Agro Prima Greenhouse'
 category: 'Panduan Konstruksi'
 tags: ['Biaya Greenhouse', 'RAB Greenhouse', 'Greenhouse Galvanis', 'Greenhouse Bambu', 'Greenhouse Baja Ringan']
 heroImage: '/images/greenhouse/greenhouse-galvanis.webp'
@@ -66,4 +66,4 @@ Sebagai referensi nyata pelaksanaan di lapangan, Anda dapat meninjau dokumentasi
 Jika Anda sedang merencanakan pembangunan greenhouse untuk kebun komersial maupun fasilitas riset:
 1. Siapkan perkiraan ukuran panjang × lebar lahan Anda.
 2. Tentukan jenis tanaman yang akan dibudidayakan (sayuran hidroponik, melon, cabai, stroberi, dsb).
-3. Konsultasikan langsung bersama tim teknis **Agrokomplek Cemerlang** melalui WhatsApp di **0851-8300-2070** untuk mendapatkan rekomendasi desain dan penawaran RAB transparan.
+3. Konsultasikan langsung bersama tim teknis **Agro Prima Greenhouse** melalui WhatsApp di **0851-8300-2070** untuk mendapatkan rekomendasi desain dan penawaran RAB transparan.

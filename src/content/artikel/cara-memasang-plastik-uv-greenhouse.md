@@ -2,7 +2,7 @@
 title: 'Cara Memasang Plastik UV Greenhouse agar Kencang & Tidak Robek'
 description: 'Panduan teknik memasang plastik UV greenhouse 200 mikron menggunakan spring clip dan profil lock C. Atap kencang rapi, tahan angin badai, awet hingga 5 tahun.'
 publishDate: '10 September 2026'
-author: 'Tim Ahli Agrokomplek Cemerlang'
+author: 'Tim Ahli Agro Prima Greenhouse'
 category: 'Panduan Konstruksi'
 tags: ['Plastik UV', 'Spring Clip', 'Profil Lock C', 'Greenhouse Tropis', 'Pasang Greenhouse']
 heroImage: '/images/products/plastik-uv-greenhouse.webp'
@@ -13,7 +13,7 @@ Pemasangan atap [Plastik UV Greenhouse 200 Mikron](/produk/plastik-uv-greenhouse
 
 Sebaliknya, plastik UV yang dipasang kencang sempurna (*drum-tight*) menggunakan teknik dan perlengkapan yang benar akan tahan terhadap hempasan badai angin tropis dan bertahan optimal 3 hingga 5 tahun.
 
-Berikut adalah panduan teknik pemasangan plastik UV standar aplikator profesional **Agrokomplek Cemerlang**.
+Berikut adalah panduan teknik pemasangan plastik UV standar aplikator profesional **Agro Prima Greenhouse**.
 
 ---
 
@@ -70,6 +70,6 @@ Sisakan kelebihan plastik sekitar 10 cm – 15 cm di luar profil C untuk memudah
 
 ## 4. Butuh Bantuan Aplikator Berpengalaman?
 
-Jika Anda tidak memiliki waktu atau tenaga kerja terampil untuk memasang sendiri atap greenhouse dan jaring dinding [Insect Net 50 Mesh](/produk/insectnet-kasa-greenhouse/), tim kontraktor **Agrokomplek Cemerlang** siap membantu instalasi terstandar ke lokasi Anda.
+Jika Anda tidak memiliki waktu atau tenaga kerja terampil untuk memasang sendiri atap greenhouse dan jaring dinding [Insect Net 50 Mesh](/produk/insectnet-kasa-greenhouse/), tim kontraktor **Agro Prima Greenhouse** siap membantu instalasi terstandar ke lokasi Anda.
 
 Kunjungi layanan kami di [Jasa Pembuatan Greenhouse Profesional](/jasa/pembuatan-greenhouse/) atau konsultasikan langsung via WhatsApp di **0851-8300-2070**.

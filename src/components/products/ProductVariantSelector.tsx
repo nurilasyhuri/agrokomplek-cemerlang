@@ -54,11 +54,11 @@ export default function ProductVariantSelector({
         ? `\n💰 Estimasi Total: ${totalPriceDisplay} (${currentPriceDisplay} x ${quantity} ${currentUnit})`
         : `\n💰 Harga: ${currentPriceDisplay}`;
 
-    const text = `Halo Agrokomplek Cemerlang, saya ingin memesan produk ini:
+    const text = `Halo Agro Prima Greenhouse, saya ingin memesan produk ini:
 
 📦 Produk: ${productTitle}${brandLine} [${categoryName}]${variantLine}
 🔢 Jumlah: ${quantity} ${currentUnit}${priceDetail}
-🔗 Halaman: https://agrokomplekcemerlang.com/produk/${productSlug}/
+🔗 Halaman: https://agroprimagreenhouse.com/produk/${productSlug}/
 
 Data Pengiriman Saya:
 - Nama: 

@@ -1,8 +1,8 @@
 # Canonical domain redirects
-http://agrokomplekcemerlang.com/* https://agrokomplekcemerlang.com/:splat 301
-https://www.agrokomplekcemerlang.com/* https://agrokomplekcemerlang.com/:splat 301
+http://agroprimagreenhouse.com/* https://agroprimagreenhouse.com/:splat 301
+https://www.agroprimagreenhouse.com/* https://agroprimagreenhouse.com/:splat 301
 
 # Shorthand aliases
-/greenhouse https://agrokomplekcemerlang.com/jasa/pembuatan-greenhouse/ 301
+/greenhouse https://agroprimagreenhouse.com/jasa/pembuatan-greenhouse/ 301
 /wa https://wa.me/6285183002070 302
 /maps https://share.google/RkGZAeLgftgFwjqRo 302

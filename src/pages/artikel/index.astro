@@ -10,24 +10,24 @@ const sortedArticles = articles.sort(
 );
 
 const breadcrumbSchema = getBreadcrumbSchema([
-  { name: 'Beranda', url: 'https://agrokomplekcemerlang.com/' },
-  { name: 'Artikel & Panduan', url: 'https://agrokomplekcemerlang.com/artikel/' },
+  { name: 'Beranda', url: 'https://agroprimagreenhouse.com/' },
+  { name: 'Artikel & Panduan', url: 'https://agroprimagreenhouse.com/artikel/' },
 ]);
 
 const collectionSchema = getCollectionPageSchema({
   name: 'Panduan Pertanian, Konstruksi Greenhouse & Irigasi',
   description: 'Artikel teknis praktisi agribisnis: estimasi biaya pembuatan greenhouse, perbandingan plastik UV vs paranet, konstruksi tunnel garam, dan instalasi fertigasi tetes.',
-  url: 'https://agrokomplekcemerlang.com/artikel/',
+  url: 'https://agroprimagreenhouse.com/artikel/',
   items: sortedArticles.map((art) => ({
     name: art.data.title,
-    url: `https://agrokomplekcemerlang.com/artikel/${art.slug}/`,
+    url: `https://agroprimagreenhouse.com/artikel/${art.slug}/`,
     description: art.data.description,
   })),
 });
 ---
 
 <BaseLayout
-  title="Panduan Pertanian, Konstruksi Greenhouse &amp; Irigasi - Agrokomplek Cemerlang"
+  title="Panduan Pertanian, Konstruksi Greenhouse &amp; Irigasi - Agro Prima Greenhouse"
   description="Kumpulan panduan teknis agribisnis: estimasi RAB greenhouse, perbandingan plastik UV vs paranet, manajemen ventilasi, &amp; teknik irigasi tetes tropis di Indonesia."
   jsonLd={[collectionSchema, breadcrumbSchema]}
 >

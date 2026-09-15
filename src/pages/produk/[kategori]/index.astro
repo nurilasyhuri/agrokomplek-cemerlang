@@ -40,18 +40,18 @@ const allProducts = await getCollection('produk');
 const filteredProducts = allProducts.filter((p) => p.data.category === kategori);
 
 const breadcrumbSchema = getBreadcrumbSchema([
-  { name: 'Beranda', url: 'https://agrokomplekcemerlang.com/' },
-  { name: 'Katalog Produk', url: 'https://agrokomplekcemerlang.com/produk/' },
-  { name: cat.shortLabel, url: `https://agrokomplekcemerlang.com/produk/${kategori}/` },
+  { name: 'Beranda', url: 'https://agroprimagreenhouse.com/' },
+  { name: 'Katalog Produk', url: 'https://agroprimagreenhouse.com/produk/' },
+  { name: cat.shortLabel, url: `https://agroprimagreenhouse.com/produk/${kategori}/` },
 ]);
 
 const collectionSchema = getCollectionPageSchema({
   name: cat.title,
   description: cat.desc,
-  url: `https://agrokomplekcemerlang.com/produk/${kategori}/`,
+  url: `https://agroprimagreenhouse.com/produk/${kategori}/`,
   items: filteredProducts.map((p) => ({
     name: p.data.title,
-    url: `https://agrokomplekcemerlang.com/produk/${p.slug}/`,
+    url: `https://agroprimagreenhouse.com/produk/${p.slug}/`,
     description: p.data.description,
   })),
 });

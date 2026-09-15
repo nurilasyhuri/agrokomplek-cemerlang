@@ -49,15 +49,15 @@ const productSchema = getProductSchema({
 });
 
 const breadcrumbSchema = getBreadcrumbSchema([
-  { name: 'Beranda', url: 'https://agrokomplekcemerlang.com/' },
-  { name: 'Katalog Produk', url: 'https://agrokomplekcemerlang.com/produk/' },
-  { name: categoryName, url: `https://agrokomplekcemerlang.com/produk/${product.data.category}/` },
-  { name: product.data.title, url: `https://agrokomplekcemerlang.com/produk/${product.slug}/` },
+  { name: 'Beranda', url: 'https://agroprimagreenhouse.com/' },
+  { name: 'Katalog Produk', url: 'https://agroprimagreenhouse.com/produk/' },
+  { name: categoryName, url: `https://agroprimagreenhouse.com/produk/${product.data.category}/` },
+  { name: product.data.title, url: `https://agroprimagreenhouse.com/produk/${product.slug}/` },
 ]);
 ---
 
 <BaseLayout
-  title={`Jual ${product.data.title} - Agrokomplek Cemerlang`}
+  title={`Jual ${product.data.title} - Agro Prima Greenhouse`}
   description={`${product.data.description} Tersedia stok fisik di toko Malang & kirim kargo seluruh Indonesia.`}
   image={product.data.thumbnail}
   type="product"

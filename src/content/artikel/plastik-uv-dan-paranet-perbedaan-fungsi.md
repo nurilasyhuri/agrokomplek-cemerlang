@@ -2,7 +2,7 @@
 title: 'Plastik UV vs Paranet: Perbedaan Fungsi, Kerapatan & Cara Pasang'
 description: 'Pahami perbedaan fungsi plastik UV 14%-20% (200 mikron) & paranet shading net 65%-75% untuk perlindungan optimal greenhouse tanaman hortikultura tropis.'
 publishDate: '1 September 2026'
-author: 'Tim Ahli Agrokomplek Cemerlang'
+author: 'Tim Ahli Agro Prima Greenhouse'
 category: 'Edukasi Produk'
 tags: ['Plastik UV', 'Paranet', 'Perlengkapan Greenhouse', 'Shading Net', 'Saprodi Malang']
 heroImage: '/images/products/plastik-uv-greenhouse.webp'
@@ -51,6 +51,6 @@ Pada perkebunan modern di Indonesia (terutama di daerah dataran rendah dengan su
 
 ## 4. Dapatkan Material Original di Toko Kami
 
-Seluruh produk Plastik UV 200 mikron 14%, Paranet shading net berbagai kerapatan (roll maupun meteran), dan aksesoris spring clip tersedia ready stock di gudang **Agrokomplek Cemerlang** di Kota Malang. Kami melayani pengiriman kargo ke seluruh Indonesia.
+Seluruh produk Plastik UV 200 mikron 14%, Paranet shading net berbagai kerapatan (roll maupun meteran), dan aksesoris spring clip tersedia ready stock di gudang **Agro Prima Greenhouse** di Kota Malang. Kami melayani pengiriman kargo ke seluruh Indonesia.
 
 Konsultasikan kebutuhan material greenhouse Anda bersama tim kami melalui WhatsApp di **0851-8300-2070** atau pelajari estimasi biaya rancang bangun melalui [Halaman Jasa Pembuatan Greenhouse](/jasa/pembuatan-greenhouse/).

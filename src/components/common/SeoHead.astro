@@ -19,21 +19,21 @@ const {
   noindex = false,
 } = Astro.props;
 
-const siteName = 'Agrokomplek Cemerlang';
+const siteName = 'Agro Prima Greenhouse';
 
 // Strictly strip any pipe symbols from title and description
 const sanitizedRawTitle = title.replace(/\s*\|\s*/g, ' - ').trim();
-const formattedTitle = sanitizedRawTitle.includes(siteName) || sanitizedRawTitle.includes('Agrokomplek')
+const formattedTitle = sanitizedRawTitle.includes(siteName) || sanitizedRawTitle.includes('Agro Prima')
   ? sanitizedRawTitle
   : `${sanitizedRawTitle} - ${siteName}`;
 
 const sanitizedDescription = description.replace(/\s*\|\s*/g, ', ').trim();
-const fullImageUrl = image.startsWith('http') ? image : `https://agrokomplekcemerlang.com${image}`;
+const fullImageUrl = image.startsWith('http') ? image : `https://agroprimagreenhouse.com${image}`;
 
 // Compute canonical URL strictly anchored to authoritative domain
 const canonicalUrl = canonical
-  ? (canonical.startsWith('http') ? canonical : `https://agrokomplekcemerlang.com${canonical}`)
-  : Astro.url.href.replace(/^https?:\/\/[^\/]+/, 'https://agrokomplekcemerlang.com');
+  ? (canonical.startsWith('http') ? canonical : `https://agroprimagreenhouse.com${canonical}`)
+  : Astro.url.href.replace(/^https?:\/\/[^\/]+/, 'https://agroprimagreenhouse.com');
 ---
 
 <!-- Global Metadata -->

@@ -7,7 +7,7 @@ priceDisplay: 'Mulai Rp 1.850.000 / paket'
 stockStatus: 'ready'
 featured: true
 thumbnail: '/images/products/instalasi-hidroponik.webp'
-brand: 'Agrokomplek Cemerlang'
+brand: 'Agro Prima Greenhouse'
 orderPriority: 4
 variants:
   - name: 'Modul Starter Hobi (72 Lubang Tanam)'

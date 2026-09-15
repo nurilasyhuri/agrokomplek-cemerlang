@@ -7,24 +7,24 @@ import { getCollection } from 'astro:content';
 const projects = await getCollection('proyek');
 
 const breadcrumbSchema = getBreadcrumbSchema([
-  { name: 'Beranda', url: 'https://agrokomplekcemerlang.com/' },
-  { name: 'Portofolio Proyek', url: 'https://agrokomplekcemerlang.com/proyek/' },
+  { name: 'Beranda', url: 'https://agroprimagreenhouse.com/' },
+  { name: 'Portofolio Proyek', url: 'https://agroprimagreenhouse.com/proyek/' },
 ]);
 
 const collectionSchema = getCollectionPageSchema({
   name: 'Portofolio Proyek Konstruksi Greenhouse & Tunnel Garam Indonesia',
-  description: 'Galeri instalasi nyata greenhouse pipa galvanis, bambu presisi, baja ringan, dan tunnel garam yang diselesaikan oleh tim Agrokomplek Cemerlang di berbagai wilayah nusantara.',
-  url: 'https://agrokomplekcemerlang.com/proyek/',
+  description: 'Galeri instalasi nyata greenhouse pipa galvanis, bambu presisi, baja ringan, dan tunnel garam yang diselesaikan oleh tim Agro Prima Greenhouse di berbagai wilayah nusantara.',
+  url: 'https://agroprimagreenhouse.com/proyek/',
   items: projects.map((p) => ({
     name: p.data.title,
-    url: `https://agrokomplekcemerlang.com/proyek/${p.slug}/`,
+    url: `https://agroprimagreenhouse.com/proyek/${p.slug}/`,
     description: `Konstruksi ${p.data.greenhouseType} di ${p.data.locationCity}, ${p.data.locationProvince}. Dimensi: ${p.data.dimensions}.`,
   })),
 });
 ---
 
 <BaseLayout
-  title="Portofolio Proyek Greenhouse &amp; Tunnel Garam - Agrokomplek Cemerlang"
+  title="Portofolio Proyek Greenhouse &amp; Tunnel Garam - Agro Prima Greenhouse"
   description="Dokumentasi proyek pengerjaan greenhouse pipa galvanis hot-dip, bambu presisi, baja ringan, &amp; tunnel garam yang selesai dibangun di Malang &amp; berbagai kota Indonesia."
   jsonLd={[collectionSchema, breadcrumbSchema]}
 >

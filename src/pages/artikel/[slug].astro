@@ -25,9 +25,9 @@ const relatedArticles = allArticles
   .slice(0, 2);
 
 const breadcrumbSchema = getBreadcrumbSchema([
-  { name: 'Beranda', url: 'https://agrokomplekcemerlang.com/' },
-  { name: 'Artikel & Panduan', url: 'https://agrokomplekcemerlang.com/artikel/' },
-  { name: article.data.title, url: `https://agrokomplekcemerlang.com/artikel/${article.slug}/` },
+  { name: 'Beranda', url: 'https://agroprimagreenhouse.com/' },
+  { name: 'Artikel & Panduan', url: 'https://agroprimagreenhouse.com/artikel/' },
+  { name: article.data.title, url: `https://agroprimagreenhouse.com/artikel/${article.slug}/` },
 ]);
 
 const articleSchema = getArticleSchema({
@@ -42,7 +42,7 @@ const articleSchema = getArticleSchema({
 ---
 
 <BaseLayout
-  title={`${article.data.title} - Panduan Agrokomplek Cemerlang`}
+  title={`${article.data.title} - Panduan Agro Prima Greenhouse`}
   description={article.data.description}
   image={article.data.heroImage}
   type="article"
@@ -119,11 +119,11 @@ const articleSchema = getArticleSchema({
             </span>
             <h4 class="text-xl sm:text-2xl font-extrabold text-white tracking-tight">Butuh Diskusi Teknis Lebih Lanjut?</h4>
             <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed max-w-xl">
-              Tim spesialis Agrokomplek Cemerlang siap membantu menjawab pertanyaan spesifik seputar pemilihan material atau pembangunan fasilitas greenhouse Anda.
+              Tim spesialis Agro Prima Greenhouse siap membantu menjawab pertanyaan spesifik seputar pemilihan material atau pembangunan fasilitas greenhouse Anda.
             </p>
           </div>
           <a
-            href="https://wa.me/6285183002070?text=Halo%20Agrokomplek%20Cemerlang%2C%20saya%20membaca%20artikel%20dan%20ingin%20konsultasi%20lebih%20lanjut."
+            href="https://wa.me/6285183002070?text=Halo%20Agro Prima%20Cemerlang%2C%20saya%20membaca%20artikel%20dan%20ingin%20konsultasi%20lebih%20lanjut."
             target="_blank"
             rel="noopener noreferrer"
             class="px-8 py-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs transition-all shadow-lg hover:shadow-emerald-900/50 shrink-0 select-none"

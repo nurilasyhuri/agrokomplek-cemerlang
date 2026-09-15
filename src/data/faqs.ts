@@ -37,10 +37,10 @@ export const GREENHOUSE_FAQS: FaqItem[] = [
   },
   {
     question: 'Apa saja tipe konstruksi greenhouse yang dapat dibangun?',
-    answer: 'Agrokomplek Cemerlang melayani pembuatan: 1) Greenhouse Pipa Galvanis Hot-Dip anti-karat untuk hortikultura modern (melon, tomat, paprika), 2) Greenhouse Baja Ringan berbobot ringan dan presisi, 3) Greenhouse Rangka Bambu ekonomis untuk pembibitan/sayuran, dan 4) Tunnel Garam (Prisma Garam) spesialis pesisir tahan korosi air laut.',
+    answer: 'Agro Prima Greenhouse melayani pembuatan: 1) Greenhouse Pipa Galvanis Hot-Dip anti-karat untuk hortikultura modern (melon, tomat, paprika), 2) Greenhouse Baja Ringan berbobot ringan dan presisi, 3) Greenhouse Rangka Bambu ekonomis untuk pembibitan/sayuran, dan 4) Tunnel Garam (Prisma Garam) spesialis pesisir tahan korosi air laut.',
   },
   {
-    question: 'Apakah Agrokomplek Cemerlang melayani pengerjaan di luar Kota Malang dan luar Pulau Jawa?',
+    question: 'Apakah Agro Prima Greenhouse melayani pengerjaan di luar Kota Malang dan luar Pulau Jawa?',
     answer: 'Ya. Kami berbasis di Kedungkandang, Kota Malang dan melayani fabrikasi serta pengiriman material sistem knock-down maupun pengerjaan instalasi tim teknisi ke seluruh Jawa Timur, Jawa Tengah, Jawa Barat, Bali, Sumatera, Kalimantan, Sulawesi, hingga kawasan timur Indonesia.',
   },
   {

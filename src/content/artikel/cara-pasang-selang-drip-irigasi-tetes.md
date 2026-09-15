@@ -2,7 +2,7 @@
 title: 'Cara Pasang Selang Drip Irigasi Tetes untuk Kebun Cabai & Melon'
 description: 'Panduan lengkap cara memasang selang drip irigasi 16mm di bawah mulsa. Hemat air hingga 60%, distribusi pupuk fertigasi merata ke seluruh tanaman.'
 publishDate: '8 September 2026'
-author: 'Tim Ahli Agrokomplek Cemerlang'
+author: 'Tim Ahli Agro Prima Greenhouse'
 category: 'Panduan Budidaya'
 tags: ['Irigasi Drip', 'Selang Drip 16mm', 'Fertigasi', 'Budidaya Cabai', 'Melon Hidroponik']
 heroImage: '/images/products/selang-drip-irigasi.webp'
@@ -67,4 +67,4 @@ Gunakan pelubang mulsa panas pada titik-titik tepat di atas atau di samping titi
 2. **Flushing Berkala:** Buka ujung penutup selang lateral selama 1-2 menit sebulan sekali untuk membilas endapan lumpur yang terbawa air.
 3. **Larutkan Pupuk Sempurna:** Pastikan pupuk yang digunakan 100% larut dalam air (*water-soluble*) tanpa residu ampas kasar sebelum dimasukkan ke dalam tangki fertigasi.
 
-Untuk konsultasi kebutuhan paket instalasi irigasi fertigasi lengkap bagi kebun terbuka maupun greenhouse, hubungi tim **Agrokomplek Cemerlang** melalui WhatsApp di **0851-8300-2070** atau kunjungi katalog kami di [Perlengkapan Pertanian & Irigasi](/produk/perlengkapan-pertanian/).
+Untuk konsultasi kebutuhan paket instalasi irigasi fertigasi lengkap bagi kebun terbuka maupun greenhouse, hubungi tim **Agro Prima Greenhouse** melalui WhatsApp di **0851-8300-2070** atau kunjungi katalog kami di [Perlengkapan Pertanian & Irigasi](/produk/perlengkapan-pertanian/).

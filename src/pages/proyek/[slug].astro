@@ -20,9 +20,9 @@ const { project } = Astro.props;
 const { Content } = await project.render();
 
 const breadcrumbSchema = getBreadcrumbSchema([
-  { name: 'Beranda', url: 'https://agrokomplekcemerlang.com/' },
-  { name: 'Portofolio Proyek', url: 'https://agrokomplekcemerlang.com/proyek/' },
-  { name: project.data.title, url: `https://agrokomplekcemerlang.com/proyek/${project.slug}/` },
+  { name: 'Beranda', url: 'https://agroprimagreenhouse.com/' },
+  { name: 'Portofolio Proyek', url: 'https://agroprimagreenhouse.com/proyek/' },
+  { name: project.data.title, url: `https://agroprimagreenhouse.com/proyek/${project.slug}/` },
 ]);
 
 const projectSchema = getProjectSchema({
@@ -38,7 +38,7 @@ const projectSchema = getProjectSchema({
 ---
 
 <BaseLayout
-  title={`${project.data.title} - Portofolio Greenhouse Agrokomplek`}
+  title={`${project.data.title} - Portofolio Greenhouse Agro Prima`}
   description={`Studi kasus konstruksi ${project.data.greenhouseType} di ${project.data.locationCity}, ${project.data.locationProvince} (Dimensi ${project.data.dimensions}). Dokumentasi instalasi, spesifikasi material, & hasil panen.`}
   image={project.data.coverImage}
   jsonLd={[projectSchema, breadcrumbSchema]}
@@ -134,12 +134,12 @@ const projectSchema = getProjectSchema({
       </span>
       <h3 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Ingin Membangun Greenhouse Serupa?</h3>
       <p class="text-xs sm:text-sm text-zinc-300 max-w-xl mx-auto leading-relaxed">
-        Diskusikan ukuran lahan, target komoditas, dan anggaran bersama tim teknisi aplikator Agrokomplek Cemerlang. Hitung perkiraan biaya secara online atau hubungi tim via WhatsApp.
+        Diskusikan ukuran lahan, target komoditas, dan anggaran bersama tim teknisi aplikator Agro Prima Greenhouse. Hitung perkiraan biaya secara online atau hubungi tim via WhatsApp.
       </p>
       <div class="flex flex-wrap items-center justify-center gap-3 pt-2">
         <a
           href={`https://wa.me/6285183002070?text=${encodeURIComponent(
-            `Halo Agrokomplek Cemerlang, saya melihat portofolio proyek ${project.data.title} dan ingin konsultasi pembuatan greenhouse serupa.`
+            `Halo Agro Prima Greenhouse, saya melihat portofolio proyek ${project.data.title} dan ingin konsultasi pembuatan greenhouse serupa.`
           )}`}
           target="_blank"
           rel="noopener noreferrer"

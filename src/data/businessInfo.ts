@@ -1,10 +1,10 @@
 export const BUSINESS_INFO = {
-  name: 'Agrokomplek Cemerlang',
-  legalName: 'Agrokomplek Cemerlang Malang',
+  name: 'Agro Prima Greenhouse',
+  legalName: 'Agro Prima Greenhouse Malang',
   tagline: 'Membangun Greenhouse Modern yang Lebih Kokoh, Presisi, dan Tahan Iklim Tropis.',
   positioning: 'Kontraktor Spesialis Jasa Pembuatan Greenhouse Berpengalaman',
   brandPillars: 'KONSTRUKSI • PROTEKSI • OTOMASI • IRIGASI',
-  description: 'Agrokomplek Cemerlang adalah kontraktor spesialis jasa pembuatan greenhouse di Malang yang melayani survei, rancang bangun struktur galvanis, baja ringan, bambu, tunnel garam, instalasi irigasi, serta pengiriman material konstruksi ke seluruh Indonesia.',
+  description: 'Agro Prima Greenhouse adalah kontraktor spesialis jasa pembuatan greenhouse di Malang yang melayani survei, rancang bangun struktur galvanis, baja ringan, bambu, tunnel garam, instalasi irigasi, serta pengiriman material konstruksi ke seluruh Indonesia.',
   address: {
     street: 'Jl. KH. Malik Dalam RT 01 RW 07',
     village: 'Buring',
@@ -19,7 +19,7 @@ export const BUSINESS_INFO = {
     phone: '0851-8300-2070',
     phoneInternational: '+62 851-8300-2070',
     whatsappRaw: '6285183002070',
-    email: 'agrokomplekcemerlang@gmail.com',
+    email: 'agroprimagreenhouse@gmail.com',
   },
   geo: {
     latitude: -7.9984,

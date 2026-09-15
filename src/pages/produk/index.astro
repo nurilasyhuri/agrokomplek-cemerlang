@@ -18,24 +18,24 @@ const mappedProducts = products.map((p) => ({
 }));
 
 const breadcrumbSchema = getBreadcrumbSchema([
-  { name: 'Beranda', url: 'https://agrokomplekcemerlang.com/' },
-  { name: 'Katalog Produk', url: 'https://agrokomplekcemerlang.com/produk/' },
+  { name: 'Beranda', url: 'https://agroprimagreenhouse.com/' },
+  { name: 'Katalog Produk', url: 'https://agroprimagreenhouse.com/produk/' },
 ]);
 
 const collectionSchema = getCollectionPageSchema({
   name: 'Katalog Saprodi Pertanian, Material Greenhouse & Irigasi',
   description: 'Distributor sarana produksi pertanian terlengkap di Malang: plastik UV 200 mikron, paranet, selang drip 16mm, mulsa, pupuk NPK, dan perlengkapan kebun.',
-  url: 'https://agrokomplekcemerlang.com/produk/',
+  url: 'https://agroprimagreenhouse.com/produk/',
   items: products.map((p) => ({
     name: p.data.title,
-    url: `https://agrokomplekcemerlang.com/produk/${p.slug}/`,
+    url: `https://agroprimagreenhouse.com/produk/${p.slug}/`,
     description: p.data.description,
   })),
 });
 ---
 
 <BaseLayout
-  title="Katalog Material Greenhouse &amp; Sistem Irigasi - Agrokomplek Cemerlang"
+  title="Katalog Material Greenhouse &amp; Sistem Irigasi - Agro Prima Greenhouse"
   description="Penyedia material greenhouse berstandar (plastik UV 200 mikron 14%, paranet 65%-75%, kasa insect net 50 mesh, selang drip 16mm, &amp; mulsa MPHP di Malang kirim se-Indonesia."
   jsonLd={[collectionSchema, breadcrumbSchema]}
 >

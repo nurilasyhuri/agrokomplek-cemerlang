@@ -273,7 +273,7 @@ export default function EstimationCalculator() {
                   {selectedModel.name} &bull; {area} m²
                 </div>
                 <p class="text-xs sm:text-sm text-zinc-300 max-w-xl leading-relaxed">
-                  Dapatkan rincian RAB resmi berdasarkan ukuran lahan <strong>{area} m²</strong> ({length}m &times; {width}m) dan panduan teknis dari tim aplikator Agrokomplek Cemerlang langsung ke WhatsApp Anda.
+                  Dapatkan rincian RAB resmi berdasarkan ukuran lahan <strong>{area} m²</strong> ({length}m &times; {width}m) dan panduan teknis dari tim aplikator Agro Prima Greenhouse langsung ke WhatsApp Anda.
                 </p>
               </div>
 
