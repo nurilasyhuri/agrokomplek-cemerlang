@@ -21,7 +21,7 @@ Berikut adalah acuan kisaran biaya konstruksi greenhouse di Indonesia berdasarka
 
 | Tipe Rangka | Estimasi Biaya per m² | Ketahanan Struktur | Karakteristik & Rekomendasi |
 | :--- | :--- | :--- | :--- |
-| **Greenhouse Bambu** | Rp 100.000 – Rp 175.000 | 3 – 5 Tahun | Paling ekonomis, menggunakan bambu petung tua yang diawetkan. Cocok untuk kebun pemula, nursery, atau uji coba budidaya. |
+| **Greenhouse Bambu** | Rp 100.000 – Rp 175.000 | 3 – 5 Tahun | Paling ekonomis, menggunakan bambu ori tua yang diawetkan. Cocok untuk kebun pemula, nursery, atau uji coba budidaya. |
 | **Greenhouse Baja Ringan** | Rp 200.000 – Rp 350.000 | 7 – 10 Tahun | Perakitan cepat, profil kanal C zincalume anti-karat, bobot ringan, cocok untuk sayuran daun hidroponik dan stroberi. |
 | **Greenhouse Pipa Galvanis Hot-Dip** | Rp 350.000 – Rp 650.000+ | 10 – 15+ Tahun | Standar komersial industri modern, kokoh menopang beban gantung puluhan ton melon/tomat, tahan terpaan angin kencang. |
 | **Tunnel Garam (Prisma Garam)** | Rp 150.000 – Rp 300.000 | 5 – 10 Tahun | Khusus sentra pesisir tambak garam meja, rangka lengkung tahan uap asam air laut untuk produksi kristal garam 365 hari. |

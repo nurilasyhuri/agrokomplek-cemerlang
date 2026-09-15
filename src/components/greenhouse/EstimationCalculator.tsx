@@ -22,7 +22,7 @@ const MODELS: ModelOption[] = [
     name: 'Bambu Presisi',
     badge: 'Ekonomis',
     lifespan: '3 - 5 Tahun',
-    frameSpec: 'Bambu petung/apus pilihan diawetkan',
+    frameSpec: 'Bambu ori pilihan diawetkan',
   },
   {
     id: 'baja-ringan',

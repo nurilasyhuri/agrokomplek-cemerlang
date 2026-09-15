@@ -15,7 +15,7 @@ coverImage: '/images/greenhouse/greenhouse-bambu.webp'
 featured: true
 ---
 
-Pembangunan greenhouse ekonomis berbahan dasar bambu lokal pilihan untuk petani sayuran hidroponik (selada, pakcoy, dan kale).
+Pembangunan greenhouse ekonomis berbahan dasar bambu ori pilihan untuk petani sayuran hidroponik (selada, pakcoy, dan kale).
 
 ### Keunggulan Konstruksi:
 - Perlakuan perendaman anti bubuk dan anti rayap membuat usia pakai bambu mencapai 4-5 tahun.
