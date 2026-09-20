@@ -3,6 +3,7 @@ import SeoHead from '../components/common/SeoHead.astro';
 import Header from '../components/common/Header.astro';
 import Footer from '../components/common/Footer.astro';
 import MobileStickyBar from '../components/common/MobileStickyBar.astro';
+import FloatingWhatsApp from '../components/common/FloatingWhatsApp.astro';
 import '../styles/global.css';
 
 export interface Props {
@@ -50,5 +51,6 @@ const isHomePage = Astro.url.pathname === '/' || Astro.url.pathname === '';
     </main>
     <Footer />
     {!hideMobileStickyBar && <MobileStickyBar />}
+    <FloatingWhatsApp />
   </body>
 </html>
