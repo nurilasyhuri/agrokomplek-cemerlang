@@ -1,24 +1,27 @@
 ---
+import { generateGeneralInquiryUrl } from '../../utils/whatsapp';
+
+const waConsultUrl = generateGeneralInquiryUrl('value-highlights');
 ---
 
-<section class="py-16 sm:py-24 bg-bg border-b border-border font-sans">
-  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+<section class="py-14 sm:py-20 bg-white border-b border-zinc-200/80 font-sans">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <!-- Section Header -->
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 pb-5 border-b border-border gap-4">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 pb-6 border-b border-zinc-100 gap-4">
       <div class="max-w-2xl">
-        <span class="text-xs font-semibold text-primary block mb-1">
+        <span class="text-xs font-bold text-emerald-800 uppercase tracking-wider block mb-1">
           Mengapa Memilih Agro Prima Greenhouse?
         </span>
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-dark tracking-tight">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-zinc-900 tracking-tight">
           Standar Konstruksi Presisi &amp; Komitmen Lapangan
         </h2>
       </div>
       <a
-        href="https://wa.me/6285183002070?text=Halo%20Agro Prima%20Cemerlang,%20saya%20ingin%20konsultasi%20pembuatan%20greenhouse."
+        href={waConsultUrl}
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-primary-hover transition-colors shrink-0"
+        class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 hover:text-emerald-800 transition-colors shrink-0"
       >
         <span>Konsultasi Proyek Anda</span>
         <span aria-hidden="true">&rarr;</span>
@@ -26,112 +29,131 @@
     </div>
 
     <!-- 5 Core Pillars Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
       
       <!-- Pillar 1 -->
-      <div class="p-6 sm:p-7 rounded-2xl sm:rounded-3xl bg-white border border-border hover:border-primary/40 hover:shadow-hover hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between">
+      <div class="p-5 sm:p-6 rounded-xl bg-white border border-zinc-200/80 hover:border-zinc-300 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between">
         <div>
-          <div class="w-12 h-12 rounded-2xl bg-peach/80 text-primary flex items-center justify-center mb-5">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
+          <div class="w-10 h-10 rounded-lg bg-zinc-100 text-emerald-700 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
             </svg>
           </div>
-          <span class="text-[11px] font-bold text-primary block mb-1">Pilar 01</span>
-          <h3 class="text-lg font-bold text-dark mb-2">Workshop &amp; Kantor Fisik Jelas</h3>
-          <p class="text-xs sm:text-sm text-muted leading-relaxed">
-            Anda dapat datang langsung ke workshop kami di Kedungkandang, Kota Malang untuk mengecek sampel material rangka dan berdiskusi teknis.
+          <span class="text-[11px] font-bold text-emerald-800 uppercase tracking-wider block mb-1">Pilar 01</span>
+          <h3 class="text-base font-bold text-zinc-900 mb-1.5">Workshop &amp; Kantor Fisik Jelas</h3>
+          <p class="text-xs text-zinc-600 leading-relaxed">
+            Anda dapat datang langsung ke workshop kami di Kedungkandang, Kota Malang untuk mengecek sampel material rangka dan berdiskusi teknis secara langsung.
           </p>
         </div>
-        <div class="pt-4 mt-4 border-t border-border/70 text-xs font-semibold text-muted">
+        <div class="pt-3.5 mt-4 border-t border-zinc-100 text-[11px] font-medium text-zinc-400">
           Transparansi Lokasi &amp; Legalitas
         </div>
       </div>
 
       <!-- Pillar 2 -->
-      <div class="p-6 sm:p-7 rounded-2xl sm:rounded-3xl bg-white border border-border hover:border-primary/40 hover:shadow-hover hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between">
+      <div class="p-5 sm:p-6 rounded-xl bg-white border border-zinc-200/80 hover:border-zinc-300 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between">
         <div>
-          <div class="w-12 h-12 rounded-2xl bg-peach/80 text-primary flex items-center justify-center mb-5">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="m7.5 4.27 9 5.15"></path>
-              <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path>
-              <path d="m3.3 7 8.7 5 8.7-5"></path>
-              <path d="M12 22V12"></path>
+          <div class="w-10 h-10 rounded-lg bg-zinc-100 text-emerald-700 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
             </svg>
           </div>
-          <span class="text-[11px] font-bold text-primary block mb-1">Pilar 02</span>
-          <h3 class="text-lg font-bold text-dark mb-2">Pilihan Struktur Lengkap</h3>
-          <p class="text-xs sm:text-sm text-muted leading-relaxed">
-            Mulai dari pipa galvanis komersial, baja ringan presisi, bambu awet ekonomis, hingga spesialis tunnel kristalisasi garam.
+          <span class="text-[11px] font-bold text-emerald-800 uppercase tracking-wider block mb-1">Pilar 02</span>
+          <h3 class="text-base font-bold text-zinc-900 mb-1.5">Pilihan Struktur Lengkap</h3>
+          <p class="text-xs text-zinc-600 leading-relaxed">
+            Mulai dari pipa galvanis komersial, baja ringan presisi, bambu awet ekonomis, hingga spesialis tunnel kristalisasi garam meja anti-hujan.
           </p>
         </div>
-        <div class="pt-4 mt-4 border-t border-border/70 text-xs font-semibold text-muted">
+        <div class="pt-3.5 mt-4 border-t border-zinc-100 text-[11px] font-medium text-zinc-400">
           Disesuaikan Target Anggaran Anda
         </div>
       </div>
 
       <!-- Pillar 3 -->
-      <div class="p-6 sm:p-7 rounded-2xl sm:rounded-3xl bg-white border border-border hover:border-primary/40 hover:shadow-hover hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between">
+      <div class="p-5 sm:p-6 rounded-xl bg-white border border-zinc-200/80 hover:border-zinc-300 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between">
         <div>
-          <div class="w-12 h-12 rounded-2xl bg-peach/80 text-primary flex items-center justify-center mb-5">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          <div class="w-10 h-10 rounded-lg bg-zinc-100 text-emerald-700 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
             </svg>
           </div>
-          <span class="text-[11px] font-bold text-primary block mb-1">Pilar 03</span>
-          <h3 class="text-lg font-bold text-dark mb-2">Konsultasi Teknis &amp; RAB Gratis</h3>
-          <p class="text-xs sm:text-sm text-muted leading-relaxed">
+          <span class="text-[11px] font-bold text-emerald-800 uppercase tracking-wider block mb-1">Pilar 03</span>
+          <h3 class="text-base font-bold text-zinc-900 mb-1.5">Konsultasi Teknis &amp; RAB Gratis</h3>
+          <p class="text-xs text-zinc-600 leading-relaxed">
             Diskusikan dimensi lahan, komoditas tanaman, arah angin, dan kalkulasi estimasi kebutuhan biaya per m² secara transparan sebelum memulai proyek.
           </p>
         </div>
-        <div class="pt-4 mt-4 border-t border-border/70 text-xs font-semibold text-muted">
+        <div class="pt-3.5 mt-4 border-t border-zinc-100 text-[11px] font-medium text-zinc-400">
           Perencanaan Matang Sejak Awal
         </div>
       </div>
 
       <!-- Pillar 4 -->
-      <div class="p-6 sm:p-7 rounded-2xl sm:rounded-3xl bg-white border border-border hover:border-primary/40 hover:shadow-hover hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between">
+      <div class="p-5 sm:p-6 rounded-xl bg-white border border-zinc-200/80 hover:border-zinc-300 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between">
         <div>
-          <div class="w-12 h-12 rounded-2xl bg-peach/80 text-primary flex items-center justify-center mb-5">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
-              <path d="M15 18H9"></path>
-              <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
-              <circle cx="17" cy="18" r="2"></circle>
-              <circle cx="7" cy="18" r="2"></circle>
+          <div class="w-10 h-10 rounded-lg bg-zinc-100 text-emerald-700 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14 18V6a2 2 0 00-2-2H4a2 2 0 00-2 2v11a1 1 0 001 1h2m9 0H9m10 0h2a1 1 0 001-1v-3.65a1 1 0 00-.22-.624l-3.48-4.35A1 1 0 0017.52 8H14M17 18a2 2 0 100-4 2 2 0 000 4zm-10 0a2 2 0 100-4 2 2 0 000 4z"></path>
             </svg>
           </div>
-          <span class="text-[11px] font-bold text-primary block mb-1">Pilar 04</span>
-          <h3 class="text-lg font-bold text-dark mb-2">Ekspedisi &amp; Instalasi Se-Indonesia</h3>
-          <p class="text-xs sm:text-sm text-muted leading-relaxed">
-            Melayani pengiriman material sistem knock-down maupun perakitan langsung oleh tim teknisi ke seluruh wilayah pulau di Indonesia.
+          <span class="text-[11px] font-bold text-emerald-800 uppercase tracking-wider block mb-1">Pilar 04</span>
+          <h3 class="text-base font-bold text-zinc-900 mb-1.5">Kirim &amp; Pasang Se-Indonesia</h3>
+          <p class="text-xs text-zinc-600 leading-relaxed">
+            Didukung jaringan ekspedisi kargo terpercaya dan tim teknisi yang siap diberangkatkan untuk perakitan langsung di lokasi lahan Anda.
           </p>
         </div>
-        <div class="pt-4 mt-4 border-t border-border/70 text-xs font-semibold text-muted">
-          Jangkauan Nasional
+        <div class="pt-3.5 mt-4 border-t border-zinc-100 text-[11px] font-medium text-zinc-400">
+          Jangkauan Nasional Dari Sabang - Merauke
         </div>
       </div>
 
       <!-- Pillar 5 -->
-      <div class="p-6 sm:p-7 rounded-2xl sm:rounded-3xl bg-white border border-border hover:border-primary/40 hover:shadow-hover hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between md:col-span-2 lg:col-span-2">
+      <div class="p-5 sm:p-6 rounded-xl bg-white border border-zinc-200/80 hover:border-zinc-300 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between">
         <div>
-          <div class="w-12 h-12 rounded-2xl bg-peach/80 text-primary flex items-center justify-center mb-5">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+          <div class="w-10 h-10 rounded-lg bg-zinc-100 text-emerald-700 flex items-center justify-center mb-4">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
             </svg>
           </div>
-          <span class="text-[11px] font-bold text-primary block mb-1">Pilar 05</span>
-          <h3 class="text-lg font-bold text-dark mb-2">Dukungan Teknis Purna Jual &amp; Garansi Konstruksi</h3>
-          <p class="text-xs sm:text-sm text-muted leading-relaxed">
-            Kami tidak sekadar memasang struktur, tetapi memastikan sistem ventilasi, penahan plastik UV spring clip, dan sistem irigasi fertigasi Anda berfungsi optimal mendukung keberhasilan budidaya panen.
+          <span class="text-[11px] font-bold text-emerald-800 uppercase tracking-wider block mb-1">Pilar 05</span>
+          <h3 class="text-base font-bold text-zinc-900 mb-1.5">Material Berstandar Mutu</h3>
+          <p class="text-xs text-zinc-600 leading-relaxed">
+            Hanya menggunakan plastik UV 200µm 14% anti-drip, paranet rajut kuat, dan kuncian profil spring clip presisi yang awet terkena panas hujan.
           </p>
         </div>
-        <div class="pt-4 mt-4 border-t border-border/70 text-xs font-semibold text-muted">
-          Mitra Pertanian Jangka Panjang
+        <div class="pt-3.5 mt-4 border-t border-zinc-100 text-[11px] font-medium text-zinc-400">
+          Ketahanan Fisik Maksimal
+        </div>
+      </div>
+
+      <!-- Extra Card: CTA Prompt -->
+      <div class="p-5 sm:p-6 rounded-xl bg-emerald-50/60 border border-emerald-200/80 flex flex-col justify-between">
+        <div>
+          <div class="w-10 h-10 rounded-lg bg-emerald-600 text-white flex items-center justify-center mb-4 shadow-2xs">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          <span class="text-[11px] font-bold text-emerald-800 uppercase tracking-wider block mb-1">Mulai Sekarang</span>
+          <h3 class="text-base font-bold text-zinc-900 mb-1.5">Siap Bangun Greenhouse?</h3>
+          <p class="text-xs text-zinc-600 leading-relaxed">
+            Kirimkan ukuran lahan Anda ke tim kami untuk mendapatkan rancangan konsep dan estimasi biaya gratis.
+          </p>
+        </div>
+        <div class="pt-3.5 mt-4 border-t border-emerald-200/60">
+          <a
+            href={waConsultUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-xs font-bold text-emerald-700 hover:text-emerald-800 inline-flex items-center gap-1.5"
+          >
+            <span>Hubungi via WhatsApp</span>
+            <span aria-hidden="true">&rarr;</span>
+          </a>
         </div>
       </div>
 
     </div>
-
   </div>
 </section>

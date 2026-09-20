@@ -5,7 +5,7 @@ publishDate: '8 September 2026'
 author: 'Tim Ahli Agro Prima Greenhouse'
 category: 'Panduan Budidaya'
 tags: ['Irigasi Drip', 'Selang Drip 16mm', 'Fertigasi', 'Budidaya Cabai', 'Melon Hidroponik']
-heroImage: '/images/products/selang-drip-irigasi.webp'
+heroImage: '/images/artikel/irigasi-drip-kebun.webp'
 featured: true
 ---
 

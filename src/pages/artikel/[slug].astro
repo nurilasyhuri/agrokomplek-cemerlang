@@ -73,7 +73,7 @@ const articleSchema = getArticleSchema({
       </div>
 
       <!-- Hero Image Frame -->
-      <div class="rounded-3xl overflow-hidden bg-zinc-100 border border-zinc-200/80 mb-12 shadow-sm aspect-video">
+      <div class="rounded-2xl overflow-hidden bg-zinc-100 border border-zinc-200/80 mb-12 shadow-sm aspect-video">
         <img
           src={article.data.heroImage}
           alt={article.data.title}
@@ -97,7 +97,7 @@ const articleSchema = getArticleSchema({
           {relatedArticles.map((rel) => (
             <a
               href={`/artikel/${rel.slug}/`}
-              class="p-5 rounded-2xl bg-zinc-50/70 border border-zinc-200/80 hover:border-emerald-300 hover:bg-white transition-all block group"
+              class="p-5 rounded-xl bg-zinc-50/70 border border-zinc-200/80 hover:border-zinc-300 hover:bg-white transition-all block group"
             >
               <span class="text-xs font-semibold text-emerald-700">{rel.data.category}</span>
               <h3 class="font-bold text-zinc-900 text-sm mt-1 group-hover:text-emerald-700 transition-colors">
@@ -110,7 +110,7 @@ const articleSchema = getArticleSchema({
       </div>
 
       <!-- Bottom Author / CTA Box -->
-      <div class="mt-12 p-8 sm:p-10 rounded-3xl bg-zinc-900 text-white border border-zinc-800 shadow-xl">
+      <div class="mt-12 p-8 sm:p-10 rounded-2xl bg-zinc-900 text-white border border-zinc-800 shadow-xl">
         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div class="space-y-2">
             <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950/80 text-emerald-300 border border-emerald-700/50">
@@ -123,7 +123,7 @@ const articleSchema = getArticleSchema({
             </p>
           </div>
           <a
-            href="https://wa.me/6285183002070?text=Halo%20Agro Prima%20Cemerlang%2C%20saya%20membaca%20artikel%20dan%20ingin%20konsultasi%20lebih%20lanjut."
+            href="https://wa.me/6285183002070?text=Halo%20Agro%20Prima%20Greenhouse%2C%20saya%20membaca%20artikel%20dan%20ingin%20konsultasi%20lebih%20lanjut."
             target="_blank"
             rel="noopener noreferrer"
             class="px-8 py-4 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs transition-all shadow-lg hover:shadow-emerald-900/50 shrink-0 select-none"

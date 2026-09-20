@@ -2,51 +2,51 @@
 import { BUSINESS_INFO } from '../../data/businessInfo';
 ---
 
-<section class="py-16 sm:py-24 bg-bg border-b border-border font-sans">
-  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+<section class="py-14 sm:py-20 bg-zinc-50/50 border-b border-zinc-200/80 font-sans">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
       
       <!-- Left Column: Logistics Info (7 cols) -->
-      <div class="lg:col-span-7 space-y-6">
+      <div class="lg:col-span-7 space-y-5">
         <div>
-          <span class="text-xs font-semibold text-primary block mb-1">
+          <span class="text-xs font-bold text-emerald-800 uppercase tracking-wider block mb-1">
             Jangkauan Pengiriman
           </span>
-          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-dark tracking-tight leading-[1.2]">
-            Melayani Pengiriman Material Pertanian ke Berbagai Wilayah Indonesia
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-zinc-900 tracking-tight leading-tight">
+            Melayani Pengiriman Material Pertanian ke Seluruh Indonesia
           </h2>
         </div>
 
-        <p class="text-xs sm:text-sm text-muted font-normal leading-relaxed">
-          Agro Prima Greenhouse melayani kebutuhan pelanggan di Jawa Timur dan berbagai wilayah Indonesia, termasuk pengiriman menuju:
+        <p class="text-xs sm:text-sm text-zinc-600 font-normal leading-relaxed">
+          Agro Prima Greenhouse melayani kebutuhan pekebun dan pelaku agribisnis dari Jawa Timur hingga ke pulau-pulau di seluruh Nusantara:
         </p>
 
         <!-- Island Badges Strip -->
-        <div class="p-4 rounded-2xl bg-white border border-border">
-          <p class="text-xs sm:text-sm font-bold text-dark text-center leading-relaxed">
+        <div class="p-3.5 rounded-xl bg-white border border-zinc-200/80 shadow-2xs">
+          <p class="text-xs sm:text-sm font-semibold text-zinc-900 text-center leading-relaxed">
             Jawa &bull; Sumatera &bull; Kalimantan &bull; Sulawesi &bull; Bali &bull; Nusa Tenggara &bull; Maluku &bull; Papua
           </p>
         </div>
 
-        <p class="text-xs sm:text-sm text-muted leading-relaxed">
-          Jenis dan biaya pengiriman akan menyesuaikan berat, volume barang, ekspedisi, serta lokasi tujuan. Untuk material berukuran besar seperti rol plastik UV, paranet, pipa, atau perlengkapan konstruksi, tim kami dapat membantu menentukan pilihan pengiriman yang paling efisien dan aman.
+        <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed">
+          Biaya pengiriman disesuaikan dengan berat, volume barang, dan armada kargo rekanan. Untuk barang berdimensi besar (rol plastik UV, paranet rol, pipa struktur, atau spring clip), kami memilihkan ekspedisi paling ekonomis dan aman.
         </p>
 
-        <!-- Action Link -->
+        <!-- Action Links -->
         <div class="pt-2 flex flex-wrap gap-3">
           <a
-            href={`https://wa.me/${BUSINESS_INFO.contact.whatsappRaw}?text=${encodeURIComponent('Halo Agro Prima Greenhouse, saya ingin menanyakan ongkir dan pilihan pengiriman material ke wilayah saya.')}`}
+            href={`https://wa.me/${BUSINESS_INFO.contact.whatsappRaw}?text=${encodeURIComponent('Halo Agro Prima Greenhouse, saya ingin menanyakan ongkir dan pilihan kargo material ke wilayah saya.')}`}
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white font-extrabold text-xs sm:text-sm transition-all shadow-xs select-none hover:scale-[1.02] active:scale-[0.98]"
+            class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs sm:text-sm transition-all shadow-xs select-none"
           >
-            <span>Tanyakan Ongkir &amp; Pengiriman</span>
+            <span>Tanyakan Pilihan Kargo</span>
             <span aria-hidden="true">&rarr;</span>
           </a>
           <a
             href="/wilayah-layanan/"
-            class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-white hover:bg-secondary text-dark font-bold text-xs sm:text-sm border border-border transition-all select-none shadow-xs"
+            class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white hover:bg-zinc-50 text-zinc-800 font-semibold text-xs sm:text-sm border border-zinc-200 transition-all select-none shadow-2xs"
           >
             <span>Informasi Wilayah Layanan</span>
             <span aria-hidden="true">&rarr;</span>
@@ -56,36 +56,36 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
 
       <!-- Right Column: Verification Data Box (5 cols) -->
       <div class="lg:col-span-5">
-        <div class="rounded-3xl bg-white border border-border p-6 sm:p-8 shadow-xs space-y-5">
-          <h3 class="text-xs font-bold text-dark uppercase tracking-wider border-b border-border pb-3">
+        <div class="rounded-xl bg-white border border-zinc-200/80 p-5 sm:p-7 shadow-xs space-y-4">
+          <h3 class="text-xs font-bold text-zinc-900 uppercase tracking-wider border-b border-zinc-100 pb-2.5">
             Pilihan Ekspedisi &amp; Kargo
           </h3>
 
-          <div class="space-y-4 text-xs">
+          <div class="space-y-3.5 text-xs">
             <div class="space-y-1">
-              <span class="font-bold text-dark text-sm block">
+              <span class="font-bold text-zinc-900 text-xs sm:text-sm block">
                 Ekspedisi Kargo Terpercaya
               </span>
-              <p class="text-muted leading-relaxed">
-                Bekerja sama dengan Indah Logistik, Baraka Sarana Tama, Dakota Cargo, J&amp;T Cargo, dan armada kargo laut untuk tarif yang bersahabat pada muatan berat.
+              <p class="text-zinc-600 leading-relaxed">
+                Bekerja sama dengan Indah Logistik, Baraka Sarana Tama, Dakota Cargo, J&amp;T Cargo, dan ekspedisi kargo laut untuk tarif terhemat muatan berat.
               </p>
             </div>
             
-            <div class="space-y-1">
-              <span class="font-bold text-dark text-sm block">
-                Pengemasan Berlapis
+            <div class="space-y-1 pt-2 border-t border-zinc-100">
+              <span class="font-bold text-zinc-900 text-xs sm:text-sm block">
+                Pengemasan Aman Standar Kargo
               </span>
-              <p class="text-muted leading-relaxed">
-                Rol plastik UV dan material peka dikemas aman dengan lapisan pelindung untuk menjaga kondisi material tetap prima saat tiba di lokasi kebun.
+              <p class="text-zinc-600 leading-relaxed">
+                Rol plastik UV dan material peka dikemas aman dengan wrapping tebal untuk menjaga kondisi material tetap utuh saat tiba di lokasi kebun Anda.
               </p>
             </div>
 
-            <div class="space-y-1">
-              <span class="font-bold text-dark text-sm block">
+            <div class="space-y-1 pt-2 border-t border-zinc-100">
+              <span class="font-bold text-zinc-900 text-xs sm:text-sm block">
                 Nomor Resi &amp; Pemantauan
               </span>
-              <p class="text-muted leading-relaxed">
-                Bukti pengiriman dan nomor resi kargo resmi dibagikan langsung melalui WhatsApp sehingga pergerakan pesanan dapat dipantau hingga tujuan.
+              <p class="text-zinc-600 leading-relaxed">
+                Bukti tanda terima dan nomor resi kargo resmi dibagikan via WhatsApp agar pergerakan kiriman dapat dilacak secara transparan.
               </p>
             </div>
           </div>

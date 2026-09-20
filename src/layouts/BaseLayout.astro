@@ -26,6 +26,8 @@ const {
   hideMobileStickyBar = false,
   noindex = false,
 } = Astro.props;
+
+const isHomePage = Astro.url.pathname === '/' || Astro.url.pathname === '';
 ---
 
 <!doctype html>
@@ -42,8 +44,8 @@ const {
     />
   </head>
   <body class="bg-white text-zinc-900 antialiased selection:bg-emerald-100 selection:text-emerald-900 font-sans">
-    <Header />
-    <main class="flex-1 pb-20 lg:pb-0">
+    <Header isHomePage={isHomePage} />
+    <main class="flex-1 pb-20 md:pb-0">
       <slot />
     </main>
     <Footer />

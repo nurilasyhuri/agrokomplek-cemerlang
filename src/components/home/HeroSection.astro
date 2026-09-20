@@ -49,7 +49,7 @@ const slides = [
     tag: "EFISIENSI BIAYA & CEPAT PASANG",
     headlineLine1: "Greenhouse Baja Ringan.",
     headlineLine2: "Presisi Rapi & Ramah Anggaran.",
-    subtitle: "Kombinasi rangka kanal C dan reng baja ringan anti karat dengan bentang luas dan pencahayaan merata. Solusi tepat untuk kebun pembibitan (nursery), sayuran hidroponik, dan budidaya semi-komersial berbiaya efisien.",
+    subtitle: "Kombinasi rangka kanal C dan reng baja ringan anti karat dengan bentang luas dan pencahayaan merata. Pilihan efisien untuk kebun pembibitan (nursery), sayuran hidroponik, dan budidaya semi-komersial berbiaya terukur.",
     ctaPrimaryText: "Hitung RAB Baja Ringan",
     ctaPrimaryUrl: "/jasa/pembuatan-greenhouse/#kalkulator",
     ctaSecondaryText: "Konsultasi Teknis",
@@ -66,7 +66,7 @@ const slides = [
   },
   {
     id: "greenhouse-bambu",
-    tag: "SOLUSI RAMAH INVESTASI PETANI",
+    tag: "INVESTASI EFISIEN PETANI",
     headlineLine1: "Greenhouse Bambu Awet.",
     headlineLine2: "Kuat, Terjangkau, & Teruji Lapangan.",
     subtitle: "Pilihan bijak untuk kelompok tani, budidaya sayuran daun, dan petani pemula. Struktur bambu pilihan dengan perlakuan anti rayap serta sistem kuncian spring clip kanal C tahan angin kencang.",
@@ -109,7 +109,7 @@ const slides = [
 
 <section
   id="hero-slider-section"
-  class="relative w-full bg-[#121316] text-white font-sans overflow-hidden min-h-[580px] sm:min-h-[640px] lg:min-h-[690px] flex flex-col justify-between border-b border-zinc-800"
+  class="relative w-full bg-[#121316] text-white font-sans overflow-hidden min-h-[100dvh] lg:h-[100dvh] -mt-[108px] flex flex-col justify-between border-b border-zinc-800"
   aria-label="Hero Showcase Jasa Pembuatan Greenhouse Agro Prima Greenhouse"
 >
   <!-- Background Image Carousel Layers -->
@@ -145,9 +145,9 @@ const slides = [
     ))}
   </div>
 
-  <!-- Foreground Content Area -->
-  <div class="relative z-20 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-16 lg:pt-20 pb-8 flex-1 flex items-center w-full">
-    <div class="w-full max-w-3xl text-left">
+  <!-- Foreground Content Area (Precise 1-Screen Centering) -->
+  <div class="relative z-20 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 pt-[124px] sm:pt-[132px] lg:pt-[136px] pb-4 sm:pb-6 flex-1 flex items-center w-full">
+    <div class="w-full max-w-3xl text-left my-auto">
       {slides.map((slide, idx) => (
         <div
           data-slide-content={idx}
@@ -157,24 +157,24 @@ const slides = [
           ]}
         >
           <!-- Category & Tag Kicker Pill -->
-          <div class="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] sm:text-xs font-extrabold tracking-wider uppercase mb-5 sm:mb-6 select-none shadow-sm">
+          <div class="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] sm:text-xs font-extrabold tracking-wider uppercase mb-3.5 sm:mb-4 select-none shadow-sm">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             <span>{slide.tag}</span>
           </div>
 
           <!-- Dynamic Main Headline -->
-          <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.1] mb-5 text-white font-sans drop-shadow-md">
+          <h1 class="text-3xl sm:text-4xl lg:text-[44px] xl:text-[50px] font-black tracking-tight leading-[1.12] mb-3.5 sm:mb-4 text-white font-sans drop-shadow-md">
             <span>{slide.headlineLine1}</span><br />
             <span class="text-emerald-400">{slide.headlineLine2}</span>
           </h1>
 
           <!-- Descriptive Subtitle -->
-          <p class="text-sm sm:text-base lg:text-lg text-zinc-200 font-normal leading-relaxed mb-8 max-w-2xl text-shadow-sm">
+          <p class="text-xs sm:text-sm lg:text-base text-zinc-200 font-normal leading-relaxed mb-5 sm:mb-6 max-w-2xl text-shadow-sm">
             {slide.subtitle}
           </p>
 
           <!-- Action Buttons Group -->
-          <div class="flex flex-wrap items-center gap-3 sm:gap-4 mb-8 sm:mb-10">
+          <div class="flex flex-wrap items-center gap-3 sm:gap-4 mb-5 sm:mb-6">
             <!-- Primary CTA -->
             <a
               href={slide.ctaPrimaryUrl}
@@ -209,7 +209,7 @@ const slides = [
           </div>
 
           <!-- Slide Specific Metrics Strip -->
-          <div class="grid grid-cols-3 gap-3 sm:gap-6 pt-5 border-t border-white/15 max-w-lg select-none">
+          <div class="grid grid-cols-3 gap-3 sm:gap-6 pt-4 border-t border-white/15 max-w-lg select-none">
             {slide.metrics.map(metric => (
               <div>
                 <span class="block font-black text-xl sm:text-2xl lg:text-3xl text-white tracking-tight leading-none mb-1">
@@ -227,8 +227,8 @@ const slides = [
   </div>
 
   <!-- Bottom Interactive Bar: Tab Progress Indicators & Arrow Controls -->
-  <div class="relative z-30 w-full border-t border-white/15 bg-black/40 backdrop-blur-md">
-    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
+  <div class="relative z-30 w-full border-t border-white/15 bg-black/40 backdrop-blur-md shrink-0">
+    <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3.5 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
       
       <!-- 5 Interactive Horizontal Progress Tabs -->
       <div class="flex items-center justify-between sm:justify-start gap-1.5 sm:gap-3 w-full sm:w-auto overflow-x-auto no-scrollbar py-1" id="hero-slider-tabs">

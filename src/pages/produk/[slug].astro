@@ -79,78 +79,78 @@ const breadcrumbSchema = getBreadcrumbSchema([
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 mt-8 items-start">
       
       <!-- Left Column: Product Imagery & Trust (Desktop Sticky, 5 cols) -->
-      <div class="lg:col-span-5 space-y-6 lg:sticky lg:top-24 self-start">
-        <div class="aspect-square bg-white rounded-3xl border border-zinc-200/80 overflow-hidden relative p-4 sm:p-6 flex items-center justify-center shadow-sm">
+      <div class="lg:col-span-5 space-y-5 lg:sticky lg:top-24 self-start">
+        <div class="aspect-square bg-zinc-50/60 rounded-2xl border border-zinc-200/80 overflow-hidden relative p-4 sm:p-6 flex items-center justify-center shadow-2xs">
           <img
             src={product.data.thumbnail}
             alt={product.data.title}
             width="800"
             height="800"
-            class="w-full h-full object-cover rounded-2xl"
+            class="w-full h-full object-cover rounded-xl"
             loading="eager"
             decoding="async"
           />
         </div>
 
-        <!-- Verified Credibility & Social Proof Strip -->
-        <div class="p-4 rounded-2xl bg-zinc-50 border border-zinc-200/80 flex items-center justify-between text-xs">
-          <div class="flex items-center gap-1.5 text-amber-500">
-            <span class="font-bold text-zinc-900">5.0</span>
-            <div class="flex text-amber-400">
-              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-            </div>
+        <!-- Verified Authentic Credibility Strip -->
+        <div class="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200/80 flex items-center justify-between text-xs">
+          <div class="flex items-center gap-2 text-emerald-800 font-semibold">
+            <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            <span>Material Standar Industri Teruji</span>
           </div>
-          <span class="text-zinc-500 font-medium">Pilihan Praktisi &amp; Petani Tropis</span>
+          <span class="text-zinc-500 font-medium text-[11px]">Tahan Iklim Tropis</span>
         </div>
 
-        <!-- 3-Pillar Trust Highlights (Clean Apple Style) -->
-        <div class="p-6 rounded-3xl bg-white border border-zinc-200/80 space-y-4 text-xs text-zinc-600 shadow-2xs">
-          <div class="flex items-start gap-3.5">
-            <div class="w-8 h-8 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-100 mt-0.5">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <!-- 3-Pillar Trust Highlights (Shopify Clean Style) -->
+        <div class="p-5 rounded-2xl bg-white border border-zinc-200/80 space-y-3.5 text-xs text-zinc-600 shadow-2xs">
+          <div class="flex items-start gap-3">
+            <div class="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-100 mt-0.5">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
             </div>
             <div>
-              <span class="font-bold text-zinc-900 block text-sm">100% Produk Original Bergaransi</span>
-              <span class="text-zinc-500 leading-relaxed block mt-0.5">Material berspesifikasi pabrik resmi, teruji tahan iklim ekstrem lapangan.</span>
+              <span class="font-bold text-zinc-900 block text-xs sm:text-sm">100% Produk Original Pabrik</span>
+              <span class="text-zinc-500 leading-relaxed block mt-0.5">Material berspesifikasi resmi, tahan terpaan cuaca ekstrem lapangan.</span>
             </div>
           </div>
 
-          <div class="flex items-start gap-3.5 pt-3 border-t border-zinc-100">
-            <div class="w-8 h-8 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-100 mt-0.5">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="flex items-start gap-3 pt-3 border-t border-zinc-100">
+            <div class="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-100 mt-0.5">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
               </svg>
             </div>
             <div>
-              <span class="font-bold text-zinc-900 block text-sm">Toko Fisik &amp; Gudang Malang</span>
-              <span class="text-zinc-500 leading-relaxed block mt-0.5">Bisa cek fisik sampel dan ambil langsung di Kedungkandang, Kota Malang.</span>
+              <span class="font-bold text-zinc-900 block text-xs sm:text-sm">Toko Fisik &amp; Gudang Malang</span>
+              <span class="text-zinc-500 leading-relaxed block mt-0.5">Bisa cek sampel fisik &amp; ambil langsung di Kedungkandang, Kota Malang.</span>
             </div>
           </div>
 
-          <div class="flex items-start gap-3.5 pt-3 border-t border-zinc-100">
-            <div class="w-8 h-8 rounded-full bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-100 mt-0.5">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/>
+          <div class="flex items-start gap-3 pt-3 border-t border-zinc-100">
+            <div class="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-100 mt-0.5">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 18V6a2 2 0 00-2-2H4a2 2 0 00-2 2v11a1 1 0 001 1h2m9 0H9m10 0h2a1 1 0 001-1v-3.65a1 1 0 00-.22-.624l-3.48-4.35A1 1 0 0017.52 8H14M17 18a2 2 0 100-4 2 2 0 000 4zm-10 0a2 2 0 100-4 2 2 0 000 4z"/>
               </svg>
             </div>
             <div>
-              <span class="font-bold text-zinc-900 block text-sm">Armada Kargo Seluruh Indonesia</span>
-              <span class="text-zinc-500 leading-relaxed block mt-0.5">Bebas pilih ekspedisi kargo darat/laut (Indah, Baraka, Dakota, dll) tarif hemat.</span>
+              <span class="font-bold text-zinc-900 block text-xs sm:text-sm">Ekspedisi Kargo Se-Indonesia</span>
+              <span class="text-zinc-500 leading-relaxed block mt-0.5">Didukung rekanan kargo darat/laut (Indah, Baraka, Dakota) tarif hemat.</span>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Right Column: Product Information & Purchase Path (7 cols) -->
-      <div class="lg:col-span-7 space-y-7">
+      <div class="lg:col-span-7 space-y-6">
         
         <div>
-          <div class="flex flex-wrap items-center gap-2 mb-3">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/60">
+          <div class="flex flex-wrap items-center gap-2 mb-2.5">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/60">
               <span class:list={[
-                'w-2 h-2 rounded-full',
+                'w-1.5 h-1.5 rounded-full',
                 product.data.stockStatus === 'ready' ? 'bg-emerald-500 animate-pulse' : 'bg-amber-500'
               ]}></span>
               <span>
@@ -161,24 +161,24 @@ const breadcrumbSchema = getBreadcrumbSchema([
                   : 'Cek Ketersediaan'}
               </span>
             </span>
-            <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-zinc-100 text-zinc-700">
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-zinc-100 text-zinc-700">
               {categoryName}
             </span>
             {product.data.brand && (
-              <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-zinc-100 text-zinc-700">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-zinc-100 text-zinc-700">
                 Merek: {product.data.brand}
               </span>
             )}
           </div>
-          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-zinc-900 leading-[1.15]">
+          <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-zinc-900 leading-tight">
             {product.data.title}
           </h1>
-          <p class="text-sm sm:text-base text-zinc-600 leading-relaxed mt-3">
+          <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed mt-2.5">
             {product.data.description}
           </p>
         </div>
 
-        <!-- Shopify-Grade Variant Selector & Direct WhatsApp Purchase Island -->
+        <!-- Shopify Variant Selector & Direct WhatsApp Purchase Island -->
         <ProductVariantSelector
           client:load
           productTitle={product.data.title}
@@ -191,31 +191,31 @@ const breadcrumbSchema = getBreadcrumbSchema([
           stockStatus={product.data.stockStatus}
         />
 
-        <!-- Technical Specifications (Apple Minimalist Spec Sheet) -->
-        <div class="rounded-3xl bg-zinc-50/70 border border-zinc-200/80 p-6 sm:p-7 space-y-4">
-          <div class="flex items-center justify-between pb-3 border-b border-zinc-200/80">
-            <h2 class="text-base sm:text-lg font-bold text-zinc-900 tracking-tight">
+        <!-- Technical Specifications Table -->
+        <div class="rounded-2xl bg-zinc-50 border border-zinc-200/80 p-5 sm:p-6 space-y-3">
+          <div class="flex items-center justify-between pb-2.5 border-b border-zinc-200">
+            <h2 class="text-sm sm:text-base font-bold text-zinc-900 tracking-tight">
               Spesifikasi Detail Produk
             </h2>
-            <span class="text-xs text-zinc-500 font-medium">Standar Industri</span>
+            <span class="text-[11px] text-zinc-400 font-medium">Standar SNI &bull; Industri</span>
           </div>
 
-          <div class="divide-y divide-zinc-200/60 text-xs sm:text-sm">
+          <div class="divide-y divide-zinc-200/70 text-xs">
             {product.data.brand && (
-              <div class="py-3 flex items-baseline justify-between">
+              <div class="py-2.5 flex items-baseline justify-between">
                 <span class="font-medium text-zinc-500">Merek / Produsen</span>
                 <span class="font-bold text-zinc-900">{product.data.brand}</span>
               </div>
             )}
             {product.data.specs && Object.entries(product.data.specs).map(([key, val]) => (
-              <div class="py-3 flex items-baseline justify-between">
+              <div class="py-2.5 flex items-baseline justify-between">
                 <span class="font-medium text-zinc-500 capitalize">
                   {key.replace(/([A-Z])/g, ' $1').trim()}
                 </span>
                 <span class="font-bold text-zinc-900">{String(val)}</span>
               </div>
             ))}
-            <div class="py-3 flex items-baseline justify-between">
+            <div class="py-2.5 flex items-baseline justify-between">
               <span class="font-medium text-zinc-500">Kesiapan Stok</span>
               <span class="font-bold text-emerald-700">
                 {product.data.stockStatus === 'ready' ? 'Stok Fisik Tersedia di Gudang Malang' : 'Indent Pabrik'}
@@ -225,11 +225,11 @@ const breadcrumbSchema = getBreadcrumbSchema([
         </div>
 
         <!-- Logistics Information Card -->
-        <div class="p-6 rounded-3xl bg-white border border-zinc-200/80 text-xs sm:text-sm space-y-3 text-zinc-600 shadow-2xs">
-          <span class="font-bold text-zinc-900 block text-sm">Ketentuan Pengambilan &amp; Pengiriman:</span>
-          <div class="space-y-2">
-            <p><strong class="text-zinc-900">1. Ambil Langsung di Toko:</strong> Pelanggan di area Malang Raya dapat berkunjung langsung ke workshop/gudang kami di Buring, Kedungkandang.</p>
-            <p><strong class="text-zinc-900">2. Kirim Ekspedisi Kargo:</strong> Didukung armada kargo rekanan (Indah Kargo, Baraka, Dakota, Truk Balen) dengan proteksi packing ekstra aman.</p>
+        <div class="p-5 rounded-2xl bg-white border border-zinc-200/80 text-xs space-y-2.5 text-zinc-600 shadow-2xs">
+          <span class="font-bold text-zinc-900 block text-xs sm:text-sm">Ketentuan Pengambilan &amp; Pengiriman:</span>
+          <div class="space-y-1.5 leading-relaxed">
+            <p><strong class="text-zinc-800">1. Ambil Langsung di Gudang:</strong> Pelanggan area Malang Raya dapat datang langsung ke workshop kami di Buring, Kedungkandang.</p>
+            <p><strong class="text-zinc-800">2. Kirim Ekspedisi Kargo:</strong> Didukung armada kargo rekanan (Indah Kargo, Baraka, Dakota, Truk Balen) dengan proteksi packing ekstra aman.</p>
           </div>
         </div>
 
@@ -237,11 +237,11 @@ const breadcrumbSchema = getBreadcrumbSchema([
 
     </div>
 
-    <!-- Long-form Description (Clean White Card) -->
-    <div class="mt-14 pt-8 border-t border-zinc-200/80">
-      <div class="p-6 sm:p-10 rounded-3xl bg-white border border-zinc-200/80 shadow-2xs">
-        <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-zinc-900 mb-6">Deskripsi &amp; Panduan Penggunaan</h2>
-        <div class="prose prose-emerald max-w-none text-zinc-600 text-sm leading-relaxed">
+    <!-- Long-form Description Card -->
+    <div class="mt-12 pt-8 border-t border-zinc-200/80">
+      <div class="p-6 sm:p-8 rounded-2xl bg-white border border-zinc-200/80 shadow-2xs">
+        <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-900 mb-4">Deskripsi &amp; Panduan Penggunaan</h2>
+        <div class="prose prose-emerald max-w-none text-zinc-600 text-xs sm:text-sm leading-relaxed">
           <Content />
         </div>
       </div>

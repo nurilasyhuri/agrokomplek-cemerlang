@@ -1,25 +1,28 @@
 ---
+import { generateGeneralInquiryUrl } from '../../utils/whatsapp';
+
+const waConsultUrl = generateGeneralInquiryUrl('service-highlight');
 ---
 
-<section class="py-16 sm:py-24 bg-white border-b border-border font-sans">
-  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+<section class="py-14 sm:py-20 bg-zinc-50/50 border-b border-zinc-200/80 font-sans">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
-    <!-- Section Header (Shopify style) -->
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-10 pb-5 border-b border-border gap-4">
+    <!-- Section Header (Shopify Clean Minimalist Style) -->
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 pb-6 border-b border-zinc-200/80 gap-4">
       <div class="max-w-2xl">
-        <span class="text-xs font-semibold text-primary block mb-1">
+        <span class="text-xs font-bold text-emerald-800 uppercase tracking-wider block mb-1">
           Jasa Pembuatan Greenhouse
         </span>
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-dark tracking-tight mb-2">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-zinc-900 tracking-tight">
           Greenhouse yang Dirancang Sesuai Lahan, Komoditas &amp; Anggaran
         </h2>
-        <p class="text-xs sm:text-sm text-muted font-normal leading-relaxed">
-          Pembuatan greenhouse sebaiknya tidak dimulai hanya dari pemilihan rangka. Ukuran lahan, kondisi angin, jenis tanaman, ventilasi, material penutup, sistem irigasi, serta target penggunaan perlu dipertimbangkan sejak awal. Agro Prima Greenhouse menyediakan beberapa pilihan konstruksi greenhouse:
+        <p class="text-xs sm:text-sm text-zinc-600 font-normal leading-relaxed mt-2">
+          Pembuatan greenhouse tidak hanya tentang memilih jenis pipa atau bambu. Ukuran lahan, kecepatan angin tropis, orientasi sinar matahari, ventilasi monitor roof, atap plastik UV anti-drip, dan sistem fertigasi harus dirancang presisi sejak awal.
         </p>
       </div>
       <a
         href="/jasa/pembuatan-greenhouse/#kalkulator"
-        class="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-primary-hover transition-colors shrink-0"
+        class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 hover:text-emerald-800 transition-colors shrink-0"
       >
         <span>Kalkulator RAB Online</span>
         <span aria-hidden="true">&rarr;</span>
@@ -27,13 +30,13 @@
     </div>
 
     <!-- 4 Greenhouse Types Technical Cards -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 mb-12 sm:mb-14">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mb-12 sm:mb-14">
       
       <!-- Type 1: Bambu -->
-      <div class="group flex flex-col justify-between rounded-2xl sm:rounded-3xl bg-white border border-border hover:border-primary/40 hover:shadow-hover hover:-translate-y-1 transition-all duration-300 p-5">
+      <div class="group flex flex-col justify-between rounded-xl bg-white border border-zinc-200/80 hover:border-zinc-300 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 p-4 sm:p-5">
         <div>
-          <!-- Photo (clean, no overlay) -->
-          <div class="aspect-[16/10] overflow-hidden rounded-xl bg-secondary/50 border border-border/60 mb-4">
+          <!-- Photo -->
+          <div class="aspect-[16/10] overflow-hidden rounded-lg bg-zinc-50 border border-zinc-100 mb-3.5">
             <img
               src="/images/greenhouse/greenhouse-bambu.webp"
               alt="Konstruksi Greenhouse Rangka Bambu Agro Prima Greenhouse"
@@ -43,33 +46,33 @@
             />
           </div>
 
-          <div class="flex items-center justify-between pb-2 border-b border-border/70 mb-2.5">
-            <span class="text-[11px] font-bold text-primary">Tipe 01 &bull; Bambu</span>
-            <span class="text-[10px] font-semibold text-muted bg-secondary px-2 py-0.5 rounded-full">
-              Investasi Terjangkau
+          <div class="flex items-center justify-between pb-2 border-b border-zinc-100 mb-2">
+            <span class="text-[11px] font-bold text-emerald-800">Tipe 01 &bull; Bambu</span>
+            <span class="text-[10px] font-medium text-zinc-600 bg-zinc-100 px-2 py-0.5 rounded-full">
+              Ekonomis
             </span>
           </div>
 
-          <h3 class="text-base font-bold text-dark mb-1.5 group-hover:text-primary transition-colors">
-            Greenhouse Bambu
+          <h3 class="text-base font-bold text-zinc-900 mb-1.5 group-hover:text-emerald-700 transition-colors">
+            Greenhouse Bambu Awet
           </h3>
-          <p class="text-xs text-muted leading-relaxed mb-4">
-            Pilihan ekonomis untuk kebun yang membutuhkan bangunan pelindung tanaman dengan investasi awal lebih terjangkau.
+          <p class="text-xs text-zinc-600 leading-relaxed mb-3.5">
+            Pilihan ramah anggaran bagi kelompok tani dan pemula. Struktur bambu ori pilihan yang diawetkan dengan kuncian spring clip tahan terpaan angin.
           </p>
 
-          <div class="space-y-1.5 text-xs text-muted border-t border-border/70 pt-3">
-            <p><span class="font-semibold text-dark">Cocok untuk:</span> Sayuran, Cabai, Tomat, Melon, Nursery, Kebun skala kecil &amp; menengah</p>
-            <p><span class="font-semibold text-dark">Rangka:</span> Bambu pilihan</p>
-            <p><span class="font-semibold text-dark">Atap:</span> Plastik UV / Paranet</p>
+          <div class="space-y-1.5 text-xs text-zinc-600 border-t border-zinc-100 pt-3">
+            <p><span class="font-semibold text-zinc-900">Cocok untuk:</span> Sayuran daun, pembibitan, melon pemula</p>
+            <p><span class="font-semibold text-zinc-900">Daya tahan:</span> 3 - 5 Tahun</p>
+            <p><span class="font-semibold text-zinc-900">Penutup:</span> Plastik UV 14% &amp; Kasa Insect Net</p>
           </div>
         </div>
 
-        <div class="pt-4 mt-4 border-t border-border/70">
+        <div class="pt-3.5 mt-3.5 border-t border-zinc-100">
           <a
-            href="https://wa.me/6285183002070?text=Halo%20Agro Prima%20Cemerlang,%20saya%20ingin%20konsultasi%20pembuatan%20Greenhouse%20Bambu."
+            href="https://wa.me/6285183002070?text=Halo%20Agro%20Prima%20Greenhouse%2C%20saya%20ingin%20konsultasi%20pembuatan%20Greenhouse%20Bambu."
             target="_blank"
             rel="noopener noreferrer"
-            class="text-xs font-bold text-primary group-hover:text-primary-hover flex items-center justify-between transition-colors"
+            class="text-xs font-semibold text-emerald-700 hover:text-emerald-800 flex items-center justify-between transition-colors"
           >
             <span>Konsultasi Greenhouse Bambu</span>
             <span aria-hidden="true">&rarr;</span>
@@ -77,11 +80,11 @@
         </div>
       </div>
 
-      <!-- Type 2: Galvanis (Paling Populer) -->
-      <div class="group flex flex-col justify-between rounded-2xl sm:rounded-3xl bg-white border-2 border-primary/60 hover:border-primary shadow-xs hover:shadow-hover hover:-translate-y-1 transition-all duration-300 p-5 relative">
+      <!-- Type 2: Galvanis (Komersial) -->
+      <div class="group flex flex-col justify-between rounded-xl bg-white border-2 border-emerald-600/70 hover:border-emerald-600 shadow-2xs hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 p-4 sm:p-5 relative">
         <div>
-          <!-- Photo (clean, no overlay) -->
-          <div class="aspect-[16/10] overflow-hidden rounded-xl bg-secondary/50 border border-border/60 mb-4">
+          <!-- Photo -->
+          <div class="aspect-[16/10] overflow-hidden rounded-lg bg-zinc-50 border border-zinc-100 mb-3.5">
             <img
               src="/images/greenhouse/greenhouse-galvanis.webp"
               alt="Konstruksi Greenhouse Pipa Galvanis Komersial"
@@ -91,33 +94,33 @@
             />
           </div>
 
-          <div class="flex items-center justify-between pb-2 border-b border-border/70 mb-2.5">
-            <span class="text-[11px] font-bold text-primary">Tipe 02 &bull; Terpopuler</span>
-            <span class="text-[10px] font-bold bg-peach text-primary px-2 py-0.5 rounded-full">
-              Komersial Permanen
+          <div class="flex items-center justify-between pb-2 border-b border-zinc-100 mb-2">
+            <span class="text-[11px] font-bold text-emerald-800">Tipe 02 &bull; Standar Industri</span>
+            <span class="text-[10px] font-bold bg-emerald-50 text-emerald-800 px-2 py-0.5 rounded-full border border-emerald-200/60">
+              Paling Populer
             </span>
           </div>
 
-          <h3 class="text-base font-bold text-dark mb-1.5 group-hover:text-primary transition-colors">
+          <h3 class="text-base font-bold text-zinc-900 mb-1.5 group-hover:text-emerald-700 transition-colors">
             Greenhouse Pipa Galvanis
           </h3>
-          <p class="text-xs text-muted leading-relaxed mb-4">
-            Pilihan untuk kebutuhan budidaya yang mengutamakan struktur lebih permanen dan penggunaan jangka panjang.
+          <p class="text-xs text-zinc-600 leading-relaxed mb-3.5">
+            Investasi jangka panjang komersial dengan pipa galvanis hot-dip anti karat. Dirancang khusus untuk budidaya intensif bernilai ekonomi tinggi.
           </p>
 
-          <div class="space-y-1.5 text-xs text-muted border-t border-border/70 pt-3">
-            <p><span class="font-semibold text-dark">Cocok untuk:</span> Melon premium, Paprika, Stroberi, Anggur, Hidroponik, Kebun komersial</p>
-            <p><span class="font-semibold text-dark">Rangka:</span> Pipa Galvanis anti karat</p>
-            <p><span class="font-semibold text-dark">Desain:</span> Disesuaikan ukuran lahan, ventilasi, insect net &amp; irigasi</p>
+          <div class="space-y-1.5 text-xs text-zinc-600 border-t border-zinc-100 pt-3">
+            <p><span class="font-semibold text-zinc-900">Cocok untuk:</span> Melon hidroponik, paprika, stroberi, tomat</p>
+            <p><span class="font-semibold text-zinc-900">Daya tahan:</span> 10 - 15+ Tahun</p>
+            <p><span class="font-semibold text-zinc-900">Fitur:</span> Monitor roof ventilation, sambungan klem tanpa las</p>
           </div>
         </div>
 
-        <div class="pt-4 mt-4 border-t border-border/70">
+        <div class="pt-3.5 mt-3.5 border-t border-zinc-100">
           <a
-            href="https://wa.me/6285183002070?text=Halo%20Agro Prima%20Cemerlang,%20saya%20ingin%20konsultasi%20pembuatan%20Greenhouse%20Pipa%20Galvanis."
+            href="https://wa.me/6285183002070?text=Halo%20Agro%20Prima%20Greenhouse%2C%20saya%20ingin%20konsultasi%20pembuatan%20Greenhouse%20Pipa%20Galvanis."
             target="_blank"
             rel="noopener noreferrer"
-            class="text-xs font-bold text-primary group-hover:text-primary-hover flex items-center justify-between transition-colors"
+            class="text-xs font-semibold text-emerald-700 hover:text-emerald-800 flex items-center justify-between transition-colors"
           >
             <span>Konsultasi Greenhouse Galvanis</span>
             <span aria-hidden="true">&rarr;</span>
@@ -126,10 +129,10 @@
       </div>
 
       <!-- Type 3: Baja Ringan -->
-      <div class="group flex flex-col justify-between rounded-2xl sm:rounded-3xl bg-white border border-border hover:border-primary/40 hover:shadow-hover hover:-translate-y-1 transition-all duration-300 p-5">
+      <div class="group flex flex-col justify-between rounded-xl bg-white border border-zinc-200/80 hover:border-zinc-300 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 p-4 sm:p-5">
         <div>
-          <!-- Photo (clean, no overlay) -->
-          <div class="aspect-[16/10] overflow-hidden rounded-xl bg-secondary/50 border border-border/60 mb-4">
+          <!-- Photo -->
+          <div class="aspect-[16/10] overflow-hidden rounded-lg bg-zinc-50 border border-zinc-100 mb-3.5">
             <img
               src="/images/greenhouse/greenhouse-baja-ringan.webp"
               alt="Konstruksi Greenhouse Rangka Baja Ringan"
@@ -139,33 +142,33 @@
             />
           </div>
 
-          <div class="flex items-center justify-between pb-2 border-b border-border/70 mb-2.5">
-            <span class="text-[11px] font-bold text-primary">Tipe 03 &bull; Modular</span>
-            <span class="text-[10px] font-semibold text-muted bg-secondary px-2 py-0.5 rounded-full">
-              Pemasangan Praktis
+          <div class="flex items-center justify-between pb-2 border-b border-zinc-100 mb-2">
+            <span class="text-[11px] font-bold text-emerald-800">Tipe 03 &bull; Modular</span>
+            <span class="text-[10px] font-medium text-zinc-600 bg-zinc-100 px-2 py-0.5 rounded-full">
+              Instalasi Cepat
             </span>
           </div>
 
-          <h3 class="text-base font-bold text-dark mb-1.5 group-hover:text-primary transition-colors">
+          <h3 class="text-base font-bold text-zinc-900 mb-1.5 group-hover:text-emerald-700 transition-colors">
             Greenhouse Baja Ringan
           </h3>
-          <p class="text-xs text-muted leading-relaxed mb-4">
-            Alternatif struktur modular dengan proses pemasangan relatif praktis untuk beberapa jenis nursery dan budidaya modern.
+          <p class="text-xs text-zinc-600 leading-relaxed mb-3.5">
+            Alternatif struktur presisi dengan perakitan ringkas dan bentang rapi. Sangat cocok untuk pembibitan (nursery) dan kebun sayur modern.
           </p>
 
-          <div class="space-y-1.5 text-xs text-muted border-t border-border/70 pt-3">
-            <p><span class="font-semibold text-dark">Cocok untuk:</span> Nursery, Sayuran, Selada, Stroberi, Hidroponik</p>
-            <p><span class="font-semibold text-dark">Rangka:</span> Baja Ringan Zincalume</p>
-            <p><span class="font-semibold text-dark">Kelebihan:</span> Bobot ringan, modular, perakitan cepat</p>
+          <div class="space-y-1.5 text-xs text-zinc-600 border-t border-zinc-100 pt-3">
+            <p><span class="font-semibold text-zinc-900">Cocok untuk:</span> Nursery, selada hidroponik, sayuran daun</p>
+            <p><span class="font-semibold text-zinc-900">Daya tahan:</span> 7 - 10 Tahun</p>
+            <p><span class="font-semibold text-zinc-900">Rangka:</span> Canal C 0.75mm + Reng Zincalume anti karat</p>
           </div>
         </div>
 
-        <div class="pt-4 mt-4 border-t border-border/70">
+        <div class="pt-3.5 mt-3.5 border-t border-zinc-100">
           <a
-            href="https://wa.me/6285183002070?text=Halo%20Agro Prima%20Cemerlang,%20saya%20ingin%20konsultasi%20pembuatan%20Greenhouse%20Baja%20Ringan."
+            href="https://wa.me/6285183002070?text=Halo%20Agro%20Prima%20Greenhouse%2C%20saya%20ingin%20konsultasi%20pembuatan%20Greenhouse%20Baja%20Ringan."
             target="_blank"
             rel="noopener noreferrer"
-            class="text-xs font-bold text-primary group-hover:text-primary-hover flex items-center justify-between transition-colors"
+            class="text-xs font-semibold text-emerald-700 hover:text-emerald-800 flex items-center justify-between transition-colors"
           >
             <span>Konsultasi Baja Ringan</span>
             <span aria-hidden="true">&rarr;</span>
@@ -174,10 +177,10 @@
       </div>
 
       <!-- Type 4: Tunnel Garam -->
-      <div class="group flex flex-col justify-between rounded-2xl sm:rounded-3xl bg-white border border-border hover:border-primary/40 hover:shadow-hover hover:-translate-y-1 transition-all duration-300 p-5">
+      <div class="group flex flex-col justify-between rounded-xl bg-white border border-zinc-200/80 hover:border-zinc-300 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 p-4 sm:p-5">
         <div>
-          <!-- Photo (clean, no overlay) -->
-          <div class="aspect-[16/10] overflow-hidden rounded-xl bg-secondary/50 border border-border/60 mb-4">
+          <!-- Photo -->
+          <div class="aspect-[16/10] overflow-hidden rounded-lg bg-zinc-50 border border-zinc-100 mb-3.5">
             <img
               src="/images/greenhouse/tunnel-garam-greenhouse.webp"
               alt="Konstruksi Tunnel Garam Prisma Pesisir"
@@ -187,33 +190,33 @@
             />
           </div>
 
-          <div class="flex items-center justify-between pb-2 border-b border-border/70 mb-2.5">
-            <span class="text-[11px] font-bold text-primary">Tipe 04 &bull; Khusus</span>
-            <span class="text-[10px] font-semibold text-muted bg-secondary px-2 py-0.5 rounded-full">
-              Tahan Cuaca Pesisir
+          <div class="flex items-center justify-between pb-2 border-b border-zinc-100 mb-2">
+            <span class="text-[11px] font-bold text-emerald-800">Tipe 04 &bull; Inovasi Pesisir</span>
+            <span class="text-[10px] font-medium text-zinc-600 bg-zinc-100 px-2 py-0.5 rounded-full">
+              Anti Hujan
             </span>
           </div>
 
-          <h3 class="text-base font-bold text-dark mb-1.5 group-hover:text-primary transition-colors">
-            Tunnel Garam
+          <h3 class="text-base font-bold text-zinc-900 mb-1.5 group-hover:text-emerald-700 transition-colors">
+            Tunnel Garam Prisma
           </h3>
-          <p class="text-xs text-muted leading-relaxed mb-4">
-            Konstruksi tunnel untuk membantu melindungi proses produksi dan kristalisasi garam dari perubahan cuaca.
+          <p class="text-xs text-zinc-600 leading-relaxed mb-3.5">
+            Rumah kristalisasi garam tertutup dengan geomembrane HDPE dan plastik UV tahan garam laut. Panen garam meja bersih higienis tanpa terhenti musim hujan.
           </p>
 
-          <div class="space-y-1.5 text-xs text-muted border-t border-border/70 pt-3">
-            <p><span class="font-semibold text-dark">Cocok untuk:</span> Meja kristalisasi garam, lahan tambak pesisir</p>
-            <p><span class="font-semibold text-dark">Rangka:</span> Bambu awet / Pipa lengkung tahan garam</p>
-            <p><span class="font-semibold text-dark">Desain:</span> Disesuaikan kondisi lokasi &amp; produksi</p>
+          <div class="space-y-1.5 text-xs text-zinc-600 border-t border-zinc-100 pt-3">
+            <p><span class="font-semibold text-zinc-900">Cocok untuk:</span> Tambak garam meja, kristalisasi higienis</p>
+            <p><span class="font-semibold text-zinc-900">Daya tahan:</span> 5 - 10 Tahun</p>
+            <p><span class="font-semibold text-zinc-900">Material:</span> Rangka lengkung anti korosi air laut &amp; HDPE</p>
           </div>
         </div>
 
-        <div class="pt-4 mt-4 border-t border-border/70">
+        <div class="pt-3.5 mt-3.5 border-t border-zinc-100">
           <a
-            href="https://wa.me/6285183002070?text=Halo%20Agro Prima%20Cemerlang,%20saya%20ingin%20konsultasi%20pembuatan%20Tunnel%20Garam."
+            href="https://wa.me/6285183002070?text=Halo%20Agro%20Prima%20Greenhouse%2C%20saya%20ingin%20konsultasi%20pembuatan%20Tunnel%20Garam."
             target="_blank"
             rel="noopener noreferrer"
-            class="text-xs font-bold text-primary group-hover:text-primary-hover flex items-center justify-between transition-colors"
+            class="text-xs font-semibold text-emerald-700 hover:text-emerald-800 flex items-center justify-between transition-colors"
           >
             <span>Konsultasi Tunnel Garam</span>
             <span aria-hidden="true">&rarr;</span>
@@ -223,32 +226,34 @@
 
     </div>
 
-    <!-- Callout Box: Bingung Menentukan Jenis Greenhouse? Hitung Kebutuhan & Estimasi Anggaran Lebih Awal -->
-    <div class="p-8 sm:p-10 rounded-2xl sm:rounded-3xl bg-dark text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-md relative overflow-hidden border border-white/10">
-      <div class="space-y-3 max-w-2xl">
-        <span class="text-xs font-semibold text-emerald-400 block">Bingung Menentukan Jenis Greenhouse?</span>
+    <!-- Editorial Callout Card (Shopify Modern Minimalist Style) -->
+    <div class="p-6 sm:p-10 rounded-2xl bg-zinc-900 text-white flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-md border border-zinc-800">
+      <div class="space-y-2 max-w-2xl">
+        <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider block">
+          Simulasi Online Mandiri
+        </span>
         <h3 class="text-xl sm:text-2xl font-extrabold tracking-tight text-white">
           Hitung Kebutuhan &amp; Estimasi Anggaran Lebih Awal
         </h3>
-        <p class="text-xs sm:text-sm text-white/80 leading-relaxed font-normal">
-          Harga pembuatan greenhouse dipengaruhi oleh banyak faktor, antara lain: luas bangunan, jenis rangka, spesifikasi plastik UV, kebutuhan insect net, sistem ventilasi, kondisi lokasi, pondasi, sistem irigasi, serta kebutuhan instalasi lainnya. Gunakan Kalkulator RAB Greenhouse untuk mendapatkan gambaran awal kebutuhan proyek Anda.
+        <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed font-normal">
+          Biaya pembuatan greenhouse dipengaruhi luas lahan, jenis rangka, spesifikasi plastik UV, ventilasi, dan instalasi fertigasi. Dapatkan estimasi biaya awal secara transparan melalui kalkulator kami.
         </p>
       </div>
       <div class="flex flex-col sm:flex-row gap-3 shrink-0 w-full md:w-auto">
         <a
           href="/jasa/pembuatan-greenhouse/#kalkulator"
-          class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-primary hover:bg-primary-hover text-white font-extrabold text-xs sm:text-sm tracking-normal transition-all shadow-md hover:scale-[1.02] active:scale-[0.98]"
+          class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs sm:text-sm tracking-normal transition-all shadow-xs"
         >
-          <span>Hitung Estimasi Greenhouse</span>
+          <span>Hitung RAB Greenhouse</span>
           <span aria-hidden="true">&rarr;</span>
         </a>
         <a
-          href="https://wa.me/6285183002070?text=Halo%20Agro Prima%20Cemerlang,%20saya%20ingin%20konsultasi%20RAB%20dan%20ukuran%20lahan%20greenhouse."
+          href={waConsultUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm tracking-normal transition-all border border-white/20"
+          class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold text-xs sm:text-sm tracking-normal transition-all border border-white/20"
         >
-          <span>Konsultasi RAB via WhatsApp</span>
+          <span>Konsultasi via WhatsApp</span>
           <span aria-hidden="true">&rarr;</span>
         </a>
       </div>

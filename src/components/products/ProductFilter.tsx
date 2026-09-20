@@ -21,6 +21,12 @@ function parsePrice(priceStr?: string): number {
   return digits ? parseInt(digits, 10) : 0;
 }
 
+const CATEGORY_LABELS: Record<string, string> = {
+  'saprodi-pertanian': 'Saprodi',
+  'perlengkapan-greenhouse': 'Greenhouse',
+  'perlengkapan-pertanian': 'Irigasi & Alat',
+};
+
 export default function ProductFilter({ products }: Props) {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -31,9 +37,9 @@ export default function ProductFilter({ products }: Props) {
 
   const categories = [
     { id: 'all', label: 'Semua Produk', count: countAll },
-    { id: 'saprodi-pertanian', label: 'Saprodi Pertanian', count: countByCat('saprodi-pertanian') },
     { id: 'perlengkapan-greenhouse', label: 'Material Greenhouse', count: countByCat('perlengkapan-greenhouse') },
-    { id: 'perlengkapan-pertanian', label: 'Irigasi & Alat', count: countByCat('perlengkapan-pertanian') },
+    { id: 'perlengkapan-pertanian', label: 'Sistem Irigasi & Alat', count: countByCat('perlengkapan-pertanian') },
+    { id: 'saprodi-pertanian', label: 'Saprodi & Pupuk', count: countByCat('saprodi-pertanian') },
   ];
 
   const filteredProducts = products.filter((p) => {
@@ -62,11 +68,11 @@ export default function ProductFilter({ products }: Props) {
   const activeCategoryObj = categories.find((c) => c.id === selectedCategory);
 
   return (
-    <div class="space-y-8">
-      {/* Control Bar: Categories, Instant Search & Sorting */}
-      <div class="bg-white border border-zinc-200/80 rounded-3xl p-3.5 sm:p-5 shadow-xs space-y-4">
+    <div class="space-y-6">
+      {/* Modern Shopify Filter Control Toolbar */}
+      <div class="bg-white border border-zinc-200/80 rounded-2xl p-4 sm:p-5 shadow-xs space-y-4">
         
-        {/* Category Filter Pills (Horizontal scrollable on mobile) */}
+        {/* Category Filter Pills */}
         <div class="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 sm:flex-wrap">
           {categories.map((cat) => {
             const isSelected = selectedCategory === cat.id;
@@ -74,16 +80,16 @@ export default function ProductFilter({ products }: Props) {
               <button
                 key={cat.id}
                 onClick={() => setSelectedCategory(cat.id)}
-                class={`whitespace-nowrap px-3.5 py-2 sm:px-4 sm:py-2.5 rounded-full text-xs font-semibold transition-all select-none shrink-0 inline-flex items-center gap-2 cursor-pointer ${
+                class={`whitespace-nowrap px-3.5 py-2 rounded-full text-xs font-semibold transition-all select-none shrink-0 inline-flex items-center gap-2 cursor-pointer ${
                   isSelected
                     ? 'bg-zinc-900 text-white shadow-xs'
-                    : 'bg-zinc-100/90 text-zinc-600 hover:bg-zinc-200/80 hover:text-zinc-900'
+                    : 'bg-zinc-100 text-zinc-600 hover:bg-zinc-200/80 hover:text-zinc-900'
                 }`}
               >
                 <span>{cat.label}</span>
                 <span
-                  class={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${
-                    isSelected ? 'bg-white/20 text-white' : 'bg-zinc-200/80 text-zinc-500'
+                  class={`text-[10px] px-1.5 py-0.2 rounded-full font-medium ${
+                    isSelected ? 'bg-white/20 text-white' : 'bg-zinc-200 text-zinc-600'
                   }`}
                 >
                   {cat.count}
@@ -93,20 +99,20 @@ export default function ProductFilter({ products }: Props) {
           })}
         </div>
 
-        {/* Secondary Bar: Search & Sort */}
+        {/* Search & Sort Sub-bar */}
         <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 pt-3 border-t border-zinc-100">
           
-          {/* Minimalist Apple Search Pill */}
+          {/* Search Input */}
           <div class="relative flex-1 max-w-md">
             <input
               type="text"
               placeholder="Cari nama produk, merek, atau spesifikasi..."
               value={searchQuery}
               onInput={(e) => setSearchQuery((e.target as HTMLInputElement).value)}
-              class="w-full pl-10 pr-9 py-2.5 rounded-full border border-zinc-200/90 bg-zinc-50 text-zinc-900 placeholder:text-zinc-400 text-xs focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:bg-white transition-all"
+              class="w-full pl-9 pr-8 py-2 rounded-full border border-zinc-200 bg-zinc-50 text-zinc-900 placeholder:text-zinc-400 text-xs focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:bg-white transition-all"
             />
             <svg
-              class="w-4 h-4 text-zinc-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none"
+              class="w-4 h-4 text-zinc-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -122,7 +128,7 @@ export default function ProductFilter({ products }: Props) {
               <button
                 onClick={() => setSearchQuery('')}
                 aria-label="Hapus pencarian"
-                class="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-zinc-200 hover:bg-zinc-300 text-zinc-600 flex items-center justify-center text-[10px] transition-colors"
+                class="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-zinc-200 hover:bg-zinc-300 text-zinc-600 flex items-center justify-center text-[10px] transition-colors"
               >
                 ✕
               </button>
@@ -134,7 +140,7 @@ export default function ProductFilter({ products }: Props) {
             <select
               value={sortBy}
               onChange={(e) => setSortBy((e.target as HTMLSelectElement).value)}
-              class="w-full sm:w-auto appearance-none bg-zinc-50 hover:bg-zinc-100/80 border border-zinc-200/90 text-zinc-700 text-xs font-semibold rounded-full pl-4 pr-9 py-2.5 focus:outline-none focus:ring-2 focus:ring-emerald-600 cursor-pointer transition-colors"
+              class="w-full sm:w-auto appearance-none bg-zinc-50 hover:bg-zinc-100 border border-zinc-200 text-zinc-700 text-xs font-semibold rounded-full pl-4 pr-8 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-600 cursor-pointer transition-colors"
             >
               <option value="featured">Urutkan: Rekomendasi</option>
               <option value="price-asc">Harga: Terendah ke Tertinggi</option>
@@ -142,7 +148,7 @@ export default function ProductFilter({ products }: Props) {
               <option value="name-asc">Nama Produk: A &rarr; Z</option>
             </select>
             <svg
-              class="w-4 h-4 text-zinc-400 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none"
+              class="w-3.5 h-3.5 text-zinc-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -155,18 +161,16 @@ export default function ProductFilter({ products }: Props) {
 
       </div>
 
-      {/* Result Count Info & Reset Pill */}
-      <div class="flex items-center justify-between text-xs text-zinc-500 px-2">
-        <div class="flex items-center gap-2">
-          <span>
-            Menampilkan <strong class="text-zinc-900 font-bold">{sortedProducts.length}</strong> produk
-            {selectedCategory !== 'all' && (
-              <span> dalam kategori <strong class="text-zinc-900">{activeCategoryObj?.label}</strong></span>
-            )}
-            {searchQuery && (
-              <span> untuk pencarian <strong class="text-zinc-900">&ldquo;{searchQuery}&rdquo;</strong></span>
-            )}
-          </span>
+      {/* Result Status & Reset Control */}
+      <div class="flex items-center justify-between text-xs text-zinc-500 px-1">
+        <div>
+          Menampilkan <strong class="text-zinc-900 font-bold">{sortedProducts.length}</strong> produk
+          {selectedCategory !== 'all' && (
+            <span> di kategori <strong class="text-zinc-900">{activeCategoryObj?.label}</strong></span>
+          )}
+          {searchQuery && (
+            <span> untuk kata kunci <strong class="text-zinc-900">&ldquo;{searchQuery}&rdquo;</strong></span>
+          )}
         </div>
         {(selectedCategory !== 'all' || searchQuery !== '') && (
           <button
@@ -182,51 +186,39 @@ export default function ProductFilter({ products }: Props) {
         )}
       </div>
 
-      {/* Product Cards Grid: 2 columns on mobile, 3 on lg, 4 on xl */}
+      {/* Product Cards Grid (Shopify 4-Column Layout) */}
       {sortedProducts.length > 0 ? (
-        <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
+        <div class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-5">
           {sortedProducts.map((product) => {
+            const displayCategory = CATEGORY_LABELS[product.category] || product.category;
             return (
               <div
                 key={product.slug}
-                class="group relative flex flex-col justify-between rounded-3xl bg-white border border-zinc-200/80 hover:border-zinc-300 hover:shadow-lg transition-all duration-300 overflow-hidden"
+                class="group relative flex flex-col justify-between rounded-xl bg-white border border-zinc-200/80 hover:border-zinc-300 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 overflow-hidden"
               >
                 <div>
                   <a
                     href={`/produk/${product.slug}/`}
-                    class="block aspect-square bg-zinc-50/80 overflow-hidden relative p-4 sm:p-5"
+                    class="block aspect-square bg-zinc-50 overflow-hidden relative"
                   >
                     <img
                       src={product.thumbnail}
                       alt={product.title}
                       width="400"
                       height="400"
-                      class="w-full h-full object-cover rounded-2xl group-hover:scale-105 transition-transform duration-500 ease-out shadow-2xs"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
                       loading="lazy"
                       decoding="async"
                       onError={(e) => {
                         (e.currentTarget as HTMLImageElement).src = '/images/products/plastik-uv-greenhouse.webp';
                       }}
                     />
-                  </a>
-
-                  <div class="p-4 sm:p-5 space-y-1.5 sm:space-y-2">
-                    <div class="flex items-center justify-between gap-2">
-                      {product.brand ? (
-                        <span class="text-[11px] font-semibold text-emerald-700 tracking-normal block">
-                          {product.brand}
-                        </span>
-                      ) : (
-                        <span></span>
-                      )}
-                      
-                      {/* Stock Status Badge (Under image, zero overlay) */}
-                      <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-medium bg-zinc-100 text-zinc-700">
-                        {product.stockStatus === 'ready' ? (
-                          <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                        ) : (
-                          <span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span>
-                        )}
+                    {/* Stock Pill */}
+                    <div class="absolute top-2.5 left-2.5 z-10">
+                      <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-white/95 backdrop-blur-xs text-zinc-800 border border-zinc-200/80 shadow-2xs">
+                        <span class={`w-1.5 h-1.5 rounded-full ${
+                          product.stockStatus === 'ready' ? 'bg-emerald-500' : 'bg-amber-500'
+                        }`}></span>
                         <span>
                           {product.stockStatus === 'ready'
                             ? 'Ready'
@@ -236,9 +228,22 @@ export default function ProductFilter({ products }: Props) {
                         </span>
                       </span>
                     </div>
+                  </a>
 
-                    <h3 class="font-semibold text-zinc-900 text-sm sm:text-base leading-snug line-clamp-2">
-                      <a href={`/produk/${product.slug}/`} class="hover:text-emerald-700 transition-colors">
+                  <div class="p-3.5 sm:p-4 space-y-1.5">
+                    <div class="flex items-center justify-between gap-2 text-[11px]">
+                      <span class="font-bold uppercase tracking-wider text-emerald-800 text-[10px]">
+                        {displayCategory}
+                      </span>
+                      {product.brand && (
+                        <span class="text-zinc-400 font-medium truncate">
+                          {product.brand}
+                        </span>
+                      )}
+                    </div>
+
+                    <h3 class="font-semibold text-zinc-900 text-sm leading-snug line-clamp-2 group-hover:text-emerald-700 transition-colors min-h-[2.5rem]">
+                      <a href={`/produk/${product.slug}/`}>
                         {product.title}
                       </a>
                     </h3>
@@ -249,25 +254,25 @@ export default function ProductFilter({ products }: Props) {
                   </div>
                 </div>
 
-                <div class="p-4 sm:p-5 pt-0 border-t border-zinc-100 mt-2 space-y-3">
-                  <div class="flex items-baseline justify-between pt-2">
+                <div class="p-3.5 sm:p-4 pt-2 border-t border-zinc-100 mt-1 space-y-2.5">
+                  <div class="flex items-baseline justify-between">
                     <div class="flex flex-col">
                       <span class="text-[10px] text-zinc-400 uppercase tracking-wider font-medium">Mulai Dari</span>
-                      <span class="font-bold text-zinc-900 text-base sm:text-lg tracking-tight">
+                      <span class="font-bold text-zinc-900 text-sm sm:text-base tracking-tight">
                         {product.priceDisplay || 'Hubungi CS'}
                       </span>
                     </div>
-                    <span class="text-[11px] font-medium text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-100/60">
-                      Siap Kirim
+                    <span class="text-[10px] font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100/60">
+                      Kargo RI
                     </span>
                   </div>
 
                   <a
                     href={`/produk/${product.slug}/`}
-                    class="w-full inline-flex items-center justify-center gap-2 py-2.5 sm:py-3 px-4 rounded-full bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-medium tracking-normal transition-all duration-200 select-none shadow-xs hover:shadow group-hover:bg-emerald-700"
+                    class="w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-zinc-900 hover:bg-emerald-700 text-white text-xs font-semibold tracking-normal transition-colors duration-200 select-none"
                   >
-                    <span>Pilih Varian &amp; Beli</span>
-                    <svg class="w-3.5 h-3.5 text-white/80 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <span>Lihat Detail &amp; Varian</span>
+                    <svg class="w-3 h-3 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                     </svg>
                   </a>
@@ -277,7 +282,7 @@ export default function ProductFilter({ products }: Props) {
           })}
         </div>
       ) : (
-        <div class="text-center py-16 bg-white rounded-3xl border border-zinc-200/80 p-8 shadow-xs max-w-lg mx-auto space-y-4">
+        <div class="text-center py-16 bg-white rounded-2xl border border-zinc-200/80 p-8 shadow-xs max-w-lg mx-auto space-y-4">
           <div class="w-12 h-12 rounded-full bg-zinc-100 text-zinc-400 flex items-center justify-center mx-auto">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
@@ -292,7 +297,7 @@ export default function ProductFilter({ products }: Props) {
               setSelectedCategory('all');
               setSearchQuery('');
             }}
-            class="px-5 py-2.5 rounded-full bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-semibold transition-all shadow-xs inline-flex items-center gap-2"
+            class="px-5 py-2.5 rounded-full bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-semibold transition-all shadow-xs inline-flex items-center gap-2 cursor-pointer"
           >
             <span>Reset Filter &amp; Pencarian</span>
             <span>&rarr;</span>

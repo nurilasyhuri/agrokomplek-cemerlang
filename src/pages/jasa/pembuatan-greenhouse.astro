@@ -72,7 +72,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-        <div class="bg-white border border-zinc-200/80 p-6 sm:p-7 rounded-3xl space-y-3 shadow-sm hover:shadow-md transition-all hover:border-zinc-300">
+        <div class="bg-white border border-zinc-200/80 p-6 sm:p-7 rounded-xl space-y-3 shadow-sm hover:shadow-md transition-all hover:border-zinc-300">
           <div class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center text-xs font-bold text-emerald-800">
             01
           </div>
@@ -82,7 +82,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
           </p>
         </div>
 
-        <div class="bg-white border border-zinc-200/80 p-6 sm:p-7 rounded-3xl space-y-3 shadow-sm hover:shadow-md transition-all hover:border-zinc-300">
+        <div class="bg-white border border-zinc-200/80 p-6 sm:p-7 rounded-xl space-y-3 shadow-sm hover:shadow-md transition-all hover:border-zinc-300">
           <div class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center text-xs font-bold text-emerald-800">
             02
           </div>
@@ -92,7 +92,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
           </p>
         </div>
 
-        <div class="bg-white border border-zinc-200/80 p-6 sm:p-7 rounded-3xl space-y-3 shadow-sm hover:shadow-md transition-all hover:border-zinc-300">
+        <div class="bg-white border border-zinc-200/80 p-6 sm:p-7 rounded-xl space-y-3 shadow-sm hover:shadow-md transition-all hover:border-zinc-300">
           <div class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center text-xs font-bold text-emerald-800">
             03
           </div>
@@ -102,7 +102,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
           </p>
         </div>
 
-        <div class="bg-white border border-zinc-200/80 p-6 sm:p-7 rounded-3xl space-y-3 shadow-sm hover:shadow-md transition-all hover:border-zinc-300">
+        <div class="bg-white border border-zinc-200/80 p-6 sm:p-7 rounded-xl space-y-3 shadow-sm hover:shadow-md transition-all hover:border-zinc-300">
           <div class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center text-xs font-bold text-emerald-800">
             04
           </div>
@@ -124,80 +124,132 @@ const breadcrumbSchema = getBreadcrumbSchema([
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
-        <div class="bg-white border border-zinc-200/80 p-6 rounded-3xl space-y-4 shadow-sm hover:border-emerald-300 transition-all flex flex-col justify-between">
-          <div class="space-y-2">
-            <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-800 border border-amber-200">Ekonomis</span>
-            <h3 class="text-lg font-bold text-zinc-900">Greenhouse Bambu</h3>
-            <p class="text-xs text-zinc-600 leading-relaxed">
-              Menggunakan bambu ori pilihan yang diawetkan. Solusi berbiaya paling terjangkau untuk kebun pemula atau persemaian bibit.
-            </p>
-            <div class="pt-2 text-xs text-zinc-500 space-y-1">
-              <p>• Ketahanan: 3 - 5 Tahun</p>
-              <p>• Estimasi: Rp 100rb - 175rb/m²</p>
-              <p>• Komoditas: Sayuran daun, bibit</p>
+        <div class="bg-white border border-zinc-200/80 rounded-xl overflow-hidden shadow-sm hover:border-zinc-300 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="aspect-[16/10] bg-zinc-100 relative overflow-hidden">
+              <img
+                src="/images/greenhouse/greenhouse-bambu.webp"
+                alt="Greenhouse Rangka Bambu Awet Ekonomis"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="p-6 space-y-2">
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-800 border border-amber-200">Ekonomis</span>
+              <h3 class="text-lg font-bold text-zinc-900">Greenhouse Bambu</h3>
+              <p class="text-xs text-zinc-600 leading-relaxed">
+                Menggunakan bambu ori pilihan yang diawetkan. Pilihan berbiaya paling hemat untuk kebun pemula atau persemaian bibit.
+              </p>
+              <div class="pt-2 text-xs text-zinc-500 space-y-1">
+                <p>• Ketahanan: 3 - 5 Tahun</p>
+                <p>• Estimasi: Rp 100rb - 175rb/m²</p>
+                <p>• Komoditas: Sayuran daun, bibit</p>
+              </div>
             </div>
           </div>
-          <a href={generateGeneralInquiryUrl('konsultasi-gh-bambu')} target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center justify-between pt-3 border-t border-zinc-100">
-            <span>Konsultasi Bambu</span>
-            <span>&rarr;</span>
-          </a>
+          <div class="p-6 pt-0">
+            <a href={generateGeneralInquiryUrl('konsultasi-gh-bambu')} target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center justify-between pt-3 border-t border-zinc-100">
+              <span>Konsultasi Bambu</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
         </div>
 
-        <div class="bg-white border border-zinc-200/80 p-6 rounded-3xl space-y-4 shadow-sm hover:border-emerald-300 transition-all flex flex-col justify-between">
-          <div class="space-y-2">
-            <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-blue-50 text-blue-800 border border-blue-200">Instalasi Cepat</span>
-            <h3 class="text-lg font-bold text-zinc-900">Greenhouse Baja Ringan</h3>
-            <p class="text-xs text-zinc-600 leading-relaxed">
-              Rangka kanal C dan reng zincalume anti-karat berbobot ringan, proses perakitan cepat, dan tampilan rapi terstandar.
-            </p>
-            <div class="pt-2 text-xs text-zinc-500 space-y-1">
-              <p>• Ketahanan: 7 - 10 Tahun</p>
-              <p>• Estimasi: Rp 200rb - 350rb/m²</p>
-              <p>• Komoditas: Sayuran, stroberi, melon</p>
+        <div class="bg-white border border-zinc-200/80 rounded-xl overflow-hidden shadow-sm hover:border-zinc-300 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="aspect-[16/10] bg-zinc-100 relative overflow-hidden">
+              <img
+                src="/images/greenhouse/greenhouse-baja-ringan.webp"
+                alt="Greenhouse Rangka Baja Ringan Presisi"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="p-6 space-y-2">
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-blue-50 text-blue-800 border border-blue-200">Instalasi Cepat</span>
+              <h3 class="text-lg font-bold text-zinc-900">Greenhouse Baja Ringan</h3>
+              <p class="text-xs text-zinc-600 leading-relaxed">
+                Rangka kanal C dan reng zincalume anti-karat berbobot ringan, proses perakitan cepat, dan tampilan rapi terstandar.
+              </p>
+              <div class="pt-2 text-xs text-zinc-500 space-y-1">
+                <p>• Ketahanan: 7 - 10 Tahun</p>
+                <p>• Estimasi: Rp 200rb - 350rb/m²</p>
+                <p>• Komoditas: Sayuran, stroberi, melon</p>
+              </div>
             </div>
           </div>
-          <a href={generateGeneralInquiryUrl('konsultasi-gh-baja-ringan')} target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center justify-between pt-3 border-t border-zinc-100">
-            <span>Konsultasi Baja Ringan</span>
-            <span>&rarr;</span>
-          </a>
+          <div class="p-6 pt-0">
+            <a href={generateGeneralInquiryUrl('konsultasi-gh-baja-ringan')} target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center justify-between pt-3 border-t border-zinc-100">
+              <span>Konsultasi Baja Ringan</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
         </div>
 
-        <div class="bg-white border border-emerald-200 p-6 rounded-3xl space-y-4 shadow-md hover:border-emerald-400 transition-all flex flex-col justify-between relative">
-          <div class="space-y-2">
-            <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-800 border border-emerald-200">Rekomendasi Komersial</span>
-            <h3 class="text-lg font-bold text-zinc-900">Greenhouse Pipa Galvanis</h3>
-            <p class="text-xs text-zinc-600 leading-relaxed">
-              Pipa galvanis hot-dip anti-karat untuk perkebunan intensif jangka panjang. Menopang beban gantung melon dan cuaca ekstrem.
-            </p>
-            <div class="pt-2 text-xs text-zinc-500 space-y-1">
-              <p>• Ketahanan: 10 - 15+ Tahun</p>
-              <p>• Estimasi: Rp 350rb - 650rb+/m²</p>
-              <p>• Komoditas: Melon hidroponik, tomat, paprika</p>
+        <div class="bg-white border border-emerald-200 rounded-xl overflow-hidden shadow-md hover:border-emerald-300 transition-all flex flex-col justify-between relative group">
+          <div>
+            <div class="aspect-[16/10] bg-zinc-100 relative overflow-hidden">
+              <img
+                src="/images/greenhouse/greenhouse-galvanis.webp"
+                alt="Greenhouse Pipa Galvanis Hot-Dip Komersial"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="p-6 space-y-2">
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-800 border border-emerald-200">Rekomendasi Komersial</span>
+              <h3 class="text-lg font-bold text-zinc-900">Greenhouse Pipa Galvanis</h3>
+              <p class="text-xs text-zinc-600 leading-relaxed">
+                Pipa galvanis hot-dip anti-karat untuk perkebunan intensif jangka panjang. Menopang beban gantung melon dan cuaca ekstrem.
+              </p>
+              <div class="pt-2 text-xs text-zinc-500 space-y-1">
+                <p>• Ketahanan: 10 - 15+ Tahun</p>
+                <p>• Estimasi: Rp 350rb - 650rb+/m²</p>
+                <p>• Komoditas: Melon hidroponik, tomat, paprika</p>
+              </div>
             </div>
           </div>
-          <a href={generateGeneralInquiryUrl('konsultasi-gh-galvanis')} target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center justify-between pt-3 border-t border-zinc-100">
-            <span>Konsultasi Galvanis</span>
-            <span>&rarr;</span>
-          </a>
+          <div class="p-6 pt-0">
+            <a href={generateGeneralInquiryUrl('konsultasi-gh-galvanis')} target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center justify-between pt-3 border-t border-zinc-100">
+              <span>Konsultasi Galvanis</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
         </div>
 
-        <div class="bg-white border border-zinc-200/80 p-6 rounded-3xl space-y-4 shadow-sm hover:border-emerald-300 transition-all flex flex-col justify-between">
-          <div class="space-y-2">
-            <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-cyan-50 text-cyan-800 border border-cyan-200">Spesialis Pesisir</span>
-            <h3 class="text-lg font-bold text-zinc-900">Tunnel Garam (Prisma)</h3>
-            <p class="text-xs text-zinc-600 leading-relaxed">
-              Inovasi greenhouse meja kristalisasi garam tahan asam air laut. Panen garam industri bersih terus berlanjut tanpa terganggu hujan.
-            </p>
-            <div class="pt-2 text-xs text-zinc-500 space-y-1">
-              <p>• Ketahanan: 5 - 10 Tahun</p>
-              <p>• Rangka: Pipa lengkung anti korosi</p>
-              <p>• Manfaat: Kadar NaCl 95%+, panen 365 hari</p>
+        <div class="bg-white border border-zinc-200/80 rounded-xl overflow-hidden shadow-sm hover:border-zinc-300 transition-all flex flex-col justify-between group">
+          <div>
+            <div class="aspect-[16/10] bg-zinc-100 relative overflow-hidden">
+              <img
+                src="/images/greenhouse/tunnel-garam-greenhouse.webp"
+                alt="Tunnel Prisma Garam Pesisir Modern"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="p-6 space-y-2">
+              <span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-cyan-50 text-cyan-800 border border-cyan-200">Spesialis Pesisir</span>
+              <h3 class="text-lg font-bold text-zinc-900">Tunnel Garam (Prisma)</h3>
+              <p class="text-xs text-zinc-600 leading-relaxed">
+                Inovasi greenhouse meja kristalisasi garam tahan asam air laut. Panen garam industri bersih terus berlanjut tanpa terganggu hujan.
+              </p>
+              <div class="pt-2 text-xs text-zinc-500 space-y-1">
+                <p>• Ketahanan: 5 - 10 Tahun</p>
+                <p>• Rangka: Pipa lengkung anti korosi</p>
+                <p>• Manfaat: Kadar NaCl 95%+, panen 365 hari</p>
+              </div>
             </div>
           </div>
-          <a href={generateGeneralInquiryUrl('konsultasi-tunnel-garam')} target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center justify-between pt-3 border-t border-zinc-100">
-            <span>Konsultasi Tunnel Garam</span>
-            <span>&rarr;</span>
-          </a>
+          <div class="p-6 pt-0">
+            <a href={generateGeneralInquiryUrl('konsultasi-tunnel-garam')} target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-emerald-700 hover:text-emerald-800 flex items-center justify-between pt-3 border-t border-zinc-100">
+              <span>Konsultasi Tunnel Garam</span>
+              <span>&rarr;</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -217,7 +269,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-        <div class="bg-zinc-50/70 border border-zinc-200/80 p-6 sm:p-7 rounded-3xl space-y-3">
+        <div class="bg-zinc-50/70 border border-zinc-200/80 p-6 sm:p-7 rounded-xl space-y-3">
           <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-zinc-900 border border-zinc-200 shadow-xs">
             Langkah 01
           </span>
@@ -227,7 +279,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
           </p>
         </div>
 
-        <div class="bg-zinc-50/70 border border-zinc-200/80 p-6 sm:p-7 rounded-3xl space-y-3">
+        <div class="bg-zinc-50/70 border border-zinc-200/80 p-6 sm:p-7 rounded-xl space-y-3">
           <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-zinc-900 border border-zinc-200 shadow-xs">
             Langkah 02
           </span>
@@ -237,7 +289,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
           </p>
         </div>
 
-        <div class="bg-zinc-50/70 border border-zinc-200/80 p-6 sm:p-7 rounded-3xl space-y-3">
+        <div class="bg-zinc-50/70 border border-zinc-200/80 p-6 sm:p-7 rounded-xl space-y-3">
           <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-zinc-900 border border-zinc-200 shadow-xs">
             Langkah 03
           </span>
@@ -247,7 +299,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
           </p>
         </div>
 
-        <div class="bg-zinc-50/70 border border-zinc-200/80 p-6 sm:p-7 rounded-3xl space-y-3">
+        <div class="bg-zinc-50/70 border border-zinc-200/80 p-6 sm:p-7 rounded-xl space-y-3">
           <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white text-zinc-900 border border-zinc-200 shadow-xs">
             Langkah 04
           </span>
@@ -274,26 +326,93 @@ const breadcrumbSchema = getBreadcrumbSchema([
         </a>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-        <a href="/produk/plastik-uv-greenhouse-14/" class="p-5 rounded-3xl bg-white border border-zinc-200/80 hover:border-emerald-300 hover:shadow-md transition-all group">
-          <span class="text-2xl mb-2 block">☀️</span>
-          <h3 class="font-bold text-zinc-900 text-sm group-hover:text-emerald-700 transition-colors">Plastik UV 200 Mikron 14%</h3>
-          <p class="text-xs text-zinc-500 mt-1 leading-relaxed">Atap pelindung tahan panas &amp; hujan dengan aditif UV stabilizer anti-getas.</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+        <a href="/produk/plastik-uv-greenhouse-14/" class="rounded-xl bg-white border border-zinc-200/80 overflow-hidden hover:border-zinc-300 hover:shadow-md transition-all group flex flex-col justify-between">
+          <div>
+            <div class="aspect-[16/10] bg-zinc-50 border-b border-zinc-100 relative overflow-hidden flex items-center justify-center p-3">
+              <img
+                src="/images/products/plastik-uv-greenhouse.webp"
+                alt="Plastik UV 200 Mikron 14%"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-zinc-900 text-sm group-hover:text-emerald-700 transition-colors">Plastik UV 200 Mikron 14%</h3>
+              <p class="text-xs text-zinc-500 mt-1 leading-relaxed">Atap pelindung tahan panas &amp; hujan dengan aditif UV stabilizer anti-getas.</p>
+            </div>
+          </div>
+          <div class="px-5 pb-4 text-xs font-semibold text-emerald-700 group-hover:text-emerald-800 flex items-center justify-between">
+            <span>Detail Material</span>
+            <span>&rarr;</span>
+          </div>
         </a>
-        <a href="/produk/paranet-tanaman/" class="p-5 rounded-3xl bg-white border border-zinc-200/80 hover:border-emerald-300 hover:shadow-md transition-all group">
-          <span class="text-2xl mb-2 block">🌿</span>
-          <h3 class="font-bold text-zinc-900 text-sm group-hover:text-emerald-700 transition-colors">Paranet Shading Net 65%-75%</h3>
-          <p class="text-xs text-zinc-500 mt-1 leading-relaxed">Jaring peneduh pengatur intensitas radiasi matahari dan penurun suhu.</p>
+
+        <a href="/produk/paranet-tanaman/" class="rounded-xl bg-white border border-zinc-200/80 overflow-hidden hover:border-zinc-300 hover:shadow-md transition-all group flex flex-col justify-between">
+          <div>
+            <div class="aspect-[16/10] bg-zinc-50 border-b border-zinc-100 relative overflow-hidden flex items-center justify-center p-3">
+              <img
+                src="/images/products/paranet-shading-net.webp"
+                alt="Paranet Shading Net 65%-75%"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-zinc-900 text-sm group-hover:text-emerald-700 transition-colors">Paranet Shading Net 65%-75%</h3>
+              <p class="text-xs text-zinc-500 mt-1 leading-relaxed">Jaring peneduh pengatur intensitas radiasi matahari dan penurun suhu.</p>
+            </div>
+          </div>
+          <div class="px-5 pb-4 text-xs font-semibold text-emerald-700 group-hover:text-emerald-800 flex items-center justify-between">
+            <span>Detail Material</span>
+            <span>&rarr;</span>
+          </div>
         </a>
-        <a href="/produk/insectnet-kasa-greenhouse/" class="p-5 rounded-3xl bg-white border border-zinc-200/80 hover:border-emerald-300 hover:shadow-md transition-all group">
-          <span class="text-2xl mb-2 block">🛡️</span>
-          <h3 class="font-bold text-zinc-900 text-sm group-hover:text-emerald-700 transition-colors">Kasa Insect Net 50 Mesh</h3>
-          <p class="text-xs text-zinc-500 mt-1 leading-relaxed">Dinding pelindung pencegah kutu kebul, thrips, dan hama mikro.</p>
+
+        <a href="/produk/insectnet-kasa-greenhouse/" class="rounded-xl bg-white border border-zinc-200/80 overflow-hidden hover:border-zinc-300 hover:shadow-md transition-all group flex flex-col justify-between">
+          <div>
+            <div class="aspect-[16/10] bg-zinc-50 border-b border-zinc-100 relative overflow-hidden flex items-center justify-center p-3">
+              <img
+                src="/images/products/insectnet-screen.webp"
+                alt="Kasa Insect Net 50 Mesh"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-zinc-900 text-sm group-hover:text-emerald-700 transition-colors">Kasa Insect Net 50 Mesh</h3>
+              <p class="text-xs text-zinc-500 mt-1 leading-relaxed">Dinding pelindung pencegah kutu kebul, thrips, dan hama mikro.</p>
+            </div>
+          </div>
+          <div class="px-5 pb-4 text-xs font-semibold text-emerald-700 group-hover:text-emerald-800 flex items-center justify-between">
+            <span>Detail Material</span>
+            <span>&rarr;</span>
+          </div>
         </a>
-        <a href="/produk/selang-drip-irigasi-16mm/" class="p-5 rounded-3xl bg-white border border-zinc-200/80 hover:border-emerald-300 hover:shadow-md transition-all group">
-          <span class="text-2xl mb-2 block">💧</span>
-          <h3 class="font-bold text-zinc-900 text-sm group-hover:text-emerald-700 transition-colors">Selang Drip Irigasi 16mm</h3>
-          <p class="text-xs text-zinc-500 mt-1 leading-relaxed">Distribusi air dan pupuk fertigasi tetes presisi langsung ke akar.</p>
+
+        <a href="/produk/selang-drip-irigasi-16mm/" class="rounded-xl bg-white border border-zinc-200/80 overflow-hidden hover:border-zinc-300 hover:shadow-md transition-all group flex flex-col justify-between">
+          <div>
+            <div class="aspect-[16/10] bg-zinc-50 border-b border-zinc-100 relative overflow-hidden flex items-center justify-center p-3">
+              <img
+                src="/images/products/selang-drip-irigasi-16mm.webp"
+                alt="Selang Drip Irigasi 16mm"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="p-5">
+              <h3 class="font-bold text-zinc-900 text-sm group-hover:text-emerald-700 transition-colors">Selang Drip Irigasi 16mm</h3>
+              <p class="text-xs text-zinc-500 mt-1 leading-relaxed">Distribusi air dan pupuk fertigasi tetes presisi langsung ke akar.</p>
+            </div>
+          </div>
+          <div class="px-5 pb-4 text-xs font-semibold text-emerald-700 group-hover:text-emerald-800 flex items-center justify-between">
+            <span>Detail Material</span>
+            <span>&rarr;</span>
+          </div>
         </a>
       </div>
     </div>
@@ -333,7 +452,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
     </div>
 
     <!-- Final Call to Action -->
-    <div class="p-8 sm:p-12 rounded-3xl bg-zinc-900 text-white text-center space-y-5 shadow-xl border border-zinc-800">
+    <div class="p-8 sm:p-12 rounded-2xl bg-zinc-900 text-white text-center space-y-5 shadow-xl border border-zinc-800">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950/80 text-emerald-300 border border-emerald-700/50">
         Konsultasi &amp; Survei Lokasi
       </div>

@@ -1,67 +1,65 @@
 ---
+import { generateGeneralInquiryUrl } from '../../utils/whatsapp';
+
+const waConsultUrl = generateGeneralInquiryUrl('cta-banner');
 ---
 
-<section class="py-16 sm:py-24 bg-white font-sans">
-  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
+<section class="py-14 sm:py-20 bg-white font-sans">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     
-    <div class="rounded-3xl bg-secondary border border-border p-8 sm:p-12 lg:p-16 relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12">
+    <div class="rounded-2xl bg-zinc-900 text-white border border-zinc-800 p-8 sm:p-12 lg:p-14 relative overflow-hidden flex flex-col lg:flex-row items-center justify-between gap-8 sm:gap-12 shadow-lg">
       
       <!-- Left Content -->
       <div class="max-w-2xl text-left">
-        <span class="text-xs font-semibold text-primary block mb-1">
+        <span class="text-xs font-bold text-emerald-400 uppercase tracking-wider block mb-1">
           Rencana Membangun Greenhouse?
         </span>
         
-        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-dark tracking-tight leading-[1.15] mb-4">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-tight mb-3">
           Konsultasikan Rancang Bangun Greenhouse Anda
         </h2>
         
-        <p class="text-xs sm:text-sm text-muted font-normal leading-relaxed mb-4">
+        <p class="text-xs sm:text-sm text-zinc-300 font-normal leading-relaxed mb-5">
           Baik Anda merencanakan greenhouse komersial galvanis, baja ringan nursery bibit, greenhouse bambu ekonomis, maupun instalasi tunnel garam tahan hujan, tim teknis kami siap membantu dari survei lahan hingga kalkulasi RAB transparan.
         </p>
 
-        <p class="text-xs font-bold text-dark mb-4">
-          Hubungi tim teknisi Agro Prima Greenhouse untuk:
-        </p>
-
         <!-- Checklist -->
-        <div class="flex flex-wrap items-center gap-2 sm:gap-3 text-xs font-semibold text-dark">
-          <span class="px-3 py-1 rounded-full bg-white border border-border">Desain struktur</span>
-          <span class="px-3 py-1 rounded-full bg-white border border-border">Kalkulasi RAB</span>
-          <span class="px-3 py-1 rounded-full bg-white border border-border">Pilihan material</span>
-          <span class="px-3 py-1 rounded-full bg-white border border-border">Jadwal survei</span>
-          <span class="px-3 py-1 rounded-full bg-white border border-border">Instalasi se-Indonesia</span>
+        <div class="flex flex-wrap items-center gap-2 text-xs font-medium text-zinc-200">
+          <span class="px-3 py-1 rounded-full bg-white/10 border border-white/15">Desain struktur</span>
+          <span class="px-3 py-1 rounded-full bg-white/10 border border-white/15">Kalkulasi RAB</span>
+          <span class="px-3 py-1 rounded-full bg-white/10 border border-white/15">Pilihan material</span>
+          <span class="px-3 py-1 rounded-full bg-white/10 border border-white/15">Jadwal survei</span>
+          <span class="px-3 py-1 rounded-full bg-white/10 border border-white/15">Instalasi se-Indonesia</span>
         </div>
       </div>
 
       <!-- Right Action Column -->
-      <div class="flex flex-col sm:flex-row lg:flex-col gap-3.5 w-full lg:w-auto shrink-0">
+      <div class="flex flex-col sm:flex-row lg:flex-col gap-3 w-full lg:w-auto shrink-0">
         <a
-          href="https://wa.me/6285183002070?text=Halo%20Agro Prima%20Cemerlang,%20saya%20ingin%20konsultasi%20pembuatan%20greenhouse."
+          href={waConsultUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="px-8 py-4 rounded-xl bg-primary hover:bg-primary-hover text-white font-extrabold text-sm shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 select-none"
+          class="px-7 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs sm:text-sm tracking-normal shadow-xs hover:shadow transition-all flex items-center justify-center gap-2 select-none"
         >
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.276-.1-.477-.15-.678.15-.2.301-.777.978-.953 1.179-.176.2-.351.226-.652.075-1.558-.78-2.573-1.393-3.606-3.167-.272-.468.272-.435.778-1.45.084-.176.042-.326-.021-.451-.063-.125-.678-1.633-.928-2.237-.244-.588-.492-.508-.678-.518-.176-.01-.377-.01-.578-.01-.2 0-.528.075-.804.376-.276.301-1.054 1.03-1.054 2.512 0 1.482 1.079 2.913 1.23 3.114.15.2 2.124 3.243 5.145 4.548 2.052.887 2.858.966 3.882.814.733-.109 2.257-.923 2.576-1.815.318-.892.318-1.656.223-1.815-.095-.16-.351-.25-.652-.401z"/>
+          <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
           </svg>
-          <span>Konsultasi RAB via WhatsApp</span>
+          <span>Konsultasi via WhatsApp</span>
         </a>
 
         <a
           href="/jasa/pembuatan-greenhouse/#kalkulator"
-          class="px-8 py-4 rounded-xl bg-white hover:bg-zinc-100 text-dark font-extrabold text-sm border border-border shadow-xs hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 select-none"
+          class="px-7 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold text-xs sm:text-sm border border-white/20 transition-all flex items-center justify-center gap-2 select-none"
         >
           <span>Hitung Estimasi Biaya (RAB)</span>
           <span aria-hidden="true">&rarr;</span>
         </a>
 
-        <p class="text-center text-[11px] text-muted font-medium">
+        <p class="text-center text-[11px] text-zinc-400 font-medium">
           Fast response: Senin &ndash; Minggu (07.30 &ndash; 17.00 WIB)
         </p>
       </div>
 
     </div>
-
   </div>
 </section>

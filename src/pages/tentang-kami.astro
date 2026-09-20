@@ -29,6 +29,28 @@ const breadcrumbSchema = getBreadcrumbSchema([
       </h1>
     </div>
 
+    <!-- Editorial Hero Image Frame -->
+    <div class="my-8 rounded-2xl overflow-hidden border border-zinc-200/80 bg-zinc-100 shadow-sm relative group">
+      <img
+        src="/images/about/kontraktor-greenhouse-malang.webp"
+        alt="Fasilitas Greenhouse Modern dan Rancang Bangun Presisi Agro Prima Greenhouse"
+        width="1400"
+        height="788"
+        class="w-full aspect-[16/9] sm:aspect-[21/10] object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+        loading="eager"
+        decoding="async"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-zinc-950/20 to-transparent flex flex-col justify-end p-5 sm:p-7 text-white">
+        <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-emerald-300">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          Workshop &amp; Fabrikasi Malang
+        </span>
+        <p class="text-xs sm:text-sm md:text-base font-semibold text-white/95 mt-1 max-w-xl leading-snug">
+          Standar rancang bangun greenhouse presisi tinggi untuk komoditas hortikultura bernilai ekonomi tinggi di seluruh Indonesia.
+        </p>
+      </div>
+    </div>
+
     <div class="space-y-8 text-sm sm:text-base text-zinc-600 leading-relaxed">
       <p>
         Pertanian modern yang produktif dan berkelanjutan berawal dari infrastruktur perlindungan tanaman yang kokoh, presisi, dan dirancang sesuai iklim mikrolokal setempat.
@@ -39,7 +61,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
       </p>
 
       <!-- Tagline Callout -->
-      <div class="p-7 sm:p-9 rounded-3xl bg-zinc-50/80 border border-zinc-200/80 space-y-3">
+      <div class="p-7 sm:p-9 rounded-xl bg-zinc-50/80 border border-zinc-200/80 space-y-3">
         <span class="text-xs font-semibold text-emerald-700 uppercase tracking-wider block">Filosofi Kerja Kami</span>
         <h2 class="text-xl sm:text-2xl font-bold text-zinc-900">
           "{BUSINESS_INFO.tagline}"
@@ -52,14 +74,14 @@ const breadcrumbSchema = getBreadcrumbSchema([
       <!-- 4 Pillars -->
       <div class="space-y-6 pt-4">
         <div>
-          <span class="text-xs font-semibold text-emerald-700 uppercase tracking-wider block">Solusi Terintegrasi</span>
+          <span class="text-xs font-semibold text-emerald-700 uppercase tracking-wider block">Cakupan Pekerjaan</span>
           <h3 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight mt-1">
-            Empat Pilar Solusi Konstruksi Greenhouse
+            4 Bidang Keahlian Konstruksi &amp; Suplai Material
           </h3>
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div class="p-7 sm:p-8 rounded-3xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-all space-y-4">
+          <div class="p-7 sm:p-8 rounded-xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-all space-y-4">
             <div class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center font-bold text-xs text-emerald-800">
               01
             </div>
@@ -75,7 +97,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
             </div>
           </div>
 
-          <div class="p-7 sm:p-8 rounded-3xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-all space-y-4">
+          <div class="p-7 sm:p-8 rounded-xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-all space-y-4">
             <div class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center font-bold text-xs text-emerald-800">
               02
             </div>
@@ -91,7 +113,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
             </div>
           </div>
 
-          <div class="p-7 sm:p-8 rounded-3xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-all space-y-4">
+          <div class="p-7 sm:p-8 rounded-xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-all space-y-4">
             <div class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center font-bold text-xs text-emerald-800">
               03
             </div>
@@ -107,7 +129,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
             </div>
           </div>
 
-          <div class="p-7 sm:p-8 rounded-3xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-all space-y-4">
+          <div class="p-7 sm:p-8 rounded-xl bg-white border border-zinc-200/80 shadow-sm hover:shadow-md transition-all space-y-4">
             <div class="w-9 h-9 rounded-full bg-emerald-50 border border-emerald-100 flex items-center justify-center font-bold text-xs text-emerald-800">
               04
             </div>
@@ -126,7 +148,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
       </div>
 
       <!-- Workshop Callout -->
-      <div class="p-7 sm:p-9 rounded-3xl bg-emerald-50/50 border border-emerald-200/80 space-y-3">
+      <div class="p-7 sm:p-9 rounded-xl bg-emerald-50/50 border border-emerald-200/80 space-y-3">
         <h3 class="text-xl font-bold text-zinc-900">Kantor &amp; Workshop Kami di Malang</h3>
         <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed">
           Workshop dan kantor kami berlokasi di {BUSINESS_INFO.address.street}, {BUSINESS_INFO.address.village}, {BUSINESS_INFO.address.district}, {BUSINESS_INFO.address.city}, {BUSINESS_INFO.address.province}. Anda dapat berkunjung langsung untuk melihat contoh sambungan pipa galvanis, kuncian spring clip, dan berdiskusi langsung mengenai proyek kebun Anda.

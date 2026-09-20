@@ -5,7 +5,7 @@ publishDate: '10 September 2026'
 author: 'Tim Ahli Agro Prima Greenhouse'
 category: 'Panduan Konstruksi'
 tags: ['Plastik UV', 'Spring Clip', 'Profil Lock C', 'Greenhouse Tropis', 'Pasang Greenhouse']
-heroImage: '/images/products/plastik-uv-greenhouse.webp'
+heroImage: '/images/artikel/pemasangan-plastik-uv-greenhouse.webp'
 featured: true
 ---
 

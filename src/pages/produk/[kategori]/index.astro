@@ -106,7 +106,7 @@ const collectionSchema = getCollectionPageSchema({
     </div>
 
     {filteredProducts.length > 0 ? (
-      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
         {filteredProducts.map((p) => (
           <ProductCard
             product={{
@@ -123,7 +123,7 @@ const collectionSchema = getCollectionPageSchema({
         ))}
       </div>
     ) : (
-      <div class="p-16 text-center bg-white rounded-3xl border border-zinc-200/80 shadow-xs">
+      <div class="p-16 text-center bg-white rounded-2xl border border-zinc-200/80 shadow-xs">
         <p class="text-zinc-600 text-sm">Belum ada item yang terdaftar di kategori ini.</p>
         <a href="/produk/" class="inline-block mt-4 px-5 py-2.5 rounded-full bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-semibold transition-all">
           Lihat Semua Produk &rarr;

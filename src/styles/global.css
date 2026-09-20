@@ -4,9 +4,9 @@
 
 @layer base {
   :root {
-    --color-bg-canvas: #fafafa;
+    --color-bg-canvas: #ffffff;
     --color-bg-card: #ffffff;
-    --color-bg-subtle: #f4f4f5;
+    --color-bg-subtle: #f9fafb;
     --color-border: #e4e4e7;
     --color-ink-primary: #09090b;
     --color-ink-secondary: #52525b;

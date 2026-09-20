@@ -22,7 +22,7 @@ Proyek pembangunan fasilitas greenhouse galvanis modern untuk budidaya melon hid
 - Angin pegunungan yang kencang pada musim kemarau.
 - Kelembaban udara tinggi saat malam hari yang memicu jamur embun tepung.
 
-### Solusi yang Diterapkan:
+### Spesifikasi Teknis & Konstruksi:
 1. Struktur melengkung *Gothic Arch* dengan pipa galvanis hot-dip untuk memecah terpaan angin kencang.
 2. Atap monitor ventilasi atas (*top ventilation*) dipadukan dengan insect net 50 mesh agar pertukaran udara panas lancar.
 3. Pemasangan pintu karantina ganda (*double door airlock*) untuk mencegah masuknya kutu kebul dan thrips pembawa virus.

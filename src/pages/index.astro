@@ -9,20 +9,17 @@ import DualPathChooser from '../components/home/DualPathChooser.astro';
 import CustomerReviews from '../components/home/CustomerReviews.astro';
 import NationwideCoverage from '../components/home/NationwideCoverage.astro';
 import HomeBlogSection from '../components/home/HomeBlogSection.astro';
-import HomeFaq from '../components/home/HomeFaq.astro';
 import CtaBanner from '../components/home/CtaBanner.astro';
-import { getLocalBusinessSchema, getWebsiteSchema, getFaqSchema } from '../utils/seo';
-import { HOME_FAQS } from '../data/faqs';
+import { getLocalBusinessSchema, getWebsiteSchema } from '../utils/seo';
 
 const localSchema = getLocalBusinessSchema();
 const websiteSchema = getWebsiteSchema();
-const faqSchema = getFaqSchema(HOME_FAQS);
 ---
 
 <BaseLayout
   title="Jasa Pembuatan Greenhouse &amp; Kontraktor Konstruksi - Agro Prima Greenhouse"
   description="Kontraktor spesialis jasa pembuatan greenhouse (galvanis, baja ringan, bambu, tunnel garam) di Malang. Melayani survei lahan, desain teknis, estimasi RAB transparan, &amp; instalasi se-Indonesia."
-  jsonLd={[localSchema, websiteSchema, faqSchema]}
+  jsonLd={[localSchema, websiteSchema]}
 >
   <!-- 1. Hero Banner (5-Slide Greenhouse Showcase Slider) -->
   <HeroSection />
@@ -42,7 +39,7 @@ const faqSchema = getFaqSchema(HOME_FAQS);
   <!-- 6. Melayani Pengiriman & Instalasi Greenhouse ke Seluruh Indonesia -->
   <NationwideCoverage />
 
-  <!-- 7. Pilihan Solusi: Material Rangka atau Bangun Terima Jadi? -->
+  <!-- 7. Pilihan Kebutuhan Proyek: Material Rangka atau Bangun Terima Jadi? -->
   <DualPathChooser />
 
   <!-- 8. Customer Reviews & Social Proof -->
@@ -51,10 +48,7 @@ const faqSchema = getFaqSchema(HOME_FAQS);
   <!-- 9. Panduan Konstruksi & Greenhouse (From the Blog) -->
   <HomeBlogSection />
 
-  <!-- 10. Pertanyaan Seputar Jasa Pembuatan Greenhouse (FAQ) -->
-  <HomeFaq />
-
-  <!-- 11. Konsultasikan Rancang Bangun Greenhouse Anda (WhatsApp CTA) -->
+  <!-- 10. Konsultasikan Rancang Bangun Greenhouse Anda (WhatsApp CTA) -->
   <CtaBanner />
 
 </BaseLayout>

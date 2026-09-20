@@ -69,7 +69,7 @@ const projectSchema = getProjectSchema({
     </div>
 
     <!-- Main Image Frame -->
-    <div class="rounded-3xl overflow-hidden bg-zinc-100 border border-zinc-200/80 mb-8 shadow-sm">
+    <div class="rounded-2xl overflow-hidden bg-zinc-100 border border-zinc-200/80 mb-8 shadow-sm">
       <img
         src={project.data.coverImage}
         alt={project.data.title}
@@ -82,7 +82,7 @@ const projectSchema = getProjectSchema({
     </div>
 
     <!-- Project Metadata Cards -->
-    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-6 sm:p-7 rounded-3xl bg-zinc-50/70 border border-zinc-200/80 mb-8 text-xs">
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 p-6 sm:p-7 rounded-xl bg-zinc-50/70 border border-zinc-200/80 mb-8 text-xs">
       <div>
         <span class="text-zinc-500 block">Tipe Struktur</span>
         <strong class="text-zinc-900 font-bold text-sm sm:text-base block mt-1">
@@ -110,7 +110,7 @@ const projectSchema = getProjectSchema({
     </div>
 
     <!-- Main Materials -->
-    <div class="p-6 sm:p-7 rounded-3xl bg-white border border-zinc-200/80 mb-8 shadow-sm">
+    <div class="p-6 sm:p-7 rounded-xl bg-white border border-zinc-200/80 mb-8 shadow-sm">
       <h2 class="text-base font-bold text-zinc-900 mb-3">Material Utama yang Digunakan</h2>
       <div class="flex flex-wrap gap-2">
         {project.data.mainMaterials.map((mat) => (
@@ -127,7 +127,7 @@ const projectSchema = getProjectSchema({
     </div>
 
     <!-- Consultation & Internal Linking Box -->
-    <div class="p-8 sm:p-10 rounded-3xl bg-zinc-900 text-white text-center space-y-4 shadow-xl border border-zinc-800">
+    <div class="p-8 sm:p-10 rounded-2xl bg-zinc-900 text-white text-center space-y-4 shadow-xl border border-zinc-800">
       <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950/80 text-emerald-300 border border-emerald-700/50">
         <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
         Konsultasi Rancang Bangun

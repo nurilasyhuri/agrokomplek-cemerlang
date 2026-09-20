@@ -36,8 +36,8 @@ const breadcrumbSchema = getBreadcrumbSchema([
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 my-10 items-start">
       
       <!-- Interactive Google Maps Container -->
-      <div class="lg:col-span-7 bg-white p-3 rounded-3xl border border-zinc-200/80 shadow-sm overflow-hidden">
-        <div class="aspect-[4/3] rounded-2xl overflow-hidden bg-zinc-100 relative">
+      <div class="lg:col-span-7 bg-white p-3 rounded-2xl border border-zinc-200/80 shadow-sm overflow-hidden">
+        <div class="aspect-[4/3] rounded-xl overflow-hidden bg-zinc-100 relative">
           <iframe
             src="https://maps.google.com/maps?q=-7.9984,112.6456&z=15&output=embed"
             width="100%"
@@ -52,7 +52,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
 
       <!-- NAP & Landmarks -->
       <div class="lg:col-span-5 space-y-6">
-        <div class="p-6 sm:p-8 rounded-3xl bg-white border border-zinc-200/80 shadow-sm space-y-6">
+        <div class="p-6 sm:p-8 rounded-xl bg-white border border-zinc-200/80 shadow-sm space-y-6">
           <h3 class="text-lg font-bold text-zinc-900 border-b border-zinc-100 pb-3">
             Informasi Alamat &amp; Kontak Toko
           </h3>
@@ -86,7 +86,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
         </div>
 
         <!-- Landmarks & Guidance -->
-        <div class="p-6 sm:p-7 rounded-3xl bg-zinc-50/70 border border-zinc-200/80 space-y-4">
+        <div class="p-6 sm:p-7 rounded-xl bg-zinc-50/70 border border-zinc-200/80 space-y-4">
           <h4 class="font-bold text-zinc-900 text-sm">Akses &amp; Panduan Menuju Lokasi</h4>
           <ul class="text-xs text-zinc-600 space-y-2 list-disc list-inside">
             <li>Dapat diakses kendaraan roda dua, mobil pick-up, hingga truk engkel kargo.</li>
@@ -97,6 +97,28 @@ const breadcrumbSchema = getBreadcrumbSchema([
 
       </div>
 
+    </div>
+
+    <!-- Warehouse & Physical Store Image Showcase -->
+    <div class="my-8 rounded-2xl overflow-hidden border border-zinc-200/80 bg-zinc-100 shadow-sm relative group">
+      <img
+        src="/images/lokasi/gudang-material-greenhouse.webp"
+        alt="Gudang Stok Material Pertanian dan Perlengkapan Greenhouse Malang"
+        width="1200"
+        height="800"
+        class="w-full aspect-[16/9] sm:aspect-[21/9] object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+        loading="lazy"
+        decoding="async"
+      />
+      <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-zinc-950/20 to-transparent flex flex-col justify-end p-5 sm:p-7 text-white">
+        <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-emerald-300">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+          Kesiapan Stok Fisik di Gudang
+        </span>
+        <p class="text-xs sm:text-sm md:text-base font-semibold text-white/95 mt-1 max-w-xl leading-snug">
+          Stok plastik UV 200 mikron, paranet roll, selang drip, tray semai, dan profil lock siap muat langsung ke kendaraan Anda.
+        </p>
+      </div>
     </div>
   </div>
 </BaseLayout>
