@@ -93,8 +93,9 @@ export function getLocalBusinessSchema() {
         },
         {
           '@type': 'OfferCatalog',
-          name: 'Sistem Irigasi & Fertigasi Presisi',
+          name: 'Sistem Irigasi & Smart Farming IoT',
           itemListElement: [
+            { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Smart Farming IoT & Kontroler Otomasi Greenhouse' } },
             { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Selang Drip Irigasi 16mm' } },
             { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Mulsa Plastik Hitam Perak MPHP' } },
             { '@type': 'Offer', itemOffered: { '@type': 'Product', name: 'Paket Instalasi Hidroponik NFT' } },
@@ -258,7 +259,7 @@ export function getProductSchema(product: ProductSchemaInput) {
         price: String(v.price),
         sku: v.sku || product.sku,
         priceValidUntil: '2027-12-31',
-        availability: product.stockStatus === 'po' ? 'https://schema.org/PreOrder' : 'https://schema.org/InStock',
+        availability: product.stockStatus === 'po' ? 'https://schema.org/PreOrder' : product.stockStatus === 'hubungi-kami' ? 'https://schema.org/LimitedAvailability' : 'https://schema.org/InStock',
         itemCondition: 'https://schema.org/NewCondition',
         url: productUrl,
         seller: {
@@ -278,7 +279,7 @@ export function getProductSchema(product: ProductSchemaInput) {
       price: String(effectivePrice),
       sku: product.sku || product.variants?.[0]?.sku,
       priceValidUntil: '2027-12-31',
-      availability: product.stockStatus === 'po' ? 'https://schema.org/PreOrder' : 'https://schema.org/InStock',
+      availability: product.stockStatus === 'po' ? 'https://schema.org/PreOrder' : product.stockStatus === 'hubungi-kami' ? 'https://schema.org/LimitedAvailability' : 'https://schema.org/InStock',
       itemCondition: 'https://schema.org/NewCondition',
       url: productUrl,
       seller: {

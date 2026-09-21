@@ -141,17 +141,21 @@ Mohon info ketersediaan stok fisik di gudang Malang dan rekomendasi ekspedisi ka
         <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-4 border-b border-zinc-200">
           <div>
             <div class="flex items-center gap-2 mb-1">
-              <span class="text-xs font-medium text-zinc-500">Harga Satuan</span>
+              <span class="text-xs font-medium text-zinc-500">
+                {currentPrice > 0 ? 'Harga Satuan' : 'Informasi Harga'}
+              </span>
               <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-medium bg-emerald-50 text-emerald-800 border border-emerald-200/60">
-                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                {stockStatus === 'ready' ? 'Stok Ready Malang' : stockStatus === 'po' ? 'Pre-Order' : 'Cek Stok'}
+                <span class={`w-1.5 h-1.5 rounded-full ${
+                  stockStatus === 'ready' ? 'bg-emerald-500' : stockStatus === 'po' ? 'bg-amber-500' : 'bg-sky-500'
+                }`}></span>
+                {stockStatus === 'ready' ? 'Stok Ready Malang' : stockStatus === 'po' ? 'Pre-Order' : 'Konsultasi / Custom'}
               </span>
             </div>
             <div class="flex items-baseline gap-2">
               <span class="text-2xl sm:text-3xl font-black text-zinc-900 tracking-tight">
                 {currentPriceDisplay}
               </span>
-              {currentUnit && (
+              {currentPrice > 0 && currentUnit && (
                 <span class="text-xs text-zinc-500 font-normal">/ {currentUnit}</span>
               )}
             </div>
@@ -212,7 +216,7 @@ Mohon info ketersediaan stok fisik di gudang Malang dan rekomendasi ekspedisi ka
             <svg class="w-4 h-4 text-white shrink-0" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
             </svg>
-            <span>Pesan Sekarang via WhatsApp</span>
+            <span>{currentPrice > 0 ? 'Pesan Sekarang via WhatsApp' : 'Konsultasi Teknis via WhatsApp'}</span>
           </a>
 
           {/* Trust Badges with SVG Icons */}
@@ -260,7 +264,7 @@ Mohon info ketersediaan stok fisik di gudang Malang dan rekomendasi ekspedisi ka
             <svg class="w-3.5 h-3.5 text-white" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
             </svg>
-            <span>Beli via WA</span>
+            <span>{currentPrice > 0 ? 'Beli via WA' : 'Konsultasi WA'}</span>
           </a>
         </div>
       </div>
