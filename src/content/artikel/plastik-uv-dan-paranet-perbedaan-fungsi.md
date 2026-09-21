@@ -13,7 +13,6 @@ Bagi praktisi pertanian hortikultura maupun pehobi tanaman yang baru pertama kal
 
 Secara teknis, **Plastik UV dan Paranet bukanlah produk yang saling menggantikan, melainkan memiliki fungsi fisiologis yang saling melengkapi**. Salah memilih material dapat menyebabkan tanaman kekurangan cahaya fotosintesis atau justru terbakar akibat panas ekstrem.
 
----
 
 ## 1. Fungsi Utama Plastik UV Greenhouse
 
@@ -24,7 +23,6 @@ Secara teknis, **Plastik UV dan Paranet bukanlah produk yang saling menggantikan
 - **Efek Anti-Drip (Anti Tetes Embun):** Mengarahkan air embun kondensasi malam hari agar mengalir ke dinding samping dan tidak menetes langsung ke tajuk tanaman.
 - **Standar Ketebalan 200 Mikron:** Tahan terhadap tarikan kencang saat dipasang menggunakan [Spring Clip & Profil C Lock](/produk/spring-clip-profil-lock/) serta tidak getas selama 3 hingga 5 tahun pemakaian luar ruangan.
 
----
 
 ## 2. Fungsi Utama Paranet (Shading Net)
 
@@ -37,7 +35,6 @@ Berbeda dengan plastik UV, [Paranet Tanaman](/produk/paranet-tanaman/) merupakan
 - **Menurunkan Suhu Udara:** Memecah radiasi panas terik siang hari sehingga suhu mikro di bawah naungan bisa turun 3°C hingga 6°C.
 - **Memecah Tetesan Air Hujan Lebat:** Menahan hantaman butiran hujan deras agar tidak merusak bibit muda yang masih rentan.
 
----
 
 ## 3. Strategi Kombinasi Keduanya pada Greenhouse Modern
 
@@ -47,7 +44,6 @@ Pada perkebunan modern di Indonesia (terutama di daerah dataran rendah dengan su
 2. **Lapisan Bawah (Dalam):** Dipasang [Paranet 65%](/produk/paranet-tanaman/) dengan mekanisme rel geser (*retractable*) di bawah rangka atap. Paranet dapat ditarik saat terik matahari jam 11.00 – 14.00, dan dibuka kembali saat pagi serta sore hari agar tanaman mendapatkan sinar matahari penuh.
 3. **Dinding Samping:** Dilindungi menggunakan [Kasa Insect Net 50 Mesh](/produk/insectnet-kasa-greenhouse/) agar sirkulasi udara tetap lancar tanpa ada hama serangga yang masuk.
 
----
 
 ## 4. Dapatkan Material Original di Toko Kami
 

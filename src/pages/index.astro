@@ -14,11 +14,25 @@ import { getLocalBusinessSchema, getWebsiteSchema } from '../utils/seo';
 
 const localSchema = getLocalBusinessSchema();
 const websiteSchema = getWebsiteSchema();
+
+const homeKeywords = [
+  'jasa pembuatan greenhouse',
+  'kontraktor greenhouse',
+  'pembuatan greenhouse malang',
+  'biaya pembuatan greenhouse per m2',
+  'greenhouse pipa galvanis',
+  'greenhouse baja ringan',
+  'greenhouse bambu',
+  'tunnel garam',
+  'rab greenhouse',
+  'agro prima greenhouse',
+];
 ---
 
 <BaseLayout
   title="Jasa Pembuatan Greenhouse &amp; Kontraktor Konstruksi - Agro Prima Greenhouse"
   description="Kontraktor spesialis jasa pembuatan greenhouse (galvanis, baja ringan, bambu, tunnel garam) di Malang. Melayani survei lahan, desain teknis, estimasi RAB transparan, &amp; instalasi se-Indonesia."
+  keywords={homeKeywords}
   jsonLd={[localSchema, websiteSchema]}
 >
   <!-- 1. Hero Banner (5-Slide Greenhouse Showcase Slider) -->

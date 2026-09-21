@@ -54,6 +54,15 @@ const breadcrumbSchema = getBreadcrumbSchema([
   { name: categoryName, url: `https://agroprimagreenhouse.com/produk/${product.data.category}/` },
   { name: product.data.title, url: `https://agroprimagreenhouse.com/produk/${product.slug}/` },
 ]);
+const productKeywords = [
+  product.data.title,
+  `jual ${product.data.title}`,
+  `harga ${product.data.title}`,
+  categoryName,
+  product.data.brand || 'Agro Prima Greenhouse',
+  'material greenhouse malang',
+  'toko pertanian malang',
+];
 ---
 
 <BaseLayout
@@ -61,6 +70,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
   description={`${product.data.description} Tersedia stok fisik di toko Malang & kirim kargo seluruh Indonesia.`}
   image={product.data.thumbnail}
   type="product"
+  keywords={productKeywords}
   jsonLd={[productSchema, breadcrumbSchema]}
   hideMobileStickyBar={true}
 >

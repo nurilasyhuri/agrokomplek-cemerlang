@@ -109,7 +109,7 @@ export default function ProductFilter({ products }: Props) {
               placeholder="Cari nama produk, merek, atau spesifikasi..."
               value={searchQuery}
               onInput={(e) => setSearchQuery((e.target as HTMLInputElement).value)}
-              class="w-full pl-9 pr-8 py-2 rounded-full border border-zinc-200 bg-zinc-50 text-zinc-900 placeholder:text-zinc-400 text-xs focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:bg-white transition-all"
+              class="w-full pl-9 pr-8 py-2 rounded-full border border-zinc-200 bg-zinc-50 text-zinc-900 placeholder:text-zinc-400 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:bg-white transition-all"
             />
             <svg
               class="w-4 h-4 text-zinc-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"

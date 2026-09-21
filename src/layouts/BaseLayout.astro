@@ -12,6 +12,8 @@ export interface Props {
   canonical?: string;
   image?: string;
   type?: 'website' | 'article' | 'product';
+  keywords?: string | string[];
+  author?: string;
   jsonLd?: Record<string, any> | Array<Record<string, any>>;
   hideMobileStickyBar?: boolean;
   noindex?: boolean;
@@ -23,6 +25,8 @@ const {
   canonical,
   image,
   type,
+  keywords,
+  author,
   jsonLd,
   hideMobileStickyBar = false,
   noindex = false,
@@ -40,6 +44,8 @@ const isHomePage = Astro.url.pathname === '/' || Astro.url.pathname === '';
       canonical={canonical}
       image={image}
       type={type}
+      keywords={keywords}
+      author={author}
       jsonLd={jsonLd}
       noindex={noindex}
     />

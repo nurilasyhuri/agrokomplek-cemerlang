@@ -24,6 +24,8 @@
     -webkit-tap-highlight-color: transparent;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    touch-action: manipulation;
   }
 
   body {
@@ -35,9 +37,14 @@
     background-color: var(--color-bg-canvas);
     color: var(--color-ink-primary);
     text-rendering: optimizeLegibility;
+    -webkit-overflow-scrolling: touch;
   }
 
-  /* Prevent iOS Safari auto-zoom on form inputs */
+  /* Prevent iOS Safari auto-zoom on form inputs & remove 300ms tap delay */
+  input, select, textarea, button, a {
+    touch-action: manipulation;
+  }
+
   input, select, textarea {
     font-size: 16px !important;
   }
@@ -64,9 +71,22 @@
   .safe-area-pb {
     padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
   }
-  
+
+  .safe-area-pt {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+
   .touch-target {
     min-height: 44px;
     min-width: 44px;
+  }
+
+  /* Seamless mobile horizontal scroll without ugly scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }

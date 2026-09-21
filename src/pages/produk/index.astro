@@ -32,11 +32,23 @@ const collectionSchema = getCollectionPageSchema({
     description: p.data.description,
   })),
 });
+const productKeywords = [
+  'material greenhouse',
+  'plastik uv 200 mikron 14 persen',
+  'paranet tanaman 65 75',
+  'kasa insect net 50 mesh',
+  'selang drip irigasi 16mm',
+  'spring clip profil c lock',
+  'mulsa plastik hitam perak',
+  'perlengkapan greenhouse malang',
+  'toko pertanian malang',
+];
 ---
 
 <BaseLayout
   title="Katalog Material Greenhouse &amp; Sistem Irigasi - Agro Prima Greenhouse"
-  description="Penyedia material greenhouse berstandar (plastik UV 200 mikron 14%, paranet 65%-75%, kasa insect net 50 mesh, selang drip 16mm, &amp; mulsa MPHP di Malang kirim se-Indonesia."
+  description="Distributor material greenhouse berstandar: plastik UV 200 mikron 14%, paranet 65%-75%, kasa insect net 50 mesh, selang drip 16mm, &amp; mulsa MPHP di Malang kirim se-Indonesia."
+  keywords={productKeywords}
   jsonLd={[collectionSchema, breadcrumbSchema]}
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-20">

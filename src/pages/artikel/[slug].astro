@@ -24,6 +24,15 @@ const relatedArticles = allArticles
   .filter((a) => a.slug !== article.slug)
   .slice(0, 2);
 
+function calculateReadingTime(text: string | undefined): string {
+  if (!text) return '5 min read';
+  const words = text.trim().split(/\s+/).length;
+  const minutes = Math.max(2, Math.ceil(words / 180));
+  return `${minutes} min read`;
+}
+
+const readingTime = calculateReadingTime(article.body);
+
 const breadcrumbSchema = getBreadcrumbSchema([
   { name: 'Beranda', url: 'https://agroprimagreenhouse.com/' },
   { name: 'Artikel & Panduan', url: 'https://agroprimagreenhouse.com/artikel/' },
@@ -39,6 +48,17 @@ const articleSchema = getArticleSchema({
   author: article.data.author,
   slug: article.slug,
 });
+
+const pageUrl = `https://agroprimagreenhouse.com/artikel/${article.slug}/`;
+const waShareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(article.data.title + ' - ' + pageUrl)}`;
+
+const articleKeywords = [
+  ...(article.data.tags || []),
+  article.data.category,
+  article.data.title,
+  'panduan greenhouse',
+  'agro prima greenhouse',
+];
 ---
 
 <BaseLayout
@@ -46,9 +66,11 @@ const articleSchema = getArticleSchema({
   description={article.data.description}
   image={article.data.heroImage}
   type="article"
+  keywords={articleKeywords}
+  author={article.data.author}
   jsonLd={[articleSchema, breadcrumbSchema]}
 >
-  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">
+  <div class="max-w-[740px] mx-auto px-4 sm:px-6 pt-6 pb-28">
     <Breadcrumb
       items={[
         { label: 'Artikel & Panduan', href: '/artikel/' },
@@ -56,68 +78,185 @@ const articleSchema = getArticleSchema({
       ]}
     />
 
-    <article class="my-8">
-      <div class="space-y-4 mb-8">
-        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/60">
+    <article class="mt-8">
+      <!-- Article Header (Medium Style) -->
+      <header class="space-y-4 mb-10">
+        <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800">
           <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
           {article.data.category}
         </div>
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-zinc-900 tracking-tight leading-tight">
+
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-zinc-900 tracking-tight leading-[1.18]">
           {article.data.title}
         </h1>
-        <div class="flex items-center gap-3 text-xs text-zinc-500 pt-1">
-          <span>Ditulis oleh: <strong class="font-semibold text-zinc-800">{article.data.author}</strong></span>
-          <span>&bull;</span>
-          <span>{article.data.publishDate}</span>
+
+        <p class="text-lg sm:text-xl text-zinc-600 font-normal leading-relaxed">
+          {article.data.description}
+        </p>
+
+        <!-- Medium Author Bar & Actions (No HR / Lines) -->
+        <div class="flex items-center justify-between pt-4 pb-2">
+          <div class="flex items-center gap-3.5">
+            <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-emerald-800 to-emerald-600 text-white flex items-center justify-center font-bold text-sm shadow-sm shrink-0">
+              AP
+            </div>
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="font-semibold text-zinc-900 text-sm sm:text-base">{article.data.author}</span>
+                <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold bg-emerald-100 text-emerald-800">
+                  Praktisi
+                </span>
+              </div>
+              <div class="flex items-center gap-2 text-xs text-zinc-500 mt-0.5">
+                <span>{article.data.publishDate}</span>
+                <span class="text-zinc-300">&bull;</span>
+                <span>{readingTime}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Share Actions -->
+          <div class="flex items-center gap-1.5">
+            <a
+              href={waShareUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Bagikan ke WhatsApp"
+              title="Bagikan ke WhatsApp"
+              class="p-2.5 rounded-full text-zinc-500 hover:text-emerald-700 hover:bg-emerald-50 transition-colors"
+            >
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+              </svg>
+            </a>
+            <button
+              id="copy-article-link-btn"
+              type="button"
+              aria-label="Salin link artikel"
+              title="Salin Link"
+              class="p-2.5 rounded-full text-zinc-500 hover:text-zinc-900 hover:bg-zinc-100 transition-colors relative"
+            >
+              <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" />
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
+              </svg>
+              <span id="copy-tooltip" class="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-zinc-900 text-white text-[10px] rounded opacity-0 pointer-events-none transition-opacity whitespace-nowrap">
+                Tersalin!
+              </span>
+            </button>
+          </div>
         </div>
-      </div>
+      </header>
 
-      <!-- Hero Image Frame -->
-      <div class="rounded-2xl overflow-hidden bg-zinc-100 border border-zinc-200/80 mb-12 shadow-sm aspect-video">
-        <img
-          src={article.data.heroImage}
-          alt={article.data.title}
-          width="1200"
-          height="675"
-          class="w-full h-full object-cover"
-          loading="eager"
-          decoding="async"
-        />
-      </div>
+      <!-- Hero Image -->
+      <figure class="mb-12">
+        <div class="rounded-2xl overflow-hidden bg-zinc-100 aspect-video shadow-sm">
+          <img
+            src={article.data.heroImage}
+            alt={article.data.title}
+            width="1200"
+            height="675"
+            class="w-full h-full object-cover"
+            loading="eager"
+            decoding="async"
+          />
+        </div>
+        <figcaption class="text-center text-xs text-zinc-400 mt-3 font-normal">
+          Dokumentasi teknis fasilitas &amp; instalasi standar Agro Prima Greenhouse
+        </figcaption>
+      </figure>
 
-      <!-- Content -->
-      <div class="prose prose-zinc prose-emerald max-w-none text-zinc-700 text-base sm:text-lg leading-relaxed">
+      <!-- Content (Medium Reading Typography - No HR / Lines) -->
+      <div class="medium-article font-sans">
         <Content />
       </div>
 
-      <!-- Related Guides & Services -->
-      <div class="mt-14 pt-8 border-t border-zinc-200/80">
-        <h2 class="text-xl font-bold text-zinc-900 mb-6">Panduan Terkait Lainnya</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {relatedArticles.map((rel) => (
-            <a
-              href={`/artikel/${rel.slug}/`}
-              class="p-5 rounded-xl bg-zinc-50/70 border border-zinc-200/80 hover:border-zinc-300 hover:bg-white transition-all block group"
-            >
-              <span class="text-xs font-semibold text-emerald-700">{rel.data.category}</span>
-              <h3 class="font-bold text-zinc-900 text-sm mt-1 group-hover:text-emerald-700 transition-colors">
-                {rel.data.title}
-              </h3>
-              <p class="text-xs text-zinc-500 mt-1 line-clamp-2">{rel.data.description}</p>
-            </a>
-          ))}
+      <!-- Tags Section (Medium Topic Badges) -->
+      {article.data.tags && article.data.tags.length > 0 && (
+        <div class="mt-14 mb-10">
+          <div class="flex flex-wrap gap-2">
+            {article.data.tags.map((tag: string) => (
+              <span class="px-3.5 py-1.5 rounded-full bg-zinc-100 hover:bg-zinc-200 text-zinc-700 text-xs font-medium transition-colors select-none">
+                {tag}
+              </span>
+            ))}
+          </div>
         </div>
+      )}
+
+      <!-- Medium Author Bio Box -->
+      <div class="mt-12 p-6 sm:p-8 rounded-2xl bg-zinc-50 space-y-4">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-full bg-gradient-to-tr from-emerald-800 to-emerald-600 text-white flex items-center justify-center font-bold text-lg shadow-sm shrink-0">
+            AP
+          </div>
+          <div>
+            <span class="text-xs uppercase tracking-wider font-bold text-emerald-800">Ditulis Oleh</span>
+            <h3 class="text-base sm:text-lg font-bold text-zinc-900 mt-0.5">{article.data.author}</h3>
+            <p class="text-xs text-zinc-500">Tim Ahli &amp; Aplikator Lapangan Agro Prima Greenhouse</p>
+          </div>
+        </div>
+        <p class="text-xs sm:text-sm text-zinc-600 leading-relaxed">
+          Berpengalaman dalam rancang bangun greenhouse skala industri, fabrikasi rangka pipa galvanis hot-dip, instalasi atap plastik UV, kasa insect net, dan sistem fertigasi presisi di seluruh wilayah Indonesia.
+        </p>
       </div>
 
-      <!-- Bottom Author / CTA Box -->
-      <div class="mt-12 p-8 sm:p-10 rounded-2xl bg-zinc-900 text-white border border-zinc-800 shadow-xl">
+      <!-- Related Articles ("More from Agro Prima") -->
+      {relatedArticles.length > 0 && (
+        <section class="mt-16 space-y-6">
+          <div class="space-y-1">
+            <span class="text-xs font-bold text-emerald-800 uppercase tracking-wider">Rekomendasi Bacaan</span>
+            <h2 class="text-2xl font-bold text-zinc-900 tracking-tight">Panduan Terkait Lainnya</h2>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {relatedArticles.map((rel) => {
+              const relReadTime = calculateReadingTime(rel.body);
+              return (
+                <a
+                  href={`/artikel/${rel.slug}/`}
+                  class="group block p-5 rounded-2xl bg-zinc-50/70 hover:bg-zinc-100/80 transition-all duration-200 space-y-3"
+                >
+                  <div class="aspect-[16/10] rounded-xl overflow-hidden bg-zinc-200">
+                    <img
+                      src={rel.data.heroImage}
+                      alt={rel.data.title}
+                      width="400"
+                      height="250"
+                      class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                  <div class="space-y-1.5">
+                    <div class="flex items-center gap-2 text-xs">
+                      <span class="font-semibold text-emerald-700">{rel.data.category}</span>
+                      <span class="text-zinc-400">&bull;</span>
+                      <span class="text-zinc-500">{relReadTime}</span>
+                    </div>
+                    <h3 class="font-bold text-zinc-900 text-base leading-snug group-hover:text-emerald-700 transition-colors line-clamp-2">
+                      {rel.data.title}
+                    </h3>
+                    <p class="text-xs text-zinc-500 line-clamp-2 leading-relaxed">
+                      {rel.data.description}
+                    </p>
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+        </section>
+      )}
+
+      <!-- Bottom Consultation Box (Clean Editorial Tone) -->
+      <div class="mt-16 p-8 sm:p-10 rounded-2xl bg-zinc-900 text-white shadow-xl">
         <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
           <div class="space-y-2">
-            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950/80 text-emerald-300 border border-emerald-700/50">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950 text-emerald-300 border border-emerald-800/60">
               <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
               Konsultasi Praktisi Lapangan
             </span>
-            <h4 class="text-xl sm:text-2xl font-extrabold text-white tracking-tight">Butuh Diskusi Teknis Lebih Lanjut?</h4>
+            <h3 class="text-xl sm:text-2xl font-extrabold text-white tracking-tight">Butuh Diskusi Teknis Lebih Lanjut?</h3>
             <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed max-w-xl">
               Tim spesialis Agro Prima Greenhouse siap membantu menjawab pertanyaan spesifik seputar pemilihan material atau pembangunan fasilitas greenhouse Anda.
             </p>
@@ -135,3 +274,196 @@ const articleSchema = getArticleSchema({
     </article>
   </div>
 </BaseLayout>
+
+<style is:global>
+  /* Medium Article Typography Engine */
+  .medium-article {
+    color: #27272a;
+    font-size: 19px;
+    line-height: 1.82;
+    letter-spacing: -0.011em;
+  }
+
+  /* Completely remove any hr or divider line */
+  .medium-article hr {
+    display: none !important;
+  }
+
+  .medium-article p {
+    margin-bottom: 2rem;
+    font-weight: 400;
+    color: #27272a;
+  }
+
+  .medium-article h2 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: #18181b;
+    margin-top: 3.5rem;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.025em;
+    line-height: 1.25;
+  }
+
+  .medium-article h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #18181b;
+    margin-top: 2.5rem;
+    margin-bottom: 0.85rem;
+    letter-spacing: -0.02em;
+    line-height: 1.3;
+  }
+
+  .medium-article strong {
+    font-weight: 700;
+    color: #09090b;
+  }
+
+  .medium-article em {
+    font-style: italic;
+  }
+
+  .medium-article a {
+    color: #047857;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: #a7f3d0;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+
+  .medium-article a:hover {
+    color: #065f46;
+    text-decoration-color: #047857;
+  }
+
+  .medium-article ul {
+    list-style-type: disc;
+    margin: 1.5rem 0 2rem 1.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .medium-article ol {
+    list-style-type: decimal;
+    margin: 1.5rem 0 2rem 1.5rem;
+    padding-left: 0.5rem;
+  }
+
+  .medium-article li {
+    margin-bottom: 0.75rem;
+    font-size: 18px;
+    line-height: 1.75;
+    color: #27272a;
+  }
+
+  .medium-article li::marker {
+    color: #059669;
+    font-weight: 600;
+  }
+
+  .medium-article blockquote {
+    border-left: 3px solid #059669;
+    padding: 0.5rem 0 0.5rem 1.5rem;
+    margin: 2.5rem 0;
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: #3f3f46;
+    background: transparent;
+  }
+
+  .medium-article blockquote p {
+    margin-bottom: 0;
+  }
+
+  /* Responsive Medium-Styled Data Tables */
+  .medium-article table {
+    width: 100%;
+    margin: 2.5rem 0;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e4e4e7;
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+
+  .medium-article th {
+    background-color: #f8fafc;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #475569;
+    padding: 12px 16px;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: left;
+  }
+
+  .medium-article td {
+    padding: 14px 16px;
+    color: #334155;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .medium-article tr:last-child td {
+    border-bottom: none;
+  }
+
+  .medium-article tr:nth-child(even) {
+    background-color: #fafaf9;
+  }
+
+  @media (max-width: 640px) {
+    .medium-article {
+      font-size: 17px;
+      line-height: 1.75;
+    }
+
+    .medium-article h2 {
+      font-size: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .medium-article h3 {
+      font-size: 1.25rem;
+      margin-top: 2rem;
+    }
+
+    .medium-article table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }
+</style>
+
+<script>
+  function setupCopyLink() {
+    const copyBtn = document.getElementById('copy-article-link-btn');
+    const tooltip = document.getElementById('copy-tooltip');
+
+    if (!copyBtn || !tooltip) return;
+
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+        tooltip.classList.remove('opacity-0');
+        tooltip.classList.add('opacity-100');
+
+        setTimeout(() => {
+          tooltip.classList.remove('opacity-100');
+          tooltip.classList.add('opacity-0');
+        }, 2000);
+      } catch (err) {
+        console.error('Failed to copy: ', err);
+      }
+    });
+  }
+
+  setupCopyLink();
+  document.addEventListener('astro:page-load', setupCopyLink);
+</script>

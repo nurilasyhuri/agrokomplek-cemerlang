@@ -21,11 +21,22 @@ const collectionSchema = getCollectionPageSchema({
     description: `Konstruksi ${p.data.greenhouseType} di ${p.data.locationCity}, ${p.data.locationProvince}. Dimensi: ${p.data.dimensions}.`,
   })),
 });
+const projectKeywords = [
+  'portofolio greenhouse',
+  'proyek pembuatan greenhouse',
+  'hasil kerja kontraktor greenhouse',
+  'greenhouse galvanis batu malang',
+  'tunnel garam madura',
+  'greenhouse bambu malang',
+  'greenhouse baja ringan',
+  'agro prima greenhouse',
+];
 ---
 
 <BaseLayout
   title="Portofolio Proyek Greenhouse &amp; Tunnel Garam - Agro Prima Greenhouse"
   description="Dokumentasi proyek pengerjaan greenhouse pipa galvanis hot-dip, bambu presisi, baja ringan, &amp; tunnel garam yang selesai dibangun di Malang &amp; berbagai kota Indonesia."
+  keywords={projectKeywords}
   jsonLd={[collectionSchema, breadcrumbSchema]}
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">

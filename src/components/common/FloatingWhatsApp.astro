@@ -5,9 +5,9 @@ import { generateGeneralInquiryUrl } from '../../utils/whatsapp';
 const waCsUrl = generateGeneralInquiryUrl('floating-cs-button');
 ---
 
-<!-- Floating WhatsApp CS Button (Bottom Right) -->
+<!-- Floating WhatsApp CS Button (Desktop View, Mobile uses Native Bottom Dock) -->
 <aside
-  class="fixed bottom-20 md:bottom-6 right-4 md:right-6 z-50 select-none print:hidden"
+  class="hidden md:block fixed bottom-6 right-6 z-50 select-none print:hidden"
   aria-label="Kontak Cepat Customer Service via WhatsApp"
 >
   <a

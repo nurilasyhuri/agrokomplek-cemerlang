@@ -162,11 +162,18 @@ const slides = [
             <span>{slide.tag}</span>
           </div>
 
-          <!-- Dynamic Main Headline -->
-          <h1 class="text-3xl sm:text-4xl lg:text-[44px] xl:text-[50px] font-black tracking-tight leading-[1.12] mb-3.5 sm:mb-4 text-white font-sans drop-shadow-md">
-            <span>{slide.headlineLine1}</span><br />
-            <span class="text-emerald-400">{slide.headlineLine2}</span>
-          </h1>
+          <!-- Dynamic Main Headline (Single authoritative H1 on slide 0) -->
+          {idx === 0 ? (
+            <h1 class="text-3xl sm:text-4xl lg:text-[44px] xl:text-[50px] font-black tracking-tight leading-[1.12] mb-3.5 sm:mb-4 text-white font-sans drop-shadow-md">
+              <span>{slide.headlineLine1}</span><br />
+              <span class="text-emerald-400">{slide.headlineLine2}</span>
+            </h1>
+          ) : (
+            <h2 class="text-3xl sm:text-4xl lg:text-[44px] xl:text-[50px] font-black tracking-tight leading-[1.12] mb-3.5 sm:mb-4 text-white font-sans drop-shadow-md">
+              <span>{slide.headlineLine1}</span><br />
+              <span class="text-emerald-400">{slide.headlineLine2}</span>
+            </h2>
+          )}
 
           <!-- Descriptive Subtitle -->
           <p class="text-xs sm:text-sm lg:text-base text-zinc-200 font-normal leading-relaxed mb-5 sm:mb-6 max-w-2xl text-shadow-sm">

@@ -13,7 +13,6 @@ Salah satu pertanyaan paling mendasar yang sering diajukan oleh pemilik lahan da
 
 Sebagai kontraktor aplikator dan penyedia material pertanian yang berbasis di Malang, kami selalu mengedukasi bahwa **biaya pembuatan greenhouse tidak dapat dipukul rata hanya dari luas lantai semata**. Kondisi topografi lahan, arah terpaan angin tropis, jenis komoditas (misal melon premium, sayuran daun, atau pembibitan), serta sistem irigasi yang dipilih sangat memengaruhi Rencana Anggaran Biaya (RAB) akhir.
 
----
 
 ## 1. Tabel Estimasi Biaya Pembuatan Greenhouse per m²
 
@@ -28,7 +27,6 @@ Berikut adalah acuan kisaran biaya konstruksi greenhouse di Indonesia berdasarka
 
 > **Gunakan Fitur Interaktif:** Anda dapat langsung menghitung simulasi kebutuhan anggaran untuk ukuran lahan Anda menggunakan [Kalkulator RAB Greenhouse Online](/jasa/pembuatan-greenhouse/#kalkulator).
 
----
 
 ## 2. Rincian Komponen Pembentuk RAB Greenhouse
 
@@ -51,7 +49,6 @@ Mencegah serangga masuk saat pekerja keluar-masuk greenhouse. Ruang antara kedua
 ### E. Sistem Distribusi Air & Fertigasi (Opsional)
 Pemasangan instalasi pengairan seperti [Selang Drip Irigasi 16mm](/produk/selang-drip-irigasi-16mm/) dan [Mulsa Plastik Hitam Perak](/produk/mulsa-plastik-hitam-perak/) untuk menekan evaporasi dan mendistribusikan nutrisi AB Mix secara terukur ke perakaran tanaman.
 
----
 
 ## 3. Studi Kasus Pembangunan Lapangan
 
@@ -59,7 +56,6 @@ Sebagai referensi nyata pelaksanaan di lapangan, Anda dapat meninjau dokumentasi
 - [Proyek Greenhouse Galvanis Komersial Batu Malang](/proyek/greenhouse-galvanis-batu-malang/) – Pembangunan greenhouse pipa galvanis seluas 400 m² untuk budidaya melon hidroponik sistem gantung.
 - [Proyek Tunnel Garam Pesisir Madura](/proyek/tunnel-garam-pesisir-madura/) – Rancang bangun prisma garam tahan korosi laut untuk kelompok tani garam.
 
----
 
 ## 4. Cara Mengajukan Rencana Anggaran Biaya (RAB) Gratis
 

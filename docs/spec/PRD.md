@@ -3,7 +3,7 @@
 ## 1. Project Identity & Overview
 - **Project Name:** Agrokomplek Cemerlang Web Platform
 - **Project Slug:** `agrokomplek-cemerlang`
-- **Domain Target:** `agrokomplekcemerlang.com`
+- **Domain Target:** `agroprimagreenhouse.com`
 - **Hosting & Infrastructure:** **Cloudflare Pages / Cloudflare Workers** (Global Edge CDN, DNS, Zero-Trust Access, Cloudflare Web Analytics / Turnstile, Polish Image Caching).
 - **Tech Stack:** Astro v5+ (Static-First / Hybrid SSG), Tailwind CSS v4, TypeScript (Strict), Astro Content Collections (Zod Schemas), Lucide Icons, React/Preact Islands (for interactive estimator & search).
 - **Visual Theme:** **Madian / Modern Agritech Aesthetic** (Clean agricultural emerald/forest green `#195a36`, warm earthy sunlight amber `#d97706`, high-contrast typography, generous negative space, crisp border treatments, and authentic agricultural imagery).

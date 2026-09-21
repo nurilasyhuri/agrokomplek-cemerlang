@@ -15,7 +15,6 @@ Sebaliknya, plastik UV yang dipasang kencang sempurna (*drum-tight*) menggunakan
 
 Berikut adalah panduan teknik pemasangan plastik UV standar aplikator profesional **Agro Prima Greenhouse**.
 
----
 
 ## 1. Alat & Perlengkapan yang Wajib Disiapkan
 
@@ -26,7 +25,6 @@ Sebelum memulai penarikan plastik di atas rangka, pastikan Anda telah menyiapkan
 4. **Lakban Khusus Tambal Plastik UV (UV Repair Tape):** Untuk mengantisipasi titik sudut runcing pada rangka.
 5. **Kain Pelapis Sudut / Busa:** Membalut semua ujung besi atau sambungan tajam agar tidak melukai permukaan plastik saat ditarik.
 
----
 
 ## 2. Langkah Demi Langkah Pemasangan Plastik UV
 
@@ -58,7 +56,6 @@ Setelah sisi pertama terkunci rapi:
 ### Langkah 6: Pemotongan Sisa Plastik
 Sisakan kelebihan plastik sekitar 10 cm – 15 cm di luar profil C untuk memudahkan penyesuaian jika suatu saat diperlukan pengetatan ulang. Jangan memotong plastik terlalu mepet dengan kawat clip.
 
----
 
 ## 3. Kesalahan Umum yang Harus Dihindari
 
@@ -66,7 +63,6 @@ Sisakan kelebihan plastik sekitar 10 cm – 15 cm di luar profil C untuk memudah
 - **Pemasangan Saat Angin Kencang:** Plastik UV lebar bertindak layaknya layar kapal. Tiupan angin mendadak dapat membahayakan keselamatan pekerja di atas rangka.
 - **Rangka Tanpa Ventilasi Monitor Roof:** Tanpa bukaan ventilasi atas, suhu panas di bawah atap plastik UV akan terperangkap dan mempercepat penuaan plastik.
 
----
 
 ## 4. Butuh Bantuan Aplikator Berpengalaman?
 

@@ -184,11 +184,11 @@ agrokomplek-cemerlang/
 ### `public/_redirects` (Canonical SEO & Edge Redirects)
 ```text
 # Domain canonical enforcement
-http://agrokomplekcemerlang.com/* https://agrokomplekcemerlang.com/:splat 301
-https://www.agrokomplekcemerlang.com/* https://agrokomplekcemerlang.com/:splat 301
+http://agroprimagreenhouse.com/* https://agroprimagreenhouse.com/:splat 301
+https://www.agroprimagreenhouse.com/* https://agroprimagreenhouse.com/:splat 301
 
 # Legacy/Shorthand routing redirects
-/greenhouse https://agrokomplekcemerlang.com/jasa/pembuatan-greenhouse/ 301
+/greenhouse https://agroprimagreenhouse.com/jasa/pembuatan-greenhouse/ 301
 /wa https://wa.me/6285183002070 302
 /maps https://share.google/RkGZAeLgftgFwjqRo 302
 ```

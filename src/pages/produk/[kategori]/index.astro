@@ -11,18 +11,21 @@ export const CATEGORIES = [
     shortLabel: 'Saprodi Pertanian',
     title: 'Saprodi Pertanian Malang: Pupuk NPK, Organik & Benih Unggul',
     desc: 'Pusat sarana produksi pertanian terlengkap di Malang: pupuk NPK 16-16-16, pupuk organik, nutrisi AB Mix hidroponik, media tanam, dan benih hortikultura unggul.',
+    keywords: ['saprodi pertanian malang', 'pupuk npk 16-16-16', 'nutrisi ab mix hidroponik', 'media tanam malang', 'benih hortikultura unggul'],
   },
   {
     kategori: 'perlengkapan-pertanian',
     shortLabel: 'Irigasi & Lahan',
     title: 'Alat Pertanian & Irigasi: Selang Drip 16mm & Mulsa MPHP',
     desc: 'Peralatan irigasi fertigasi presisi dan perlengkapan lahan: selang drip 16mm, sprayer elektrik 16L, mulsa plastik hitam perak, dan nepel fitting sambungan.',
+    keywords: ['selang drip irigasi 16mm', 'mulsa plastik hitam perak', 'sprayer elektrik 16l', 'irigasi tetes malang', 'peralatan pertanian presisi'],
   },
   {
     kategori: 'perlengkapan-greenhouse',
     shortLabel: 'Material Greenhouse',
     title: 'Material Greenhouse: Plastik UV, Paranet & Kasa Insect Net',
     desc: 'Distributor material greenhouse terlengkap: plastik UV 14%-20% (200 mikron), paranet shading net 65%-75%, kasa insect net 50 mesh, dan profil lock spring clip.',
+    keywords: ['material greenhouse malang', 'plastik uv 200 mikron', 'paranet shading net 65 75', 'kasa insect net 50 mesh', 'spring clip profil lock c'],
   },
 ];
 
@@ -60,6 +63,7 @@ const collectionSchema = getCollectionPageSchema({
 <BaseLayout
   title={cat.title}
   description={cat.desc}
+  keywords={cat.keywords}
   jsonLd={[collectionSchema, breadcrumbSchema]}
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20">

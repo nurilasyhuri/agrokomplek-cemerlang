@@ -35,12 +35,21 @@ const projectSchema = getProjectSchema({
   dimensions: project.data.dimensions,
   slug: project.slug,
 });
+const projectKeywords = [
+  project.data.title,
+  project.data.greenhouseType,
+  `greenhouse ${project.data.locationCity}`,
+  `konstruksi greenhouse ${project.data.locationCity}`,
+  'hasil proyek greenhouse',
+  'agro prima greenhouse',
+];
 ---
 
 <BaseLayout
   title={`${project.data.title} - Portofolio Greenhouse Agro Prima`}
   description={`Studi kasus konstruksi ${project.data.greenhouseType} di ${project.data.locationCity}, ${project.data.locationProvince} (Dimensi ${project.data.dimensions}). Dokumentasi instalasi, spesifikasi material, & hasil panen.`}
   image={project.data.coverImage}
+  keywords={projectKeywords}
   jsonLd={[projectSchema, breadcrumbSchema]}
 >
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">

@@ -13,7 +13,6 @@ Sistem irigasi tetes (*drip irrigation*) telah menjadi standar utama bagi petani
 
 Berikut adalah panduan langkah demi langkah cara memasang [Selang Drip Irigasi 16mm](/produk/selang-drip-irigasi-16mm/) yang benar untuk bedengan lahan terbuka maupun di dalam greenhouse.
 
----
 
 ## 1. Keuntungan Menggunakan Sistem Selang Drip
 
@@ -22,7 +21,6 @@ Berikut adalah panduan langkah demi langkah cara memasang [Selang Drip Irigasi 1
 3. **Menekan Serangan Jamur Daun:** Tajuk tanaman tetap kering karena air tidak disemprotkan ke daun, sehingga menekan risiko penyakit antraknosa (patek) dan busuk daun.
 4. **Efisiensi Tenaga Kerja:** Lahan seluas 1 hektar dapat disiram sekaligus hanya dengan membuka satu kran utama selama 20–30 menit.
 
----
 
 ## 2. Komponen Utama Instalasi Irigasi Tetes
 
@@ -34,7 +32,6 @@ Untuk membangun instalasi irigasi tetes standar, Anda membutuhkan komponen berik
 - [Selang Drip 16mm](/produk/selang-drip-irigasi-16mm/): Selang lateral berlubang tetes (*drip tape*) yang dibentangkan di atas bedengan.
 - [Mulsa Plastik Hitam Perak (MPHP)](/produk/mulsa-plastik-hitam-perak/): Penutup bedengan untuk menahan kelembapan tanah dan menekan pertumbuhan gulma.
 
----
 
 ## 3. Langkah-Langkah Pemasangan di Lahan
 
@@ -59,7 +56,6 @@ Tutup bedengan dengan [Mulsa Plastik Hitam Perak](/produk/mulsa-plastik-hitam-pe
 ### Langkah 5: Pelubangan Mulsa dan Penanaman
 Gunakan pelubang mulsa panas pada titik-titik tepat di atas atau di samping titik tetesan selang drip. Bibit siap dipindahkan dari [Tray Semai 128 Lubang](/produk/tray-semai-128-lubang/) ke lubang tanam.
 
----
 
 ## 4. Tips Perawatan agar Selang Drip Awet 3-5 Musim
 

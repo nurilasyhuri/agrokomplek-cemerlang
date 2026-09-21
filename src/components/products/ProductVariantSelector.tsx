@@ -179,7 +179,7 @@ Mohon info ketersediaan stok fisik di gudang Malang dan rekomendasi ekspedisi ka
                   const val = parseInt((e.target as HTMLInputElement).value, 10);
                   if (!isNaN(val) && val >= 1) setQuantity(val);
                 }}
-                class="w-10 text-center bg-transparent text-xs font-bold text-zinc-900 focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                class="w-10 text-center bg-transparent text-base sm:text-sm font-bold text-zinc-900 focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
               />
               <button
                 type="button"

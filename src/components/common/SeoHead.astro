@@ -5,6 +5,8 @@ export interface Props {
   canonical?: string;
   image?: string;
   type?: 'website' | 'article' | 'product';
+  keywords?: string | string[];
+  author?: string;
   jsonLd?: Record<string, any> | Array<Record<string, any>>;
   noindex?: boolean;
 }
@@ -15,11 +17,14 @@ const {
   canonical,
   image = '/images/og/default-og.jpg',
   type = 'website',
+  keywords,
+  author = 'Agro Prima Greenhouse',
   jsonLd,
   noindex = false,
 } = Astro.props;
 
 const siteName = 'Agro Prima Greenhouse';
+const domain = 'https://agroprimagreenhouse.com';
 
 // Strictly strip any pipe symbols from title and description
 const sanitizedRawTitle = title.replace(/\s*\|\s*/g, ' - ').trim();
@@ -28,19 +33,66 @@ const formattedTitle = sanitizedRawTitle.includes(siteName) || sanitizedRawTitle
   : `${sanitizedRawTitle} - ${siteName}`;
 
 const sanitizedDescription = description.replace(/\s*\|\s*/g, ', ').trim();
-const fullImageUrl = image.startsWith('http') ? image : `https://agroprimagreenhouse.com${image}`;
 
-// Compute canonical URL strictly anchored to authoritative domain
-const canonicalUrl = canonical
-  ? (canonical.startsWith('http') ? canonical : `https://agroprimagreenhouse.com${canonical}`)
-  : Astro.url.href.replace(/^https?:\/\/[^\/]+/, 'https://agroprimagreenhouse.com');
+// Authoritative Absolute Image URL
+const fullImageUrl = image.startsWith('http')
+  ? image
+  : `${domain}${image.startsWith('/') ? image : `/${image}`}`;
+
+// Authoritative Canonical URL with guaranteed trailing slash alignment
+const rawPath = canonical || Astro.url.pathname;
+const cleanPathname = rawPath.startsWith('http')
+  ? new URL(rawPath).pathname
+  : (rawPath.startsWith('/') ? rawPath : `/${rawPath}`);
+const normalizedPathname = cleanPathname.endsWith('/') || cleanPathname.includes('.')
+  ? cleanPathname
+  : `${cleanPathname}/`;
+const canonicalUrl = `${domain}${normalizedPathname}`;
+
+// Keywords string
+const defaultKeywords = [
+  'jasa pembuatan greenhouse',
+  'kontraktor greenhouse',
+  'biaya greenhouse per m2',
+  'greenhouse malang',
+  'plastik uv 200 mikron',
+  'selang drip irigasi tetes',
+  'tunnel garam prisma',
+  'greenhouse galvanis',
+  'agro prima greenhouse',
+];
+const keywordsString = Array.isArray(keywords)
+  ? keywords.join(', ')
+  : (keywords || defaultKeywords.join(', '));
+
+// Format structured data JSON-LD into compliant schema @graph if multiple root entities
+const formattedJsonLd = jsonLd
+  ? (Array.isArray(jsonLd)
+      ? {
+          '@context': 'https://schema.org',
+          '@graph': jsonLd.map((item) => {
+            if (item && item['@context']) {
+              const { '@context': _, ...rest } = item;
+              return rest;
+            }
+            return item;
+          }),
+        }
+      : jsonLd)
+  : null;
 ---
 
-<!-- Global Metadata -->
+<!-- Global Metadata & Mobile App Viewport -->
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+<meta name="format-detection" content="telephone=no" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <meta name="generator" content={Astro.generator} />
+<meta name="theme-color" content="#047857" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="apple-mobile-web-app-title" content="Agro Prima" />
+<meta name="application-name" content="Agro Prima Greenhouse" />
 
 <!-- Robots & Indexing Directives -->
 <meta
@@ -52,10 +104,13 @@ const canonicalUrl = canonical
   content={noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'}
 />
 
-<!-- Primary Meta Tags (Tanpa Pipe Symbol) -->
+<!-- Primary Meta Tags -->
 <title>{formattedTitle}</title>
 <meta name="title" content={formattedTitle} />
 <meta name="description" content={sanitizedDescription} />
+<meta name="keywords" content={keywordsString} />
+<meta name="author" content={author} />
+<meta name="publisher" content={siteName} />
 <link rel="canonical" href={canonicalUrl} />
 
 <!-- Indonesian Geo-Targeting Metadata (Malang, Jawa Timur, Indonesia) -->
@@ -92,10 +147,10 @@ const canonicalUrl = canonical
 />
 
 <!-- Structured Data (JSON-LD) -->
-{jsonLd && (
+{formattedJsonLd && (
   <script
     is:inline
     type="application/ld+json"
-    set:html={JSON.stringify(Array.isArray(jsonLd) && jsonLd.length === 1 ? jsonLd[0] : jsonLd)}
+    set:html={JSON.stringify(formattedJsonLd)}
   />
 )}

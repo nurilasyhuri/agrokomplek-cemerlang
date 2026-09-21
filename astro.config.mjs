@@ -5,7 +5,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://agrokomplekcemerlang.com',
+  site: 'https://agroprimagreenhouse.com',
   trailingSlash: 'always',
   integrations: [
     tailwind({

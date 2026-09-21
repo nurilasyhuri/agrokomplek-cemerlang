@@ -9,11 +9,21 @@ const breadcrumbSchema = getBreadcrumbSchema([
   { name: 'Beranda', url: 'https://agroprimagreenhouse.com/' },
   { name: 'Lokasi & Toko Fisik', url: 'https://agroprimagreenhouse.com/lokasi/' },
 ]);
+
+const lokasiKeywords = [
+  'toko pertanian kedungkandang malang',
+  'lokasi agro prima greenhouse',
+  'alamat toko pertanian malang',
+  'supplier greenhouse malang',
+  'gudang plastik uv malang',
+  'toko saprodi buring malang',
+];
 ---
 
 <BaseLayout
   title="Toko Pertanian Kedungkandang Malang &amp; Supplier Greenhouse - Agro Prima Greenhouse"
   description="Kunjungi toko fisik &amp; gudang Agro Prima Greenhouse di Buring, Kedungkandang, Kota Malang. Cek fisik sampel plastik UV 200 mikron, paranet, selang drip, &amp; konsultasi greenhouse."
+  keywords={lokasiKeywords}
   jsonLd={[schema, breadcrumbSchema]}
 >
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">
@@ -53,9 +63,9 @@ const breadcrumbSchema = getBreadcrumbSchema([
       <!-- NAP & Landmarks -->
       <div class="lg:col-span-5 space-y-6">
         <div class="p-6 sm:p-8 rounded-xl bg-white border border-zinc-200/80 shadow-sm space-y-6">
-          <h3 class="text-lg font-bold text-zinc-900 border-b border-zinc-100 pb-3">
+          <h2 class="text-lg font-bold text-zinc-900 border-b border-zinc-100 pb-3">
             Informasi Alamat &amp; Kontak Toko
-          </h3>
+          </h2>
 
           <div class="space-y-4 text-xs sm:text-sm text-zinc-600">
             <div>
@@ -87,7 +97,7 @@ const breadcrumbSchema = getBreadcrumbSchema([
 
         <!-- Landmarks & Guidance -->
         <div class="p-6 sm:p-7 rounded-xl bg-zinc-50/70 border border-zinc-200/80 space-y-4">
-          <h4 class="font-bold text-zinc-900 text-sm">Akses &amp; Panduan Menuju Lokasi</h4>
+          <h3 class="font-bold text-zinc-900 text-sm">Akses &amp; Panduan Menuju Lokasi</h3>
           <ul class="text-xs text-zinc-600 space-y-2 list-disc list-inside">
             <li>Dapat diakses kendaraan roda dua, mobil pick-up, hingga truk engkel kargo.</li>
             <li>Berada di kawasan Kedungkandang (Buring), dekat dengan jalur lingkar timur Malang.</li>

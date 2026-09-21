@@ -226,7 +226,7 @@ export default function EstimationCalculator() {
                 placeholder="Contoh: Malang / Batu / Kediri"
                 value={location}
                 onInput={(e) => setLocation((e.target as HTMLInputElement).value)}
-                class="w-full px-3.5 py-2.5 rounded-xl border border-zinc-200 bg-white text-zinc-900 text-xs focus:outline-none focus:ring-2 focus:ring-emerald-600/20 focus:border-emerald-600 transition-all"
+                class="w-full px-3.5 py-2.5 rounded-xl border border-zinc-200 bg-white text-zinc-900 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600/20 focus:border-emerald-600 transition-all"
               />
             </div>
 
@@ -239,7 +239,7 @@ export default function EstimationCalculator() {
                 placeholder="Contoh: Melon Hidroponik / Sayuran"
                 value={crops}
                 onInput={(e) => setCrops((e.target as HTMLInputElement).value)}
-                class="w-full px-3.5 py-2.5 rounded-xl border border-zinc-200 bg-white text-zinc-900 text-xs focus:outline-none focus:ring-2 focus:ring-emerald-600/20 focus:border-emerald-600 transition-all"
+                class="w-full px-3.5 py-2.5 rounded-xl border border-zinc-200 bg-white text-zinc-900 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600/20 focus:border-emerald-600 transition-all"
               />
             </div>
 
@@ -250,7 +250,7 @@ export default function EstimationCalculator() {
               <select
                 value={timeline}
                 onChange={(e) => setTimeline((e.target as HTMLSelectElement).value)}
-                class="w-full px-3.5 py-2.5 rounded-xl border border-zinc-200 bg-white text-zinc-900 text-xs focus:outline-none focus:ring-2 focus:ring-emerald-600/20 focus:border-emerald-600 transition-all"
+                class="w-full px-3.5 py-2.5 rounded-xl border border-zinc-200 bg-white text-zinc-900 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600/20 focus:border-emerald-600 transition-all"
               >
                 <option value="Bulan Ini">Bulan Ini (Segera)</option>
                 <option value="1 - 2 Bulan ke Depan">1 - 2 Bulan ke Depan</option>

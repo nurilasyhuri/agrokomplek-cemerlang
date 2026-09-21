@@ -62,12 +62,12 @@ graph TD
 {
   "@context": "https://schema.org",
   "@type": "Store",
-  "@id": "https://agrokomplekcemerlang.com/#business",
+  "@id": "https://agroprimagreenhouse.com/#business",
   "name": "Agrokomplek Cemerlang",
   "alternateName": "Toko Pertanian & Jasa Greenhouse Agrokomplek Cemerlang",
-  "url": "https://agrokomplekcemerlang.com/",
-  "logo": "https://agrokomplekcemerlang.com/images/brand/logo.png",
-  "image": "https://agrokomplekcemerlang.com/images/hero/toko-agrokomplek-malang.webp",
+  "url": "https://agroprimagreenhouse.com/",
+  "logo": "https://agroprimagreenhouse.com/images/brand/logo.png",
+  "image": "https://agroprimagreenhouse.com/images/hero/toko-agrokomplek-malang.webp",
   "description": "Pusat penjualan saprodi pertanian, perlengkapan greenhouse, dan kontraktor jasa pembuatan greenhouse di Malang untuk seluruh wilayah Indonesia.",
   "telephone": "+6285183002070",
   "email": "agrokomplekcemerlang@gmail.com",
@@ -114,11 +114,11 @@ graph TD
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://agrokomplekcemerlang.com/jasa/pembuatan-greenhouse/#service",
+  "@id": "https://agroprimagreenhouse.com/jasa/pembuatan-greenhouse/#service",
   "name": "Jasa Pembuatan Greenhouse & Tunnel Garam",
   "serviceType": "Konstruksi & Instalasi Greenhouse Pertanian",
   "provider": {
-    "@id": "https://agrokomplekcemerlang.com/#business"
+    "@id": "https://agroprimagreenhouse.com/#business"
   },
   "areaServed": {
     "@type": "Country",
@@ -130,7 +130,7 @@ graph TD
     "availability": "https://schema.org/InStock",
     "priceCurrency": "IDR",
     "price": "0",
-    "url": "https://agrokomplekcemerlang.com/jasa/pembuatan-greenhouse/"
+    "url": "https://agroprimagreenhouse.com/jasa/pembuatan-greenhouse/"
   }
 }
 </script>
@@ -143,7 +143,7 @@ graph TD
 - **Primary Category:** `Agricultural service` / `Agricultural supply store` / `Farm equipment supplier`.
 - **Secondary Category:** `Greenhouse builder` / `Garden center`.
 - **Phone:** `0851-8300-2070`.
-- **Tracking UTM Link:** `https://agrokomplekcemerlang.com/?utm_source=gbp&utm_medium=organic&utm_campaign=gmb-profile`.
+- **Tracking UTM Link:** `https://agroprimagreenhouse.com/?utm_source=gbp&utm_medium=organic&utm_campaign=gmb-profile`.
 
 ---
 

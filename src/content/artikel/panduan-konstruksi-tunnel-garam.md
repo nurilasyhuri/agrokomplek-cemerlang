@@ -13,7 +13,6 @@ Petani garam konvensional di pesisir Indonesia kerap menghadapi kendala musim ke
 
 Inovasi **Tunnel Garam (Prisma Garam)** berbasis teknologi konstruksi greenhouse menghadirkan terobosan besar bagi sentra garam di Madura, Pantura Jawa, Nusa Tenggara, dan Sulawesi.
 
----
 
 ## 1. Keunggulan Teknologi Tunnel Garam
 
@@ -24,7 +23,6 @@ Penerapan penutup prisma plastik UV di atas meja kristalisasi garam memberikan m
 3. **Warna Garam Putih Kristal Bersih:** Menghasilkan garam kualitas premium (K1) yang memenuhi standar garam industri farmasi, pengolahan pangan, dan garam konsumsi beryodium bernilai jual tinggi.
 4. **Efek Rumah Kaca (*Greenhouse Effect*):** Suhu di dalam ruangan tunnel garam dapat mencapai 45°C – 55°C pada siang hari, mempercepat laju evaporasi air hingga 3 kali lebih cepat dibanding tambak terbuka.
 
----
 
 ## 2. Kunci Rekayasa Konstruksi Tunnel Garam yang Awet
 
@@ -35,14 +33,12 @@ Membangun struktur di kawasan pesisir membutuhkan perhitungan khusus karena uap 
 - **Ventilasi Uap Air Terarah:** Rancang bangun atap lengkung dilengkapi celah sirkulasi agar uap air yang menguap dari meja garam dapat keluar dengan lancar tanpa menciptakan kondensasi berlebih yang menetes kembali ke garam.
 - **Geomembrane Alas Meja Garam:** Bagian dasar dilapisi terpal plastik geomembrane HDPE hitam agar air garam tidak meresap ke tanah dan kristal garam dapat dipanen secara higienis.
 
----
 
 ## 3. Contoh Implementasi di Lapangan
 
 Tim Agro Prima Greenhouse telah menyelesaikan pengerjaan fasilitas prisma garam di berbagai sentra garam nasional. Simak studi kasus lengkap kami pada:
 - [Portofolio Pembangunan Tunnel Garam Pesisir Madura](/proyek/tunnel-garam-pesisir-madura/) – Instalasi 10 unit tunnel garam rangka lengkung modular dengan sistem pembuangan uap terintegrasi.
 
----
 
 ## 4. Konsultasi Rancang Bangun Fasilitas Garam
 

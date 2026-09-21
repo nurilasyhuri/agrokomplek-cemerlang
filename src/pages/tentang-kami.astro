@@ -6,14 +6,24 @@ import { getAboutPageSchema, getBreadcrumbSchema } from '../utils/seo';
 
 const aboutSchema = getAboutPageSchema();
 const breadcrumbSchema = getBreadcrumbSchema([
-  { name: 'Beranda', url: '/' },
-  { name: 'Tentang Kami', url: '/tentang-kami/' },
+  { name: 'Beranda', url: 'https://agroprimagreenhouse.com/' },
+  { name: 'Tentang Kami', url: 'https://agroprimagreenhouse.com/tentang-kami/' },
 ]);
+
+const aboutKeywords = [
+  'profil agro prima greenhouse',
+  'kontraktor greenhouse malang',
+  'tentang agro prima',
+  'spesialis greenhouse indonesia',
+  'workshop greenhouse malang',
+  'jasa greenhouse terpercaya',
+];
 ---
 
 <BaseLayout
   title="Tentang Kontraktor Greenhouse Malang - Agro Prima Greenhouse"
   description="Profil Agro Prima Greenhouse: kontraktor spesialis jasa pembuatan greenhouse galvanis, baja ringan, bambu, dan tunnel garam berbasis di Malang untuk seluruh Indonesia."
+  keywords={aboutKeywords}
   jsonLd={[aboutSchema, breadcrumbSchema]}
 >
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">

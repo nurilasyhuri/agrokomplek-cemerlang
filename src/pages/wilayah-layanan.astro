@@ -1,18 +1,30 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumb from '../components/common/Breadcrumb.astro';
-import { getBreadcrumbSchema } from '../utils/seo';
+import { getBreadcrumbSchema, getLocalBusinessSchema } from '../utils/seo';
 
+const businessSchema = getLocalBusinessSchema();
 const breadcrumbSchema = getBreadcrumbSchema([
   { name: 'Beranda', url: 'https://agroprimagreenhouse.com/' },
   { name: 'Wilayah Layanan', url: 'https://agroprimagreenhouse.com/wilayah-layanan/' },
 ]);
+
+const wilayahKeywords = [
+  'wilayah layanan greenhouse',
+  'pengiriman material greenhouse',
+  'kargo plastik uv luar pulau',
+  'jasa greenhouse jawa timur',
+  'jasa greenhouse sumatera kalimantan sulawesi',
+  'ekspedisi kargo pertanian',
+  'agro prima greenhouse',
+];
 ---
 
 <BaseLayout
   title="Wilayah Layanan Greenhouse &amp; Ekspedisi Kargo Indonesia - Agro Prima Greenhouse"
   description="Layanan pembuatan greenhouse &amp; pengiriman material konstruksi ke Jawa, Bali, Sumatera, Kalimantan, Sulawesi, hingga Papua via kargo darat &amp; laut terpercaya."
-  jsonLd={[breadcrumbSchema]}
+  keywords={wilayahKeywords}
+  jsonLd={[businessSchema, breadcrumbSchema]}
 >
   <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">
     <Breadcrumb items={[{ label: 'Wilayah Layanan' }]} />

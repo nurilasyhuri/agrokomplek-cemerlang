@@ -14,11 +14,24 @@ const breadcrumbSchema = getBreadcrumbSchema([
   { name: 'Beranda', url: 'https://agroprimagreenhouse.com/' },
   { name: 'Jasa Pembuatan Greenhouse', url: 'https://agroprimagreenhouse.com/jasa/pembuatan-greenhouse/' },
 ]);
+
+const serviceKeywords = [
+  'jasa pembuatan greenhouse',
+  'kontraktor greenhouse',
+  'biaya pembuatan greenhouse per m2',
+  'kalkulator rab greenhouse',
+  'greenhouse pipa galvanis hot dip',
+  'greenhouse bambu malang',
+  'greenhouse baja ringan',
+  'tunnel garam prisma',
+  'pembuatan greenhouse indonesia',
+];
 ---
 
 <BaseLayout
   title="Jasa Pembuatan Greenhouse Malang &amp; Kontraktor Indonesia - Agro Prima Greenhouse"
   description="Kontraktor jasa pembuatan greenhouse di Malang. Spesialis rancang bangun struktur pipa galvanis hot-dip, bambu awet, baja ringan, &amp; tunnel garam seluruh Indonesia."
+  keywords={serviceKeywords}
   jsonLd={[serviceSchema, breadcrumbSchema, faqSchema]}
 >
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-20 space-y-12">

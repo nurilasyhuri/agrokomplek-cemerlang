@@ -6,14 +6,23 @@ import { getContactPageSchema, getBreadcrumbSchema } from '../utils/seo';
 
 const contactSchema = getContactPageSchema();
 const breadcrumbSchema = getBreadcrumbSchema([
-  { name: 'Beranda', url: '/' },
-  { name: 'Kontak', url: '/kontak/' },
+  { name: 'Beranda', url: 'https://agroprimagreenhouse.com/' },
+  { name: 'Kontak', url: 'https://agroprimagreenhouse.com/kontak/' },
 ]);
+
+const contactKeywords = [
+  'kontak agro prima greenhouse',
+  'nomor whatsapp kontraktor greenhouse',
+  'konsultasi rab greenhouse malang',
+  'survei lokasi greenhouse',
+  'kontraktor greenhouse malang telepon',
+];
 ---
 
 <BaseLayout
   title="Kontak Kontraktor Jasa Greenhouse Malang - Agro Prima Greenhouse"
   description="Hubungi tim teknisi Agro Prima Greenhouse via WhatsApp 0851-8300-2070 untuk konsultasi desain greenhouse, estimasi RAB, &amp; survei lokasi di Malang &amp; sekitarnya."
+  keywords={contactKeywords}
   jsonLd={[contactSchema, breadcrumbSchema]}
 >
   <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">
