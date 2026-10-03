@@ -3,10 +3,11 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Breadcrumb from '../../components/common/Breadcrumb.astro';
 import { getCollectionPageSchema, getBreadcrumbSchema } from '../../utils/seo';
 import { getCollection } from 'astro:content';
+import { parseIndonesianDate } from '../../utils/date';
 
 const articles = await getCollection('artikel');
 const sortedArticles = articles.sort(
-  (a, b) => new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
+  (a, b) => parseIndonesianDate(b.data.publishDate).getTime() - parseIndonesianDate(a.data.publishDate).getTime()
 );
 
 function calculateReadingTime(text: string | undefined): string {

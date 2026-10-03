@@ -1,4 +1,5 @@
 import { BUSINESS_INFO } from '../data/businessInfo';
+import { toIsoDate } from './date';
 
 const CANONICAL_BASE = 'https://agroprimagreenhouse.com';
 
@@ -339,8 +340,8 @@ export function getArticleSchema(article: {
     publisher: {
       '@id': `${CANONICAL_BASE}/#business`,
     },
-    datePublished: article.publishDate,
-    dateModified: article.updatedDate || article.publishDate,
+    datePublished: toIsoDate(article.publishDate),
+    dateModified: toIsoDate(article.updatedDate || article.publishDate),
     inLanguage: 'id-ID',
     mainEntityOfPage: {
       '@type': 'WebPage',
