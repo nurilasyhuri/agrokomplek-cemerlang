@@ -136,8 +136,14 @@ export function getGreenhouseServiceSchema() {
     '@context': 'https://schema.org',
     '@type': 'Service',
     '@id': `${CANONICAL_BASE}/jasa/pembuatan-greenhouse/#service`,
-    name: 'Jasa Pembuatan Greenhouse & Tunnel Garam Indonesia',
-    serviceType: 'Jasa Konstruksi & Instalasi Greenhouse Pertanian Tropis',
+    name: 'Jasa Pembuatan Greenhouse & Kontraktor Konstruksi',
+    alternateName: [
+      'Jasa Pembuatan Greenhouse',
+      'Jasa Pembuatan Greenhouse Malang',
+      'Kontraktor Jasa Pembuatan Greenhouse Indonesia',
+      'Jasa Bangun Greenhouse Baja Ringan & Galvanis',
+    ],
+    serviceType: 'Jasa Pembuatan Greenhouse',
     provider: { '@id': `${CANONICAL_BASE}/#business` },
     areaServed: [
       { '@type': 'AdministrativeArea', name: 'Jawa Timur' },
