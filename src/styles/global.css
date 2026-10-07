@@ -11,9 +11,9 @@
     --color-ink-primary: #09090b;
     --color-ink-secondary: #52525b;
     --color-ink-muted: #71717a;
-    --color-agri-600: #059669;
-    --color-agri-700: #047857;
-    --color-agri-800: #065f46;
+    --color-agri-600: #74a516;
+    --color-agri-700: #0d4c15;
+    --color-agri-800: #0a3d11;
   }
 
   html {
@@ -54,15 +54,15 @@
     }
   }
 
-  /* Clean subtle selection */
+  /* Clean subtle selection matching 2-green palette */
   ::selection {
-    background-color: #d1fae5;
-    color: #064e3b;
+    background-color: #d0eaab;
+    color: #0d4c15;
   }
 
   /* Accessible smooth focus rings */
   a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
-    outline: 2px solid #059669;
+    outline: 2px solid #74a516;
     outline-offset: 2px;
   }
 }

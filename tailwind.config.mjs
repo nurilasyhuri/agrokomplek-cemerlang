@@ -4,50 +4,101 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Shopify-style Direct Tokens (matching babyfit.us theme architecture)
-        primary: '#047857',
-        'primary-hover': '#065f46',
+        // Two-Green Ecosystem from Green Harvest reference
+        // Green 1: Deep Forest Green (#0D4C15)
+        // Green 2: Fresh Leaf Green (#74A516)
+        // Accent: Warm Sunshine Gold (#F8B502)
+        forest: {
+          50: '#f0f7f1',
+          100: '#dceee0',
+          200: '#bbdec2',
+          300: '#8ec599',
+          400: '#5ba66b',
+          500: '#39874a',
+          600: '#1b672c',
+          700: '#0d4c15', // Core Deep Forest Green
+          800: '#0a3d11',
+          900: '#08330e', // Deep Pine / Dark Bar
+          950: '#041c08',
+        },
+        leaf: {
+          50: '#f5faec',  // Soft leaf tint
+          100: '#e7f4d2', // Soft leaf card / badge
+          200: '#d0eaab', // Leaf border
+          300: '#b1dc76',
+          400: '#8fc73b', // Bright sunny leaf on dark
+          500: '#74a516', // Core Fresh Leaf Green
+          600: '#5c860e', // Action leaf green
+          700: '#46670e',
+          800: '#385210',
+          900: '#304512',
+          950: '#182705',
+        },
+        sun: {
+          50: '#fffbeb',
+          100: '#fef3c7',
+          400: '#fbbf24',
+          500: '#f8b502', // Warm sunshine gold
+          600: '#d97706',
+        },
+        // Override Emerald so all existing components adapt seamlessly to the 2 greens
+        emerald: {
+          50: '#f5faec',  // Fresh leaf tint background
+          100: '#e7f4d2', // Soft leaf border/badge bg
+          200: '#d0eaab', // Leaf border accent
+          300: '#b1dc76', // Fresh leaf medium
+          400: '#8fc73b', // Bright spring leaf (high contrast on dark)
+          500: '#74a516', // CORE FRESH LEAF GREEN
+          600: '#5c860e', // Fresh leaf button / active state
+          700: '#0d4c15', // CORE DEEP FOREST GREEN
+          800: '#0a3d11', // Deep dark forest
+          900: '#08330e', // Deep pine forest
+          950: '#041c08', // Darkest night forest
+        },
+        // Direct semantic tokens
+        primary: '#0d4c15',
+        'primary-hover': '#0a3d11',
         dark: '#09090b',
         muted: '#71717a',
         secondary: '#f4f4f5',
         border: '#e4e4e7',
         bg: '#fafafa',
-        peach: '#ecfdf5',
+        peach: '#f5faec',
         sand: '#f5f5f4',
         // Modern Pristine Canvas & Card Structure (Apple/Google design language)
         surface: {
-          canvas: '#fafafa',     // Clean subtle off-white ground
-          card: '#ffffff',       // Pure white content surface
-          subtle: '#f4f4f5',     // Sleek zinc inset container
-          border: '#e4e4e7',     // Ultra-clean 1px hairline border
-          'border-dark': '#d4d4d8', // Contrast divider
+          canvas: '#fafafa',
+          card: '#ffffff',
+          subtle: '#f5faec',
+          border: '#e4e4e7',
+          'border-dark': '#d4d4d8',
         },
         // Modern Ink Hierarchy (Neutral Zinc & Slate)
         ink: {
-          primary: '#09090b',    // Crisp high-contrast black
-          secondary: '#52525b',  // Refined readable body
-          muted: '#71717a',      // Subtle technical metadata
-          inverse: '#ffffff',    // Text on dark buttons
+          primary: '#09090b',
+          secondary: '#52525b',
+          muted: '#71717a',
+          inverse: '#ffffff',
         },
-        // Brand Vibrant Emerald
+        // Brand Vibrant Agro Palette
         agri: {
-          50: '#ecfdf5',
-          100: '#d1fae5',
-          200: '#a7f3d0',
-          500: '#10b981',
-          600: '#059669',
-          700: '#047857',        // Official brand emerald
-          800: '#065f46',
-          900: '#064e3b',
-          950: '#022c22',
+          50: '#f5faec',
+          100: '#e7f4d2',
+          200: '#d0eaab',
+          500: '#74a516',
+          600: '#5c860e',
+          700: '#0d4c15',
+          800: '#0a3d11',
+          900: '#08330e',
+          950: '#041c08',
         },
-        // Functional Accent Warm Amber
+        // Functional Accent Warm Amber / Sun
         ochre: {
           50: '#fffbeb',
           100: '#fef3c7',
-          600: '#d97706',
-          700: '#b45309',
-          800: '#92400e',
+          600: '#f8b502',
+          700: '#d97706',
+          800: '#b45309',
         },
       },
       fontFamily: {
