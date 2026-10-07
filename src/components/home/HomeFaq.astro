@@ -2,18 +2,18 @@
 import { HOME_FAQS } from '../../data/faqs';
 ---
 
-<section class="py-14 sm:py-20 bg-zinc-50/50 border-b border-zinc-200/80 font-sans">
+<section class="py-14 sm:py-20 bg-[#f4f1ea] border-b border-[#dedad0] font-sans">
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
     
     <!-- Section Header (Shopify Clean Minimalist) -->
     <div class="text-center mb-8 sm:mb-12">
-      <span class="text-xs font-bold text-emerald-800 uppercase tracking-wider block mb-1">
+      <span class="text-xs font-bold text-[#064e3b] uppercase tracking-wider block mb-1">
         FAQ Jasa Pembuatan Greenhouse
       </span>
-      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-zinc-900 tracking-tight mb-2">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#1b2819] tracking-tight mb-2">
         Pertanyaan Seputar Jasa Pembuatan Greenhouse
       </h2>
-      <p class="text-xs sm:text-sm text-zinc-600 font-normal max-w-lg mx-auto">
+      <p class="text-xs sm:text-sm text-[#485245] font-normal max-w-lg mx-auto">
         Jawaban praktis seputar estimasi biaya per m², tipe rangka pipa galvanis atau bambu, spesifikasi plastik UV, dan estimasi waktu pengerjaan.
       </p>
     </div>
@@ -21,19 +21,19 @@ import { HOME_FAQS } from '../../data/faqs';
     <!-- Accordion List -->
     <div class="space-y-3">
       {HOME_FAQS.map((faq, i) => (
-        <details class="group rounded-xl bg-white border border-zinc-200/80 overflow-hidden transition-all duration-200 hover:border-zinc-300 open:border-emerald-600/40 open:shadow-xs">
-          <summary class="flex items-center justify-between gap-4 p-4 sm:p-5 cursor-pointer select-none text-left list-none font-semibold text-xs sm:text-sm text-zinc-900 group-hover:text-emerald-700 transition-colors">
+        <details class="group rounded-xl bg-white border border-[#dedad0] overflow-hidden transition-all duration-200 hover:border-[#c8c3b7] open:border-[#064e3b]/40 open:shadow-xs">
+          <summary class="flex items-center justify-between gap-4 p-4 sm:p-5 cursor-pointer select-none text-left list-none font-semibold text-xs sm:text-sm text-[#1b2819] group-hover:text-[#064e3b] transition-colors">
             <span class="flex items-center gap-3">
-              <span class="text-emerald-700 font-bold text-xs">0{i + 1}.</span>
+              <span class="text-[#064e3b] font-bold text-xs">0{i + 1}.</span>
               <span>{faq.question}</span>
             </span>
-            <span class="w-6 h-6 rounded-full bg-zinc-100 flex items-center justify-center shrink-0 text-zinc-500 group-hover:text-emerald-700 transition-transform duration-200 group-open:rotate-180">
+            <span class="w-6 h-6 rounded-full bg-[#e4e5da] flex items-center justify-center shrink-0 text-[#064e3b] group-hover:text-[#064e3b] transition-transform duration-200 group-open:rotate-180">
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
               </svg>
             </span>
           </summary>
-          <div class="px-4 sm:px-5 pb-5 pt-1 text-xs text-zinc-600 leading-relaxed border-t border-zinc-100 mt-0.5">
+          <div class="px-4 sm:px-5 pb-5 pt-1 text-xs text-[#485245] leading-relaxed border-t border-[#dedad0]/60 mt-0.5">
             {faq.answer}
           </div>
         </details>

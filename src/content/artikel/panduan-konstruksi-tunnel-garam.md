@@ -2,7 +2,7 @@
 title: 'Konstruksi Tunnel Garam (Prisma Garam): Panduan Agribisnis Pesisir'
 description: 'Teknologi greenhouse tunnel prisma garam memungkinkan panen garam kualitas industri bersih sepanjang tahun 365 hari tanpa terhenti musim hujan.'
 publishDate: '28 Agustus 2026'
-author: 'Tim Ahli Agro Prima Greenhouse'
+author: 'Tim Ahli Agrokomplek Cemerlang'
 category: 'Inovasi Agribisnis'
 tags: ['Tunnel Garam', 'Prisma Garam', 'Garam Industri', 'Teknologi Pesisir', 'Greenhouse Pesisir']
 heroImage: '/images/greenhouse/tunnel-garam-greenhouse.webp'
@@ -36,7 +36,7 @@ Membangun struktur di kawasan pesisir membutuhkan perhitungan khusus karena uap 
 
 ## 3. Contoh Implementasi di Lapangan
 
-Tim Agro Prima Greenhouse telah menyelesaikan pengerjaan fasilitas prisma garam di berbagai sentra garam nasional. Simak studi kasus lengkap kami pada:
+Tim Agrokomplek Cemerlang telah menyelesaikan pengerjaan fasilitas prisma garam di berbagai sentra garam nasional. Simak studi kasus lengkap kami pada:
 - [Portofolio Pembangunan Tunnel Garam Pesisir Madura](/proyek/tunnel-garam-pesisir-madura/) – Instalasi 10 unit tunnel garam rangka lengkung modular dengan sistem pembuangan uap terintegrasi.
 
 

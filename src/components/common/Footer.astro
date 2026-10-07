@@ -2,46 +2,46 @@
 import { BUSINESS_INFO } from '../../data/businessInfo';
 ---
 
-<footer class="bg-zinc-900 text-zinc-300 pt-14 pb-8 border-t border-zinc-800 relative overflow-hidden font-sans">
+<footer class="bg-[#064e3b] text-[#edeae1] pt-12 pb-24 md:pb-10 border-t border-[#047857]/40 relative overflow-hidden font-sans">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-12">
       
       <!-- Branding & Address (Col 1-5, 5 cols) -->
       <div class="lg:col-span-5 pr-0 lg:pr-8 space-y-4">
         <div>
-          <a href="/" title="Agro Prima Greenhouse" class="font-sans text-2xl font-black tracking-tight text-white leading-none uppercase block">
-            AGRO PRIMA<span class="text-emerald-500">.</span>
+          <a href="/" title="Agrokomplek Cemerlang" class="font-sans text-xl sm:text-2xl font-black tracking-tight text-white leading-none uppercase block">
+            AGROKOMPLEK CEMERLANG<span class="text-[#a9bfa4]">.</span>
           </a>
-          <span class="text-[9px] font-bold tracking-widest text-zinc-400 uppercase leading-none mt-1 block">
-            KONTRAKTOR JASA GREENHOUSE
+          <span class="text-[9px] font-bold tracking-widest text-[#767e73] uppercase leading-none mt-1 block">
+            PUSAT PERTANIAN &amp; GREENHOUSE
           </span>
         </div>
 
-        <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed font-normal">
-          Spesialis rancang bangun greenhouse pipa galvanis hot-dip, baja ringan, bambu awet, tunnel garam, serta penyedia material plastik UV dan irigasi tetes kirim ke seluruh Indonesia.
+        <p class="text-xs sm:text-sm text-[#dedad0]/80 leading-relaxed font-normal">
+          Pusat penjualan saprodi pertanian, supplier perlengkapan greenhouse, dan kontraktor paket rancang bangun greenhouse bambu, baja ringan, galvanis, serta tunnel garam siap tanam ke seluruh Indonesia.
         </p>
         
-        <div class="space-y-2.5 text-xs text-zinc-400 pt-2">
+        <div class="space-y-2.5 text-xs text-[#dedad0]/80 pt-2">
           <p class="flex items-start gap-2.5">
-            <svg class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 text-[#7e9f78] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
             </svg>
-            <span><strong class="text-zinc-200">Workshop &amp; Gudang:</strong> {BUSINESS_INFO.address.fullFormatted}</span>
+            <span><strong class="text-[#edeae1]">Workshop &amp; Gudang:</strong> {BUSINESS_INFO.address.fullFormatted}</span>
           </p>
           <p class="flex items-center gap-2.5">
-            <svg class="w-4 h-4 text-emerald-400 shrink-0" viewBox="0 0 24 24" fill="currentColor">
+            <svg class="w-4 h-4 text-[#7e9f78] shrink-0" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
             </svg>
-            <a href="https://wa.me/6285183002070" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-emerald-400 transition-colors">
-              <strong class="text-zinc-200">WhatsApp:</strong> {BUSINESS_INFO.contact.phone}
+            <a href="https://wa.me/6285183002070" target="_blank" rel="noopener noreferrer" class="text-[#dedad0] hover:text-[#edeae1] transition-colors">
+              <strong class="text-[#edeae1]">WhatsApp:</strong> {BUSINESS_INFO.contact.phone}
             </a>
           </p>
           <p class="flex items-center gap-2.5">
-            <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 text-[#7e9f78] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <circle cx="12" cy="12" r="10"></circle>
               <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
-            <span><strong class="text-zinc-200">Jam Operasional:</strong> {BUSINESS_INFO.hours.physicalStore}</span>
+            <span><strong class="text-[#edeae1]">Jam Operasional:</strong> {BUSINESS_INFO.hours.physicalStore}</span>
           </p>
         </div>
 
@@ -50,7 +50,7 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
             href={BUSINESS_INFO.geo.mapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-200 hover:text-white text-xs font-medium transition-colors border border-zinc-700"
+            class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-lg bg-[#047857]/40 hover:bg-[#047857] text-[#edeae1] hover:text-white text-xs font-medium transition-colors border border-[#047857]/60"
           >
             <span>Petunjuk Google Maps</span>
             <span aria-hidden="true">&rarr;</span>
@@ -66,15 +66,15 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
           <h4 class="font-bold text-white uppercase tracking-wider text-[11px] mb-3.5">
             Material Greenhouse
           </h4>
-          <ul class="space-y-2 text-zinc-400">
-            <li><a href="/produk/plastik-uv-greenhouse-14/" class="hover:text-emerald-400 transition-colors">Plastik UV 200µm</a></li>
-            <li><a href="/produk/paranet-tanaman/" class="hover:text-emerald-400 transition-colors">Paranet Shading Net</a></li>
-            <li><a href="/produk/insectnet-kasa-greenhouse/" class="hover:text-emerald-400 transition-colors">Insect Net 50 Mesh</a></li>
-            <li><a href="/produk/spring-clip-profil-lock/" class="hover:text-emerald-400 transition-colors">Spring Clip &amp; Kanal C</a></li>
-            <li><a href="/produk/selang-drip-irigasi-16mm/" class="hover:text-emerald-400 transition-colors">Selang Drip Irigasi</a></li>
-            <li><a href="/produk/mulsa-plastik-hitam-perak/" class="hover:text-emerald-400 transition-colors">Mulsa Bedengan MPHP</a></li>
-            <li><a href="/produk/paket-instalasi-hidroponik/" class="hover:text-emerald-400 transition-colors">Sistem Hidroponik NFT</a></li>
-            <li><a href="/produk/" class="text-emerald-400 font-semibold hover:underline">Semua Material &rarr;</a></li>
+          <ul class="space-y-2 text-[#dedad0]/70">
+            <li><a href="/produk/plastik-uv-greenhouse-14/" class="hover:text-[#edeae1] transition-colors">Plastik UV 200µm</a></li>
+            <li><a href="/produk/paranet-tanaman/" class="hover:text-[#edeae1] transition-colors">Paranet Shading Net</a></li>
+            <li><a href="/produk/insectnet-kasa-greenhouse/" class="hover:text-[#edeae1] transition-colors">Insect Net 50 Mesh</a></li>
+            <li><a href="/produk/spring-clip-profil-lock/" class="hover:text-[#edeae1] transition-colors">Spring Clip &amp; Kanal C</a></li>
+            <li><a href="/produk/selang-drip-irigasi-16mm/" class="hover:text-[#edeae1] transition-colors">Selang Drip Irigasi</a></li>
+            <li><a href="/produk/mulsa-plastik-hitam-perak/" class="hover:text-[#edeae1] transition-colors">Mulsa Bedengan MPHP</a></li>
+            <li><a href="/produk/paket-instalasi-hidroponik/" class="hover:text-[#edeae1] transition-colors">Sistem Hidroponik NFT</a></li>
+            <li><a href="/produk/" class="text-[#a9bfa4] font-semibold hover:underline">Semua Material &rarr;</a></li>
           </ul>
         </div>
 
@@ -83,14 +83,14 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
           <h4 class="font-bold text-white uppercase tracking-wider text-[11px] mb-3.5">
             Jasa Konstruksi
           </h4>
-          <ul class="space-y-2 text-zinc-400">
-            <li><a href="/jasa/pembuatan-greenhouse/" class="hover:text-emerald-400 transition-colors">Greenhouse Galvanis</a></li>
-            <li><a href="/jasa/pembuatan-greenhouse/" class="hover:text-emerald-400 transition-colors">Greenhouse Baja Ringan</a></li>
-            <li><a href="/jasa/pembuatan-greenhouse/" class="hover:text-emerald-400 transition-colors">Greenhouse Bambu Awet</a></li>
-            <li><a href="/proyek/tunnel-garam-pesisir-madura/" class="hover:text-emerald-400 transition-colors">Tunnel Prisma Garam</a></li>
-            <li><a href="/jasa/pembuatan-greenhouse/#kalkulator" class="text-emerald-400 font-semibold hover:underline">Simulasi RAB Online</a></li>
-            <li><a href="/wilayah-layanan/" class="hover:text-emerald-400 transition-colors">Jangkauan Kargo &amp; Pasang</a></li>
-            <li><a href="/proyek/" class="hover:text-emerald-400 transition-colors">Galeri Proyek Lapangan</a></li>
+          <ul class="space-y-2 text-[#dedad0]/70">
+            <li><a href="/jasa/pembuatan-greenhouse/" class="hover:text-[#edeae1] transition-colors">Greenhouse Galvanis</a></li>
+            <li><a href="/jasa/pembuatan-greenhouse/" class="hover:text-[#edeae1] transition-colors">Greenhouse Baja Ringan</a></li>
+            <li><a href="/jasa/pembuatan-greenhouse/" class="hover:text-[#edeae1] transition-colors">Greenhouse Bambu Awet</a></li>
+            <li><a href="/proyek/tunnel-garam-pesisir-madura/" class="hover:text-[#edeae1] transition-colors">Tunnel Prisma Garam</a></li>
+            <li><a href="/jasa/pembuatan-greenhouse/#kalkulator" class="text-[#a9bfa4] font-semibold hover:underline">Simulasi RAB Online</a></li>
+            <li><a href="/wilayah-layanan/" class="hover:text-[#edeae1] transition-colors">Jangkauan Kargo &amp; Pasang</a></li>
+            <li><a href="/proyek/" class="hover:text-[#edeae1] transition-colors">Galeri Proyek Lapangan</a></li>
           </ul>
         </div>
 
@@ -99,13 +99,13 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
           <h4 class="font-bold text-white uppercase tracking-wider text-[11px] mb-3.5">
             Panduan &amp; Kontak
           </h4>
-          <ul class="space-y-2 text-zinc-400">
-            <li><a href="/artikel/" class="hover:text-emerald-400 transition-colors">Blog &amp; Panduan Budidaya</a></li>
-            <li><a href="/artikel/biaya-pembuatan-greenhouse/" class="hover:text-emerald-400 transition-colors">Estimasi Biaya per m²</a></li>
-            <li><a href="/artikel/panduan-konstruksi-tunnel-garam/" class="hover:text-emerald-400 transition-colors">Konstruksi Tunnel Garam</a></li>
-            <li><a href="/tentang-kami/" class="hover:text-emerald-400 transition-colors">Tentang Agro Prima</a></li>
-            <li><a href="/lokasi/" class="hover:text-emerald-400 transition-colors">Lokasi Workshop Malang</a></li>
-            <li><a href="/kontak/" class="hover:text-emerald-400 transition-colors">Kontak Resmi &amp; WhatsApp</a></li>
+          <ul class="space-y-2 text-[#dedad0]/70">
+            <li><a href="/artikel/" class="hover:text-[#edeae1] transition-colors">Blog &amp; Panduan Budidaya</a></li>
+            <li><a href="/artikel/biaya-pembuatan-greenhouse/" class="hover:text-[#edeae1] transition-colors">Estimasi Biaya per m²</a></li>
+            <li><a href="/artikel/panduan-konstruksi-tunnel-garam/" class="hover:text-[#edeae1] transition-colors">Konstruksi Tunnel Garam</a></li>
+            <li><a href="/tentang-kami/" class="hover:text-[#edeae1] transition-colors">Tentang Agrokomplek Cemerlang</a></li>
+            <li><a href="/lokasi/" class="hover:text-[#edeae1] transition-colors">Lokasi Toko Malang</a></li>
+            <li><a href="/kontak/" class="hover:text-[#edeae1] transition-colors">Kontak Resmi &amp; WhatsApp</a></li>
           </ul>
         </div>
 
@@ -113,20 +113,20 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
     </div>
 
     <!-- Bottom Bar (Shopify Clean Minimalist Footer) -->
-    <div class="pt-8 border-t border-zinc-800 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left text-xs text-zinc-400">
+    <div class="pt-8 border-t border-[#047857]/40 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left text-xs text-[#a7f3d0]/80">
       <div>
-        <span>&copy; {new Date().getFullYear()} Agro Prima Greenhouse. Hak cipta dilindungi undang-undang.</span>
+        <span>&copy; {new Date().getFullYear()} Agrokomplek Cemerlang. All rights reserved.</span>
       </div>
 
       <!-- Payment & Cargo Logistics Pills -->
-      <div class="flex flex-wrap items-center justify-center gap-1.5 select-none text-[10px] font-semibold text-zinc-300">
-        <span class="text-zinc-500 uppercase tracking-wider mr-1 text-[9px]">Kargo &amp; Bank:</span>
-        <span class="px-2 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-zinc-300">BCA</span>
-        <span class="px-2 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-zinc-300">MANDIRI</span>
-        <span class="px-2 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-zinc-300">BRI</span>
-        <span class="px-2 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-emerald-400">INDAH CARGO</span>
-        <span class="px-2 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-emerald-400">BARAKA</span>
-        <span class="px-2 py-0.5 bg-zinc-800 border border-zinc-700 rounded text-emerald-400">DAKOTA</span>
+      <div class="flex flex-wrap items-center justify-center gap-1.5 select-none text-[10px] font-semibold text-[#edeae1]">
+        <span class="text-[#a7f3d0]/70 uppercase tracking-wider mr-1 text-[9px]">Kargo &amp; Bank:</span>
+        <span class="px-2 py-0.5 bg-[#043e30] border border-[#065f46] rounded text-[#edeae1]">BCA</span>
+        <span class="px-2 py-0.5 bg-[#043e30] border border-[#065f46] rounded text-[#edeae1]">MANDIRI</span>
+        <span class="px-2 py-0.5 bg-[#043e30] border border-[#065f46] rounded text-[#edeae1]">BRI</span>
+        <span class="px-2 py-0.5 bg-[#043e30] border border-[#065f46] rounded text-[#a7f3d0]">INDAH CARGO</span>
+        <span class="px-2 py-0.5 bg-[#043e30] border border-[#065f46] rounded text-[#a7f3d0]">BARAKA</span>
+        <span class="px-2 py-0.5 bg-[#043e30] border border-[#065f46] rounded text-[#a7f3d0]">DAKOTA</span>
       </div>
     </div>
   </div>
