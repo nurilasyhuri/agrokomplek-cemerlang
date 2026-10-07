@@ -1,7 +1,7 @@
 import { BUSINESS_INFO } from '../data/businessInfo';
 import { toIsoDate } from './date';
 
-const CANONICAL_BASE = 'https://agrokomplekcemerlang.com';
+const CANONICAL_BASE = 'https://agroprimagreenhouse.com';
 
 function ensureAbsoluteUrl(url: string): string {
   if (url.startsWith('http://') || url.startsWith('https://')) {
@@ -14,13 +14,13 @@ function ensureAbsoluteUrl(url: string): string {
 export function getLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': ['Store', 'HomeAndConstructionBusiness'],
+    '@type': ['HomeAndConstructionBusiness', 'GeneralContractor'],
     '@id': `${CANONICAL_BASE}/#business`,
     name: BUSINESS_INFO.name,
     alternateName: [
-      'Agrokomplek Cemerlang Malang',
-      'Toko Perlengkapan Pertanian & Jasa Greenhouse',
-      'Pusat Saprodi dan Pembuatan Greenhouse Malang',
+      'Agro Prima Greenhouse Malang',
+      'Kontraktor Spesialis Jasa Pembuatan Greenhouse',
+      'Jasa Pembuatan Greenhouse Malang Agro Prima Greenhouse',
     ],
     url: `${CANONICAL_BASE}/`,
     logo: `${CANONICAL_BASE}/favicon.svg`,
@@ -68,7 +68,7 @@ export function getLocalBusinessSchema() {
     ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Katalog Produk Pertanian & Jasa Greenhouse Agrokomplek Cemerlang',
+      name: 'Katalog Jasa Pembuatan Greenhouse & Material Agro Prima Greenhouse',
       itemListElement: [
         {
           '@type': 'OfferCatalog',
@@ -115,7 +115,7 @@ export function getWebsiteSchema() {
     '@id': `${CANONICAL_BASE}/#website`,
     url: `${CANONICAL_BASE}/`,
     name: BUSINESS_INFO.name,
-    alternateName: 'Agrokomplek Cemerlang Malang',
+    alternateName: 'Agro Prima Greenhouse Malang',
     description: BUSINESS_INFO.description,
     publisher: {
       '@id': `${CANONICAL_BASE}/#business`,
@@ -334,7 +334,7 @@ export function getArticleSchema(article: {
     image: imageUrl,
     author: {
       '@type': 'Person',
-      name: article.author || 'Tim Ahli Agrokomplek Cemerlang',
+      name: article.author || 'Tim Ahli Agro Prima Greenhouse',
       url: `${CANONICAL_BASE}/tentang-kami/`,
     },
     publisher: {
@@ -450,7 +450,7 @@ export function getAboutPageSchema() {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
     '@id': `${CANONICAL_BASE}/tentang-kami/#about`,
-    name: 'Tentang Agrokomplek Cemerlang',
+    name: 'Tentang Agro Prima Greenhouse',
     description: BUSINESS_INFO.description,
     url: `${CANONICAL_BASE}/tentang-kami/`,
     mainEntity: {
@@ -464,8 +464,8 @@ export function getContactPageSchema() {
     '@context': 'https://schema.org',
     '@type': 'ContactPage',
     '@id': `${CANONICAL_BASE}/kontak/#contact`,
-    name: 'Kontak Agrokomplek Cemerlang',
-    description: 'Hubungi tim Agrokomplek Cemerlang via WhatsApp atau kunjungi toko fisik di Kedungkandang Malang.',
+    name: 'Kontak Agro Prima Greenhouse',
+    description: 'Hubungi tim Agro Prima Greenhouse via WhatsApp atau kunjungi toko fisik di Kedungkandang Malang.',
     url: `${CANONICAL_BASE}/kontak/`,
     mainEntity: {
       '@id': `${CANONICAL_BASE}/#business`,

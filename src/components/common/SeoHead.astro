@@ -18,17 +18,17 @@ const {
   image = '/images/og/default-og.jpg',
   type = 'website',
   keywords,
-  author = 'Agrokomplek Cemerlang',
+  author = 'Agro Prima Greenhouse',
   jsonLd,
   noindex = false,
 } = Astro.props;
 
-const siteName = 'Agrokomplek Cemerlang';
-const domain = 'https://agrokomplekcemerlang.com';
+const siteName = 'Agro Prima Greenhouse';
+const domain = 'https://agroprimagreenhouse.com';
 
 // Strictly strip any pipe symbols from title and description
 const sanitizedRawTitle = title.replace(/\s*\|\s*/g, ' - ').trim();
-const formattedTitle = sanitizedRawTitle.includes(siteName) || sanitizedRawTitle.includes('Agrokomplek')
+const formattedTitle = sanitizedRawTitle.includes(siteName) || sanitizedRawTitle.includes('Agro Prima')
   ? sanitizedRawTitle
   : `${sanitizedRawTitle} - ${siteName}`;
 
@@ -52,16 +52,14 @@ const canonicalUrl = `${domain}${normalizedPathname}`;
 // Keywords string
 const defaultKeywords = [
   'jasa pembuatan greenhouse',
-  'supplier perlengkapan greenhouse',
-  'toko saprodi pertanian malang',
-  'paket pembuatan greenhouse siap tanam',
+  'kontraktor greenhouse',
+  'biaya greenhouse per m2',
+  'greenhouse malang',
   'plastik uv 200 mikron',
-  'paranet tanaman malang',
   'selang drip irigasi tetes',
   'tunnel garam prisma',
-  'greenhouse baja ringan',
-  'greenhouse bambu awet',
-  'agrokomplek cemerlang',
+  'greenhouse galvanis',
+  'agro prima greenhouse',
 ];
 const keywordsString = Array.isArray(keywords)
   ? keywords.join(', ')
@@ -93,8 +91,8 @@ const formattedJsonLd = jsonLd
 <meta name="theme-color" content="#047857" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-<meta name="apple-mobile-web-app-title" content="Agrokomplek Cemerlang" />
-<meta name="application-name" content="Agrokomplek Cemerlang" />
+<meta name="apple-mobile-web-app-title" content="Agro Prima" />
+<meta name="application-name" content="Agro Prima Greenhouse" />
 
 <!-- Robots & Indexing Directives -->
 <meta

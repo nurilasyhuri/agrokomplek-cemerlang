@@ -4,19 +4,16 @@
 
 @layer base {
   :root {
-    --color-bg-canvas: #efebe2;
+    --color-bg-canvas: #ffffff;
     --color-bg-card: #ffffff;
-    --color-bg-subtle: #e4e5da;
-    --color-border: #dedad0;
-    --color-ink-primary: #1b2819;
-    --color-ink-secondary: #485245;
-    --color-ink-muted: #767e73;
-    --color-agri-600: #3f6239;
-    --color-agri-700: #2d4729;
-    --color-agri-800: #213420;
-    --color-gold-400: #eab308;
-    --color-gold-500: #ca8a04;
-    --color-gold-metallic: #c59b27;
+    --color-bg-subtle: #f9fafb;
+    --color-border: #e4e4e7;
+    --color-ink-primary: #09090b;
+    --color-ink-secondary: #52525b;
+    --color-ink-muted: #71717a;
+    --color-agri-600: #059669;
+    --color-agri-700: #047857;
+    --color-agri-800: #065f46;
   }
 
   html {
@@ -59,13 +56,13 @@
 
   /* Clean subtle selection */
   ::selection {
-    background-color: #ccd7c9;
-    color: #141d13;
+    background-color: #d1fae5;
+    color: #064e3b;
   }
 
   /* Accessible smooth focus rings */
   a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
-    outline: 2px solid #213420;
+    outline: 2px solid #059669;
     outline-offset: 2px;
   }
 }

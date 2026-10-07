@@ -4,70 +4,50 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Direct Tokens (Organic Botanical Earth - Reference: Earthly / Lounge Lizard)
-        primary: '#213420',          // Deep Botanical Forest Olive (Main brand & button)
-        'primary-hover': '#2d442c',  // Botanical hover
-        dark: '#141d13',             // Deepest botanical dark
-        muted: '#767e73',            // Earthy muted text
-        secondary: '#e4e5da',        // Soft sage-oat inset
-        border: '#dedad0',           // Warm organic hairline border
-        bg: '#efebe2',               // Warm natural linen / oat canvas
-        peach: '#f4f1ea',
-        sand: '#edeae1',
-        linen: '#f4f1ea',
-        // Modern Organic Canvas & Card Structure (Earthly sustainable aesthetic)
+        // Shopify-style Direct Tokens (matching babyfit.us theme architecture)
+        primary: '#047857',
+        'primary-hover': '#065f46',
+        dark: '#09090b',
+        muted: '#71717a',
+        secondary: '#f4f4f5',
+        border: '#e4e4e7',
+        bg: '#fafafa',
+        peach: '#ecfdf5',
+        sand: '#f5f5f4',
+        // Modern Pristine Canvas & Card Structure (Apple/Google design language)
         surface: {
-          canvas: '#efebe2',     // Earthly Warm Linen / Oat Canvas
-          card: '#ffffff',       // Pure white card
-          subtle: '#e4e5da',     // Soft sage-oat container
-          border: '#dedad0',     // Warm hairline divider
-          'border-dark': '#c8c3b7',
+          canvas: '#fafafa',     // Clean subtle off-white ground
+          card: '#ffffff',       // Pure white content surface
+          subtle: '#f4f4f5',     // Sleek zinc inset container
+          border: '#e4e4e7',     // Ultra-clean 1px hairline border
+          'border-dark': '#d4d4d8', // Contrast divider
         },
-        // Modern Botanical Ink Hierarchy
+        // Modern Ink Hierarchy (Neutral Zinc & Slate)
         ink: {
-          primary: '#1b2819',    // Deep Botanical Dark Ink (Headlines)
-          secondary: '#485245',  // Readable botanical body copy
-          muted: '#767e73',      // Technical metadata
+          primary: '#09090b',    // Crisp high-contrast black
+          secondary: '#52525b',  // Refined readable body
+          muted: '#71717a',      // Subtle technical metadata
           inverse: '#ffffff',    // Text on dark buttons
         },
-        // Botanical Forest & Sage Spectrum (Agri Palette)
+        // Brand Vibrant Emerald
         agri: {
-          50: '#f5f6f4',
-          100: '#e5eae3',
-          200: '#ccd7c9',
-          300: '#a9bfa4',
-          400: '#7e9f78',
-          500: '#5a8053',
-          600: '#3f6239',
-          700: '#2d4729',
-          800: '#213420',        // Earthly Primary Signature
-          900: '#1b2a19',        // Earthly Dark Forest
-          950: '#141d13',        // Midnight Forest
+          50: '#ecfdf5',
+          100: '#d1fae5',
+          200: '#a7f3d0',
+          500: '#10b981',
+          600: '#059669',
+          700: '#047857',        // Official brand emerald
+          800: '#065f46',
+          900: '#064e3b',
+          950: '#022c22',
         },
-        // Warm Organic Gold / Honey Accent
-        gold: {
-          50: '#fefce8',
-          100: '#fef9c3',
-          200: '#fef08a',
-          300: '#fde047',
-          400: '#eab308',
-          500: '#ca8a04',
-          600: '#a16207',
-          700: '#854d0e',
-          800: '#713f12',
-          900: '#422006',
-          metallic: '#c59b27',
-        },
+        // Functional Accent Warm Amber
         ochre: {
-          50: '#fefce8',
-          100: '#fef9c3',
-          200: '#fef08a',
-          300: '#fde047',
-          400: '#eab308',
-          500: '#ca8a04',
-          600: '#a16207',
-          700: '#854d0e',
-          800: '#713f12',
+          50: '#fffbeb',
+          100: '#fef3c7',
+          600: '#d97706',
+          700: '#b45309',
+          800: '#92400e',
         },
       },
       fontFamily: {

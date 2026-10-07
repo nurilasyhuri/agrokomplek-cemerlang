@@ -6,13 +6,13 @@ import { getLocalBusinessSchema, getBreadcrumbSchema } from '../utils/seo';
 
 const schema = getLocalBusinessSchema();
 const breadcrumbSchema = getBreadcrumbSchema([
-  { name: 'Beranda', url: 'https://agrokomplekcemerlang.com/' },
-  { name: 'Lokasi & Toko Fisik', url: 'https://agrokomplekcemerlang.com/lokasi/' },
+  { name: 'Beranda', url: 'https://agroprimagreenhouse.com/' },
+  { name: 'Lokasi & Toko Fisik', url: 'https://agroprimagreenhouse.com/lokasi/' },
 ]);
 
 const lokasiKeywords = [
   'toko pertanian kedungkandang malang',
-  'lokasi agrokomplek cemerlang',
+  'lokasi agro prima greenhouse',
   'alamat toko pertanian malang',
   'supplier greenhouse malang',
   'gudang plastik uv malang',
@@ -21,8 +21,8 @@ const lokasiKeywords = [
 ---
 
 <BaseLayout
-  title="Toko Pertanian Kedungkandang Malang &amp; Supplier Greenhouse - Agrokomplek Cemerlang"
-  description="Kunjungi toko fisik &amp; gudang Agrokomplek Cemerlang di Buring, Kedungkandang, Kota Malang. Cek fisik sampel plastik UV 200 mikron, paranet, selang drip, &amp; konsultasi greenhouse."
+  title="Toko Pertanian Kedungkandang Malang &amp; Supplier Greenhouse - Agro Prima Greenhouse"
+  description="Kunjungi toko fisik &amp; gudang Agro Prima Greenhouse di Buring, Kedungkandang, Kota Malang. Cek fisik sampel plastik UV 200 mikron, paranet, selang drip, &amp; konsultasi greenhouse."
   keywords={lokasiKeywords}
   jsonLd={[schema, breadcrumbSchema]}
 >
@@ -30,14 +30,14 @@ const lokasiKeywords = [
     <Breadcrumb items={[{ label: 'Lokasi & Toko' }]} />
 
     <div class="my-10 text-center max-w-3xl mx-auto space-y-3">
-      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#e4e5da] text-[#213420] border border-[#dedad0]">
-        <span class="w-1.5 h-1.5 rounded-full bg-[#213420]"></span>
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/60">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
         Toko Pertanian &amp; Gudang Malang
       </div>
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1b2819] tracking-tight">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight">
         Toko Pertanian di Kedungkandang Malang &amp; Pusat Saprodi
       </h1>
-      <p class="text-sm sm:text-base text-[#485245] leading-relaxed">
+      <p class="text-sm sm:text-base text-zinc-600 leading-relaxed">
         Pusat sarana produksi pertanian dan suplai material greenhouse bagi petani di Malang Raya (Kedungkandang, Buring, Gadang, Tajinan, Kota Malang, Kota Batu, dan sekitarnya). Kunjungi toko fisik kami untuk melihat sampel produk dan konsultasi teknis greenhouse.
       </p>
     </div>
@@ -46,7 +46,7 @@ const lokasiKeywords = [
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 my-10 items-start">
       
       <!-- Interactive Google Maps Container -->
-      <div class="lg:col-span-7 bg-white p-3 rounded-2xl border border-[#dedad0] shadow-sm overflow-hidden">
+      <div class="lg:col-span-7 bg-white p-3 rounded-2xl border border-zinc-200/80 shadow-sm overflow-hidden">
         <div class="aspect-[4/3] rounded-xl overflow-hidden bg-zinc-100 relative">
           <iframe
             src="https://maps.google.com/maps?q=-7.9984,112.6456&z=15&output=embed"
@@ -55,40 +55,40 @@ const lokasiKeywords = [
             style="border:0;"
             allowfullscreen=""
             loading="lazy"
-            title="Lokasi Agrokomplek Cemerlang Malang"
+            title="Lokasi Agro Prima Greenhouse Malang"
           ></iframe>
         </div>
       </div>
 
       <!-- NAP & Landmarks -->
       <div class="lg:col-span-5 space-y-6">
-        <div class="p-6 sm:p-8 rounded-xl bg-white border border-[#dedad0] shadow-sm space-y-6">
-          <h2 class="text-lg font-bold text-[#1b2819] border-b border-[#dedad0] pb-3">
+        <div class="p-6 sm:p-8 rounded-xl bg-white border border-zinc-200/80 shadow-sm space-y-6">
+          <h2 class="text-lg font-bold text-zinc-900 border-b border-zinc-100 pb-3">
             Informasi Alamat &amp; Kontak Toko
           </h2>
 
-          <div class="space-y-4 text-xs sm:text-sm text-[#485245]">
+          <div class="space-y-4 text-xs sm:text-sm text-zinc-600">
             <div>
               <span class="font-semibold block text-xs uppercase tracking-wider text-zinc-500">Alamat Lengkap</span>
-              <span class="mt-1 block leading-relaxed text-[#1b2819]">{BUSINESS_INFO.address.fullFormatted}</span>
+              <span class="mt-1 block leading-relaxed text-zinc-700">{BUSINESS_INFO.address.fullFormatted}</span>
             </div>
 
-            <div class="border-t border-[#dedad0] pt-4">
+            <div class="border-t border-zinc-100 pt-4">
               <span class="font-semibold block text-xs uppercase tracking-wider text-zinc-500">WhatsApp / Telepon</span>
-              <a href={`https://wa.me/${BUSINESS_INFO.contact.whatsappRaw}`} class="mt-1 block font-bold text-[#213420] hover:text-[#141d13] text-sm">
+              <a href={`https://wa.me/${BUSINESS_INFO.contact.whatsappRaw}`} class="mt-1 block font-bold text-emerald-700 hover:text-emerald-800 text-sm">
                 {BUSINESS_INFO.contact.phone}
               </a>
             </div>
 
-            <div class="border-t border-[#dedad0] pt-4">
+            <div class="border-t border-zinc-100 pt-4">
               <span class="font-semibold block text-xs uppercase tracking-wider text-zinc-500">Jam Layanan Toko Fisik</span>
-              <span class="mt-1 block text-[#1b2819]">{BUSINESS_INFO.hours.physicalStore}</span>
+              <span class="mt-1 block text-zinc-700">{BUSINESS_INFO.hours.physicalStore}</span>
               <span class="text-[11px] text-zinc-400 mt-0.5 block">{BUSINESS_INFO.hours.display}</span>
             </div>
 
-            <div class="border-t border-[#dedad0] pt-4">
+            <div class="border-t border-zinc-100 pt-4">
               <span class="font-semibold block text-xs uppercase tracking-wider text-zinc-500">Kesiapan Sampel Fisik</span>
-              <p class="mt-1 text-[#485245] leading-relaxed text-xs">
+              <p class="mt-1 text-zinc-600 leading-relaxed text-xs">
                 Tersedia sampel fisik plastik UV 200 mikron, paranet 65%-75%, kasa insect net 50 mesh, selang drip, dan mulsa MPHP untuk diperiksa langsung.
               </p>
             </div>
@@ -96,9 +96,9 @@ const lokasiKeywords = [
         </div>
 
         <!-- Landmarks & Guidance -->
-        <div class="p-6 sm:p-7 rounded-xl bg-[#f4f1ea] border border-[#dedad0] space-y-4">
-          <h3 class="font-bold text-[#1b2819] text-sm">Akses &amp; Panduan Menuju Lokasi</h3>
-          <ul class="text-xs text-[#485245] space-y-2 list-disc list-inside">
+        <div class="p-6 sm:p-7 rounded-xl bg-zinc-50/70 border border-zinc-200/80 space-y-4">
+          <h3 class="font-bold text-zinc-900 text-sm">Akses &amp; Panduan Menuju Lokasi</h3>
+          <ul class="text-xs text-zinc-600 space-y-2 list-disc list-inside">
             <li>Dapat diakses kendaraan roda dua, mobil pick-up, hingga truk engkel kargo.</li>
             <li>Berada di kawasan Kedungkandang (Buring), dekat dengan jalur lingkar timur Malang.</li>
             <li>Melayani pengangkutan langsung ke armada kendaraan pembeli.</li>
@@ -110,7 +110,7 @@ const lokasiKeywords = [
     </div>
 
     <!-- Warehouse & Physical Store Image Showcase -->
-    <div class="my-8 rounded-2xl overflow-hidden border border-[#dedad0] bg-zinc-100 shadow-sm relative group">
+    <div class="my-8 rounded-2xl overflow-hidden border border-zinc-200/80 bg-zinc-100 shadow-sm relative group">
       <img
         src="/images/lokasi/gudang-material-greenhouse.webp"
         alt="Gudang Stok Material Pertanian dan Perlengkapan Greenhouse Malang"
@@ -121,8 +121,8 @@ const lokasiKeywords = [
         decoding="async"
       />
       <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-zinc-950/20 to-transparent flex flex-col justify-end p-5 sm:p-7 text-white">
-        <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-[#a9bfa4]">
-          <span class="w-1.5 h-1.5 rounded-full bg-[#a9bfa4]"></span>
+        <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-emerald-300">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
           Kesiapan Stok Fisik di Gudang
         </span>
         <p class="text-xs sm:text-sm md:text-base font-semibold text-white/95 mt-1 max-w-xl leading-snug">

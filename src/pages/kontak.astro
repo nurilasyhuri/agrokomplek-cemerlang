@@ -6,12 +6,12 @@ import { getContactPageSchema, getBreadcrumbSchema } from '../utils/seo';
 
 const contactSchema = getContactPageSchema();
 const breadcrumbSchema = getBreadcrumbSchema([
-  { name: 'Beranda', url: 'https://agrokomplekcemerlang.com/' },
-  { name: 'Kontak', url: 'https://agrokomplekcemerlang.com/kontak/' },
+  { name: 'Beranda', url: 'https://agroprimagreenhouse.com/' },
+  { name: 'Kontak', url: 'https://agroprimagreenhouse.com/kontak/' },
 ]);
 
 const contactKeywords = [
-  'kontak agrokomplek cemerlang',
+  'kontak agro prima greenhouse',
   'nomor whatsapp kontraktor greenhouse',
   'konsultasi rab greenhouse malang',
   'survei lokasi greenhouse',
@@ -20,8 +20,8 @@ const contactKeywords = [
 ---
 
 <BaseLayout
-  title="Kontak Kontraktor Jasa Greenhouse Malang - Agrokomplek Cemerlang"
-  description="Hubungi tim teknisi Agrokomplek Cemerlang via WhatsApp 0851-8300-2070 untuk konsultasi desain greenhouse, estimasi RAB, &amp; survei lokasi di Malang &amp; sekitarnya."
+  title="Kontak Kontraktor Jasa Greenhouse Malang - Agro Prima Greenhouse"
+  description="Hubungi tim teknisi Agro Prima Greenhouse via WhatsApp 0851-8300-2070 untuk konsultasi desain greenhouse, estimasi RAB, &amp; survei lokasi di Malang &amp; sekitarnya."
   keywords={contactKeywords}
   jsonLd={[contactSchema, breadcrumbSchema]}
 >
@@ -29,23 +29,23 @@ const contactKeywords = [
     <Breadcrumb items={[{ label: 'Kontak' }]} />
 
     <div class="my-10 text-center max-w-2xl mx-auto space-y-3">
-      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#e4e5da] text-[#064e3b] border border-[#dedad0]">
-        <span class="w-1.5 h-1.5 rounded-full bg-[#064e3b]"></span>
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/60">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
         Konsultasi Teknis &amp; RAB Proyek
       </div>
-      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1b2819] tracking-tight">
+      <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight">
         Kontak Kontraktor Jasa Pembuatan Greenhouse Malang
       </h1>
-      <p class="text-sm sm:text-base text-[#485245] leading-relaxed">
-        Konsultasikan rencana struktur greenhouse Anda, diskusikan kebutuhan material penutup atap, atau ajukan permintaan survei lokasi bersama tim teknis Agrokomplek Cemerlang.
+      <p class="text-sm sm:text-base text-zinc-600 leading-relaxed">
+        Konsultasikan rencana struktur greenhouse Anda, diskusikan kebutuhan material penutup atap, atau ajukan permintaan survei lokasi bersama tim teknis Agro Prima Greenhouse.
       </p>
     </div>
 
     <!-- Visual Hero Banner -->
-    <div class="my-8 rounded-2xl overflow-hidden border border-[#dedad0] bg-zinc-100 shadow-sm relative group">
+    <div class="my-8 rounded-2xl overflow-hidden border border-zinc-200/80 bg-zinc-100 shadow-sm relative group">
       <img
         src="/images/kontak/konsultasi-teknisi-greenhouse.webp"
-        alt="Konsultasi Teknis Konstruksi Greenhouse Agrokomplek Cemerlang Malang"
+        alt="Konsultasi Teknis Konstruksi Greenhouse Agro Prima Malang"
         width="1400"
         height="788"
         class="w-full aspect-[16/9] sm:aspect-[21/9] object-cover group-hover:scale-[1.02] transition-transform duration-700 ease-out"
@@ -53,8 +53,8 @@ const contactKeywords = [
         decoding="async"
       />
       <div class="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-zinc-950/20 to-transparent flex flex-col justify-end p-5 sm:p-7 text-white">
-        <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-[#a9bfa4]">
-          <span class="w-1.5 h-1.5 rounded-full bg-[#a9bfa4]"></span>
+        <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-emerald-300">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
           Pendampingan Teknis Langsung
         </span>
         <p class="text-xs sm:text-sm md:text-base font-semibold text-white/95 mt-1 max-w-xl leading-snug">
@@ -65,15 +65,15 @@ const contactKeywords = [
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-10 items-stretch">
       <!-- Contact Details -->
-      <div class="p-7 sm:p-9 rounded-xl bg-white border border-[#dedad0] shadow-sm flex flex-col justify-between space-y-6">
+      <div class="p-7 sm:p-9 rounded-xl bg-white border border-zinc-200/80 shadow-sm flex flex-col justify-between space-y-6">
         <div>
-          <h3 class="text-lg font-bold text-[#1b2819] border-b border-[#dedad0] pb-3">
+          <h3 class="text-lg font-bold text-zinc-900 border-b border-zinc-100 pb-3">
             Saluran Komunikasi Resmi
           </h3>
 
-          <div class="space-y-4 text-xs sm:text-sm text-[#485245] mt-4">
+          <div class="space-y-4 text-xs sm:text-sm text-zinc-600 mt-4">
             <div class="flex items-start gap-3">
-              <div class="w-8 h-8 rounded-lg bg-[#e4e5da] text-[#064e3b] flex items-center justify-center shrink-0 border border-[#dedad0] mt-0.5">
+              <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-100/60 mt-0.5">
                 <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
                 </svg>
@@ -84,7 +84,7 @@ const contactKeywords = [
                   href={`https://wa.me/${BUSINESS_INFO.contact.whatsappRaw}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="font-bold text-[#064e3b] hover:text-[#141d13] text-base"
+                  class="font-bold text-emerald-700 hover:text-emerald-800 text-base"
                 >
                   {BUSINESS_INFO.contact.phone}
                 </a>
@@ -102,7 +102,7 @@ const contactKeywords = [
                 <span class="text-zinc-500 block text-xs">Email Resmi:</span>
                 <a
                   href={`mailto:${BUSINESS_INFO.contact.email}`}
-                  class="font-bold text-[#1b2819] hover:text-[#064e3b]"
+                  class="font-bold text-zinc-900 hover:text-emerald-700"
                 >
                   {BUSINESS_INFO.contact.email}
                 </a>
@@ -141,10 +141,10 @@ const contactKeywords = [
           </div>
         </div>
 
-        <div class="pt-4 border-t border-[#dedad0]">
+        <div class="pt-4 border-t border-zinc-100">
           <a
             href="/lokasi/"
-            class="text-xs font-semibold text-[#064e3b] hover:text-[#141d13] flex items-center justify-between"
+            class="text-xs font-semibold text-emerald-700 hover:text-emerald-800 flex items-center justify-between"
           >
             <span>Petunjuk Arah &amp; Peta Google Maps</span>
             <span>&rarr;</span>
@@ -153,46 +153,46 @@ const contactKeywords = [
       </div>
 
       <!-- Quick Routing Direct Actions -->
-      <div class="p-7 sm:p-9 rounded-xl bg-[#064e3b] text-[#edeae1] border border-[#047857]/60 shadow-xl flex flex-col justify-between space-y-6">
+      <div class="p-7 sm:p-9 rounded-xl bg-zinc-900 text-white border border-zinc-800 shadow-xl flex flex-col justify-between space-y-6">
         <div class="space-y-3">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-[#047857]/40 text-emerald-200 border border-[#047857]/60">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-950/80 text-emerald-300 border border-emerald-700/50">
             <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
             Direct WhatsApp Action
           </span>
           <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight">
             Hubungi Sesuai Kebutuhan Anda
           </h3>
-          <p class="text-xs sm:text-sm text-[#dedad0] leading-relaxed">
+          <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
             Pilih jalur pesan agar kami dapat langsung mengarahkan Anda ke teknisi konstruksi greenhouse atau admin material kami:
           </p>
         </div>
 
         <div class="space-y-3 pt-4">
           <a
-            href="https://wa.me/6285183002070?text=Halo%20Agrokomplek%20Cemerlang%2C%20saya%20ingin%20konsultasi%20jasa%20pembuatan%20greenhouse."
+            href="https://wa.me/6285183002070?text=Halo%20Agro%20Prima%20Greenhouse%2C%20saya%20ingin%20konsultasi%20jasa%20pembuatan%20greenhouse."
             target="_blank"
             rel="noopener noreferrer"
-            class="w-full flex items-center justify-between p-4 rounded-xl bg-[#047857]/30 hover:bg-[#047857] text-[#edeae1] text-xs sm:text-sm font-semibold transition-all border border-[#047857]/50"
+            class="w-full flex items-center justify-between p-4 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white text-xs sm:text-sm font-semibold transition-all border border-zinc-700"
           >
             <span>Konsultasi Pembuatan Greenhouse</span>
             <span>&rarr;</span>
           </a>
 
           <a
-            href="https://wa.me/6285183002070?text=Halo%20Agrokomplek%20Cemerlang%2C%20saya%20ingin%20cek%20stok%20material%20greenhouse%20(Plastik%20UV%20%2F%20Paranet%20%2F%20Insect%20Net)."
+            href="https://wa.me/6285183002070?text=Halo%20Agro%20Prima%20Greenhouse%2C%20saya%20ingin%20cek%20stok%20material%20greenhouse%20(Plastik%20UV%20%2F%20Paranet%20%2F%20Insect%20Net)."
             target="_blank"
             rel="noopener noreferrer"
-            class="w-full flex items-center justify-between p-4 rounded-xl bg-[#047857]/30 hover:bg-[#047857] text-[#edeae1] text-xs sm:text-sm font-semibold transition-all border border-[#047857]/50"
+            class="w-full flex items-center justify-between p-4 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white text-xs sm:text-sm font-semibold transition-all border border-zinc-700"
           >
             <span>Cek Material (Plastik UV &amp; Paranet)</span>
             <span>&rarr;</span>
           </a>
 
           <a
-            href="https://wa.me/6285183002070?text=Halo%20Agrokomplek%20Cemerlang%2C%20saya%20ingin%20estimasi%20RAB%20dan%20jadwal%20survei%20lahan."
+            href="https://wa.me/6285183002070?text=Halo%20Agro%20Prima%20Greenhouse%2C%20saya%20ingin%20estimasi%20RAB%20dan%20jadwal%20survei%20lahan."
             target="_blank"
             rel="noopener noreferrer"
-            class="w-full flex items-center justify-between p-4 rounded-xl bg-[#047857]/30 hover:bg-[#047857] text-[#edeae1] text-xs sm:text-sm font-semibold transition-all border border-[#047857]/50"
+            class="w-full flex items-center justify-between p-4 rounded-xl bg-zinc-800 hover:bg-zinc-700 text-white text-xs sm:text-sm font-semibold transition-all border border-zinc-700"
           >
             <span>Simulasi RAB &amp; Survei Lokasi Lahan</span>
             <span>&rarr;</span>
