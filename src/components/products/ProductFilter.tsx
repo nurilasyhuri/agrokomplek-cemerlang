@@ -82,7 +82,7 @@ export default function ProductFilter({ products }: Props) {
                 onClick={() => setSelectedCategory(cat.id)}
                 class={`whitespace-nowrap px-3.5 py-2 rounded-full text-xs font-semibold transition-all select-none shrink-0 inline-flex items-center gap-2 cursor-pointer ${
                   isSelected
-                    ? 'bg-zinc-900 text-white shadow-xs'
+                    ? 'bg-[#0d4c15] text-white shadow-xs'
                     : 'bg-zinc-100 text-zinc-600 hover:bg-zinc-200/80 hover:text-zinc-900'
                 }`}
               >
@@ -269,7 +269,7 @@ export default function ProductFilter({ products }: Props) {
 
                   <a
                     href={`/produk/${product.slug}/`}
-                    class="w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-zinc-900 hover:bg-emerald-700 text-white text-xs font-semibold tracking-normal transition-colors duration-200 select-none"
+                    class="w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-[#0d4c15] hover:bg-[#07240c] text-white text-xs font-semibold tracking-normal transition-colors duration-200 select-none"
                   >
                     <span>Lihat Detail &amp; Varian</span>
                     <svg class="w-3 h-3 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -297,7 +297,7 @@ export default function ProductFilter({ products }: Props) {
               setSelectedCategory('all');
               setSearchQuery('');
             }}
-            class="px-5 py-2.5 rounded-full bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-semibold transition-all shadow-xs inline-flex items-center gap-2 cursor-pointer"
+            class="px-5 py-2.5 rounded-full bg-[#0d4c15] hover:bg-[#07240c] text-white text-xs font-semibold transition-all shadow-xs inline-flex items-center gap-2 cursor-pointer"
           >
             <span>Reset Filter &amp; Pencarian</span>
             <span>&rarr;</span>

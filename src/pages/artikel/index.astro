@@ -76,7 +76,7 @@ const articleListKeywords = [
             data-category-btn={cat}
             class={`category-tab px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all shrink-0 select-none ${
               idx === 0
-                ? 'bg-zinc-900 text-white shadow-sm active-tab'
+                ? 'bg-[#0d4c15] text-white shadow-sm active-tab'
                 : 'bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-zinc-900'
             }`}
           >
@@ -189,10 +189,10 @@ const articleListKeywords = [
       buttons.forEach((b) => {
         const isActive = b.dataset.categoryBtn === category;
         if (isActive) {
-          b.classList.add('bg-zinc-900', 'text-white', 'shadow-sm', 'active-tab');
+          b.classList.add('bg-[#0d4c15]', 'text-white', 'shadow-sm', 'active-tab');
           b.classList.remove('bg-zinc-100', 'text-zinc-600');
         } else {
-          b.classList.remove('bg-zinc-900', 'text-white', 'shadow-sm', 'active-tab');
+          b.classList.remove('bg-[#0d4c15]', 'text-white', 'shadow-sm', 'active-tab');
           b.classList.add('bg-zinc-100', 'text-zinc-600');
         }
       });

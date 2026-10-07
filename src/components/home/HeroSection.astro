@@ -109,7 +109,7 @@ const slides = [
 
 <section
   id="hero-slider-section"
-  class="relative w-full bg-[#121316] text-white font-sans overflow-hidden min-h-[100dvh] lg:h-[100dvh] -mt-[108px] flex flex-col justify-between border-b border-zinc-800"
+  class="relative w-full bg-[#07240c] text-white font-sans overflow-hidden min-h-[100dvh] lg:h-[100dvh] -mt-[108px] flex flex-col justify-between border-b border-[#0d4c15]"
   aria-label="Hero Showcase Jasa Pembuatan Greenhouse Agro Prima Greenhouse"
 >
   <!-- Background Image Carousel Layers -->
@@ -134,13 +134,13 @@ const slides = [
             decoding="async"
           />
         </picture>
-        <!-- Layered Cinematic Overlays for 100% Text Legibility -->
-        <!-- 1. Deep lateral vignette from left to right -->
-        <div class="absolute inset-0 bg-gradient-to-r from-black/95 via-black/75 to-black/30 lg:to-black/20"></div>
+        <!-- Layered Cinematic Overlays for 100% Text Legibility with Deep Forest Green -->
+        <!-- 1. Deep lateral forest vignette from left to right -->
+        <div class="absolute inset-0 bg-gradient-to-r from-[#07240c]/95 via-[#07240c]/80 to-[#07240c]/35 lg:to-[#07240c]/20"></div>
         <!-- 2. Vertical bottom gradient to ground the metrics and tabs -->
-        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/40"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-[#07240c]/90 via-transparent to-[#07240c]/40"></div>
         <!-- 3. Soft ambient color tint matching agriculture theme -->
-        <div class="absolute inset-0 bg-emerald-950/20 mix-blend-multiply"></div>
+        <div class="absolute inset-0 bg-[#0d4c15]/25 mix-blend-multiply"></div>
       </div>
     ))}
   </div>
@@ -157,8 +157,8 @@ const slides = [
           ]}
         >
           <!-- Category & Tag Kicker Pill -->
-          <div class="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] sm:text-xs font-extrabold tracking-wider uppercase mb-3.5 sm:mb-4 select-none shadow-sm">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <div class="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-[#07240c]/85 backdrop-blur-md border border-[#74a516]/40 text-white text-[10px] sm:text-xs font-extrabold tracking-wider uppercase mb-3.5 sm:mb-4 select-none shadow-sm">
+            <span class="w-2 h-2 rounded-full bg-[#8fc73b] animate-pulse"></span>
             <span>{slide.tag}</span>
           </div>
 
@@ -206,10 +206,10 @@ const slides = [
               href={slide.ctaSecondaryUrl}
               target={slide.ctaSecondaryUrl.includes("wa.me") ? "_blank" : "_self"}
               rel={slide.ctaSecondaryUrl.includes("wa.me") ? "noopener noreferrer" : undefined}
-              class="px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase border border-white/25 hover:border-white/40 hover:scale-[1.02] active:scale-[0.98] transition-all inline-flex items-center justify-center gap-2 select-none"
+              class="px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-[#07240c]/90 hover:bg-[#0d4c15] backdrop-blur-md text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase border border-[#74a516]/40 hover:border-[#74a516] hover:scale-[1.02] active:scale-[0.98] transition-all inline-flex items-center justify-center gap-2 select-none shadow-md"
             >
               <span>{slide.ctaSecondaryText}</span>
-              <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-4 h-4 text-[#8fc73b]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
               </svg>
             </a>
@@ -234,7 +234,7 @@ const slides = [
   </div>
 
   <!-- Bottom Interactive Bar: Tab Progress Indicators & Arrow Controls -->
-  <div class="relative z-30 w-full border-t border-white/15 bg-black/40 backdrop-blur-md shrink-0">
+  <div class="relative z-30 w-full border-t border-[#74a516]/25 bg-[#07240c]/90 backdrop-blur-md shrink-0">
     <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3.5 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
       
       <!-- 5 Interactive Horizontal Progress Tabs -->
@@ -246,7 +246,7 @@ const slides = [
             aria-label={`Pindah ke slide ${idx + 1}: ${slide.navLabel}`}
             class:list={[
               "group flex flex-col items-start text-left cursor-pointer transition-all duration-300 rounded-lg p-1.5 sm:px-3 sm:py-1.5 select-none focus:outline-none",
-              idx === 0 ? "bg-white/10" : "hover:bg-white/5 opacity-70 hover:opacity-100"
+              idx === 0 ? "bg-[#0d4c15] border border-[#74a516]/30 shadow-xs" : "hover:bg-white/5 opacity-70 hover:opacity-100"
             ]}
           >
             <!-- Progress Pill Line -->
@@ -356,10 +356,10 @@ const slides = [
       // 3. Update Tabs & Progress Fill
       tabButtons.forEach((tab, i) => {
         if (i === currentIndex) {
-          tab.classList.add("bg-white/10");
+          tab.classList.add("bg-[#0d4c15]", "border", "border-[#74a516]/30", "shadow-xs");
           tab.classList.remove("opacity-70");
         } else {
-          tab.classList.remove("bg-white/10");
+          tab.classList.remove("bg-[#0d4c15]", "border", "border-[#74a516]/30", "shadow-xs");
           tab.classList.add("opacity-70");
         }
       });

@@ -262,11 +262,11 @@ export default function EstimationCalculator() {
 
         {/* Step 4: Budget Estimation Summary Card */}
         <div class="pt-5 border-t border-zinc-100">
-          <div class="rounded-2xl bg-zinc-900 text-white p-5 sm:p-7 shadow-lg space-y-5 border border-zinc-800">
+          <div class="rounded-2xl bg-[#07240c] text-white p-5 sm:p-7 shadow-xl space-y-5 border border-[#0d4c15]">
             <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-5">
               <div class="space-y-1.5">
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-medium bg-emerald-950/80 text-emerald-300 border border-emerald-700/50">
-                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-[#0d4c15] text-[#8fc73b] border border-[#74a516]/40">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#8fc73b]"></span>
                   Rencana Anggaran Biaya (RAB) Siap Dihitung
                 </span>
                 <div class="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
