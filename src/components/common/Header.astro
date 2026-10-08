@@ -104,45 +104,45 @@ const searchItems = [
 ];
 ---
 
-<!-- Top Announcement Bar (Deep Biru Dongker - Layer 1) -->
+<!-- Top Announcement Bar (Shopify Clean Minimalist Style) -->
 <div
   id="top-announcement-bar"
   class:list={[
-    "text-[10px] sm:text-[11px] font-medium tracking-wide py-1.5 sm:py-2 px-3 sm:px-4 border-b select-none transition-colors duration-300 relative z-40",
-    "bg-[#071322] text-white border-b border-white/10"
+    "text-[11px] font-medium tracking-wide py-2 px-4 border-b select-none transition-colors duration-300 relative z-40",
+    "bg-[#0284c7] text-white border-[#0369a1]"
   ]}
 >
   <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 flex justify-between items-center">
     <!-- Left: Delivery & Value Highlights -->
-    <div class="flex items-center gap-2 sm:gap-3">
+    <div class="flex items-center gap-3">
       <span class="inline-flex items-center gap-1.5 text-white font-bold uppercase tracking-wider text-[10px] sm:text-[11px]">
-        <svg class="w-3.5 h-3.5 text-[#38bdf8] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-3.5 h-3.5 text-white shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 18V6a2 2 0 00-2-2H4a2 2 0 00-2 2v11a1 1 0 001 1h2m9 0H9m10 0h2a1 1 0 001-1v-3.65a1 1 0 00-.22-.624l-3.48-4.35A1 1 0 0017.52 8H14M17 18a2 2 0 100-4 2 2 0 000 4zm-10 0a2 2 0 100-4 2 2 0 000 4z" />
         </svg>
         <span>Kontraktor Greenhouse Nusantara</span>
       </span>
-      <span class="text-white/30 hidden sm:inline">•</span>
-      <span class="hidden md:inline text-zinc-300 font-normal">
+      <span class="text-white/40 hidden sm:inline">•</span>
+      <span class="hidden md:inline text-white/90 font-normal">
         Gratis Konsultasi Desain Struktur &amp; Estimasi RAB Transparan
       </span>
     </div>
 
     <!-- Right: Workshop Info & Location Link -->
     <div class="flex items-center gap-3 text-white font-medium">
-      <span class="inline-flex items-center gap-1.5 text-zinc-300 text-[10px] sm:text-[11px]">
-        <svg class="w-3.5 h-3.5 text-[#38bdf8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <span class="inline-flex items-center gap-1.5 text-white/90 text-[11px]">
+        <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <circle cx="12" cy="12" r="10"></circle>
           <polyline points="12 6 12 12 16 14"></polyline>
         </svg>
         <span>{BUSINESS_INFO.hours.physicalStore}</span>
       </span>
-      <span class="hidden sm:inline text-white/30">•</span>
+      <span class="hidden sm:inline text-white/40">•</span>
       <a
         href="/lokasi/"
-        class="hidden sm:inline-flex items-center gap-1 text-white hover:text-sky-300 transition-colors text-[11px]"
+        class="hidden sm:inline-flex items-center gap-1 text-white hover:text-sky-100 transition-colors text-[11px]"
       >
         <span>Workshop Malang</span>
-        <svg class="w-3 h-3 text-[#38bdf8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
         </svg>
       </a>
@@ -150,7 +150,7 @@ const searchItems = [
   </div>
 </div>
 
-<!-- Main Sticky Header (Seamless Crisp White - Layer 2) -->
+<!-- Main Sticky Header (Seamless Hero Overlay on Homepage & Sticky Glass Effect) -->
 <header
   id="main-header"
   data-home-header={isHomePage ? "true" : "false"}
@@ -159,8 +159,8 @@ const searchItems = [
     isHomePage ? "is-at-top" : "is-scrolled"
   ]}
 >
-  <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-    <div class="flex justify-between items-center h-[60px] sm:h-[68px] lg:h-[72px] relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-[72px] relative">
       
       <!-- Mobile Left: Hamburger Button -->
       <div class="flex items-center lg:hidden z-10">
