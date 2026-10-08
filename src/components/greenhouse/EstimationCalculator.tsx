@@ -262,44 +262,44 @@ export default function EstimationCalculator() {
 
         {/* Step 4: Budget Estimation Summary Card */}
         <div class="pt-5 border-t border-zinc-100">
-          <div class="rounded-2xl bg-[#071322] text-white p-5 sm:p-7 shadow-xl space-y-5 border border-[#0b1e36]">
+          <div class="rounded-2xl bg-gradient-to-br from-[#0284c7] to-[#0369a1] text-white p-5 sm:p-7 shadow-lg space-y-5">
             <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-5">
               <div class="space-y-1.5">
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-[#0b1e36] text-[#38bdf8] border border-[#0284c7]/40">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[#38bdf8]"></span>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-white/20 text-white border border-white/30">
+                  <span class="w-1.5 h-1.5 rounded-full bg-sky-200"></span>
                   Rencana Anggaran Biaya (RAB) Siap Dihitung
                 </span>
                 <div class="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
                   {selectedModel.name} &bull; {area} m²
                 </div>
-                <p class="text-xs text-zinc-300 max-w-xl leading-relaxed">
+                <p class="text-xs text-sky-100 max-w-xl leading-relaxed">
                   Rincian estimasi RAB resmi berdasarkan ukuran lahan <strong>{area} m²</strong> ({length}m &times; {width}m) siap diteruskan ke WhatsApp tim teknisi kami.
                 </p>
               </div>
 
               <button
                 type="submit"
-                class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#0284c7] hover:bg-[#0369a1] text-white font-semibold text-xs sm:text-sm transition-all shadow-xs shrink-0 select-none cursor-pointer"
+                class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white hover:bg-sky-50 text-[#0284c7] font-bold text-xs sm:text-sm transition-all shadow-md shrink-0 select-none cursor-pointer"
               >
-                <svg class="w-4 h-4 text-white shrink-0" viewBox="0 0 24 24" fill="currentColor">
+                <svg class="w-4 h-4 text-[#0284c7] shrink-0" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
                 </svg>
                 <span>Kirim Rincian ke Teknisi WA</span>
               </button>
             </div>
 
-            <div class="pt-4 border-t border-zinc-800 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-zinc-400">
+            <div class="pt-4 border-t border-white/20 grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs text-sky-100">
               <div class="space-y-0.5">
-                <span class="text-zinc-500 text-[11px] block">Spesifikasi Rangka</span>
-                <span class="font-medium text-zinc-200 text-xs">{selectedModel.frameSpec}</span>
+                <span class="text-sky-200 text-[11px] block">Spesifikasi Rangka</span>
+                <span class="font-medium text-white text-xs">{selectedModel.frameSpec}</span>
               </div>
               <div class="space-y-0.5">
-                <span class="text-zinc-500 text-[11px] block">Masa Pakai Konstruksi</span>
-                <span class="font-medium text-zinc-200 text-xs">{selectedModel.lifespan}</span>
+                <span class="text-sky-200 text-[11px] block">Masa Pakai Konstruksi</span>
+                <span class="font-medium text-white text-xs">{selectedModel.lifespan}</span>
               </div>
               <div class="space-y-0.5">
-                <span class="text-zinc-500 text-[11px] block">Dukungan Aplikator</span>
-                <span class="font-medium text-sky-400 text-xs">Konsultasi langsung tim fabrikasi</span>
+                <span class="text-sky-200 text-[11px] block">Dukungan Aplikator</span>
+                <span class="font-medium text-white text-xs">Konsultasi langsung tim fabrikasi</span>
               </div>
             </div>
           </div>
