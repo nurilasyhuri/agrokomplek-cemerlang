@@ -109,7 +109,7 @@ const slides = [
 
 <section
   id="hero-slider-section"
-  class="relative w-full bg-slate-50 text-slate-900 font-sans overflow-hidden min-h-[calc(100dvh-108px)] lg:min-h-[calc(100dvh-72px)] flex flex-col justify-between border-b border-sky-100"
+  class="relative w-full bg-slate-50 text-slate-900 font-sans overflow-hidden min-h-[calc(100dvh-168px)] lg:min-h-[calc(100dvh-72px)] flex flex-col justify-between border-b border-sky-100"
   aria-label="Hero Showcase Jasa Pembuatan Greenhouse Agro Prima Greenhouse"
 >
   <!-- Background Image Carousel Layers -->
@@ -134,19 +134,19 @@ const slides = [
             decoding="async"
           />
         </picture>
-        <!-- Layered Cinematic Overlays for 100% Text Legibility with Clean Sky Glass & Light Sunlit Theme -->
-        <!-- 1. Lateral white & sky mist gradient from left to right -->
-        <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/85 to-white/30 lg:to-white/10"></div>
-        <!-- 2. Vertical bottom gradient to ground the metrics and tabs -->
-        <div class="absolute inset-0 bg-gradient-to-t from-white/95 via-transparent to-white/40"></div>
-        <!-- 3. Soft ambient sky tint -->
-        <div class="absolute inset-0 bg-sky-500/[0.03]"></div>
+        <!-- Layered Cinematic Overlays: Gradasi Kaya Putih -> Sky Blue -> Biru Navy (Anti-Puyeh) -->
+        <!-- 1. Master Smooth Gradient: Putih (kiri) -> Biru Langit (tengah) -> Biru Dongker Transparan (kanan) -->
+        <div class="absolute inset-0 bg-gradient-to-b from-white/95 via-sky-50/85 to-sky-900/60 lg:bg-gradient-to-r lg:from-white/95 lg:via-sky-100/70 lg:to-[#071322]/45"></div>
+        <!-- 2. Vibrant Atmospheric Tint: Rona biru langit segar pada struktur kaca & tanaman agar tidak susu/puyeh -->
+        <div class="absolute inset-0 bg-gradient-to-br from-white/30 via-sky-500/15 to-[#0b1e36]/50 pointer-events-none"></div>
+        <!-- 3. Grounding Bottom Shadow: Transisi halus 120px menuju tab navigasi navy di bawah -->
+        <div class="absolute inset-x-0 bottom-0 h-28 sm:h-36 bg-gradient-to-t from-[#071322] via-[#071322]/50 to-transparent pointer-events-none"></div>
       </div>
     ))}
   </div>
 
   <!-- Foreground Content Area (Precise 1-Screen Centering) -->
-  <div class="relative z-20 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-14 flex-1 flex items-center w-full">
+  <div class="relative z-20 max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-10 lg:py-12 flex-1 flex items-center w-full">
     <div class="w-full max-w-3xl text-left my-auto">
       {slides.map((slide, idx) => (
         <div
@@ -157,37 +157,37 @@ const slides = [
           ]}
         >
           <!-- Category & Tag Kicker Pill -->
-          <div class="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white/90 backdrop-blur-md border border-sky-300 text-sky-800 text-[10px] sm:text-xs font-extrabold tracking-wider uppercase mb-3.5 sm:mb-4 select-none shadow-xs">
+          <div class="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-full bg-white/95 backdrop-blur-md border border-sky-300 text-sky-800 text-[10px] sm:text-xs font-extrabold tracking-wider uppercase mb-3.5 sm:mb-4 select-none shadow-xs">
             <span class="w-2 h-2 rounded-full bg-[#0284c7] animate-pulse"></span>
             <span>{slide.tag}</span>
           </div>
 
           <!-- Dynamic Main Headline (Single authoritative H1 on slide 0) -->
           {idx === 0 ? (
-            <h1 class="text-3xl sm:text-4xl lg:text-[44px] xl:text-[50px] font-black tracking-tight leading-[1.12] mb-3.5 sm:mb-4 text-slate-900 font-sans">
+            <h1 class="text-2xl sm:text-4xl lg:text-[44px] xl:text-[50px] font-black tracking-tight leading-[1.15] sm:leading-[1.12] mb-3 sm:mb-4 text-slate-900 font-sans">
               <span>{slide.headlineLine1}</span><br />
               <span class="text-[#0284c7]">{slide.headlineLine2}</span>
             </h1>
           ) : (
-            <h2 class="text-3xl sm:text-4xl lg:text-[44px] xl:text-[50px] font-black tracking-tight leading-[1.12] mb-3.5 sm:mb-4 text-slate-900 font-sans">
+            <h2 class="text-2xl sm:text-4xl lg:text-[44px] xl:text-[50px] font-black tracking-tight leading-[1.15] sm:leading-[1.12] mb-3 sm:mb-4 text-slate-900 font-sans">
               <span>{slide.headlineLine1}</span><br />
               <span class="text-[#0284c7]">{slide.headlineLine2}</span>
             </h2>
           )}
 
           <!-- Descriptive Subtitle -->
-          <p class="text-xs sm:text-sm lg:text-base text-slate-600 font-normal leading-relaxed mb-5 sm:mb-6 max-w-2xl">
+          <p class="text-xs sm:text-sm lg:text-base text-slate-700 font-normal leading-relaxed mb-4 sm:mb-6 max-w-2xl font-medium">
             {slide.subtitle}
           </p>
 
           <!-- Action Buttons Group -->
-          <div class="flex flex-wrap items-center gap-3 sm:gap-4 mb-5 sm:mb-6">
+          <div class="flex flex-wrap items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
             <!-- Primary CTA -->
             <a
               href={slide.ctaPrimaryUrl}
               target={slide.ctaPrimaryUrl.includes("wa.me") ? "_blank" : "_self"}
               rel={slide.ctaPrimaryUrl.includes("wa.me") ? "noopener noreferrer" : undefined}
-              class="px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-[#0284c7] hover:bg-[#0369a1] text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase shadow-lg shadow-sky-600/25 hover:scale-[1.02] active:scale-[0.98] transition-all inline-flex items-center justify-center gap-2.5 select-none"
+              class="px-5 sm:px-8 py-3 sm:py-4 rounded-full bg-[#0284c7] hover:bg-[#0369a1] text-white font-extrabold text-xs sm:text-sm tracking-wider uppercase shadow-lg shadow-sky-600/25 hover:scale-[1.02] active:scale-[0.98] transition-all inline-flex items-center justify-center gap-2.5 select-none"
             >
               {slide.ctaPrimaryUrl.includes("wa.me") ? (
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -206,7 +206,7 @@ const slides = [
               href={slide.ctaSecondaryUrl}
               target={slide.ctaSecondaryUrl.includes("wa.me") ? "_blank" : "_self"}
               rel={slide.ctaSecondaryUrl.includes("wa.me") ? "noopener noreferrer" : undefined}
-              class="px-6 sm:px-8 py-3.5 sm:py-4 rounded-full bg-white hover:bg-sky-50 text-[#0284c7] font-extrabold text-xs sm:text-sm tracking-wider uppercase border-2 border-[#0284c7] hover:border-[#0369a1] hover:scale-[1.02] active:scale-[0.98] transition-all inline-flex items-center justify-center gap-2 select-none shadow-xs"
+              class="px-5 sm:px-8 py-3 sm:py-4 rounded-full bg-white hover:bg-sky-50 text-[#0284c7] font-extrabold text-xs sm:text-sm tracking-wider uppercase border-2 border-[#0284c7] hover:border-[#0369a1] hover:scale-[1.02] active:scale-[0.98] transition-all inline-flex items-center justify-center gap-2 select-none shadow-xs"
             >
               <span>{slide.ctaSecondaryText}</span>
               <svg class="w-4 h-4 text-[#0284c7]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -216,13 +216,13 @@ const slides = [
           </div>
 
           <!-- Slide Specific Metrics Strip -->
-          <div class="grid grid-cols-3 gap-3 sm:gap-6 pt-4 border-t border-slate-200/80 max-w-lg select-none">
+          <div class="grid grid-cols-3 gap-2 sm:gap-6 p-2.5 sm:p-0 pt-2.5 sm:pt-4 bg-white/75 sm:bg-transparent backdrop-blur-xs sm:backdrop-blur-none rounded-xl sm:rounded-none border border-sky-200/60 sm:border-0 sm:border-t sm:border-slate-300/80 max-w-lg select-none shadow-xs sm:shadow-none">
             {slide.metrics.map(metric => (
               <div>
-                <span class="block font-black text-xl sm:text-2xl lg:text-3xl text-slate-900 tracking-tight leading-none mb-1">
+                <span class="block font-black text-lg sm:text-2xl lg:text-3xl text-slate-900 tracking-tight leading-none mb-1">
                   {metric.num}
                 </span>
-                <span class="text-[11px] sm:text-xs font-medium text-slate-500 leading-tight block">
+                <span class="text-[10px] sm:text-xs font-semibold text-slate-600 leading-tight block">
                   {metric.label}
                 </span>
               </div>
@@ -233,8 +233,8 @@ const slides = [
     </div>
   </div>
 
-  <!-- Bottom Interactive Bar: Tab Progress Indicators & Arrow Controls -->
-  <div class="relative z-30 w-full border-t border-sky-100 bg-white/95 backdrop-blur-md shrink-0">
+  <!-- Bottom Interactive Bar: Tab Progress Indicators & Arrow Controls (Biru Dongker Ground) -->
+  <div class="relative z-30 w-full border-t border-sky-400/20 bg-[#071322]/95 backdrop-blur-md shrink-0">
     <div class="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3.5 flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
       
       <!-- 5 Interactive Horizontal Progress Tabs -->
@@ -246,25 +246,25 @@ const slides = [
             aria-label={`Pindah ke slide ${idx + 1}: ${slide.navLabel}`}
             class:list={[
               "group flex flex-col items-start text-left cursor-pointer transition-all duration-300 rounded-lg p-1.5 sm:px-3 sm:py-1.5 select-none focus:outline-none",
-              idx === 0 ? "bg-sky-50/90 border border-sky-200 shadow-xs" : "hover:bg-sky-50/50 opacity-70 hover:opacity-100"
+              idx === 0 ? "bg-white/15 border border-sky-400/40 shadow-xs" : "hover:bg-white/5 opacity-60 hover:opacity-100"
             ]}
           >
             <!-- Progress Pill Line -->
-            <div class="w-12 sm:w-20 md:w-28 h-1 sm:h-1.5 bg-slate-200 rounded-full overflow-hidden mb-1.5 relative">
+            <div class="w-12 sm:w-20 md:w-28 h-1 sm:h-1.5 bg-white/20 rounded-full overflow-hidden mb-1.5 relative">
               <div
                 data-tab-fill={idx}
                 class:list={[
-                  "h-full bg-[#0284c7] rounded-full transition-all duration-300",
+                  "h-full bg-[#38bdf8] rounded-full transition-all duration-300",
                   idx === 0 ? "w-full" : "w-0"
                 ]}
               ></div>
             </div>
             <!-- Tab Text Label -->
             <div class="flex items-center gap-1.5">
-              <span class="text-[9px] sm:text-[10px] font-mono font-bold text-slate-400 group-hover:text-slate-600">
+              <span class="text-[9px] sm:text-[10px] font-mono font-bold text-sky-200">
                 0{idx + 1}
               </span>
-              <span class="text-[10px] sm:text-xs font-bold text-slate-800 tracking-wide truncate max-w-[80px] sm:max-w-none">
+              <span class="text-[10px] sm:text-xs font-bold text-white tracking-wide truncate max-w-[80px] sm:max-w-none">
                 {slide.navLabel}
               </span>
             </div>
@@ -278,7 +278,7 @@ const slides = [
           type="button"
           id="hero-prev-btn"
           aria-label="Slide sebelumnya"
-          class="p-2.5 rounded-full bg-slate-100 hover:bg-sky-50 border border-slate-200 text-slate-700 hover:text-[#0284c7] transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-xs"
+          class="p-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-xs"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
             <polyline points="15 18 9 12 15 6"></polyline>
@@ -288,7 +288,7 @@ const slides = [
           type="button"
           id="hero-next-btn"
           aria-label="Slide berikutnya"
-          class="p-2.5 rounded-full bg-slate-100 hover:bg-sky-50 border border-slate-200 text-slate-700 hover:text-[#0284c7] transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-xs"
+          class="p-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 text-white transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-xs"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4">
             <polyline points="9 18 15 12 9 6"></polyline>
@@ -356,11 +356,11 @@ const slides = [
       // 3. Update Tabs & Progress Fill
       tabButtons.forEach((tab, i) => {
         if (i === currentIndex) {
-          tab.classList.add("bg-sky-50/90", "border", "border-sky-200", "shadow-xs");
-          tab.classList.remove("opacity-70");
+          tab.classList.add("bg-white/15", "border", "border-sky-400/40", "shadow-xs");
+          tab.classList.remove("opacity-60");
         } else {
-          tab.classList.remove("bg-sky-50/90", "border", "border-sky-200", "shadow-xs");
-          tab.classList.add("opacity-70");
+          tab.classList.remove("bg-white/15", "border", "border-sky-400/40", "shadow-xs");
+          tab.classList.add("opacity-60");
         }
       });
 
