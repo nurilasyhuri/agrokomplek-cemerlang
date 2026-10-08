@@ -82,7 +82,7 @@ export default function ProductFilter({ products }: Props) {
                 onClick={() => setSelectedCategory(cat.id)}
                 class={`whitespace-nowrap px-3.5 py-2 rounded-full text-xs font-semibold transition-all select-none shrink-0 inline-flex items-center gap-2 cursor-pointer ${
                   isSelected
-                    ? 'bg-[#0d4c15] text-white shadow-xs'
+                    ? 'bg-[#0b1e36] text-white shadow-xs'
                     : 'bg-zinc-100 text-zinc-600 hover:bg-zinc-200/80 hover:text-zinc-900'
                 }`}
               >
@@ -109,7 +109,7 @@ export default function ProductFilter({ products }: Props) {
               placeholder="Cari nama produk, merek, atau spesifikasi..."
               value={searchQuery}
               onInput={(e) => setSearchQuery((e.target as HTMLInputElement).value)}
-              class="w-full pl-9 pr-8 py-2 rounded-full border border-zinc-200 bg-zinc-50 text-zinc-900 placeholder:text-zinc-400 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600 focus:bg-white transition-all"
+              class="w-full pl-9 pr-8 py-2 rounded-full border border-zinc-200 bg-zinc-50 text-zinc-900 placeholder:text-zinc-400 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-sky-500 focus:bg-white transition-all"
             />
             <svg
               class="w-4 h-4 text-zinc-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none"
@@ -140,7 +140,7 @@ export default function ProductFilter({ products }: Props) {
             <select
               value={sortBy}
               onChange={(e) => setSortBy((e.target as HTMLSelectElement).value)}
-              class="w-full sm:w-auto appearance-none bg-zinc-50 hover:bg-zinc-100 border border-zinc-200 text-zinc-700 text-xs font-semibold rounded-full pl-4 pr-8 py-2 focus:outline-none focus:ring-2 focus:ring-emerald-600 cursor-pointer transition-colors"
+              class="w-full sm:w-auto appearance-none bg-zinc-50 hover:bg-zinc-100 border border-zinc-200 text-zinc-700 text-xs font-semibold rounded-full pl-4 pr-8 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500 cursor-pointer transition-colors"
             >
               <option value="featured">Urutkan: Rekomendasi</option>
               <option value="price-asc">Harga: Terendah ke Tertinggi</option>
@@ -178,7 +178,7 @@ export default function ProductFilter({ products }: Props) {
               setSelectedCategory('all');
               setSearchQuery('');
             }}
-            class="inline-flex items-center gap-1 text-emerald-700 font-semibold hover:text-emerald-800 transition-colors"
+            class="inline-flex items-center gap-1 text-sky-600 font-semibold hover:text-sky-700 transition-colors"
           >
             <span>Reset Filter</span>
             <span class="text-xs">&times;</span>
@@ -217,7 +217,7 @@ export default function ProductFilter({ products }: Props) {
                     <div class="absolute top-2.5 left-2.5 z-10">
                       <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-white/95 backdrop-blur-xs text-zinc-800 border border-zinc-200/80 shadow-2xs">
                         <span class={`w-1.5 h-1.5 rounded-full ${
-                          product.stockStatus === 'ready' ? 'bg-emerald-500' : 'bg-amber-500'
+                          product.stockStatus === 'ready' ? 'bg-[#0284c7]' : 'bg-amber-500'
                         }`}></span>
                         <span>
                           {product.stockStatus === 'ready'
@@ -232,7 +232,7 @@ export default function ProductFilter({ products }: Props) {
 
                   <div class="p-3.5 sm:p-4 space-y-1.5">
                     <div class="flex items-center justify-between gap-2 text-[11px]">
-                      <span class="font-bold uppercase tracking-wider text-emerald-800 text-[10px]">
+                      <span class="font-bold uppercase tracking-wider text-sky-600 text-[10px]">
                         {displayCategory}
                       </span>
                       {product.brand && (
@@ -242,7 +242,7 @@ export default function ProductFilter({ products }: Props) {
                       )}
                     </div>
 
-                    <h3 class="font-semibold text-zinc-900 text-sm leading-snug line-clamp-2 group-hover:text-emerald-700 transition-colors min-h-[2.5rem]">
+                    <h3 class="font-semibold text-zinc-900 text-sm leading-snug line-clamp-2 group-hover:text-sky-600 transition-colors min-h-[2.5rem]">
                       <a href={`/produk/${product.slug}/`}>
                         {product.title}
                       </a>
@@ -262,14 +262,14 @@ export default function ProductFilter({ products }: Props) {
                         {product.priceDisplay || 'Hubungi CS'}
                       </span>
                     </div>
-                    <span class="text-[10px] font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-100/60">
+                    <span class="text-[10px] font-medium text-sky-700 bg-sky-50 px-2 py-0.5 rounded-full border border-sky-100/60">
                       Kargo RI
                     </span>
                   </div>
 
                   <a
                     href={`/produk/${product.slug}/`}
-                    class="w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-[#0d4c15] hover:bg-[#07240c] text-white text-xs font-semibold tracking-normal transition-colors duration-200 select-none"
+                    class="w-full inline-flex items-center justify-center gap-1.5 py-2 px-3 rounded-lg bg-[#0b1e36] hover:bg-[#071322] text-white text-xs font-semibold tracking-normal transition-colors duration-200 select-none"
                   >
                     <span>Lihat Detail &amp; Varian</span>
                     <svg class="w-3 h-3 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -297,7 +297,7 @@ export default function ProductFilter({ products }: Props) {
               setSelectedCategory('all');
               setSearchQuery('');
             }}
-            class="px-5 py-2.5 rounded-full bg-[#0d4c15] hover:bg-[#07240c] text-white text-xs font-semibold transition-all shadow-xs inline-flex items-center gap-2 cursor-pointer"
+            class="px-5 py-2.5 rounded-full bg-[#0b1e36] hover:bg-[#071322] text-white text-xs font-semibold transition-all shadow-xs inline-flex items-center gap-2 cursor-pointer"
           >
             <span>Reset Filter &amp; Pencarian</span>
             <span>&rarr;</span>

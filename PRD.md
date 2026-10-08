@@ -1,29 +1,30 @@
-# Product Requirements Document (PRD) — Agrokomplek Cemerlang
+# Product Requirements Document (PRD) — Agro Prima Greenhouse
 
 ## 1. Project Identity & Overview
-- **Project Name:** Agrokomplek Cemerlang Web Platform
-- **Project Slug:** `agrokomplek-cemerlang`
+- **Project Name:** Agro Prima Greenhouse Web Platform
+- **Project Slug:** `agroprimagreenhouse`
 - **Domain Target:** `agroprimagreenhouse.com`
-- **Hosting & Infrastructure:** **Cloudflare Pages / Cloudflare Workers** (Global Edge CDN, DNS, Zero-Trust Access, Cloudflare Web Analytics / Turnstile, Polish Image Caching).
-- **Tech Stack:** Astro v5+ (Static-First / Hybrid SSG), Tailwind CSS v4, TypeScript (Strict), Astro Content Collections (Zod Schemas), Lucide Icons, React/Preact Islands (for interactive estimator & search).
-- **Visual Theme:** **Madian / Modern Agritech Aesthetic** (Clean agricultural emerald/forest green `#195a36`, warm earthy sunlight amber `#d97706`, high-contrast typography, generous negative space, crisp border treatments, and authentic agricultural imagery).
-- **Core Positioning:** "Pusat kebutuhan pertanian dan jasa pembuatan greenhouse Seluruh Indonesia — Dari Malang untuk Pertanian Indonesia".
+- **Hosting & Infrastructure:** **Cloudflare Pages / Vercel Edge** (Global Edge CDN, DNS, Polish Image Caching).
+- **Tech Stack:** Astro v5+ (Static-First / SSG), Tailwind CSS, TypeScript (Strict), Astro Content Collections (Zod Schemas), Lucide Icons, Preact Islands (for interactive estimator & search).
+- **Visual Theme:** **Dutch High-Tech Glasshouse Aesthetic** (Deep emerald `#064e3b`, fresh mint cyan `#10b981` / `#34d399`, pristine cool canvas `#f8fafc`, solar royal amber `#f59e0b`, high-contrast typography, and authentic greenhouse structural imagery).
+- **Core Positioning:** "Membangun Greenhouse Modern yang Lebih Kokoh, Presisi, dan Tahan Iklim Tropis — Kontraktor Spesialis Jasa Pembuatan Greenhouse Seluruh Indonesia".
 - **Primary Business Goals:**
-  1. Generate high-intent WhatsApp leads for agricultural supplies (saprodi) and farming equipment across Indonesia.
-  2. Generate structured quote requests and survey inquiries for custom greenhouse projects (Bambu, Galvanis, Baja Ringan, Tunnel Garam).
-  3. Establish local SEO authority in Malang (Kedungkandang / Buring) while ranking nationally for high-value transactional greenhouse & agritech keywords.
-  4. Deliver 100/100 Core Web Vitals on Cloudflare Edge with zero-JS static baseline and instant mobile response.
+  1. Generate high-intent WhatsApp leads and quote requests for custom greenhouse projects (Pipa Galvanis Hot-Dip, Baja Ringan, Bambu Awet, Tunnel Garam Prisma, Smart Farming IoT).
+  2. Provide transparent online RAB calculation and structural consultations for commercial horticulture & farming investors.
+  3. Supply premium greenhouse construction materials (Plastik UV 200µm 14%, Paranet Shading Net, Insect Net 50 Mesh, Spring Clip Kanal C, Selang Drip) across Indonesia.
+  4. Deliver 100/100 Core Web Vitals on edge delivery with instant mobile performance.
 
 ---
 
 ## 2. Business Entity & Canonical NAP
-- **Brand Name:** Agrokomplek Cemerlang
+- **Brand Name:** Agro Prima Greenhouse
+- **Legal Entity:** Agro Prima Greenhouse Malang
 - **Physical Address:** Jl. KH. Malik Dalam RT 01 RW 07, Buring, Kedungkandang, Kota Malang, Jawa Timur 65136, Indonesia
 - **Official WhatsApp:** `+62 851-8300-2070` (`0851-8300-2070`)
-- **Official Email:** `agrokomplekcemerlang@gmail.com`
+- **Official Email:** `agroprimagreenhouse@gmail.com`
 - **Google Maps Pin:** `https://share.google/RkGZAeLgftgFwjqRo`
-- **Operating Hours:** 24 Jam (WhatsApp Consultation & Online Ordering) / Jam Operasional Fisik Toko
-- **Coverage Scope:** Physical Store in Malang + Nationwide Product Shipping & Greenhouse Project Installation across Indonesia
+- **Operating Hours:** Buka Setiap Hari (Konsultasi Teknis & RAB 24 Jam) / Workshop: 07.30 - 17.00 WIB
+- **Coverage Scope:** Workshop di Malang + Pengerjaan Konstruksi Greenhouse & Ekspedisi Material ke Seluruh Indonesia
 
 ---
 

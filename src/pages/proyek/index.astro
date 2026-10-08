@@ -43,8 +43,8 @@ const projectKeywords = [
     <Breadcrumb items={[{ label: 'Portofolio Proyek' }]} />
 
     <div class="my-10 text-center max-w-3xl mx-auto space-y-3">
-      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/60">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-sky-50 text-sky-800 border border-sky-200/60">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#0284c7]"></span>
         Dokumentasi Proyek Greenhouse Nyata
       </div>
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight">
@@ -74,23 +74,23 @@ const projectKeywords = [
               </div>
 
               <div class="p-6 space-y-3">
-                <span class="inline-block text-xs font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-100">
+                <span class="inline-block text-xs font-semibold text-sky-700 bg-sky-50 px-2.5 py-0.5 rounded-full border border-sky-200">
                   {proj.data.greenhouseType}
                 </span>
-                <h3 class="font-bold text-zinc-900 text-lg sm:text-xl leading-snug group-hover:text-emerald-700 transition-colors">
+                <h3 class="font-bold text-zinc-900 text-lg sm:text-xl leading-snug group-hover:text-sky-600 transition-colors">
                   {proj.data.title}
                 </h3>
 
                 <div class="space-y-2 text-xs text-zinc-500">
                   <div class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 text-sky-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                     </svg>
                     <span>{proj.data.locationCity}, {proj.data.locationProvince}</span>
                   </div>
                   <div class="flex items-center gap-2">
-                    <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg class="w-4 h-4 text-sky-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/>
                     </svg>
                     <span>Dimensi: <strong class="font-semibold text-zinc-700">{proj.data.dimensions}</strong></span>
@@ -99,7 +99,7 @@ const projectKeywords = [
               </div>
             </div>
 
-            <div class="px-6 py-4 bg-zinc-50/60 border-t border-zinc-100 flex items-center justify-between text-xs font-semibold text-emerald-700 group-hover:text-emerald-800">
+            <div class="px-6 py-4 bg-zinc-50/60 border-t border-zinc-100 flex items-center justify-between text-xs font-semibold text-sky-600 group-hover:text-sky-700">
               <span>Lihat Spesifikasi &amp; Detail</span>
               <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">&rarr;</span>
             </div>

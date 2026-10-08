@@ -4,99 +4,112 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Two-Green Ecosystem from Green Harvest reference
-        // Green 1: Deep Forest Green (#0D4C15)
-        // Green 2: Fresh Leaf Green (#74A516)
-        // Accent: Warm Sunshine Gold (#F8B502)
+        // Industrial Steel Navy & Sky Glass Blue Palette
+        // Primary: Deep Steel Navy (#0B1E36)
+        // Secondary / Glass: Sky Glass Blue (#0284C7 / #38BDF8)
+        // Accent: Solar Amber (#F59E0B)
+        navy: {
+          50: '#f0f7ff',
+          100: '#e0effe',
+          200: '#bae0fd',
+          300: '#7cc5fb',
+          400: '#38a8f8',
+          500: '#0284c7', // Sky Glass Blue
+          600: '#0369a1',
+          700: '#0b1e36', // Core Deep Steel Navy
+          800: '#081628', // Pressed Deep Navy
+          900: '#050e1a', // Deepest Navy Ground
+          950: '#03080f',
+        },
         forest: {
-          50: '#f0f7f1',
-          100: '#dceee0',
-          200: '#bbdec2',
-          300: '#8ec599',
-          400: '#5ba66b',
-          500: '#39874a',
-          600: '#1b672c',
-          700: '#0d4c15', // Core Deep Forest Green
-          800: '#0a3d11',
-          900: '#08330e', // Deep Pine / Dark Bar
-          950: '#041c08',
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#bae6fd',
+          300: '#7dd3fc',
+          400: '#38bdf8',
+          500: '#0284c7',
+          600: '#0369a1',
+          700: '#0b1e36', // Core Steel Navy
+          800: '#081628',
+          900: '#050e1a',
+          950: '#03080f',
         },
         leaf: {
-          50: '#f5faec',  // Soft leaf tint
-          100: '#e7f4d2', // Soft leaf card / badge
-          200: '#d0eaab', // Leaf border
-          300: '#b1dc76',
-          400: '#8fc73b', // Bright sunny leaf on dark
-          500: '#74a516', // Core Fresh Leaf Green
-          600: '#5c860e', // Action leaf green
-          700: '#46670e',
-          800: '#385210',
-          900: '#304512',
-          950: '#182705',
+          50: '#f0f9ff',  // Soft sky tint
+          100: '#e0f2fe', // Sky card / badge
+          200: '#bae6fd', // Sky glass border
+          300: '#7dd3fc',
+          400: '#38bdf8', // Bright sky glass on dark
+          500: '#0284c7', // Core Sky Glass Blue
+          600: '#0369a1', // Action sky blue
+          700: '#075985',
+          800: '#0c4a6e',
+          900: '#082f49',
+          950: '#041724',
         },
         sun: {
           50: '#fffbeb',
           100: '#fef3c7',
           400: '#fbbf24',
-          500: '#f8b502', // Warm sunshine gold
+          500: '#f59e0b', // Solar Amber
           600: '#d97706',
         },
-        // Override Emerald so all existing components adapt seamlessly to the 2 greens
+        // Override Emerald so all existing components seamlessly use Pure Biru Muda (Sky Glass Blue)
         emerald: {
-          50: '#f5faec',  // Fresh leaf tint background
-          100: '#e7f4d2', // Soft leaf border/badge bg
-          200: '#d0eaab', // Leaf border accent
-          300: '#b1dc76', // Fresh leaf medium
-          400: '#8fc73b', // Bright spring leaf (high contrast on dark)
-          500: '#74a516', // CORE FRESH LEAF GREEN
-          600: '#5c860e', // Fresh leaf button / active state
-          700: '#0d4c15', // CORE DEEP FOREST GREEN
-          800: '#0a3d11', // Deep dark forest
-          900: '#08330e', // Deep pine forest
-          950: '#041c08', // Darkest night forest
+          50: '#f0f9ff',  // Soft sky tint background
+          100: '#e0f2fe', // Light sky badge/border bg
+          200: '#bae6fd', // Sky border highlight
+          300: '#7dd3fc', // Medium light sky
+          400: '#38bdf8', // Biru muda terang (bright sky on dark)
+          500: '#0ea5e9', // Biru muda cerah
+          600: '#0284c7', // TOMBOL UTAMA BIRU MUDA (Core Sky Glass Blue)
+          700: '#0284c7', // TULISAN TEKS BIRU MUDA (#0284C7)
+          800: '#0369a1', // Teks biru muda kontras tinggi (#0369A1)
+          900: '#0c4a6e', // Deep sky blue
+          950: '#082f49', // Darkest sky
         },
         // Direct semantic tokens
-        primary: '#0d4c15',
-        'primary-hover': '#0a3d11',
+        primary: '#0b1e36',
+        'primary-hover': '#081628',
         dark: '#09090b',
-        muted: '#71717a',
-        secondary: '#f4f4f5',
-        border: '#e4e4e7',
-        bg: '#fafafa',
-        peach: '#f5faec',
-        sand: '#f5f5f4',
-        // Modern Pristine Canvas & Card Structure (Apple/Google design language)
+        muted: '#64748b',
+        secondary: '#f1f5f9',
+        border: '#e2e8f0',
+        bg: '#f8fafc',
+        peach: '#f0f9ff',
+        sand: '#f1f5f9',
+        // Modern Pristine Canvas & Card Structure (Steel & Glass architecture)
         surface: {
-          canvas: '#fafafa',
+          canvas: '#f8fafc',
           card: '#ffffff',
-          subtle: '#f5faec',
-          border: '#e4e4e7',
-          'border-dark': '#d4d4d8',
+          subtle: '#f0f9ff',
+          border: '#e2e8f0',
+          'border-dark': '#cbd5e1',
         },
-        // Modern Ink Hierarchy (Neutral Zinc & Slate)
+        // Modern Ink Hierarchy (Slate)
         ink: {
-          primary: '#09090b',
-          secondary: '#52525b',
-          muted: '#71717a',
+          primary: '#0f172a',
+          secondary: '#334155',
+          muted: '#64748b',
           inverse: '#ffffff',
         },
-        // Brand Vibrant Agro Palette
+        // Brand Vibrant Agro Palette -> mapped to Steel Navy & Sky Glass
         agri: {
-          50: '#f5faec',
-          100: '#e7f4d2',
-          200: '#d0eaab',
-          500: '#74a516',
-          600: '#5c860e',
-          700: '#0d4c15',
-          800: '#0a3d11',
-          900: '#08330e',
-          950: '#041c08',
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#bae6fd',
+          500: '#0284c7',
+          600: '#0369a1',
+          700: '#0b1e36',
+          800: '#081628',
+          900: '#050e1a',
+          950: '#03080f',
         },
         // Functional Accent Warm Amber / Sun
         ochre: {
           50: '#fffbeb',
           100: '#fef3c7',
-          600: '#f8b502',
+          600: '#f59e0b',
           700: '#d97706',
           800: '#b45309',
         },

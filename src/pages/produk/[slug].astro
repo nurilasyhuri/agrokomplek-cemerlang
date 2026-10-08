@@ -104,8 +104,8 @@ const productKeywords = [
 
         <!-- Verified Authentic Credibility Strip -->
         <div class="p-3.5 rounded-xl bg-zinc-50 border border-zinc-200/80 flex items-center justify-between text-xs">
-          <div class="flex items-center gap-2 text-emerald-800 font-semibold">
-            <svg class="w-4 h-4 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="flex items-center gap-2 text-sky-800 font-semibold">
+            <svg class="w-4 h-4 text-sky-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
             <span>Material Standar Industri Teruji</span>
@@ -116,7 +116,7 @@ const productKeywords = [
         <!-- 3-Pillar Trust Highlights (Shopify Clean Style) -->
         <div class="p-5 rounded-2xl bg-white border border-zinc-200/80 space-y-3.5 text-xs text-zinc-600 shadow-2xs">
           <div class="flex items-start gap-3">
-            <div class="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-100 mt-0.5">
+            <div class="w-7 h-7 rounded-lg bg-sky-50 text-sky-700 flex items-center justify-center shrink-0 border border-sky-100 mt-0.5">
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
               </svg>
@@ -128,7 +128,7 @@ const productKeywords = [
           </div>
 
           <div class="flex items-start gap-3 pt-3 border-t border-zinc-100">
-            <div class="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-100 mt-0.5">
+            <div class="w-7 h-7 rounded-lg bg-sky-50 text-sky-700 flex items-center justify-center shrink-0 border border-sky-100 mt-0.5">
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
               </svg>
@@ -140,7 +140,7 @@ const productKeywords = [
           </div>
 
           <div class="flex items-start gap-3 pt-3 border-t border-zinc-100">
-            <div class="w-7 h-7 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center shrink-0 border border-emerald-100 mt-0.5">
+            <div class="w-7 h-7 rounded-lg bg-sky-50 text-sky-700 flex items-center justify-center shrink-0 border border-sky-100 mt-0.5">
               <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 18V6a2 2 0 00-2-2H4a2 2 0 00-2 2v11a1 1 0 001 1h2m9 0H9m10 0h2a1 1 0 001-1v-3.65a1 1 0 00-.22-.624l-3.48-4.35A1 1 0 0017.52 8H14M17 18a2 2 0 100-4 2 2 0 000 4zm-10 0a2 2 0 100-4 2 2 0 000 4z"/>
               </svg>
@@ -158,10 +158,10 @@ const productKeywords = [
         
         <div>
           <div class="flex flex-wrap items-center gap-2 mb-2.5">
-            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/60">
+            <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-sky-50 text-sky-800 border border-sky-200/60">
               <span class:list={[
                 'w-1.5 h-1.5 rounded-full',
-                product.data.stockStatus === 'ready' ? 'bg-emerald-500 animate-pulse' : 'bg-amber-500'
+                product.data.stockStatus === 'ready' ? 'bg-[#0284c7] animate-pulse' : 'bg-amber-500'
               ]}></span>
               <span>
                 {product.data.stockStatus === 'ready'
@@ -227,7 +227,7 @@ const productKeywords = [
             ))}
             <div class="py-2.5 flex items-baseline justify-between">
               <span class="font-medium text-zinc-500">Kesiapan Stok</span>
-              <span class="font-bold text-emerald-700">
+              <span class="font-bold text-sky-600">
                 {product.data.stockStatus === 'ready' ? 'Stok Fisik Tersedia di Gudang Malang' : 'Indent Pabrik'}
               </span>
             </div>
@@ -251,7 +251,7 @@ const productKeywords = [
     <div class="mt-12 pt-8 border-t border-zinc-200/80">
       <div class="p-6 sm:p-8 rounded-2xl bg-white border border-zinc-200/80 shadow-2xs">
         <h2 class="text-lg sm:text-xl font-bold tracking-tight text-zinc-900 mb-4">Deskripsi &amp; Panduan Penggunaan</h2>
-        <div class="prose prose-emerald max-w-none text-zinc-600 text-xs sm:text-sm leading-relaxed">
+        <div class="prose prose-sky max-w-none text-zinc-600 text-xs sm:text-sm leading-relaxed">
           <Content />
         </div>
       </div>
@@ -262,10 +262,10 @@ const productKeywords = [
       <div class="mt-20 pt-12 border-t border-zinc-200/80">
         <div class="flex items-center justify-between mb-8">
           <div>
-            <span class="text-xs font-semibold text-emerald-700 uppercase tracking-wider block">Koleksi Terkait</span>
+            <span class="text-xs font-semibold text-sky-600 uppercase tracking-wider block">Koleksi Terkait</span>
             <h2 class="text-2xl sm:text-3xl font-extrabold text-zinc-900 tracking-tight mt-1">Produk Pelengkap Lainnya</h2>
           </div>
-          <a href="/produk/" class="text-xs font-semibold text-emerald-700 hover:text-emerald-800 inline-flex items-center gap-1 group">
+          <a href="/produk/" class="text-xs font-semibold text-sky-600 hover:text-sky-700 inline-flex items-center gap-1 group">
             <span>Semua Produk</span>
             <span aria-hidden="true" class="group-hover:translate-x-1 transition-transform">&rarr;</span>
           </a>

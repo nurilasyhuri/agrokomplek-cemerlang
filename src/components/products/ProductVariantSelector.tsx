@@ -85,7 +85,7 @@ Mohon info ketersediaan stok fisik di gudang Malang dan rekomendasi ekspedisi ka
             <span class="font-semibold text-zinc-900 tracking-normal">
               Pilihan Varian / Ukuran:
             </span>
-            <span class="text-emerald-700 font-semibold bg-emerald-50 px-2.5 py-0.5 rounded-full text-[11px] border border-emerald-200/60">
+            <span class="text-sky-700 font-semibold bg-sky-50 px-2.5 py-0.5 rounded-full text-[11px] border border-sky-200/60">
               {currentVariant?.name}
             </span>
           </div>
@@ -100,7 +100,7 @@ Mohon info ketersediaan stok fisik di gudang Malang dan rekomendasi ekspedisi ka
                   onClick={() => setSelectedIdx(idx)}
                   class={`text-left p-3.5 rounded-xl border text-xs transition-all duration-200 select-none flex flex-col justify-between relative cursor-pointer ${
                     isSelected
-                      ? 'border-emerald-600 bg-emerald-50/40 ring-1 ring-emerald-600'
+                      ? 'border-[#0284c7] bg-sky-50/40 ring-1 ring-[#0284c7]'
                       : 'border-zinc-200 bg-white hover:border-zinc-300 hover:bg-zinc-50/60 text-zinc-600'
                   }`}
                 >
@@ -109,7 +109,7 @@ Mohon info ketersediaan stok fisik di gudang Malang dan rekomendasi ekspedisi ka
                       {variant.name}
                     </span>
                     <span class={`w-4 h-4 rounded-full flex items-center justify-center shrink-0 transition-colors mt-0.5 ${
-                      isSelected ? 'bg-emerald-600 text-white' : 'border border-zinc-300 bg-white'
+                      isSelected ? 'bg-[#0284c7] text-white' : 'border border-zinc-300 bg-white'
                     }`}>
                       {isSelected ? (
                         <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -120,7 +120,7 @@ Mohon info ketersediaan stok fisik di gudang Malang dan rekomendasi ekspedisi ka
                   </div>
                   
                   <div class="mt-3 flex items-baseline justify-between pt-2 border-t border-zinc-100">
-                    <span class={`font-bold text-xs sm:text-sm ${isSelected ? 'text-emerald-700' : 'text-zinc-900'}`}>
+                    <span class={`font-bold text-xs sm:text-sm ${isSelected ? 'text-sky-600' : 'text-zinc-900'}`}>
                       {variant.priceDisplay}
                     </span>
                     {variant.unit && (
@@ -144,9 +144,9 @@ Mohon info ketersediaan stok fisik di gudang Malang dan rekomendasi ekspedisi ka
               <span class="text-xs font-medium text-zinc-500">
                 {currentPrice > 0 ? 'Harga Satuan' : 'Informasi Harga'}
               </span>
-              <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-medium bg-emerald-50 text-emerald-800 border border-emerald-200/60">
+              <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-medium bg-sky-50 text-sky-700 border border-sky-200/60">
                 <span class={`w-1.5 h-1.5 rounded-full ${
-                  stockStatus === 'ready' ? 'bg-emerald-500' : stockStatus === 'po' ? 'bg-amber-500' : 'bg-sky-500'
+                  stockStatus === 'ready' ? 'bg-[#0284c7]' : stockStatus === 'po' ? 'bg-amber-500' : 'bg-sky-400'
                 }`}></span>
                 {stockStatus === 'ready' ? 'Stok Ready Malang' : stockStatus === 'po' ? 'Pre-Order' : 'Konsultasi / Custom'}
               </span>
@@ -201,7 +201,7 @@ Mohon info ketersediaan stok fisik di gudang Malang dan rekomendasi ekspedisi ka
         {totalPrice > 0 && quantity > 1 && (
           <div class="flex items-center justify-between py-2.5 px-4 rounded-xl bg-white border border-zinc-200/80 text-xs">
             <span class="text-zinc-600 font-medium">Estimasi Subtotal ({quantity} {currentUnit}):</span>
-            <span class="font-bold text-emerald-700 text-sm sm:text-base">{totalPriceDisplay}</span>
+            <span class="font-bold text-sky-600 text-sm sm:text-base">{totalPriceDisplay}</span>
           </div>
         )}
 
@@ -211,7 +211,7 @@ Mohon info ketersediaan stok fisik di gudang Malang dan rekomendasi ekspedisi ka
             href={waUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-full bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white font-semibold text-sm tracking-normal shadow-xs hover:shadow transition-all select-none"
+            class="w-full inline-flex items-center justify-center gap-2.5 py-3.5 px-6 rounded-full bg-[#0284c7] hover:bg-[#0369a1] active:bg-[#0c4a6e] text-white font-semibold text-sm tracking-normal shadow-xs hover:shadow transition-all select-none"
           >
             <svg class="w-4 h-4 text-white shrink-0" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
@@ -222,19 +222,19 @@ Mohon info ketersediaan stok fisik di gudang Malang dan rekomendasi ekspedisi ka
           {/* Trust Badges with SVG Icons */}
           <div class="grid grid-cols-3 gap-2 text-center text-[11px] text-zinc-500 pt-1">
             <div class="flex items-center justify-center gap-1.5">
-              <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-3.5 h-3.5 text-sky-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
               <span>Respon Cepat</span>
             </div>
             <div class="flex items-center justify-center gap-1.5 border-x border-zinc-200">
-              <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-3.5 h-3.5 text-sky-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
               </svg>
               <span>Gudang Malang</span>
             </div>
             <div class="flex items-center justify-center gap-1.5">
-              <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg class="w-3.5 h-3.5 text-sky-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 18V6a2 2 0 00-2-2H4a2 2 0 00-2 2v11a1 1 0 001 1h2m9 0H9m10 0h2a1 1 0 001-1v-3.65a1 1 0 00-.22-.624l-3.48-4.35A1 1 0 0017.52 8H14M17 18a2 2 0 100-4 2 2 0 000 4zm-10 0a2 2 0 100-4 2 2 0 000 4z" />
               </svg>
               <span>Kargo Nasional</span>
@@ -259,7 +259,7 @@ Mohon info ketersediaan stok fisik di gudang Malang dan rekomendasi ekspedisi ka
             href={waUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center justify-center gap-1.5 py-2.5 px-5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs tracking-normal transition-all shadow-xs shrink-0 select-none"
+            class="inline-flex items-center justify-center gap-1.5 py-2.5 px-5 rounded-full bg-[#0284c7] hover:bg-[#0369a1] text-white font-semibold text-xs tracking-normal transition-all shadow-xs shrink-0 select-none"
           >
             <svg class="w-3.5 h-3.5 text-white" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>

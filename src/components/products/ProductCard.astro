@@ -59,7 +59,7 @@ const displayCategory = categoryLabels[product.category] || product.category;
         <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-white/95 backdrop-blur-xs text-zinc-800 border border-zinc-200/80 shadow-2xs">
           <span class:list={[
             "w-1.5 h-1.5 rounded-full",
-            product.stockStatus === "ready" ? "bg-emerald-500" : product.stockStatus === "po" ? "bg-amber-500" : "bg-sky-500"
+            product.stockStatus === "ready" ? "bg-[#0284c7]" : product.stockStatus === "po" ? "bg-amber-500" : "bg-sky-500"
           ]}></span>
           <span>
             {product.stockStatus === "ready" ? "Ready" : product.stockStatus === "po" ? "Pre-Order" : "Konsultasi"}
@@ -72,7 +72,7 @@ const displayCategory = categoryLabels[product.category] || product.category;
     <div class="p-4 pb-2 space-y-1.5">
       <!-- Category & Brand Row -->
       <div class="flex items-center justify-between gap-2 text-[11px]">
-        <span class="font-bold uppercase tracking-wider text-emerald-800 text-[10px]">
+        <span class="font-bold uppercase tracking-wider text-sky-600 text-[10px]">
           {displayCategory}
         </span>
         {product.brand && (
@@ -83,7 +83,7 @@ const displayCategory = categoryLabels[product.category] || product.category;
       </div>
 
       <!-- Title -->
-      <h3 class="font-semibold text-zinc-900 text-sm leading-snug line-clamp-2 group-hover:text-emerald-700 transition-colors min-h-[2.5rem]">
+      <h3 class="font-semibold text-zinc-900 text-sm leading-snug line-clamp-2 group-hover:text-sky-600 transition-colors min-h-[2.5rem]">
         <a href={`/produk/${product.slug}/`}>
           {product.title}
         </a>
@@ -91,7 +91,7 @@ const displayCategory = categoryLabels[product.category] || product.category;
 
       <!-- Feature Chip / Verifiable Quality Proof -->
       <div class="flex items-center gap-1.5 text-[11px] text-zinc-500 pt-0.5">
-        <svg class="w-3.5 h-3.5 text-emerald-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-3.5 h-3.5 text-sky-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
         </svg>
         <span class="truncate">Material Teruji Tropis &bull; Kargo RI</span>
@@ -113,7 +113,7 @@ const displayCategory = categoryLabels[product.category] || product.category;
 
       <a
         href={`/produk/${product.slug}/`}
-        class="inline-flex items-center justify-center gap-1 py-1.5 px-3 rounded-lg bg-zinc-100 hover:bg-[#0d4c15] text-zinc-800 hover:text-white text-xs font-semibold transition-all duration-200"
+        class="inline-flex items-center justify-center gap-1 py-1.5 px-3 rounded-lg bg-zinc-100 hover:bg-[#0b1e36] text-zinc-800 hover:text-white text-xs font-semibold transition-all duration-200"
       >
         <span>Detail</span>
         <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

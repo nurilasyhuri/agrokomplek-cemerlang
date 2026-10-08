@@ -74,8 +74,8 @@ export default function EstimationCalculator() {
     <div class="bg-white rounded-2xl border border-zinc-200/80 shadow-xs overflow-hidden">
       {/* Calculator Header (Shopify Clean Minimalist) */}
       <div class="p-5 sm:p-7 lg:p-8 border-b border-zinc-100 bg-zinc-50/50">
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200/60">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>
+        <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-sky-50 text-sky-700 border border-sky-200/60">
+          <span class="w-1.5 h-1.5 rounded-full bg-sky-600"></span>
           Kalkulator &amp; Estimasi RAB Online
         </span>
         <h3 class="text-xl sm:text-2xl font-extrabold text-zinc-900 tracking-tight mt-2.5">
@@ -108,19 +108,19 @@ export default function EstimationCalculator() {
                   onClick={() => setSelectedModelId(model.id)}
                   class={`p-4 rounded-xl text-left border transition-all select-none flex flex-col justify-between cursor-pointer ${
                     isSelected
-                      ? 'border-emerald-600 bg-emerald-50/40 ring-1 ring-emerald-600 shadow-2xs'
+                      ? 'border-[#0284c7] bg-sky-50/50 ring-1 ring-[#0284c7] shadow-2xs'
                       : 'border-zinc-200/80 bg-white hover:border-zinc-300 hover:bg-zinc-50/50'
                   }`}
                 >
                   <div class="space-y-2.5">
                     <div class="flex items-center justify-between gap-2">
                       <span class={`text-[10px] font-semibold px-2 py-0.5 rounded-full ${
-                        isSelected ? 'bg-emerald-600 text-white' : 'bg-zinc-100 text-zinc-600'
+                        isSelected ? 'bg-[#0284c7] text-white' : 'bg-zinc-100 text-zinc-600'
                       }`}>
                         {model.badge}
                       </span>
                       <div class={`w-3.5 h-3.5 rounded-full border flex items-center justify-center transition-colors ${
-                        isSelected ? 'border-emerald-600 bg-emerald-600' : 'border-zinc-300 bg-white'
+                        isSelected ? 'border-[#0284c7] bg-[#0284c7]' : 'border-zinc-300 bg-white'
                       }`}>
                         {isSelected && (
                           <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
@@ -154,7 +154,7 @@ export default function EstimationCalculator() {
             </div>
             <div class="inline-flex items-center gap-2 text-xs font-semibold text-zinc-900 bg-zinc-100 px-3.5 py-1.5 rounded-full border border-zinc-200/80 self-start sm:self-auto">
               <span>Total Luas:</span>
-              <span class="text-emerald-700 font-extrabold text-sm">{area} m²</span>
+              <span class="text-sky-600 font-extrabold text-sm">{area} m²</span>
               <span class="text-zinc-400">({length}m &times; {width}m)</span>
             </div>
           </div>
@@ -164,7 +164,7 @@ export default function EstimationCalculator() {
             <div class="bg-zinc-50/70 border border-zinc-200/80 p-4 rounded-xl space-y-2.5">
               <div class="flex justify-between items-center text-xs">
                 <span class="font-semibold text-zinc-700">Panjang Greenhouse:</span>
-                <span class="font-bold text-sm text-emerald-700">{length} Meter</span>
+                <span class="font-bold text-sm text-sky-600">{length} Meter</span>
               </div>
               <input
                 type="range"
@@ -173,7 +173,7 @@ export default function EstimationCalculator() {
                 step={2}
                 value={length}
                 onInput={(e) => setLength(Number((e.target as HTMLInputElement).value))}
-                class="w-full accent-emerald-600 cursor-pointer h-2 bg-zinc-200 rounded-full"
+                class="w-full accent-[#0284c7] cursor-pointer h-2 bg-zinc-200 rounded-full"
               />
               <div class="flex justify-between text-[10px] text-zinc-400">
                 <span>Min: 6m</span>
@@ -186,7 +186,7 @@ export default function EstimationCalculator() {
             <div class="bg-zinc-50/70 border border-zinc-200/80 p-4 rounded-xl space-y-2.5">
               <div class="flex justify-between items-center text-xs">
                 <span class="font-semibold text-zinc-700">Lebar Greenhouse:</span>
-                <span class="font-bold text-sm text-emerald-700">{width} Meter</span>
+                <span class="font-bold text-sm text-sky-600">{width} Meter</span>
               </div>
               <input
                 type="range"
@@ -195,7 +195,7 @@ export default function EstimationCalculator() {
                 step={2}
                 value={width}
                 onInput={(e) => setWidth(Number((e.target as HTMLInputElement).value))}
-                class="w-full accent-emerald-600 cursor-pointer h-2 bg-zinc-200 rounded-full"
+                class="w-full accent-[#0284c7] cursor-pointer h-2 bg-zinc-200 rounded-full"
               />
               <div class="flex justify-between text-[10px] text-zinc-400">
                 <span>Min: 4m</span>
@@ -218,7 +218,7 @@ export default function EstimationCalculator() {
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
             <div>
               <label class="block text-xs font-semibold text-zinc-700 mb-1">
-                Lokasi Proyek (Kota / Kab) <span class="text-emerald-700">*</span>
+                Lokasi Proyek (Kota / Kab) <span class="text-sky-600">*</span>
               </label>
               <input
                 type="text"
@@ -226,7 +226,7 @@ export default function EstimationCalculator() {
                 placeholder="Contoh: Malang / Batu / Kediri"
                 value={location}
                 onInput={(e) => setLocation((e.target as HTMLInputElement).value)}
-                class="w-full px-3.5 py-2.5 rounded-xl border border-zinc-200 bg-white text-zinc-900 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600/20 focus:border-emerald-600 transition-all"
+                class="w-full px-3.5 py-2.5 rounded-xl border border-zinc-200 bg-white text-zinc-900 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition-all"
               />
             </div>
 
@@ -239,7 +239,7 @@ export default function EstimationCalculator() {
                 placeholder="Contoh: Melon Hidroponik / Sayuran"
                 value={crops}
                 onInput={(e) => setCrops((e.target as HTMLInputElement).value)}
-                class="w-full px-3.5 py-2.5 rounded-xl border border-zinc-200 bg-white text-zinc-900 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600/20 focus:border-emerald-600 transition-all"
+                class="w-full px-3.5 py-2.5 rounded-xl border border-zinc-200 bg-white text-zinc-900 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition-all"
               />
             </div>
 
@@ -250,7 +250,7 @@ export default function EstimationCalculator() {
               <select
                 value={timeline}
                 onChange={(e) => setTimeline((e.target as HTMLSelectElement).value)}
-                class="w-full px-3.5 py-2.5 rounded-xl border border-zinc-200 bg-white text-zinc-900 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-emerald-600/20 focus:border-emerald-600 transition-all"
+                class="w-full px-3.5 py-2.5 rounded-xl border border-zinc-200 bg-white text-zinc-900 text-base sm:text-sm focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition-all"
               >
                 <option value="Bulan Ini">Bulan Ini (Segera)</option>
                 <option value="1 - 2 Bulan ke Depan">1 - 2 Bulan ke Depan</option>
@@ -262,11 +262,11 @@ export default function EstimationCalculator() {
 
         {/* Step 4: Budget Estimation Summary Card */}
         <div class="pt-5 border-t border-zinc-100">
-          <div class="rounded-2xl bg-[#07240c] text-white p-5 sm:p-7 shadow-xl space-y-5 border border-[#0d4c15]">
+          <div class="rounded-2xl bg-[#071322] text-white p-5 sm:p-7 shadow-xl space-y-5 border border-[#0b1e36]">
             <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-5">
               <div class="space-y-1.5">
-                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-[#0d4c15] text-[#8fc73b] border border-[#74a516]/40">
-                  <span class="w-1.5 h-1.5 rounded-full bg-[#8fc73b]"></span>
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-[#0b1e36] text-[#38bdf8] border border-[#0284c7]/40">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#38bdf8]"></span>
                   Rencana Anggaran Biaya (RAB) Siap Dihitung
                 </span>
                 <div class="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
@@ -279,7 +279,7 @@ export default function EstimationCalculator() {
 
               <button
                 type="submit"
-                class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs sm:text-sm transition-all shadow-xs shrink-0 select-none cursor-pointer"
+                class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#0284c7] hover:bg-[#0369a1] text-white font-semibold text-xs sm:text-sm transition-all shadow-xs shrink-0 select-none cursor-pointer"
               >
                 <svg class="w-4 h-4 text-white shrink-0" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2z"/>
@@ -299,7 +299,7 @@ export default function EstimationCalculator() {
               </div>
               <div class="space-y-0.5">
                 <span class="text-zinc-500 text-[11px] block">Dukungan Aplikator</span>
-                <span class="font-medium text-emerald-400 text-xs">Konsultasi langsung tim fabrikasi</span>
+                <span class="font-medium text-sky-400 text-xs">Konsultasi langsung tim fabrikasi</span>
               </div>
             </div>
           </div>
