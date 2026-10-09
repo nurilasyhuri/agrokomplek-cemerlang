@@ -2,7 +2,7 @@
 title: 'Jasa Pembuatan Greenhouse Melon Hidroponik: Standar Konstruksi & Estimasi Biaya'
 description: 'Panduan lengkap jasa pembuatan greenhouse melon hidroponik modern. Rancang bangun ventilasi tropis, atap plastik UV 200 mikron, beban gantung melon, dan rincian RAB per m2.'
 publishDate: '3 Oktober 2026'
-author: 'Tim Ahli Agro Prima Greenhouse'
+author: 'Tim Ahli Agrokomplek Cemerlang'
 category: 'Konstruksi & Budidaya'
 tags: ['Greenhouse Melon', 'Melon Hidroponik', 'Jasa Pembuatan Greenhouse', 'Biaya Greenhouse Melon', 'Greenhouse Galvanis']
 heroImage: '/images/greenhouse/instalasi-hidroponik.webp'
@@ -13,7 +13,7 @@ Budidaya melon hidroponik premium seperti varietas **Inthanon, Golden Aroma, Fuj
 
 Melon adalah komoditas dengan nilai investasi tinggi yang sangat sensitif terhadap kelembapan berlebih, serangan hama mikro seperti kutu kebul (*Bemisia tabaci*) pembawa virus Gemini, serta terpaan hawa panas di siang hari.
 
-Sebagai kontraktor spesialis [jasa pembuatan greenhouse](/jasa/pembuatan-greenhouse/) yang berbasis di Malang dan berpengalaman menangani instalasi ke berbagai penjuru nusantara, **Agro Prima Greenhouse** merangkum panduan teknis rekayasa greenhouse melon modern siap pakai berikut ini.
+Sebagai kontraktor spesialis [jasa pembuatan greenhouse](/jasa/pembuatan-greenhouse/) yang berbasis di Malang dan berpengalaman menangani instalasi ke berbagai penjuru nusantara, **Agrokomplek Cemerlang** merangkum panduan teknis rekayasa greenhouse melon modern siap pakai berikut ini.
 
 
 ## 1. Tantangan Spesifik Konstruksi Greenhouse Melon Tropis
@@ -29,11 +29,11 @@ Pada sistem budidaya melon hidroponik substrat (*fertigasi dutch bucket* atau po
 Suhu ideal untuk pembentukan jaring melon adalah 28°C – 33°C. Di iklim tropis Indonesia, suhu di dalam greenhouse tertutup tanpa sistem sirkulasi udara yang tepat dapat melonjak drastis hingga 42°C. Suhu ekstrem ini memicu kerontokan bunga, buah pecah (*cracking*), dan tanaman gagal menyerbuk.
 
 
-## 2. Standar Wajib Rekayasa Greenhouse Melon Agro Prima
+## 2. Standar Wajib Rekayasa Greenhouse Melon Agrokomplek Cemerlang
 
 Untuk memastikan tanaman melon tumbuh optimal dan menghasilkan laba komersial maksimal, kami menerapkan 5 standar baku rekayasa tropis:
 
-| Parameter Rekayasa | Standar Teknis Agro Prima | Manfaat untuk Tanaman Melon |
+| Parameter Rekayasa | Standar Teknis Agrokomplek Cemerlang | Manfaat untuk Tanaman Melon |
 | :--- | :--- | :--- |
 | **Tinggi Kolom Tiang** | 3,8 meter – 4,5 meter ke talang air | Volume udara dalam kubah luas, udara panas terkumpul jauh di atas tajuk daun |
 | **Sistem Ventilasi Atap** | *Monitor Roof* (Bukaan Atap Chimney 80 – 120 cm) | Membuang udara panas secara pasif melalui efek cerobong tanpa membebani listrik |
@@ -45,7 +45,7 @@ Untuk memastikan tanaman melon tumbuh optimal dan menghasilkan laba komersial ma
 
 ## 3. Integrasi Sistem Fertigasi Tetes & Smart Farming
 
-Greenhouse melon modern tidak lengkap tanpa sistem irigasi nutrisi otomatis. Agro Prima Greenhouse mengintegrasikan:
+Greenhouse melon modern tidak lengkap tanpa sistem irigasi nutrisi otomatis. Agrokomplek Cemerlang mengintegrasikan:
 1. **[Selang Drip Irigasi 16mm](/produk/selang-drip-irigasi-16mm/) & Stick Dripper Presisi:** Mendistribusikan larutan hara AB Mix secara akurat ke setiap pot tanaman melon dengan debit terukur 2 liter/jam per tanaman.
 2. **[Mulsa Plastik Hitam Perak (MPHP)](/produk/mulsa-plastik-hitam-perak/):** Melapisi lantai tanam untuk mencegah gulma, menjaga suhu tanah perakaran, dan memantulkan sinar matahari ke bagian bawah kanopi daun.
 3. **[Smart Farming IoT & Sensor Mikroklimat](/produk/smart-farming-iot-greenhouse/):** Kontroler otomatis berbasis sensor suhu, kelembapan (RH), dan timer pompa fertigasi yang dapat dipantau langsung dari layar smartphone Anda.
@@ -76,6 +76,6 @@ Kami tidak sekadar menjual rancangan di atas kertas. Kualitas pengerjaan tim kam
 Memulai proyek greenhouse melon komersial memerlukan perencanaan matang sejak survei topografi lahan, orientasi arah matahari, hingga perhitungan debit air baku.
 
 Jika Anda berencana membangun greenhouse melon di wilayah Jawa Timur maupun daerah lain di seluruh Indonesia:
-1. Hubungi tim teknis **Agro Prima Greenhouse** via WhatsApp di **0851-8300-2070**.
+1. Hubungi tim teknis **Agrokomplek Cemerlang** via WhatsApp di **0851-8300-2070**.
 2. Kirimkan data ukuran lahan dan target kapasitas tanaman yang diinginkan.
 3. Dapatkan desain sketsa teknis dan lembar **Rencana Anggaran Biaya (RAB) transparan tanpa komitmen tersembunyi**.

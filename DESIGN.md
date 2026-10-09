@@ -1,17 +1,16 @@
-# Design System Specification & UI/UX Audit — Agro Prima Greenhouse
+# Design System Specification & UI/UX Audit — Agrokomplek Cemerlang
 
-> Canonical design system, visual tokens, UI/UX architecture, and component guidelines for **Agro Prima Greenhouse** (`agroprimagreenhouse.com`).
-> Built for Astro v5, Tailwind CSS, Preact Islands, and edge delivery.
+> Canonical design system, visual tokens, UI/UX architecture, and component guidelines for **Agrokomplek Cemerlang**.
+> Built for Astro v5, Tailwind CSS, Preact Islands, and Cloudflare Pages edge delivery.
 
 ---
 
 ## 1. Design Read & Operating Profile
 
-- **Design Read:** High-trust commercial greenhouse contractor & agritech engineering web platform; Service Contractor + Material Supply mode; aesthetic family: **Industrial Steel Navy & Sky Glass Blue Design System** (crisp engineering contrast, pristine slate ground `#f8fafc`, deep steel navy `#0b1e36`, reflective sky glass blue `#0284c7` / `#38bdf8` accents representing UV plastic & glass transparency, solar amber `#f59e0b` for high-intent RAB CTAs, crisp 1px structural hairlines, and authentic greenhouse structural photography).
-- **Core Business Positioning:**
-  1. **Kontraktor Spesialis Greenhouse Nasional (Seluruh Indonesia):** Spesialis rancang bangun konstruksi greenhouse (Pipa Galvanis Hot-Dip, Baja Ringan, Bambu Presisi, Tunnel Garam, Smart Farming & Otomasi IoT) dengan kalkulasi iklim tropis, estimasi RAB transparan, dan tim aplikator ke lokasi proyek.
-  2. **Penyedia Material Konstruksi Greenhouse:** Penjualan langsung material berkualitas (Plastik UV 200 mikron 14%, Paranet Shading Net 65%-85%, Insect Net 50 Mesh, Spring Clip Kanal C, Selang Drip Irigasi 16mm).
-  *Catatan Penting:* Entitas ini terpisah dari retail saprodi umum (Agrokomplek Cemerlang). Seluruh fokus visual, copy, dan konversi ditujukan eksklusif untuk **Agro Prima Greenhouse**.
+- **Design Read:** High-trust commercial agritech web platform for Indonesian farmers, agricultural cooperatives, and commercial agribusiness investors; Storefront + Service Contractor mode; aesthetic family: **Madian Agritech Design System** (grounded, technical, clean unbleached paper structure, deep forest canopy green, earthy terracotta ochre accents, crisp 1px structural hairlines, and authentic agricultural imagery).
+- **Dual Business Positioning:**
+  1. **Toko Fisik & Gudang Lokal (Malang):** Penjualan retail/grosir saprodi pertanian (pupuk, media tanam, mulsa, sprayer, benih) dengan alamat fisik valid di Kedungkandang, rute Maps jelas, dan stok siap ambil/kirim.
+  2. **Kontraktor Greenhouse Nasional (Seluruh Indonesia):** Spesialis rancang bangun konstruksi greenhouse (Pipa Galvanis Hot-Dip, Bambu Presisi, Baja Ringan, Tunnel Garam) dengan perhitungan iklim tropis, estimasi RAB transparan, dan tim aplikator ke lokasi proyek.
 
 ### Three Dials Configuration
 | Dial | Level (1-10) | Rationale |
@@ -24,33 +23,28 @@
 
 ## 2. Color Palette & Design Tokens
 
-### 2.1 Color Spectrum (Industrial Steel Navy & Sky Glass Blue)
+### 2.1 Color Spectrum (Madian Agritech)
 
 ```text
-[Surface Canvas] #f8fafc ── Cool pristine canvas (clean engineering ground)
-[Surface Card]   #ffffff ── High-contrast pure white content tile
-[Surface Subtle] #f0f9ff ── Sky blue inset container & metadata panel
-[Surface Border] #e2e8f0 ── Crisp 1px structural hairline (slate-200)
-[Border Dark]    #cbd5e1 ── High-contrast dividing line for active states
+[Surface Canvas] #f7f6f2 ── Warm unbleached natural agricultural ground
+[Surface Card]   #ffffff ── High-contrast clean white content tile
+[Surface Subtle] #efece4 ── Technical inset container & metadata panel
+[Surface Border] #dcd9d0 ── Crisp 1px structural hairline
+[Border Dark]    #b5b2a6 ── High-contrast dividing line for active states
 
-[Ink Primary]    #09090b ── High-contrast dark carbon ink (WCAG AAA > 12:1)
-[Ink Secondary]  #475569 ── Readable body text (WCAG AA > 7:1)
-[Ink Muted]      #64748b ── Technical metadata & labels (WCAG AA > 4.5:1)
+[Ink Primary]    #111713 ── Deep carbon-forest ink (WCAG AAA > 12:1)
+[Ink Secondary]  #364239 ── Readable body text (WCAG AA > 6.5:1)
+[Ink Muted]      #637066 ── Technical metadata & labels (WCAG AA > 4.5:1)
 [Ink Inverse]    #ffffff ── Pure white on dark buttons/chips
 
-[Primary / Steel Navy]  #0b1e36 ── Deep Structural Navy (Headers, structural frames, authority)
-[Primary Hover]         #081628 ── Pressed / hover deep navy
-[Deep Container]        #071322 ── Rich dark container for hero, cards, and editorial highlights
-[Deepest Foundation]    #050e1a ── Deepest navy for announcement bar & footer
+[Agri 700]       #165334 ── Official brand deep forest canopy green (Primary)
+[Agri 800]       #0f3c25 ── Pressed / hover deep green
+[Agri 50]        #eef5f0 ── Soft agricultural green tint for active tags
+[Agri 100]       #d7e8db ── Border highlight & selection accent
 
-[Secondary / Sky Glass] #0284c7 ── Sky Glass Blue (Reflective sky on UV plastic/glass, active tabs, buttons)
-[Glass Highlight]       #38bdf8 ── Bright sky cyan for icons, border accents, and active indicators
-[Glass Tint 50]         #f0f9ff ── Ultra-light clean sky tint for tags & badges
-[Glass Border 200]      #bae6fd ── Soft sky blue border highlight & text selection accent
-
-[Accent Amber 500]      #f59e0b ── Solar Amber (RAB simulation button & high-intent CTAs)
-[Accent Amber 600]      #d97706 ── Pressed amber state
-[Accent Amber 50]       #fffbeb ── Light amber notification surface
+[Ochre 700]      #a34e0f ── Earth terracotta amber (Secondary accent for quotes/RAB)
+[Ochre 800]      #873d08 ── Pressed ochre state
+[Ochre 50]       #fbf4ed ── Light amber notification surface
 ```
 
 ### 2.2 Typography Scale

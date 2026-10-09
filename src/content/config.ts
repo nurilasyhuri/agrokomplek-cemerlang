@@ -48,7 +48,7 @@ const artikelCollection = defineCollection({
     description: z.string(),
     publishDate: z.string(),
     updatedDate: z.string().optional(),
-    author: z.string().default('Tim Ahli Agro Prima Greenhouse'),
+    author: z.string().default('Tim Ahli Agrokomplek Cemerlang'),
     category: z.string(),
     tags: z.array(z.string()),
     heroImage: z.string(),

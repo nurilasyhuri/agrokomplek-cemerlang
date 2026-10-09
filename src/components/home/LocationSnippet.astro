@@ -2,45 +2,45 @@
 import { BUSINESS_INFO } from '../../data/businessInfo';
 ---
 
-<section class="py-16 lg:py-24 bg-white border-b border-zinc-200/80">
+<section class="py-16 lg:py-24 bg-[#efebe2] border-b border-[#dedad0]">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
       
       <!-- Text details -->
       <div class="lg:col-span-6 space-y-6">
         <div>
-          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-sky-50 text-sky-700 border border-sky-200/60 mb-3">
-            <span class="w-1.5 h-1.5 rounded-full bg-[#0284c7]"></span>
-            Kantor &amp; Workshop Greenhouse Malang
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#e4e5da] text-[#1b2819] border border-[#dedad0] mb-3 shadow-2xs">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#064e3b]"></span>
+            Toko Fisik &amp; Gudang Saprodi Malang
           </div>
-          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-zinc-900 tracking-tight leading-[1.15]">
-            Kunjungi Workshop &amp; Kantor Agro Prima Greenhouse Malang
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1b2819] tracking-tight leading-[1.15]">
+            Kunjungi Toko &amp; Gudang Agrokomplek Cemerlang Malang
           </h2>
-          <p class="text-sm sm:text-base text-zinc-600 mt-3 leading-relaxed">
-            Pusat konsultasi rancang bangun greenhouse, pengecekan sampel material pipa galvanis, baja ringan, plastik UV 200 mikron, paranet, dan kuncian spring clip di Kedungkandang, Kota Malang. Terbuka bagi pengusaha agribisnis, kelompok tani, instansi, dan umum.
+          <p class="text-sm sm:text-base text-[#485245] mt-3 leading-relaxed">
+            Pusat penjualan sarana produksi pertanian, pengecekan sampel fisik plastik UV 200 mikron, paranet, selang drip, pupuk, serta konsultasi rancang bangun greenhouse di Kedungkandang, Kota Malang. Terbuka bagi petani, pekebun, kelompok tani, dan umum.
           </p>
         </div>
 
-        <div class="space-y-3 text-xs sm:text-sm text-zinc-600">
-          <div class="flex items-start gap-3.5 p-5 rounded-xl bg-zinc-50/70 border border-zinc-200/80">
-            <svg class="w-5 h-5 text-sky-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="space-y-3 text-xs sm:text-sm text-[#485245]">
+          <div class="flex items-start gap-3.5 p-5 rounded-xl bg-white border border-[#dedad0]">
+            <svg class="w-5 h-5 text-[#064e3b] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
             </svg>
             <div>
-              <span class="font-bold text-zinc-900 block text-xs uppercase tracking-wider text-zinc-500">Alamat Kantor &amp; Workshop</span>
-              <span class="text-zinc-700 mt-1 block leading-relaxed">{BUSINESS_INFO.address.fullFormatted}</span>
+              <span class="font-bold text-[#1b2819] block text-xs uppercase tracking-wider text-[#767e73]">Alamat Kantor &amp; Workshop</span>
+              <span class="text-[#1b2819] mt-1 block leading-relaxed">{BUSINESS_INFO.address.fullFormatted}</span>
             </div>
           </div>
 
-          <div class="flex items-start gap-3.5 p-5 rounded-xl bg-zinc-50/70 border border-zinc-200/80">
-            <svg class="w-5 h-5 text-sky-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div class="flex items-start gap-3.5 p-5 rounded-xl bg-white border border-[#dedad0]">
+            <svg class="w-5 h-5 text-[#064e3b] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
             </svg>
             <div class="space-y-1">
-              <span class="font-bold text-zinc-900 block text-xs uppercase tracking-wider text-zinc-500">Jam Layanan &amp; Konsultasi</span>
-              <p class="text-zinc-900 font-semibold text-xs sm:text-sm">{BUSINESS_INFO.hours.physicalStore}</p>
-              <p class="text-zinc-500 text-xs">Konsultasi WhatsApp &amp; Estimasi RAB: 24 Jam Nonstop</p>
+              <span class="font-bold text-[#1b2819] block text-xs uppercase tracking-wider text-[#767e73]">Jam Layanan &amp; Konsultasi</span>
+              <p class="text-[#1b2819] font-semibold text-xs sm:text-sm">{BUSINESS_INFO.hours.physicalStore}</p>
+              <p class="text-[#767e73] text-xs">Konsultasi WhatsApp &amp; Estimasi RAB: 24 Jam Nonstop</p>
             </div>
           </div>
         </div>
@@ -50,7 +50,7 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
             href={BUSINESS_INFO.geo.mapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#0284c7] hover:bg-[#0369a1] text-white font-semibold text-sm transition-all shadow-sm select-none"
+            class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#064e3b] hover:bg-[#047857] text-[#edeae1] font-semibold text-sm transition-all shadow-sm select-none"
           >
             <span>Buka Rute Google Maps</span>
             <span aria-hidden="true">&rarr;</span>
@@ -58,7 +58,7 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
 
           <a
             href="/lokasi/"
-            class="inline-flex items-center gap-1.5 px-7 py-3.5 rounded-full border border-zinc-200 bg-white hover:bg-zinc-50 text-zinc-900 font-semibold text-sm transition-all shadow-xs select-none"
+            class="inline-flex items-center gap-1.5 px-7 py-3.5 rounded-full border border-[#dedad0] bg-white hover:bg-[#e4e5da] text-[#1b2819] font-semibold text-sm transition-all shadow-xs select-none"
           >
             <span>Detail Panduan Lokasi</span>
           </a>
@@ -67,7 +67,7 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
 
       <!-- Google Maps Embed Container -->
       <div class="lg:col-span-6">
-        <div class="rounded-2xl overflow-hidden border border-zinc-200/80 bg-zinc-100 aspect-[4/3] relative shadow-sm">
+        <div class="rounded-2xl overflow-hidden border border-[#dedad0] bg-[#e4e5da] aspect-[4/3] relative shadow-sm">
           <iframe
             src="https://maps.google.com/maps?q=-7.9984,112.6456&z=15&output=embed"
             width="100%"
@@ -76,7 +76,7 @@ import { BUSINESS_INFO } from '../../data/businessInfo';
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="Peta Lokasi Agro Prima Greenhouse Malang"
+            title="Peta Lokasi Agrokomplek Cemerlang Malang"
           ></iframe>
         </div>
       </div>

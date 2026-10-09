@@ -20,17 +20,17 @@ function calculateReadingTime(text: string | undefined): string {
 const categories = ['Semua', ...Array.from(new Set(sortedArticles.map((a) => a.data.category)))];
 
 const breadcrumbSchema = getBreadcrumbSchema([
-  { name: 'Beranda', url: 'https://agroprimagreenhouse.com/' },
-  { name: 'Artikel & Panduan', url: 'https://agroprimagreenhouse.com/artikel/' },
+  { name: 'Beranda', url: 'https://agrokomplekcemerlang.com/' },
+  { name: 'Artikel & Panduan', url: 'https://agrokomplekcemerlang.com/artikel/' },
 ]);
 
 const collectionSchema = getCollectionPageSchema({
   name: 'Panduan Pertanian, Konstruksi Greenhouse & Irigasi',
   description: 'Artikel teknis praktisi agribisnis: estimasi biaya pembuatan greenhouse, perbandingan plastik UV vs paranet, konstruksi tunnel garam, dan instalasi fertigasi tetes.',
-  url: 'https://agroprimagreenhouse.com/artikel/',
+  url: 'https://agrokomplekcemerlang.com/artikel/',
   items: sortedArticles.map((art) => ({
     name: art.data.title,
-    url: `https://agroprimagreenhouse.com/artikel/${art.slug}/`,
+    url: `https://agrokomplekcemerlang.com/artikel/${art.slug}/`,
     description: art.data.description,
   })),
 });
@@ -42,12 +42,12 @@ const articleListKeywords = [
   'konstruksi tunnel garam',
   'plastik uv vs paranet',
   'artikel pertanian modern',
-  'agro prima greenhouse',
+  'agrokomplek cemerlang',
 ];
 ---
 
 <BaseLayout
-  title="Panduan Pertanian, Konstruksi Greenhouse &amp; Irigasi - Agro Prima Greenhouse"
+  title="Panduan Pertanian, Konstruksi Greenhouse &amp; Irigasi - Agrokomplek Cemerlang"
   description="Kumpulan panduan teknis agribisnis: estimasi RAB greenhouse, perbandingan plastik UV vs paranet, manajemen ventilasi, &amp; teknik irigasi tetes tropis di Indonesia."
   keywords={articleListKeywords}
   jsonLd={[collectionSchema, breadcrumbSchema]}
@@ -55,16 +55,16 @@ const articleListKeywords = [
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-28">
     <Breadcrumb items={[{ label: 'Artikel & Panduan' }]} />
 
-    <!-- Editorial Header (Medium Publication Style) -->
+      <!-- Editorial Header (Medium Publication Style) -->
     <header class="pt-8 pb-10 space-y-4">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-sky-50 text-sky-800">
-        <span class="w-1.5 h-1.5 rounded-full bg-[#0284c7]"></span>
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#e4e5da] text-[#213420] border border-[#dedad0]">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#213420]"></span>
         Jurnal &amp; Panduan Praktisi
       </div>
-      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-zinc-900 tracking-tight leading-[1.15]">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1b2819] tracking-tight leading-[1.15]">
         Wawasan Lapangan, Konstruksi Greenhouse &amp; Irigasi
       </h1>
-      <p class="text-base sm:text-lg text-zinc-600 font-normal leading-relaxed max-w-2xl">
+      <p class="text-base sm:text-lg text-[#485245] font-normal leading-relaxed max-w-2xl">
         Kumpulan panduan teknis berbasis pengalaman lapangan untuk membantu Anda mengambil keputusan tepat dalam pemilihan material dan pembangunan fasilitas greenhouse modern di Indonesia.
       </p>
 
@@ -76,8 +76,8 @@ const articleListKeywords = [
             data-category-btn={cat}
             class={`category-tab px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all shrink-0 select-none ${
               idx === 0
-                ? 'bg-[#0284c7] text-white shadow-sm active-tab'
-                : 'bg-zinc-100 text-zinc-600 hover:bg-zinc-200 hover:text-zinc-900'
+                ? 'bg-[#064e3b] text-[#efebe2] shadow-sm active-tab'
+                : 'bg-[#e4e5da] text-[#485245] hover:bg-[#dedad0] hover:text-[#1b2819]'
             }`}
           >
             {cat}
@@ -95,27 +95,27 @@ const articleListKeywords = [
         return (
           <article
             data-category={art.data.category}
-            class="article-item group p-4 sm:p-6 -mx-4 sm:-mx-6 rounded-2xl hover:bg-zinc-50/90 transition-all duration-200"
+            class="article-item group p-4 sm:p-6 -mx-4 sm:-mx-6 rounded-2xl bg-white/70 hover:bg-white border border-transparent hover:border-[#dedad0] hover:shadow-sm transition-all duration-200"
           >
             <div class="flex flex-col-reverse sm:flex-row items-start sm:items-center justify-between gap-6 sm:gap-8">
               <!-- Left / Main Text Column -->
               <div class="flex-1 min-w-0 space-y-2.5">
                 <!-- Author & Date Header -->
-                <div class="flex items-center gap-2.5 text-xs text-zinc-500">
-                  <div class="w-6 h-6 rounded-full bg-[#0284c7] text-white flex items-center justify-center font-bold text-[10px] shrink-0">
-                    AP
+                <div class="flex items-center gap-2.5 text-xs text-[#717b6e]">
+                  <div class="w-6 h-6 rounded-full bg-[#064e3b] text-[#efebe2] flex items-center justify-center font-bold text-[10px] shrink-0">
+                    AC
                   </div>
-                  <span class="font-medium text-zinc-800">{art.data.author}</span>
-                  <span class="text-zinc-300">&bull;</span>
+                  <span class="font-medium text-[#1b2819]">{art.data.author}</span>
+                  <span class="text-[#dedad0]">&bull;</span>
                   <span>{art.data.publishDate}</span>
                 </div>
 
                 <!-- Title & Excerpt -->
                 <a href={`/artikel/${art.slug}/`} class="block group">
-                  <h2 class="text-lg sm:text-xl md:text-2xl font-bold text-zinc-900 group-hover:text-sky-600 transition-colors tracking-tight leading-snug">
+                  <h2 class="text-lg sm:text-xl md:text-2xl font-bold text-[#1b2819] group-hover:text-[#213420] transition-colors tracking-tight leading-snug">
                     {art.data.title}
                   </h2>
-                  <p class="text-sm sm:text-base text-zinc-600 line-clamp-2 leading-relaxed mt-2 font-normal">
+                  <p class="text-sm sm:text-base text-[#485245] line-clamp-2 leading-relaxed mt-2 font-normal">
                     {art.data.description}
                   </p>
                 </a>
@@ -123,17 +123,17 @@ const articleListKeywords = [
                 <!-- Meta Footer -->
                 <div class="flex items-center justify-between pt-2">
                   <div class="flex items-center gap-3">
-                    <span class="inline-block text-xs font-medium px-3 py-1 rounded-full bg-zinc-100 text-zinc-700 group-hover:bg-sky-50 group-hover:text-sky-800 transition-colors">
+                    <span class="inline-block text-xs font-medium px-3 py-1 rounded-full bg-[#e4e5da] text-[#213420] group-hover:bg-[#dedad0] transition-colors">
                       {art.data.category}
                     </span>
-                    <span class="text-xs text-zinc-400 font-medium">
+                    <span class="text-xs text-[#717b6e] font-medium">
                       {readTime}
                     </span>
                   </div>
 
                   <a
                     href={`/artikel/${art.slug}/`}
-                    class="text-xs font-semibold text-sky-600 hover:text-sky-700 inline-flex items-center gap-1 group-hover:translate-x-1 transition-all"
+                    class="text-xs font-semibold text-[#213420] hover:text-[#141d13] inline-flex items-center gap-1 group-hover:translate-x-1 transition-all"
                   >
                     <span>Baca</span>
                     <span aria-hidden="true">&rarr;</span>
@@ -144,7 +144,7 @@ const articleListKeywords = [
               <!-- Right / Thumbnail Column -->
               <a
                 href={`/artikel/${art.slug}/`}
-                class="w-full sm:w-44 md:w-52 lg:w-60 aspect-[16/10] sm:aspect-[4/3] rounded-xl overflow-hidden bg-zinc-100 shrink-0 block"
+                class="w-full sm:w-44 md:w-52 lg:w-60 aspect-[16/10] sm:aspect-[4/3] rounded-xl overflow-hidden bg-[#e4e5da] shrink-0 block border border-[#dedad0]/60"
               >
                 <img
                   src={art.data.heroImage}
@@ -164,11 +164,11 @@ const articleListKeywords = [
 
     <!-- Empty State for Filter -->
     <div id="empty-state" class="hidden text-center py-16 space-y-3">
-      <p class="text-base text-zinc-500 font-medium">Tidak ada artikel di kategori ini saat ini.</p>
+      <p class="text-base text-[#485245] font-medium">Tidak ada artikel di kategori ini saat ini.</p>
       <button
         type="button"
         id="reset-filter-btn"
-        class="text-xs font-semibold text-sky-600 hover:text-sky-700 underline underline-offset-4"
+        class="text-xs font-semibold text-[#213420] hover:text-[#141d13] underline underline-offset-4"
       >
         Tampilkan semua artikel
       </button>
@@ -189,11 +189,11 @@ const articleListKeywords = [
       buttons.forEach((b) => {
         const isActive = b.dataset.categoryBtn === category;
         if (isActive) {
-          b.classList.add('bg-[#0284c7]', 'text-white', 'shadow-sm', 'active-tab');
-          b.classList.remove('bg-zinc-100', 'text-zinc-600');
+          b.classList.add('bg-[#064e3b]', 'text-[#efebe2]', 'shadow-sm', 'active-tab');
+          b.classList.remove('bg-[#e4e5da]', 'text-[#485245]', 'hover:bg-[#dedad0]', 'hover:text-[#1b2819]');
         } else {
-          b.classList.remove('bg-[#0284c7]', 'text-white', 'shadow-sm', 'active-tab');
-          b.classList.add('bg-zinc-100', 'text-zinc-600');
+          b.classList.remove('bg-[#064e3b]', 'text-[#efebe2]', 'shadow-sm', 'active-tab');
+          b.classList.add('bg-[#e4e5da]', 'text-[#485245]', 'hover:bg-[#dedad0]', 'hover:text-[#1b2819]');
         }
       });
 

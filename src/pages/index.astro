@@ -3,13 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import HeroSection from '../components/home/HeroSection.astro';
 import TrustBar from '../components/home/TrustBar.astro';
 import CategoryGrid from '../components/home/CategoryGrid.astro';
-import ValueHighlights from '../components/home/ValueHighlights.astro';
-import GreenhouseServiceHighlight from '../components/home/GreenhouseServiceHighlight.astro';
 import DualPathChooser from '../components/home/DualPathChooser.astro';
-import CustomerReviews from '../components/home/CustomerReviews.astro';
-import NationwideCoverage from '../components/home/NationwideCoverage.astro';
-import HomeBlogSection from '../components/home/HomeBlogSection.astro';
-import CtaBanner from '../components/home/CtaBanner.astro';
+import GreenhouseServiceHighlight from '../components/home/GreenhouseServiceHighlight.astro';
+import HomeContactSection from '../components/home/HomeContactSection.astro';
 import { getLocalBusinessSchema, getWebsiteSchema } from '../utils/seo';
 
 const localSchema = getLocalBusinessSchema();
@@ -17,52 +13,39 @@ const websiteSchema = getWebsiteSchema();
 
 const homeKeywords = [
   'jasa pembuatan greenhouse',
-  'kontraktor greenhouse',
-  'pembuatan greenhouse malang',
-  'biaya pembuatan greenhouse per m2',
-  'greenhouse pipa galvanis',
+  'supplier perlengkapan greenhouse',
+  'toko saprodi pertanian malang',
+  'paket pembuatan greenhouse siap tanam',
+  'jual plastik uv greenhouse 200 mikron',
+  'jual paranet tanaman malang',
+  'jasa pembuatan tunnel garam',
   'greenhouse baja ringan',
-  'greenhouse bambu',
-  'tunnel garam',
-  'rab greenhouse',
-  'agro prima greenhouse',
+  'greenhouse bambu awet',
+  'agrokomplek cemerlang',
 ];
 ---
 
 <BaseLayout
-  title="Jasa Pembuatan Greenhouse &amp; Kontraktor Konstruksi - Agro Prima Greenhouse"
-  description="Kontraktor spesialis jasa pembuatan greenhouse (galvanis, baja ringan, bambu, tunnel garam) di Malang. Melayani survei lahan, desain teknis, estimasi RAB transparan, &amp; instalasi se-Indonesia."
+  title="Pusat Perlengkapan Pertanian dan Jasa Greenhouse - Agrokomplek Cemerlang"
+  description="Toko saprodi pertanian terlengkap dan jasa pembuatan greenhouse siap tanam di Malang. Melayani pengiriman material dan instalasi ke seluruh Indonesia."
   keywords={homeKeywords}
   jsonLd={[localSchema, websiteSchema]}
 >
-  <!-- 1. Hero Banner (5-Slide Greenhouse Showcase Slider) -->
+  <!-- 1. Hero Showcase -->
   <HeroSection />
 
-  <!-- 2. Trust Strip (Contractor Quality Highlights) -->
+  <!-- 2. Keunggulan Toko & Workshop -->
   <TrustBar />
 
-  <!-- 3. Pilihan Tipe Konstruksi Greenhouse (4 Core Types Grid) -->
+  <!-- 3. Katalog Produk & Material Pertanian -->
   <CategoryGrid />
 
-  <!-- 4. Jasa Pembuatan Greenhouse (Technical Services & Types) -->
-  <GreenhouseServiceHighlight />
-
-  <!-- 5. Mengapa Memilih Agro Prima Greenhouse? (5 Core Pillars) -->
-  <ValueHighlights />
-
-  <!-- 6. Melayani Pengiriman & Instalasi Greenhouse ke Seluruh Indonesia -->
-  <NationwideCoverage />
-
-  <!-- 7. Pilihan Kebutuhan Proyek: Material Rangka atau Bangun Terima Jadi? -->
+  <!-- 4. Pilihan Kebutuhan Pertanian: Beli Material atau Bangun Siap Tanam -->
   <DualPathChooser />
 
-  <!-- 8. Customer Reviews & Social Proof -->
-  <CustomerReviews />
+  <!-- 5. Layanan Konstruksi Greenhouse & Estimasi RAB -->
+  <GreenhouseServiceHighlight />
 
-  <!-- 9. Panduan Konstruksi & Greenhouse (From the Blog) -->
-  <HomeBlogSection />
-
-  <!-- 10. Konsultasikan Rancang Bangun Greenhouse Anda (WhatsApp CTA) -->
-  <CtaBanner />
-
+  <!-- 6. Kontak Resmi & Workshop Malang -->
+  <HomeContactSection />
 </BaseLayout>

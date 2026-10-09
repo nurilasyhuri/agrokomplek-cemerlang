@@ -4,114 +4,70 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Industrial Steel Navy & Sky Glass Blue Palette
-        // Primary: Deep Steel Navy (#0B1E36)
-        // Secondary / Glass: Sky Glass Blue (#0284C7 / #38BDF8)
-        // Accent: Solar Amber (#F59E0B)
-        navy: {
-          50: '#f0f7ff',
-          100: '#e0effe',
-          200: '#bae0fd',
-          300: '#7cc5fb',
-          400: '#38a8f8',
-          500: '#0284c7', // Sky Glass Blue
-          600: '#0369a1',
-          700: '#0b1e36', // Core Deep Steel Navy
-          800: '#081628', // Pressed Deep Navy
-          900: '#050e1a', // Deepest Navy Ground
-          950: '#03080f',
-        },
-        forest: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0284c7',
-          600: '#0369a1',
-          700: '#0b1e36', // Core Steel Navy
-          800: '#081628',
-          900: '#050e1a',
-          950: '#03080f',
-        },
-        leaf: {
-          50: '#f0f9ff',  // Soft sky tint
-          100: '#e0f2fe', // Sky card / badge
-          200: '#bae6fd', // Sky glass border
-          300: '#7dd3fc',
-          400: '#38bdf8', // Bright sky glass on dark
-          500: '#0284c7', // Core Sky Glass Blue
-          600: '#0369a1', // Action sky blue
-          700: '#075985',
-          800: '#0c4a6e',
-          900: '#082f49',
-          950: '#041724',
-        },
-        sun: {
-          50: '#fffbeb',
-          100: '#fef3c7',
-          400: '#fbbf24',
-          500: '#f59e0b', // Solar Amber
-          600: '#d97706',
-        },
-        // Override Emerald so all existing components seamlessly use Pure Biru Muda (Sky Glass Blue)
-        emerald: {
-          50: '#f0f9ff',  // Soft sky tint background
-          100: '#e0f2fe', // Light sky badge/border bg
-          200: '#bae6fd', // Sky border highlight
-          300: '#7dd3fc', // Medium light sky
-          400: '#38bdf8', // Biru muda terang (bright sky on dark)
-          500: '#0ea5e9', // Biru muda cerah
-          600: '#0284c7', // TOMBOL UTAMA BIRU MUDA (Core Sky Glass Blue)
-          700: '#0284c7', // TULISAN TEKS BIRU MUDA (#0284C7)
-          800: '#0369a1', // Teks biru muda kontras tinggi (#0369A1)
-          900: '#0c4a6e', // Deep sky blue
-          950: '#082f49', // Darkest sky
-        },
-        // Direct semantic tokens
-        primary: '#0b1e36',
-        'primary-hover': '#081628',
-        dark: '#09090b',
-        muted: '#64748b',
-        secondary: '#f1f5f9',
-        border: '#e2e8f0',
-        bg: '#f8fafc',
-        peach: '#f0f9ff',
-        sand: '#f1f5f9',
-        // Modern Pristine Canvas & Card Structure (Steel & Glass architecture)
+        // Direct Tokens (Organic Botanical Earth - Reference: Earthly / Lounge Lizard)
+        primary: '#213420',          // Deep Botanical Forest Olive (Main brand & button)
+        'primary-hover': '#2d442c',  // Botanical hover
+        dark: '#141d13',             // Deepest botanical dark
+        muted: '#767e73',            // Earthy muted text
+        secondary: '#e4e5da',        // Soft sage-oat inset
+        border: '#dedad0',           // Warm organic hairline border
+        bg: '#efebe2',               // Warm natural linen / oat canvas
+        peach: '#f4f1ea',
+        sand: '#edeae1',
+        linen: '#f4f1ea',
+        // Modern Organic Canvas & Card Structure (Earthly sustainable aesthetic)
         surface: {
-          canvas: '#f8fafc',
-          card: '#ffffff',
-          subtle: '#f0f9ff',
-          border: '#e2e8f0',
-          'border-dark': '#cbd5e1',
+          canvas: '#efebe2',     // Earthly Warm Linen / Oat Canvas
+          card: '#ffffff',       // Pure white card
+          subtle: '#e4e5da',     // Soft sage-oat container
+          border: '#dedad0',     // Warm hairline divider
+          'border-dark': '#c8c3b7',
         },
-        // Modern Ink Hierarchy (Slate)
+        // Modern Botanical Ink Hierarchy
         ink: {
-          primary: '#0f172a',
-          secondary: '#334155',
-          muted: '#64748b',
-          inverse: '#ffffff',
+          primary: '#1b2819',    // Deep Botanical Dark Ink (Headlines)
+          secondary: '#485245',  // Readable botanical body copy
+          muted: '#767e73',      // Technical metadata
+          inverse: '#ffffff',    // Text on dark buttons
         },
-        // Brand Vibrant Agro Palette -> mapped to Steel Navy & Sky Glass
+        // Botanical Forest & Sage Spectrum (Agri Palette)
         agri: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          500: '#0284c7',
-          600: '#0369a1',
-          700: '#0b1e36',
-          800: '#081628',
-          900: '#050e1a',
-          950: '#03080f',
+          50: '#f5f6f4',
+          100: '#e5eae3',
+          200: '#ccd7c9',
+          300: '#a9bfa4',
+          400: '#7e9f78',
+          500: '#5a8053',
+          600: '#3f6239',
+          700: '#2d4729',
+          800: '#213420',        // Earthly Primary Signature
+          900: '#1b2a19',        // Earthly Dark Forest
+          950: '#141d13',        // Midnight Forest
         },
-        // Functional Accent Warm Amber / Sun
+        // Warm Organic Gold / Honey Accent
+        gold: {
+          50: '#fefce8',
+          100: '#fef9c3',
+          200: '#fef08a',
+          300: '#fde047',
+          400: '#eab308',
+          500: '#ca8a04',
+          600: '#a16207',
+          700: '#854d0e',
+          800: '#713f12',
+          900: '#422006',
+          metallic: '#c59b27',
+        },
         ochre: {
-          50: '#fffbeb',
-          100: '#fef3c7',
-          600: '#f59e0b',
-          700: '#d97706',
-          800: '#b45309',
+          50: '#fefce8',
+          100: '#fef9c3',
+          200: '#fef08a',
+          300: '#fde047',
+          400: '#eab308',
+          500: '#ca8a04',
+          600: '#a16207',
+          700: '#854d0e',
+          800: '#713f12',
         },
       },
       fontFamily: {

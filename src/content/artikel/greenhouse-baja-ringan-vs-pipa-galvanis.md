@@ -2,7 +2,7 @@
 title: 'Greenhouse Baja Ringan vs Pipa Galvanis: Perbandingan Biaya, Kekuatan & Umur Pakai'
 description: 'Bandingkan rangka greenhouse baja ringan vs pipa galvanis hot-dip. Analisis kekuatan beban angin tropis, risiko korosi, kecepatan pasang, dan efisiensi investasi jangka panjang.'
 publishDate: '3 Oktober 2026'
-author: 'Tim Ahli Agro Prima Greenhouse'
+author: 'Tim Ahli Agrokomplek Cemerlang'
 category: 'Panduan Konstruksi'
 tags: ['Greenhouse Baja Ringan', 'Greenhouse Galvanis', 'Rangka Greenhouse', 'Biaya Greenhouse', 'Kontraktor Greenhouse']
 heroImage: '/images/greenhouse/greenhouse-baja-ringan.webp'
@@ -13,7 +13,7 @@ Saat merencanakan pembangunan greenhouse pertanian modern, keputusan paling pent
 
 Masing-masing material memiliki karakteristik teknis, tingkat ketahanan beban, dan profil biaya yang berbeda. Memilih material yang keliru bukan hanya membuat anggaran membengkak, namun dapat berisiko fatal jika struktur gagal menahan terpaan angin badai tropis atau beban gantung tanaman.
 
-Sebagai kontraktor aplikator [jasa pembuatan greenhouse](/jasa/pembuatan-greenhouse/) berpengalaman di Indonesia, **Agro Prima Greenhouse** menyajikan perbandingan obyektif dan mendalam antara rangka baja ringan dan pipa galvanis.
+Sebagai kontraktor aplikator [jasa pembuatan greenhouse](/jasa/pembuatan-greenhouse/) berpengalaman di Indonesia, **Agrokomplek Cemerlang** menyajikan perbandingan obyektif dan mendalam antara rangka baja ringan dan pipa galvanis.
 
 
 ## 1. Tabel Perbandingan Head-to-Head: Baja Ringan vs Pipa Galvanis
@@ -76,7 +76,7 @@ Agar investasi Anda tepat sasaran, ikuti formula keputusan praktis berikut:
 
 ## 5. Hitung Estimasi Biaya Rangka Anda Sekarang
 
-Berapapun ukuran lahan Anda, tim ahli **Agro Prima Greenhouse** siap membantu menghitungkan kebutuhan material, spesifikasi bentang kubah yang aman, dan simulasi biaya secara transparan.
+Berapapun ukuran lahan Anda, tim ahli **Agrokomplek Cemerlang** siap membantu menghitungkan kebutuhan material, spesifikasi bentang kubah yang aman, dan simulasi biaya secara transparan.
 
 * Coba hitung simulasi anggaran Anda langsung menggunakan [Kalkulator RAB Greenhouse Online](/jasa/pembuatan-greenhouse/#kalkulator).
 * Diskusikan denah lahan Anda bersama konsultan kami via WhatsApp di **0851-8300-2070** untuk survei lokasi dan rancangan teknis terbaik.

@@ -7,7 +7,7 @@ priceDisplay: 'Konsultasi RAB Proyek'
 stockStatus: 'hubungi-kami'
 featured: true
 thumbnail: '/images/products/smart-farming-iot.webp'
-brand: 'Agro Prima Greenhouse'
+brand: 'Agrokomplek Cemerlang'
 orderPriority: 3
 variants:
   - name: 'Paket IoT Monitoring Iklim Mikro (Suhu, RH, VPD, Lux)'
@@ -41,7 +41,7 @@ specs:
   Garansi & Dukungan: 'Garansi Unit Kontroler 1 Tahun, Instalasi Lapangan & Training Operator'
 ---
 
-Sistem Smart Farming berbasis IoT (Internet of Things) dari Agro Prima Greenhouse dirancang khusus untuk pertanian presisi tropis di Indonesia. Perangkat kontroler ini menggabungkan pemantauan lingkungan iklim mikro (*microclimate monitoring*) secara realtime dengan otomasi penyiraman dan pemupukan (*fertigation dosing*) presisi tinggi langsung dari genggaman Anda.
+Sistem Smart Farming berbasis IoT (Internet of Things) dari Agrokomplek Cemerlang dirancang khusus untuk pertanian presisi tropis di Indonesia. Perangkat kontroler ini menggabungkan pemantauan lingkungan iklim mikro (*microclimate monitoring*) secara realtime dengan otomasi penyiraman dan pemupukan (*fertigation dosing*) presisi tinggi langsung dari genggaman Anda.
 
 Dengan sistem otomasi ini, greenhouse komersial mampu menekan konsumsi air dan pupuk hingga 40%, mencegah kegagalan panen akibat stres iklim, serta memangkas ketergantungan tenaga kerja manual secara signifikan.
 
@@ -66,6 +66,6 @@ Sistem kontroler IoT ini siap diintegrasikan pada berbagai metode budidaya moder
 3. **Komoditas Hortikultura Bernilai Tinggi (Cabai, Tomat Cherry, Paprika):** Monitoring kelembapan media tanam cocopeat/sekam bakar secara multi-titik.
 4. **Greenhouse Pembenihan (*Nursery*) & Tanaman Hias:** Kelembapan tinggi terkontrol menggunakan siklus kabut mikro otomatis.
 
-### Mengapa Memilih IoT dari Agro Prima Greenhouse?
+### Mengapa Memilih IoT dari Agrokomplek Cemerlang?
 
 Kami bukan sekadar perakit komponen elektronik; kami adalah praktisi manufaktur dan konstruksi greenhouse di lapangan. Kontroler kami dikemas dalam boks industrial tahan air dan debu (standar IP65), menggunakan kabel berlapis pelindung korosi pupuk kimia, serta telah teruji tahan terhadap fluktuasi cuaca ekstrem Indonesia. Layanan mencakup konsultasi desain kelistrikan & otomasi, perakitan panel, pemasangan sensor di lokasi, hingga bimbingan kalibrasi berkala bagi tim agronomis Anda.
