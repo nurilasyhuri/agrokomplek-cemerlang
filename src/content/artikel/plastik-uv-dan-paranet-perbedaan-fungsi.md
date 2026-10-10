@@ -1,6 +1,7 @@
 ---
 title: 'Plastik UV vs Paranet: Perbedaan Fungsi, Kerapatan & Cara Pasang'
-description: 'Pahami perbedaan fungsi plastik UV 14%-20% (200 mikron) & paranet shading net 65%-75% untuk perlindungan optimal greenhouse tanaman hortikultura tropis.'
+seoTitle: 'Perbedaan Plastik UV dan Paranet Tanaman'
+description: 'Pahami perbedaan fungsi plastik UV 14%-20% (200 mikron) dan paranet shading net 65%-75% untuk perlindungan optimal greenhouse hortikultura tropis.'
 publishDate: '1 September 2026'
 author: 'Tim Ahli Agrokomplek Cemerlang'
 category: 'Edukasi Produk'

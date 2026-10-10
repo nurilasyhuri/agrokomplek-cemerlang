@@ -1,5 +1,6 @@
 ---
 title: 'Konstruksi Tunnel Garam (Prisma Garam): Panduan Agribisnis Pesisir'
+seoTitle: 'Panduan Konstruksi Tunnel Prisma Garam'
 description: 'Teknologi greenhouse tunnel prisma garam memungkinkan panen garam kualitas industri bersih sepanjang tahun 365 hari tanpa terhenti musim hujan.'
 publishDate: '28 Agustus 2026'
 author: 'Tim Ahli Agrokomplek Cemerlang'

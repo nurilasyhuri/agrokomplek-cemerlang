@@ -1,6 +1,7 @@
 ---
 title: 'Jasa Pembuatan Greenhouse Melon Hidroponik: Standar Konstruksi & Estimasi Biaya'
-description: 'Panduan lengkap jasa pembuatan greenhouse melon hidroponik modern. Rancang bangun ventilasi tropis, atap plastik UV 200 mikron, beban gantung melon, dan rincian RAB per m2.'
+seoTitle: 'Greenhouse Melon Hidroponik dan Biayanya'
+description: 'Panduan teknis greenhouse melon hidroponik modern. Rancang bangun ventilasi tropis, plastik UV 200 mikron, beban gantung, dan estimasi RAB.'
 publishDate: '3 Oktober 2026'
 author: 'Tim Ahli Agrokomplek Cemerlang'
 category: 'Konstruksi & Budidaya'

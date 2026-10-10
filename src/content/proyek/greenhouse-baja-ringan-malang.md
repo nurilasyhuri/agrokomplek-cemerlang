@@ -1,5 +1,7 @@
 ---
 title: 'Pembangunan Greenhouse Baja Ringan Presisi 300 m² di Malang'
+seoTitle: 'Pembangunan Greenhouse Baja Ringan di Malang'
+description: 'Studi kasus pembangunan greenhouse baja ringan 300 m² di Malang. Dokumentasi instalasi rangka galvalume, plastik UV, dan hasil panen kebun.'
 clientType: 'komersial'
 greenhouseType: 'Greenhouse Baja Ringan'
 locationCity: 'Kabupaten Malang'

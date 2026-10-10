@@ -1,5 +1,7 @@
 ---
 title: 'Instalasi Greenhouse Bambu Petung Awet 240 m² di Kedungkandang Malang'
+seoTitle: 'Instalasi Greenhouse Bambu Petung di Malang'
+description: 'Studi kasus instalasi greenhouse bambu petung 240 m² di Kedungkandang Malang. Konstruksi ekonomis, awet 5 tahun, dan ramah lingkungan.'
 clientType: 'petani-individu'
 greenhouseType: 'Greenhouse Bambu'
 locationCity: 'Kota Malang'

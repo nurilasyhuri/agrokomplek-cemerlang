@@ -59,10 +59,13 @@ const articleKeywords = [
   'panduan greenhouse',
   'agrokomplek cemerlang',
 ];
+
+const rawTitle = article.data.seoTitle || article.data.title;
+const pageTitle = rawTitle.includes('Agrokomplek') ? rawTitle : `${rawTitle} - Agrokomplek Cemerlang`;
 ---
 
 <BaseLayout
-  title={`${article.data.title} - Panduan Agrokomplek Cemerlang`}
+  title={pageTitle}
   description={article.data.description}
   image={article.data.heroImage}
   type="article"

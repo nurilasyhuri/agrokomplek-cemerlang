@@ -1,6 +1,7 @@
 ---
 title: 'Cara Memasang Plastik UV Greenhouse agar Kencang & Tidak Robek'
-description: 'Panduan teknik memasang plastik UV greenhouse 200 mikron menggunakan spring clip dan profil lock C. Atap kencang rapi, tahan angin badai, awet hingga 5 tahun.'
+seoTitle: 'Cara Memasang Plastik UV Greenhouse Kuat'
+description: 'Panduan memasang plastik UV greenhouse 200 mikron dengan spring clip dan profil lock C. Atap rapi, kencang, tahan badai, dan awet 5 tahun.'
 publishDate: '10 September 2026'
 author: 'Tim Ahli Agrokomplek Cemerlang'
 category: 'Panduan Konstruksi'

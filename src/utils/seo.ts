@@ -23,7 +23,7 @@ export function getLocalBusinessSchema() {
       'Pusat Saprodi dan Pembuatan Greenhouse Malang',
     ],
     url: `${CANONICAL_BASE}/`,
-    logo: `${CANONICAL_BASE}/favicon.svg`,
+    logo: `${CANONICAL_BASE}/images/brand/logo.png`,
     image: [
       `${CANONICAL_BASE}/images/hero/hero-greenhouse.webp`,
       `${CANONICAL_BASE}/images/og/default-og.jpg`,
@@ -338,7 +338,15 @@ export function getArticleSchema(article: {
       url: `${CANONICAL_BASE}/tentang-kami/`,
     },
     publisher: {
+      '@type': 'Organization',
       '@id': `${CANONICAL_BASE}/#business`,
+      name: BUSINESS_INFO.name,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${CANONICAL_BASE}/images/brand/logo.png`,
+        width: 512,
+        height: 512,
+      },
     },
     datePublished: toIsoDate(article.publishDate),
     dateModified: toIsoDate(article.updatedDate || article.publishDate),

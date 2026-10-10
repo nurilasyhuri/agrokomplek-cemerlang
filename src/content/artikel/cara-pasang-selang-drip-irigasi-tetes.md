@@ -1,6 +1,7 @@
 ---
 title: 'Cara Pasang Selang Drip Irigasi Tetes untuk Kebun Cabai & Melon'
-description: 'Panduan lengkap cara memasang selang drip irigasi 16mm di bawah mulsa. Hemat air hingga 60%, distribusi pupuk fertigasi merata ke seluruh tanaman.'
+seoTitle: 'Cara Pasang Selang Drip Irigasi Tetes Kebun'
+description: 'Panduan lengkap cara memasang selang drip irigasi 16mm di bawah mulsa. Hemat air hingga 60%, distribusi pupuk fertigasi merata ke tanaman.'
 publishDate: '8 September 2026'
 author: 'Tim Ahli Agrokomplek Cemerlang'
 category: 'Panduan Budidaya'

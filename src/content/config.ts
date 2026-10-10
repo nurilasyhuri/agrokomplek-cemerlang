@@ -4,6 +4,7 @@ const produkCollection = defineCollection({
   type: 'content',
   schema: () => z.object({
     title: z.string(),
+    seoTitle: z.string().optional(),
     description: z.string(),
     category: z.enum(['saprodi-pertanian', 'perlengkapan-pertanian', 'perlengkapan-greenhouse']),
     price: z.number().optional(),
@@ -28,6 +29,8 @@ const proyekCollection = defineCollection({
   type: 'content',
   schema: () => z.object({
     title: z.string(),
+    seoTitle: z.string().optional(),
+    description: z.string().optional(),
     clientType: z.enum(['komersial', 'petani-individu', 'institusi', 'penelitian']),
     greenhouseType: z.enum(['Greenhouse Bambu', 'Greenhouse Galvanis', 'Greenhouse Baja Ringan', 'Tunnel Garam']),
     locationCity: z.string(),
@@ -45,6 +48,7 @@ const artikelCollection = defineCollection({
   type: 'content',
   schema: () => z.object({
     title: z.string(),
+    seoTitle: z.string().optional(),
     description: z.string(),
     publishDate: z.string(),
     updatedDate: z.string().optional(),

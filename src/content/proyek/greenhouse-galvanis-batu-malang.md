@@ -1,5 +1,7 @@
 ---
 title: 'Pembangunan Greenhouse Galvanis Melon Hidroponik 400 m² di Kota Batu'
+seoTitle: 'Proyek Greenhouse Galvanis di Kota Batu'
+description: 'Pembangunan greenhouse pipa galvanis hot-dip 400 m² untuk melon hidroponik di Kota Batu. Struktur kokoh tahan angin pegunungan dan awet 15 tahun.'
 clientType: 'komersial'
 greenhouseType: 'Greenhouse Galvanis'
 locationCity: 'Kota Batu'

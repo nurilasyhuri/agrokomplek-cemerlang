@@ -1,6 +1,7 @@
 ---
-title: 'Smart Farming IoT & Kontroler Otomasi Greenhouse'
-description: 'Sistem smart farming berbasis IoT untuk otomasi fertigasi presisi, pemantauan iklim mikro (suhu, RH, VPD), dan kendali aktuator greenhouse via smartphone dan web dashboard.'
+title: 'Smart Farming IoT dan Otomasi Greenhouse'
+seoTitle: 'Jual Smart Farming IoT Otomasi Greenhouse'
+description: 'Sistem IoT smart farming untuk kontrol fertigasi presisi, pantau suhu dan kelembapan, serta kendali aktuator greenhouse berbasis smartphone.'
 category: 'perlengkapan-greenhouse'
 price: 0
 priceDisplay: 'Konsultasi RAB Proyek'

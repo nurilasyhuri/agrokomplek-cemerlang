@@ -1,6 +1,6 @@
 ---
 title: 'Pupuk NPK Mutiara 16-16-16'
-description: 'Pupuk NPK 16-16-16 formula seimbang untuk memacu pertumbuhan vegetatif, perakaran, dan pembuahan tanaman hortikultura & sayuran pangan.'
+description: 'Pupuk NPK 16-16-16 formula seimbang untuk memacu pertumbuhan vegetatif, perakaran, dan pembuahan tanaman hortikultura dan sayuran pangan.'
 category: 'saprodi-pertanian'
 stockStatus: 'ready'
 featured: false

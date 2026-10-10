@@ -1,6 +1,6 @@
 ---
 title: 'Selang Drip Irigasi Tetes 16 mm'
-description: 'Selang drip irigasi tetes 16 mm fertigasi presisi untuk melon hidroponik, cabai, & hortikultura. Hemat air dan nutrisi dengan debit tetesan seragam.'
+description: 'Selang drip irigasi tetes 16 mm fertigasi presisi untuk melon hidroponik, cabai, dan hortikultura. Hemat air dan nutrisi dengan debit tetesan seragam.'
 category: 'perlengkapan-pertanian'
 stockStatus: 'ready'
 featured: false

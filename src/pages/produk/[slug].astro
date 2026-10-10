@@ -63,11 +63,14 @@ const productKeywords = [
   'material greenhouse malang',
   'toko pertanian malang',
 ];
+
+const baseTitle = product.data.seoTitle || `Jual ${product.data.title}`;
+const pageTitle = baseTitle.includes('Agrokomplek') ? baseTitle : `${baseTitle} - Agrokomplek Cemerlang`;
 ---
 
 <BaseLayout
-  title={`Jual ${product.data.title} - Agrokomplek Cemerlang`}
-  description={`${product.data.description} Tersedia stok fisik di toko Malang & kirim kargo seluruh Indonesia.`}
+  title={pageTitle}
+  description={product.data.description}
   image={product.data.thumbnail}
   type="product"
   keywords={productKeywords}

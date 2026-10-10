@@ -1,5 +1,7 @@
 ---
 title: 'Pembangunan Tunnel Garam (Prisma Garam) 300 m² di Pesisir Sumenep Madura'
+seoTitle: 'Proyek Tunnel Prisma Garam di Madura'
+description: 'Konstruksi greenhouse tunnel prisma garam 300 m² di Sumenep Madura. Solusi produksi garam kristal higienis sepanjang tahun tahan air laut.'
 clientType: 'komersial'
 greenhouseType: 'Tunnel Garam'
 locationCity: 'Kabupaten Sumenep'

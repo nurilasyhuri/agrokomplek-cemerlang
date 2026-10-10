@@ -1,6 +1,7 @@
 ---
 title: 'Biaya Pembuatan Greenhouse per Meter: Panduan Hitung RAB Lengkap'
-description: 'Rincian estimasi biaya pembuatan greenhouse per m2 di Indonesia. Bandingkan RAB rangka bambu, baja ringan, pipa galvanis hot-dip, & material plastik UV 200 mikron.'
+seoTitle: 'Biaya Pembuatan Greenhouse per Meter dan RAB'
+description: 'Rincian estimasi biaya pembuatan greenhouse per m2 di Indonesia. Bandingkan RAB rangka bambu, baja ringan, pipa galvanis, dan plastik UV.'
 publishDate: '2 September 2026'
 author: 'Tim Ahli Agrokomplek Cemerlang'
 category: 'Panduan Konstruksi'

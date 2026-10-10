@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-const HOST = 'agroprimagreenhouse.com';
+const HOST = 'agrokomplekcemerlang.com';
 const KEY = 'd4a79b28c13e45f992160357e84bf92a';
 const SITEMAP_PATH = path.resolve('dist/sitemap-0.xml');
 

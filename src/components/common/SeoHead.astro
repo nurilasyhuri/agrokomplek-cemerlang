@@ -26,13 +26,21 @@ const {
 const siteName = 'Agrokomplek Cemerlang';
 const domain = 'https://agrokomplekcemerlang.com';
 
-// Strictly strip any pipe symbols from title and description
-const sanitizedRawTitle = title.replace(/\s*\|\s*/g, ' - ').trim();
+// Strictly strip any pipe symbols, em-dashes, and raw &amp; from title and description
+const sanitizedRawTitle = title
+  .replace(/&amp;/g, 'dan')
+  .replace(/\s*\|\s*/g, ' - ')
+  .replace(/\s*—\s*/g, ' - ')
+  .trim();
 const formattedTitle = sanitizedRawTitle.includes(siteName) || sanitizedRawTitle.includes('Agrokomplek')
   ? sanitizedRawTitle
   : `${sanitizedRawTitle} - ${siteName}`;
 
-const sanitizedDescription = description.replace(/\s*\|\s*/g, ', ').trim();
+const sanitizedDescription = description
+  .replace(/&amp;/g, 'dan')
+  .replace(/\s*\|\s*/g, ', ')
+  .replace(/\s*—\s*/g, ' - ')
+  .trim();
 
 // Authoritative Absolute Image URL
 const fullImageUrl = image.startsWith('http')
@@ -89,6 +97,9 @@ const formattedJsonLd = jsonLd
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
 <meta name="format-detection" content="telephone=no" />
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <meta name="generator" content={Astro.generator} />
 <meta name="theme-color" content="#047857" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -133,6 +144,12 @@ const formattedJsonLd = jsonLd
 <meta property="og:image:alt" content={formattedTitle} />
 <meta property="og:site_name" content={siteName} />
 <meta property="og:locale" content="id_ID" />
+{type === 'article' && (
+  <>
+    <meta property="article:author" content={author} />
+    <meta property="article:publisher" content={siteName} />
+  </>
+)}
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image" />

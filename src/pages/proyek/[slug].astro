@@ -43,11 +43,15 @@ const projectKeywords = [
   'hasil proyek greenhouse',
   'agrokomplek cemerlang',
 ];
+
+const rawTitle = project.data.seoTitle || project.data.title;
+const pageTitle = rawTitle.includes('Agrokomplek') ? rawTitle : `${rawTitle} - Agrokomplek Cemerlang`;
+const projectDescription = project.data.description || `Studi kasus pembangunan ${project.data.greenhouseType} di ${project.data.locationCity}, ${project.data.locationProvince} dimensi ${project.data.dimensions}.`;
 ---
 
 <BaseLayout
-  title={`${project.data.title} - Portofolio Greenhouse Agrokomplek Cemerlang`}
-  description={`Studi kasus konstruksi ${project.data.greenhouseType} di ${project.data.locationCity}, ${project.data.locationProvince} (Dimensi ${project.data.dimensions}). Dokumentasi instalasi, spesifikasi material, & hasil panen.`}
+  title={pageTitle}
+  description={projectDescription}
   image={project.data.coverImage}
   keywords={projectKeywords}
   jsonLd={[projectSchema, breadcrumbSchema]}

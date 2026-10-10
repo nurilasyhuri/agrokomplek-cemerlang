@@ -1,6 +1,7 @@
 ---
 title: 'Greenhouse Baja Ringan vs Pipa Galvanis: Perbandingan Biaya, Kekuatan & Umur Pakai'
-description: 'Bandingkan rangka greenhouse baja ringan vs pipa galvanis hot-dip. Analisis kekuatan beban angin tropis, risiko korosi, kecepatan pasang, dan efisiensi investasi jangka panjang.'
+seoTitle: 'Greenhouse Baja Ringan vs Pipa Galvanis'
+description: 'Perbandingan rangka greenhouse baja ringan vs pipa galvanis hot-dip. Analisis beban angin, ketahanan korosi, dan efisiensi biaya investasi.'
 publishDate: '3 Oktober 2026'
 author: 'Tim Ahli Agrokomplek Cemerlang'
 category: 'Panduan Konstruksi'
