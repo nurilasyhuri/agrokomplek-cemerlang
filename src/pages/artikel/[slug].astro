@@ -174,16 +174,15 @@ const pageTitle = rawTitle.includes('Agrokomplek') ? rawTitle : `${rawTitle} - A
         <Content />
       </div>
 
-      <!-- Tags Section (Medium Topic Badges) -->
+      <!-- Tags Strip (Inline Typographic Flow Invariant) -->
       {article.data.tags && article.data.tags.length > 0 && (
-        <div class="mt-14 mb-10">
-          <div class="flex flex-wrap gap-2">
-            {article.data.tags.map((tag: string) => (
-              <span class="px-3.5 py-1.5 rounded-full bg-[#e4e5da] hover:bg-[#dedad0] text-[#213420] border border-[#dedad0] text-xs font-medium transition-colors select-none">
-                {tag}
-              </span>
-            ))}
-          </div>
+        <div class="mt-8 mb-8 flex flex-wrap items-baseline gap-x-2.5 gap-y-1 text-xs text-[#5c6e58]">
+          <span class="font-bold uppercase tracking-wider text-[#213420]">Tag:</span>
+          {article.data.tags.map((tag: string) => (
+            <span class="text-[#213420] hover:underline underline-offset-4 cursor-pointer">
+              #{tag}
+            </span>
+          ))}
         </div>
       )}
 
